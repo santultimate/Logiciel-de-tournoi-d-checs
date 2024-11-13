@@ -1,15 +1,23 @@
 import json
 from models.tournament import Tournament
 
-class TournamentController:
+class MenuController:
     def __init__(self):
-        self.tournaments = []
+        # Import local pour éviter les imports circulaires
+        from controllers.tournament_controller import TournamentController
+        self.tournament_controller = TournamentController()
+        self.current_tournament = None
 
-    def create_tournament(self, name, location, start_date, end_date, description=""):
-        """Crée un nouveau tournoi."""
-        tournament = Tournament(name, location, start_date, end_date, description)
-        self.tournaments.append(tournament)
-        return tournament
+    def create_tournament(self):
+        name = input("Nom du tournoi : ")
+        location = input("Lieu du tournoi : ")
+        start_date = input("Date de début (YYYY-MM-DD) : ")
+        end_date = input("Date de fin (YYYY-MM-DD) : ")
+        description = input("Description : ")
+        self.current_tournament = self.tournament_controller.create_tournament(
+            name, location, start_date, end_date, description=description
+        )
+        print("Tournoi créé avec succès !")
 
     def save_tournament(self, tournament):
         """Sauvegarde un tournoi dans un fichier JSON."""
