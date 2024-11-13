@@ -1,12 +1,12 @@
 import json
 from models.tournament import Tournament
 
+
 class TournamentController:
     def __init__(self):
         self.tournaments = []
 
     def create_tournament(self, name, location, start_date, end_date, description=""):
-        """Crée un nouveau tournoi."""
         tournament = Tournament(name, location, start_date, end_date, description)
         self.tournaments.append(tournament)
         return tournament
@@ -23,5 +23,5 @@ class TournamentController:
                 data = json.load(file)
             return Tournament.from_dict(data)
         except FileNotFoundError:
-            print("Erreur : Le fichier de tournoi n'existe pas.")
+            print("Erreur : Le fichier du tournoi n'existe pas.")
             return None
