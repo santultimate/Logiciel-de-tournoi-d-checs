@@ -31,7 +31,10 @@ class Player:
     @classmethod
     def from_dict(cls, data):
         player = cls(
-            data["last_name"], data["first_name"], data["birth_date"], data["national_id"]
+            data["last_name"],
+            data["first_name"],
+            data["birth_date"],
+            data["national_id"]
         )
         player.score = data.get("score", 0)
         return player

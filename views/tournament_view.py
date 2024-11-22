@@ -12,6 +12,29 @@ class TournamentView:
             )
         print("")
 
+
+    
+    @staticmethod
+    def get_tournament_data():
+        print("\n=== Création d'un tournoi ===")
+        name = input("Nom du tournoi : ")
+        location = input("Lieu : ")
+        start_date = input("Date de début (YYYY-MM-DD) : ")
+        end_date = input("Date de fin (YYYY-MM-DD) : ")
+        description = input("Description : ")
+        return {
+            "name": name,
+            "location": location,
+            "start_date": start_date,
+            "end_date": end_date,
+            "description": description,
+        }
+
+    @staticmethod
+    def get_tournament_file():
+        print("\n=== Chargement d'un tournoi ===")
+        return input("Nom du fichier du tournoi (sans '.json') : ")
+
     @staticmethod
     def display_menu():
         print("\n=== Menu Principal ===")
@@ -19,4 +42,8 @@ class TournamentView:
         print("2. Charger un tournoi existant")
         print("3. Ajouter un joueur à un tournoi")
         print("4. Afficher les résultats du tournoi")
-        print("5. Quitter")
+        print("5. Voir tous les tournois enregistrés")
+        print("6. Voir tous les joueurs enregistrés")  # Nouvelle option
+        print("7. Quitter")
+        return input("Votre choix : ")
+
