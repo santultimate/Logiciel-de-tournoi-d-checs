@@ -87,21 +87,24 @@ class MenuController:
                 elif choice == "3":
                     self.add_player()
                 elif choice == "4":
-                    self.show_tournament_results()
+                    self.create_player()  # Nouvelle option pour créer un joueur
                 elif choice == "5":
-                    self.view_all_tournaments()
+                    self.show_tournament_results()
                 elif choice == "6":
-                    self.view_all_players()  # Nouvelle option
+                    self.view_all_tournaments()
                 elif choice == "7":
+                    self.view_all_players()
+                elif choice == "8":
                     print("Merci d'avoir utilisé le gestionnaire de tournois d'échecs. À bientôt !")
                     break
                 else:
-                    print("Choix invalide. Veuillez entrer un nombre entre 1 et 7.")
+                    print("Choix invalide. Veuillez entrer un nombre entre 1 et 8.")
             except KeyboardInterrupt:
                 print("\nProgramme interrompu par l'utilisateur. À bientôt !")
                 break
             except Exception as e:
                 print(f"Erreur inattendue : {e}")
+
 
     def view_all_players(self):
         """Affiche tous les joueurs enregistrés."""
@@ -133,3 +136,26 @@ class MenuController:
                 print("==========================\n")
         except Exception as e:
             print(f"Erreur lors de l'affichage des tournois : {e}")
+            
+    def create_player(self):
+        """Créer un joueur et le sauvegarder dans le fichier JSON."""
+        print("\n=== Création d'un joueur ===")
+        last_name = input("Nom de famille : ")
+        first_name = input("Prénom : ")
+        national_id = input("Identifiant national d'échecs : ")
+
+        while True:
+            birth_date = input("Date de naissance (YYYY-MM-DD) : ")
+            try:
+                player_data = {
+                    "last_name": last_name,
+                    "first_name": first_name,
+                    "birth_date": birth_date,
+                    "national_id": national_id,
+                }
+                player = self.player_controller.add_player(player_data)
+                print(f"Joueur '{player.first_name} {player.last_name}' créé avec succès.")
+                break
+            except ValueError as e:
+                print(f"Erreur : {e}. Veuillez réessayer.")
+

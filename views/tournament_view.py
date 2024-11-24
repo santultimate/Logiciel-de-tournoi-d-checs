@@ -43,12 +43,14 @@ class TournamentView:
             print("1. Créer un nouveau tournoi")
             print("2. Charger un tournoi existant")
             print("3. Ajouter un joueur à un tournoi")
-            print("4. Afficher les résultats du tournoi")
-            print("5. Voir tous les tournois enregistrés")
-            print("6. Voir tous les joueurs enregistrés")
-            print("7. Quitter")
+            print("4. Créer un joueur")
+            print("5. Afficher les résultats du tournoi")
+            print("6. Voir tous les tournois enregistrés")
+            print("7. Voir tous les joueurs enregistrés")
+            print("8. Quitter")
             choice = input("Votre choix : ")
-            if choice in {"1", "2", "3", "4", "5", "6", "7"}:
+            if choice in {"1", "2", "3", "4", "5", "6", "7","8"}:
                 return choice
-            print("Choix invalide. Veuillez entrer un nombre entre 1 et 7.")
+            print("Choix invalide. Veuillez entrer un nombre entre 1 et 8.")
+
 
