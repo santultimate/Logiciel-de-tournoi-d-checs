@@ -1,3 +1,6 @@
+import json
+import os
+
 from datetime import datetime
 
 
@@ -38,3 +41,4 @@ class Player:
         )
         player.score = data.get("score", 0)
         return player
+

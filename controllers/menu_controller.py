@@ -1,12 +1,14 @@
 from controllers.tournament_controller import TournamentController
+from controllers.player_controller import PlayerController
 from views.tournament_view import TournamentView
-from models.player import Player
-from controllers.player_controller import load_all_players
 
 class MenuController:
     def __init__(self):
         self.tournament_controller = TournamentController()
+        self.player_controller = PlayerController()  # Ajout de l'instance
         self.current_tournament = None
+
+
 
     def create_tournament(self):
         """Création d'un tournoi."""
@@ -102,12 +104,32 @@ class MenuController:
                 print(f"Erreur inattendue : {e}")
 
     def view_all_players(self):
-        """Affiche tous les joueurs enregistrés dans le fichier JSON."""
-        self.player_controller.load_all_players()
-        if not self.player_controller.players:
-            print("Aucun joueur enregistré.")
-        else:
-            print("\n=== Liste des Joueurs ===")
-            for i, player in enumerate(self.player_controller.players, 1):
-                print(f"{i}. {player.first_name} {player.last_name} (ID : {player.national_id})")
-            print("==========================\n")
+        """Affiche tous les joueurs enregistrés."""
+        try:
+            self.player_controller.load_all_players()
+            if not self.player_controller.players:
+                print("Aucun joueur enregistré.")
+            else:
+                print("\n=== Liste des Joueurs ===")
+                for i, player in enumerate(self.player_controller.players, 1):
+                    print(f"{i}. {player.first_name} {player.last_name} (ID : {player.national_id})")
+                print("==========================\n")
+        except Exception as e:
+            print(f"Erreur lors de l'affichage des joueurs : {e}")
+
+    def view_all_tournaments(self):
+        """Affiche tous les tournois enregistrés."""
+        try:
+            # Charger tous les tournois depuis le contrôleur
+            tournaments = self.tournament_controller.load_all_tournaments()
+            
+            if not tournaments:
+                print("Aucun tournoi enregistré.")
+            else:
+                print("\n=== Liste des Tournois ===")
+                for i, tournament in enumerate(tournaments, 1):
+                    print(f"{i}. {tournament.name} - {tournament.location} "
+                        f"({tournament.start_date} - {tournament.end_date})")
+                print("==========================\n")
+        except Exception as e:
+            print(f"Erreur lors de l'affichage des tournois : {e}")
