@@ -16,12 +16,18 @@ class TournamentView:
     
     @staticmethod
     def get_tournament_data():
+        """Collecte les données nécessaires à la création d'un tournoi."""
         print("\n=== Création d'un tournoi ===")
-        name = input("Nom du tournoi : ")
-        location = input("Lieu : ")
-        start_date = input("Date de début (YYYY-MM-DD) : ")
-        end_date = input("Date de fin (YYYY-MM-DD) : ")
-        description = input("Description : ")
+        name = input("Nom du tournoi : ").strip()
+        location = input("Lieu : ").strip()
+        start_date = input("Date de début (YYYY-MM-DD) : ").strip()
+        end_date = input("Date de fin (YYYY-MM-DD) : ").strip()
+        description = input("Description : ").strip()
+
+        if not name or not location or not start_date or not end_date:
+            print("Erreur : Toutes les informations sont obligatoires.")
+            return None
+
         return {
             "name": name,
             "location": location,

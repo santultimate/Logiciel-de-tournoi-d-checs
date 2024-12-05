@@ -1,31 +1,32 @@
 from datetime import datetime
-from .match import Match
 
 class Round:
-    def __init__(self, name):
+    def __init__(self, name, matches):
         self.name = name
-        self.start_time = datetime.now()
+        self.matches = matches
+        self.start_time = datetime.now().isoformat()
         self.end_time = None
-        self.matches = []
 
     def end_round(self):
-        self.end_time = datetime.now()
+        """Marque le tour comme terminé."""
+        self.end_time = datetime.now().isoformat()
 
-    def add_match(self, match):
-        self.matches.append(match)
+    def record_match_result(self, match_index, score1, score2):
+        """Enregistre le résultat d'un match."""
+        self.matches[match_index].set_result(score1, score2)
 
     def to_dict(self):
         return {
             "name": self.name,
-            "start_time": self.start_time.isoformat(),
-            "end_time": self.end_time.isoformat() if self.end_time else None,
-            "matches": [match.to_tuple() for match in self.matches]
+            "matches": [match.to_tuple() for match in self.matches],
+            "start_time": self.start_time,
+            "end_time": self.end_time,
         }
 
     @classmethod
     def from_dict(cls, data):
-        round_ = cls(data["name"])
-        round_.start_time = datetime.fromisoformat(data["start_time"])
-        round_.end_time = datetime.fromisoformat(data["end_time"]) if data["end_time"] else None
-        round_.matches = [Match.from_tuple(m) for m in data["matches"]]
-        return round_
+        matches = [Match(*match) for match in data["matches"]]
+        round_instance = cls(data["name"], matches)
+        round_instance.start_time = data["start_time"]
+        round_instance.end_time = data["end_time"]
+        return round_instance
