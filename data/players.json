@@ -1,1 +1,98 @@
-[]
+[
+    {
+        "last_name": "Dupont",
+        "first_name": "Jean",
+        "birth_date": "1985-03-15",
+        "national_id": "FR12345",
+        "score": 0,
+        "matches_played": []
+    },
+    {
+        "last_name": "Dupont",
+        "first_name": "Jean",
+        "birth_date": "1985-03-15",
+        "national_id": "FR12345",
+        "score": 0,
+        "matches_played": []
+    },
+    {
+        "last_name": "Leblanc",
+        "first_name": "Sophie",
+        "birth_date": "1992-04-15",
+        "national_id": "FR23456",
+        "score": 0,
+        "matches_played": []
+    },
+    {
+        "last_name": "Martin",
+        "first_name": "Paul",
+        "birth_date": "1987-06-10",
+        "national_id": "BE12345",
+        "score": 0,
+        "matches_played": []
+    },
+    {
+        "last_name": "Dupuis",
+        "first_name": "Clara",
+        "birth_date": "1995-08-20",
+        "national_id": "CH54321",
+        "score": 0,
+        "matches_played": []
+    },
+    {
+        "last_name": "Morel",
+        "first_name": "Antoine",
+        "birth_date": "1990-01-30",
+        "national_id": "IT67890",
+        "score": 0,
+        "matches_played": []
+    },
+    {
+        "last_name": "Girard",
+        "first_name": "Julie",
+        "birth_date": "1998-12-05",
+        "national_id": "ES09876",
+        "score": 0,
+        "matches_played": []
+    },
+    {
+        "last_name": "Lambert",
+        "first_name": "Fran\u00e7ois",
+        "birth_date": "1993-03-12",
+        "national_id": "DE13579",
+        "score": 0,
+        "matches_played": []
+    },
+    {
+        "last_name": "Rousseau",
+        "first_name": "Emma",
+        "birth_date": "1991-09-25",
+        "national_id": "US24680",
+        "score": 0,
+        "matches_played": []
+    },
+    {
+        "last_name": "Petit",
+        "first_name": "Jacques",
+        "birth_date": "1989-11-02",
+        "national_id": "GB10293",
+        "score": 0,
+        "matches_played": []
+    },
+    {
+        "last_name": "Santara",
+        "first_name": "Yacouba",
+        "birth_date": "1987-03-03",
+        "national_id": "ML44556",
+        "score": 0,
+        "matches_played": []
+    },
+    {
+        "last_name": "Diallo",
+        "first_name": "Aminata",
+        "birth_date": "2000-10-03",
+        "national_id": "ML12336",
+        "score": 0,
+        "matches_played": []
+    }
+]
