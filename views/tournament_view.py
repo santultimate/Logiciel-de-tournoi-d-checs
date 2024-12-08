@@ -39,24 +39,20 @@ class TournamentView:
         print("\n=== Chargement d'un tournoi ===")
         return input("Nom du fichier du tournoi (sans '.json') : ")
 
-
     @staticmethod
     def display_menu():
-        while True:
-            print("\n=== Menu Principal ===")
-            print("1. Créer un nouveau tournoi")
-            print("2. Charger un tournoi existant")
-            print("3. Ajouter un joueur à un tournoi")
-            print("4. Créer un joueur")
-            print("5. Afficher les résultats du tournoi")
-            print("6. Voir tous les tournois enregistrés")
-            print("7. Voir tous les joueurs enregistrés")
-            print("8. Quitter")
-            choice = input("Votre choix : ")
-            if choice in {"1", "2", "3", "4", "5", "6", "7","8"}:
-                return choice
-            print("Choix invalide. Veuillez entrer un nombre entre 1 et 8.")
-            
+        print("\n=== Menu Principal ===")
+        print("1. Créer un nouveau tournoi")
+        print("2. Charger un tournoi existant")
+        print("3. Ajouter un joueur")
+        print("4. Commencer un nouveau tour")
+        print("5. Enregistrer les résultats d'un match")
+        print("6. Terminer le tour actuel")  # Nouvelle option
+        print("7. Afficher les rapports")
+        print("8. Terminer le tournoi et afficher le classement")
+        print("9. Quitter")
+        return input("Votre choix : ")
+                
     @staticmethod
     def get_player_data():
         """Collecte les données nécessaires à l'ajout d'un joueur."""
@@ -88,12 +84,16 @@ class TournamentView:
         for i, match in enumerate(round.matches, 1):
             player1, score1 = match[0]
             player2, score2 = match[1]
-            print(
-                f"  Match {i}: "
-                f"{player1.first_name} {player1.last_name} ({score1} pts) "
-                f"vs "
-                f"{player2.first_name} {player2.last_name} ({score2} pts)"
-            )
+
+            if player2 is None:
+                print(f"  Match {i}: {player1.first_name} {player1.last_name} est exempté.")
+            else:
+                print(
+                    f"  Match {i}: "
+                    f"{player1.first_name} {player1.last_name} ({score1} pts) "
+                    f"vs "
+                    f"{player2.first_name} {player2.last_name} ({score2} pts)"
+                )
         print("")
         
     @staticmethod
@@ -111,4 +111,31 @@ class TournamentView:
         except ValueError:
             print("Entrée invalide. Veuillez réessayer.")
             return None
+        
+    @staticmethod
+    def display_player_scores(players):
+        """Affiche les scores de tous les joueurs."""
+        print("\n=== Scores des Joueurs ===")
+        for player in players:
+            print(f"{player.first_name} {player.last_name} - Score : {player.score}")
+        print("==========================\n")
     
+    @staticmethod
+    def display_rankings(players):
+        """Affiche le classement des joueurs."""
+        print("\n=== Classement Final ===")
+        for player in players:
+            print(f"{player.rank}. {player.first_name} {player.last_name} - Score : {player.score}")
+        print("=========================\n")
+
+    @staticmethod
+    def display_report_menu():
+        """Affiche le sous-menu pour choisir un rapport."""
+        print("\n=== Menu des Rapports ===")
+        print("1. Liste de tous les joueurs par ordre alphabétique")
+        print("2. Liste de tous les tournois")
+        print("3. Nom et dates d’un tournoi donné")
+        print("4. Liste des joueurs d’un tournoi par ordre alphabétique")
+        print("5. Liste de tous les rounds et matchs d’un tournoi")
+        print("6. Retour au menu principal")
+        return input("Votre choix : ")

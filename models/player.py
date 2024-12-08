@@ -12,7 +12,7 @@ class Player:
         self.national_id = national_id
         self.score = 0  # Initial score
         self.matches_played = []
-
+        self.rank = None  # Rang initialisé à None
 
     @staticmethod
     def validate_birth_date(birth_date):
@@ -32,7 +32,8 @@ class Player:
             "birth_date": self.birth_date,
             "national_id": self.national_id,
             "score": self.score,
-            "matches_played": self.matches_played
+            "matches_played": self.matches_played,
+            "rank": self.rank,  # Inclure le rang dans les données sauvegardées
         }
 
     @classmethod
@@ -46,6 +47,7 @@ class Player:
         )
         player.score = data["score"]
         player.matches_played = data["matches_played"]
+        player.rank = data.get("rank")  # Charger le rang depuis le fichier
         return player
 
     #@classmethod

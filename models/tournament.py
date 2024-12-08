@@ -87,3 +87,11 @@ class Tournament:
         self.current_round += 1
 
         return new_round
+    def calculate_rankings(self):
+        """Calcule les classements des joueurs en fonction de leurs scores."""
+        # Trier les joueurs par score décroissant
+        self.players.sort(key=lambda player: player.score, reverse=True)
+
+        # Attribuer les rangs
+        for rank, player in enumerate(self.players, start=1):
+            player.rank = rank
