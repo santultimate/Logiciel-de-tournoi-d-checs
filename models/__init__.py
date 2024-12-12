@@ -8,7 +8,4 @@ __all__ = [
     "Tournament",
     "Round",
     "Match",
-    "MenuController",
-    "PlayerController",
-    "TournamentController",
 ]

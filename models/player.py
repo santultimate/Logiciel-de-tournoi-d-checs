@@ -1,8 +1,6 @@
 import json
 import os
-
 from datetime import datetime
-
 
 class Player:
     def __init__(self, last_name, first_name, birth_date, national_id):
@@ -49,8 +47,4 @@ class Player:
         player.matches_played = data["matches_played"]
         player.rank = data.get("rank")  # Charger le rang depuis le fichier
         return player
-
-    #@classmethod
-    #def update_score(cls, score):
-     #   self.score += score 
 

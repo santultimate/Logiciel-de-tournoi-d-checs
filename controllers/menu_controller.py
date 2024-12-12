@@ -263,30 +263,30 @@ class MenuController:
                 break  # Retour au menu principal
             else:
                 print("Choix invalide. Veuillez entrer un nombre entre 1 et 6.")
+                
     def display_all_players(self):
         """Affiche tous les joueurs par ordre alphabétique."""
         players = self.player_controller.load_all_players()
         if not players:
             print("Aucun joueur enregistré.")
             return
-
         sorted_players = sorted(players, key=lambda p: (p.last_name, p.first_name))
         TournamentView.display_player_list(sorted_players)
+        
     def display_all_tournaments(self):
         """Affiche tous les tournois enregistrés."""
         tournaments = self.tournament_controller.load_all_tournaments()
         if not tournaments:
             print("Aucun tournoi enregistré.")
             return
-
         TournamentView.display_tournament_list(tournaments)
+        
     def display_all_tournaments(self):
         """Affiche tous les tournois enregistrés."""
         tournaments = self.tournament_controller.load_all_tournaments()
         if not tournaments:
             print("Aucun tournoi enregistré.")
             return
-
         TournamentView.display_tournament_list(tournaments)
         
     def display_tournament_details(self):
@@ -296,7 +296,6 @@ class MenuController:
         if not tournament:
             print(f"Tournoi '{name}' introuvable.")
             return
-
         TournamentView.display_tournament_details(tournament)
         
     def display_players_in_tournament(self):
@@ -304,7 +303,6 @@ class MenuController:
         if not self.current_tournament:
             print("Aucun tournoi chargé.")
             return
-
         sorted_players = sorted(self.current_tournament.players, key=lambda p: (p.last_name, p.first_name))
         TournamentView.display_player_list(sorted_players)
         
@@ -313,6 +311,5 @@ class MenuController:
         if not self.current_tournament:
             print("Aucun tournoi chargé.")
             return
-
         TournamentView.display_rounds_and_matches(self.current_tournament.rounds)
 

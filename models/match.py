@@ -1,19 +1,18 @@
 class Match:
     def __init__(self, player1, player2):
-        self.players = [(player1, 0), (player2, 0)]
+        self.players = {player1: 0, player2: 0} 
+        self.winner = None 
+        
     def set_result(self, score1, score2):
-        """Enregistre les scores des deux joueurs."""
-        self.players[0] = (self.players[0][0], score1)
-        self.players[1] = (self.players[1][0], score2)
-    def to_tuple(self):
-        return self.players
-    @classmethod
-    def end_match(self,winner):
-        if winner == self.player1:
-            self.player1.update_score(2)
+        player1, player2 = list(self.players.keys())
+        self.players[player1] = score1
+        self.players[player2] = score2
+        if score1 > score2:
+            self.winner = player1
+        elif score2 > score1:
+            self.winner = player2
+        else:
+            self.winner = None
             
-        elif winner == self.player2:
-            self.player2.update_score(2)
-        else :
-            self.player2.update_score(1)
-            self.player1.update_score(1)
+    def to_tuple(self):
+        return tuple(self.players.items())

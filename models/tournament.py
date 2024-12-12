@@ -66,27 +66,6 @@ class Tournament:
         tournament.rounds = [Round.from_dict(r) for r in data["rounds"]]
         return tournament
 
-    def create_next_round(self):
-        """Crée le prochain tour avec des paires générées."""
-        if self.current_round > self.num_rounds:
-            print("Tous les tours ont été joués.")
-            return None
-
-        # Trier les joueurs par score
-        self.players.sort(key=lambda player: player.score, reverse=True)
-
-        # Créer le tour
-        round_name = f"Round {self.current_round}"
-        new_round = Round(name=round_name)
-
-        # Générer les matchs pour ce tour
-        new_round.generate_matches(self.players)
-
-        # Ajouter le tour au tournoi
-        self.rounds.append(new_round)
-        self.current_round += 1
-
-        return new_round
     def calculate_rankings(self):
         """Calcule les classements des joueurs en fonction de leurs scores."""
         # Trier les joueurs par score décroissant
@@ -95,3 +74,26 @@ class Tournament:
         # Attribuer les rangs
         for rank, player in enumerate(self.players, start=1):
             player.rank = rank
+
+
+""" def create_next_round(self):
+         #Crée le prochain tour avec des paires générées.
+         if self.current_round > self.num_rounds:
+            print("Tous les tours ont été joués.")
+            return None
+
+         # Trier les joueurs par score
+         self.players.sort(key=lambda player: player.score, reverse=True)
+
+         # Créer le tour
+         round_name = f"Round {self.current_round}"
+         new_round = Round(name=round_name)
+
+         # Générer les matchs pour ce tour
+         new_round.generate_matches(self.players)
+
+         # Ajouter le tour au tournoi
+         self.rounds.append(new_round)
+         self.current_round += 1
+         return new_round"""
+    

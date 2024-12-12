@@ -21,6 +21,9 @@ class Round:
         """Enregistre le résultat d'un match."""
         self.matches[match_index].set_result(score1, score2)
 
+#dans il faut utiliser lobjet match
+#dans tournament 
+
     def to_dict(self):
         """Convertit le tour en dictionnaire pour JSON."""
         return {
@@ -35,7 +38,6 @@ class Round:
             "start_time": self.start_time,
             "end_time": self.end_time,
         }
-
 
     @classmethod
     def from_dict(cls, data):
