@@ -9,7 +9,7 @@ class Tournament:
         self.end_date = end_date
         self.description = description
         self.num_rounds = num_rounds
-        self.current_round = 1
+        self.current_round = 0  # Commence à 0 car le premier round sera Round 1
         self.players = []
         self.rounds = []
 
@@ -20,22 +20,23 @@ class Tournament:
             return
         self.players.append(player)
 
-    def create_next_round(self):
-        """Crée le prochain tour."""
-        if self.current_round > self.num_rounds:
-            print("Le tournoi est terminé.")
-            return None
-        matches = self.generate_pairs()
-        new_round = Round(f"Round {self.current_round}", matches)
-        self.rounds.append(new_round)
-        self.current_round += 1
-        return new_round
-
-    def generate_pairs(self):
+    def generate_pairs(self, players):
         """Génère dynamiquement les paires pour un tour."""
-        from random import shuffle
-        shuffle(self.players)
-        return [(self.players[i], self.players[i+1]) for i in range(0, len(self.players), 2)]
+        # Trier les joueurs par score décroissant, puis par ordre alphabétique pour briser les égalités
+        players.sort(key=lambda p: (-p.score, p.last_name, p.first_name))
+        
+        pairs = []
+        unmatched_player = None
+
+        # Gestion des joueurs impairs
+        if len(players) % 2 != 0:
+            unmatched_player = players.pop()  # Exclut le dernier joueur pour ce tour
+
+        # Créer les paires
+        for i in range(0, len(players), 2):
+            pairs.append((players[i], players[i + 1]))
+
+        return pairs, unmatched_player
 
     def to_dict(self):
         """Convertit le tournoi en dictionnaire pour JSON."""
@@ -69,31 +70,36 @@ class Tournament:
     def calculate_rankings(self):
         """Calcule les classements des joueurs en fonction de leurs scores."""
         # Trier les joueurs par score décroissant
-        self.players.sort(key=lambda player: player.score, reverse=True)
+        self.players.sort(key=lambda player: (-player.score, player.last_name, player.first_name))
 
         # Attribuer les rangs
         for rank, player in enumerate(self.players, start=1):
             player.rank = rank
 
-
-""" def create_next_round(self):
-         #Crée le prochain tour avec des paires générées.
-         if self.current_round > self.num_rounds:
+    def create_next_round(self):
+        """Crée le prochain tour avec des paires générées."""
+        if self.current_round > self.num_rounds:
             print("Tous les tours ont été joués.")
             return None
 
-         # Trier les joueurs par score
-         self.players.sort(key=lambda player: player.score, reverse=True)
+        if not self.players:
+            print("Aucun joueur n'est enregistré dans le tournoi.")
+            return None
 
-         # Créer le tour
-         round_name = f"Round {self.current_round}"
-         new_round = Round(name=round_name)
+        # Trier les joueurs par score
+        self.players.sort(key=lambda player: player.score, reverse=True)
 
-         # Générer les matchs pour ce tour
-         new_round.generate_matches(self.players)
+        # Créer un nouveau tour
+        round_name = f"Round {self.current_round}"
+        new_round = Round(name=round_name)
 
-         # Ajouter le tour au tournoi
-         self.rounds.append(new_round)
-         self.current_round += 1
-         return new_round"""
-    
+        # Générer les matchs pour ce tour
+        try:
+            new_round.generate_matches(self.players)
+            self.rounds.append(new_round)  # Ajouter à la liste des tours
+            self.current_round += 1
+            print(f"{round_name} créé avec succès.")
+            return new_round
+        except Exception as e:
+            print(f"Erreur lors de la génération des matchs : {e}")
+            return None

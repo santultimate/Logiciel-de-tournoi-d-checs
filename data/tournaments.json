@@ -1,30 +1,30 @@
 [
     {
-        "name": "tournoi1",
-        "location": "Bamako",
-        "start_date": "2024-12-01",
+        "name": "test1",
+        "location": "bko",
+        "start_date": "2024-12-06",
         "end_date": "2024-12-10",
-        "description": "essai",
+        "description": "chap chap",
         "num_rounds": 4,
-        "current_round": 2,
+        "current_round": 3,
         "players": [
             {
-                "last_name": "santara",
-                "first_name": "yacouba",
-                "birth_date": "2000-10-10",
-                "national_id": "ML22334",
-                "score": 2,
+                "last_name": "ballo",
+                "first_name": "adama",
+                "birth_date": "2000-03-03",
+                "national_id": "LM112233",
+                "score": 0,
                 "matches_played": [],
-                "rank": 1
+                "rank": null
             },
             {
-                "last_name": "Hamidou",
-                "first_name": "Filou",
-                "birth_date": "1986-03-01",
-                "national_id": "AB12345",
-                "score": 1,
+                "last_name": "diallo",
+                "first_name": "amadou",
+                "birth_date": "1999-01-01",
+                "national_id": "ML668877",
+                "score": 0,
                 "matches_played": [],
-                "rank": 2
+                "rank": null
             }
         ],
         "rounds": [
@@ -34,61 +34,96 @@
                     [
                         [
                             {
-                                "last_name": "santara",
-                                "first_name": "yacouba",
-                                "birth_date": "2000-10-10",
-                                "national_id": "ML22334",
-                                "score": 2,
+                                "last_name": "ballo",
+                                "first_name": "adama",
+                                "birth_date": "2000-03-03",
+                                "national_id": "LM112233",
+                                "score": 0,
                                 "matches_played": [],
-                                "rank": 1
+                                "rank": null
                             },
-                            2.0
+                            0
                         ],
                         [
                             {
-                                "last_name": "Hamidou",
-                                "first_name": "Filou",
-                                "birth_date": "1986-03-01",
-                                "national_id": "AB12345",
-                                "score": 1,
+                                "last_name": "diallo",
+                                "first_name": "amadou",
+                                "birth_date": "1999-01-01",
+                                "national_id": "ML668877",
+                                "score": 0,
                                 "matches_played": [],
-                                "rank": 2
+                                "rank": null
                             },
-                            0.0
+                            0
                         ]
                     ]
                 ],
-                "start_time": "2024-12-08T09:49:59.254955",
-                "end_time": "2024-12-08T09:50:38.410262"
+                "start_time": "2024-12-12T15:13:04.324654",
+                "end_time": null,
+                "version": 1
+            },
+            {
+                "name": "Round 3",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "ballo",
+                                "first_name": "adama",
+                                "birth_date": "2000-03-03",
+                                "national_id": "LM112233",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "diallo",
+                                "first_name": "amadou",
+                                "birth_date": "1999-01-01",
+                                "national_id": "ML668877",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-15T11:29:18.621229",
+                "end_time": null,
+                "version": 1
             }
         ]
     },
     {
-        "name": "t1",
-        "location": "bamako",
-        "start_date": "2024-12-01",
-        "end_date": "2024-12-10",
-        "description": "essai",
+        "name": "test1",
+        "location": "madrid",
+        "start_date": "2024-12-05",
+        "end_date": "2024-12-07",
+        "description": "test",
         "num_rounds": 4,
         "current_round": 2,
         "players": [
             {
-                "last_name": "santara",
-                "first_name": "yacouba",
-                "birth_date": "1993-01-29",
-                "national_id": "AB12345",
-                "score": 2,
+                "last_name": "dupont",
+                "first_name": "blanc",
+                "birth_date": "2000-10-10",
+                "national_id": "AB332211",
+                "score": 0,
                 "matches_played": [],
-                "rank": 1
+                "rank": null
             },
             {
-                "last_name": "sophie",
-                "first_name": "blanche",
-                "birth_date": "2000-10-14",
-                "national_id": "TN204466",
-                "score": 1,
+                "last_name": "diallo",
+                "first_name": "adama",
+                "birth_date": "1988-03-03",
+                "national_id": "ML554433",
+                "score": 0,
                 "matches_played": [],
-                "rank": 2
+                "rank": null
             }
         ],
         "rounds": [
@@ -98,32 +133,818 @@
                     [
                         [
                             {
-                                "last_name": "santara",
-                                "first_name": "yacouba",
-                                "birth_date": "1993-01-29",
-                                "national_id": "AB12345",
-                                "score": 2,
+                                "last_name": "dupont",
+                                "first_name": "blanc",
+                                "birth_date": "2000-10-10",
+                                "national_id": "AB332211",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "diallo",
+                                "first_name": "adama",
+                                "birth_date": "1988-03-03",
+                                "national_id": "ML554433",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-15T08:16:36.594720",
+                "end_time": null,
+                "version": 1
+            }
+        ]
+    },
+    {
+        "name": "test",
+        "location": "bamako",
+        "start_date": "2024-10-10",
+        "end_date": "2024-12-20",
+        "description": "test",
+        "num_rounds": 4,
+        "current_round": 5,
+        "players": [
+            {
+                "last_name": "Dupont",
+                "first_name": "Jean",
+                "birth_date": "1980-01-01",
+                "national_id": "FR12345",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "Martin",
+                "first_name": "Paul",
+                "birth_date": "1985-06-15",
+                "national_id": "FR67908",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "dupont",
+                "first_name": "blanc",
+                "birth_date": "1987-03-03",
+                "national_id": "FR12345",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "dupont",
+                "first_name": "jean",
+                "birth_date": "1985-03-15",
+                "national_id": "FR12345",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "Martin",
+                "first_name": "Paue",
+                "birth_date": "1990-07-20",
+                "national_id": "FR67890",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            }
+        ],
+        "rounds": [
+            {
+                "name": "Round 1",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "Dupont",
+                                "first_name": "Jean",
+                                "birth_date": "1980-01-01",
+                                "national_id": "FR12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "Martin",
+                                "first_name": "Paul",
+                                "birth_date": "1985-06-15",
+                                "national_id": "FR67908",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-15T08:27:24.009558",
+                "end_time": null,
+                "version": 1
+            },
+            {
+                "name": "Round 2",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "Dupont",
+                                "first_name": "Jean",
+                                "birth_date": "1980-01-01",
+                                "national_id": "FR12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "Martin",
+                                "first_name": "Paul",
+                                "birth_date": "1985-06-15",
+                                "national_id": "FR67908",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-15T08:41:23.948702",
+                "end_time": null,
+                "version": 1
+            },
+            {
+                "name": "Round 3",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "Dupont",
+                                "first_name": "Jean",
+                                "birth_date": "1980-01-01",
+                                "national_id": "FR12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "Martin",
+                                "first_name": "Paul",
+                                "birth_date": "1985-06-15",
+                                "national_id": "FR67908",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-15T08:46:53.930514",
+                "end_time": null,
+                "version": 1
+            },
+            {
+                "name": "Round 4",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "Dupont",
+                                "first_name": "Jean",
+                                "birth_date": "1980-01-01",
+                                "national_id": "FR12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "Martin",
+                                "first_name": "Paul",
+                                "birth_date": "1985-06-15",
+                                "national_id": "FR67908",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "last_name": "dupont",
+                                "first_name": "blanc",
+                                "birth_date": "1987-03-03",
+                                "national_id": "FR12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            null,
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-15T08:48:14.402048",
+                "end_time": null,
+                "version": 1
+            }
+        ]
+    },
+    {
+        "name": "average",
+        "location": "dakar",
+        "start_date": "2024-12-05",
+        "end_date": "2024-12-19",
+        "description": "test1",
+        "num_rounds": 4,
+        "current_round": 2,
+        "players": [
+            {
+                "last_name": "dupont",
+                "first_name": "martin",
+                "birth_date": "1987-07-07",
+                "national_id": "FR12345",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "Paul",
+                "first_name": "Martin",
+                "birth_date": "2000-10-10",
+                "national_id": "ML34567",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            }
+        ],
+        "rounds": [
+            {
+                "name": "Round 1",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "dupont",
+                                "first_name": "martin",
+                                "birth_date": "1987-07-07",
+                                "national_id": "FR12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "Paul",
+                                "first_name": "Martin",
+                                "birth_date": "2000-10-10",
+                                "national_id": "ML34567",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-15T09:25:30.679924",
+                "end_time": null,
+                "version": 1
+            }
+        ]
+    },
+    {
+        "name": "test3",
+        "location": "pologne",
+        "start_date": "2020-12-12",
+        "end_date": "2024-12-12",
+        "description": "test3",
+        "num_rounds": 4,
+        "current_round": 4,
+        "players": [
+            {
+                "last_name": "Dupont",
+                "first_name": "Jeqn",
+                "birth_date": "1985-03-15",
+                "national_id": "FR12345",
+                "score": 0,
+                "matches_played": [],
+                "rank": 1
+            },
+            {
+                "last_name": "Martin",
+                "first_name": "Paul",
+                "birth_date": "1990-07-20",
+                "national_id": "FR67890",
+                "score": 0,
+                "matches_played": [],
+                "rank": 2
+            }
+        ],
+        "rounds": [
+            {
+                "name": "Round 1",
+                "matches": [],
+                "start_time": "2024-12-15T09:36:21.759569",
+                "end_time": null,
+                "version": 1
+            },
+            {
+                "name": "Round 2",
+                "matches": [],
+                "start_time": "2024-12-15T09:37:02.363282",
+                "end_time": null,
+                "version": 1
+            },
+            {
+                "name": "Round 4",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "Dupont",
+                                "first_name": "Jeqn",
+                                "birth_date": "1985-03-15",
+                                "national_id": "FR12345",
+                                "score": 0,
                                 "matches_played": [],
                                 "rank": 1
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "Martin",
+                                "first_name": "Paul",
+                                "birth_date": "1990-07-20",
+                                "national_id": "FR67890",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": 2
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-15T09:48:02.275381",
+                "end_time": null,
+                "version": 1
+            }
+        ]
+    },
+    {
+        "name": "test4",
+        "location": "tunis",
+        "start_date": "2024-12-10",
+        "end_date": "2024-12-20",
+        "description": "test4",
+        "num_rounds": 4,
+        "current_round": 2,
+        "players": [
+            {
+                "last_name": "dupont",
+                "first_name": "Martin",
+                "birth_date": "1987-07-07",
+                "national_id": "FR12345",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "Paul",
+                "first_name": "Blanc",
+                "birth_date": "2000-12-12",
+                "national_id": "ML45678",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            }
+        ],
+        "rounds": [
+            {
+                "name": "Round 2",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "dupont",
+                                "first_name": "Martin",
+                                "birth_date": "1987-07-07",
+                                "national_id": "FR12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "Paul",
+                                "first_name": "Blanc",
+                                "birth_date": "2000-12-12",
+                                "national_id": "ML45678",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-15T10:06:13.077590",
+                "end_time": null,
+                "version": 1
+            }
+        ]
+    },
+    {
+        "name": "test5",
+        "location": "bamako",
+        "start_date": "2024-12-12",
+        "end_date": "2024-12-20",
+        "description": "test5",
+        "num_rounds": 4,
+        "current_round": 2,
+        "players": [
+            {
+                "last_name": "dupont",
+                "first_name": "jean",
+                "birth_date": "1987-12-12",
+                "national_id": "AB12345",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "marie",
+                "first_name": "dubois",
+                "birth_date": "2000-12-01",
+                "national_id": "FR$%?&*",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            }
+        ],
+        "rounds": [
+            {
+                "name": "Round 2",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "dupont",
+                                "first_name": "jean",
+                                "birth_date": "1987-12-12",
+                                "national_id": "AB12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "marie",
+                                "first_name": "dubois",
+                                "birth_date": "2000-12-01",
+                                "national_id": "FR$%?&*",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-15T10:20:18.385179",
+                "end_time": null,
+                "version": 1
+            }
+        ]
+    },
+    {
+        "name": "test6",
+        "location": "madrid",
+        "start_date": "2024-12-05",
+        "end_date": "2024-12-20",
+        "description": "test6",
+        "num_rounds": 4,
+        "current_round": 2,
+        "players": [
+            {
+                "last_name": "Dupont",
+                "first_name": "Paul",
+                "birth_date": "2000-12-12",
+                "national_id": "FR12345",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "Martin",
+                "first_name": "Jean",
+                "birth_date": "1987-09-09",
+                "national_id": "FR56789",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            }
+        ],
+        "rounds": [
+            {
+                "name": "Round 2",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "Dupont",
+                                "first_name": "Paul",
+                                "birth_date": "2000-12-12",
+                                "national_id": "FR12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "Martin",
+                                "first_name": "Jean",
+                                "birth_date": "1987-09-09",
+                                "national_id": "FR56789",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-15T10:26:23.378778",
+                "end_time": null,
+                "version": 1
+            }
+        ]
+    },
+    {
+        "name": "test7",
+        "location": "bko",
+        "start_date": "2024-12-12",
+        "end_date": "2024-12-19",
+        "description": "test7",
+        "num_rounds": 4,
+        "current_round": 2,
+        "players": [
+            {
+                "last_name": "ali",
+                "first_name": "bam",
+                "birth_date": "2000-12-12",
+                "national_id": "AB12345",
+                "score": 0,
+                "matches_played": [],
+                "rank": 1
+            },
+            {
+                "last_name": "abu",
+                "first_name": "dabi",
+                "birth_date": "2010-10-10",
+                "national_id": "TN12345",
+                "score": 0,
+                "matches_played": [],
+                "rank": 2
+            }
+        ],
+        "rounds": [
+            {
+                "name": "Round 2",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "ali",
+                                "first_name": "bam",
+                                "birth_date": "2000-12-12",
+                                "national_id": "AB12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "abu",
+                                "first_name": "dabi",
+                                "birth_date": "2010-10-10",
+                                "national_id": "TN12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-15T10:31:13.695184",
+                "end_time": null,
+                "version": 1
+            }
+        ]
+    },
+    {
+        "name": "te1",
+        "location": "usa",
+        "start_date": "2024-12-12",
+        "end_date": "2024-12-20",
+        "description": "bko",
+        "num_rounds": 4,
+        "current_round": 3,
+        "players": [
+            {
+                "last_name": "diallo",
+                "first_name": "aminata",
+                "birth_date": "2000-02-02",
+                "national_id": "ML12345",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "moussa",
+                "first_name": "Ba",
+                "birth_date": "1987-04-12",
+                "national_id": "GH#$%?&",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "barry",
+                "first_name": "mamadou",
+                "birth_date": "1997-01-20",
+                "national_id": "ML23456",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "Amary",
+                "first_name": "Dijon",
+                "birth_date": "2000-10-03",
+                "national_id": "GH54356",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            }
+        ],
+        "rounds": [
+            {
+                "name": "Round 1",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "diallo",
+                                "first_name": "aminata",
+                                "birth_date": "2000-02-02",
+                                "national_id": "ML12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
                             },
                             4.0
                         ],
                         [
                             {
-                                "last_name": "sophie",
-                                "first_name": "blanche",
-                                "birth_date": "2000-10-14",
-                                "national_id": "TN204466",
-                                "score": 1,
+                                "last_name": "moussa",
+                                "first_name": "Ba",
+                                "birth_date": "1987-04-12",
+                                "national_id": "GH#$%?&",
+                                "score": 0,
                                 "matches_played": [],
-                                "rank": 2
+                                "rank": null
+                            },
+                            3.0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "last_name": "barry",
+                                "first_name": "mamadou",
+                                "birth_date": "1997-01-20",
+                                "national_id": "ML23456",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
                             },
                             2.0
+                        ],
+                        [
+                            {
+                                "last_name": "Amary",
+                                "first_name": "Dijon",
+                                "birth_date": "2000-10-03",
+                                "national_id": "GH54356",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            6.0
                         ]
                     ]
                 ],
-                "start_time": "2024-12-08T10:04:08.010613",
-                "end_time": "2024-12-08T10:05:32.032381"
+                "start_time": "2024-12-15T21:46:19.050815",
+                "end_time": "2024-12-15T21:49:09.032011",
+                "version": 1
+            },
+            {
+                "name": "Round 2",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "diallo",
+                                "first_name": "aminata",
+                                "birth_date": "2000-02-02",
+                                "national_id": "ML12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "moussa",
+                                "first_name": "Ba",
+                                "birth_date": "1987-04-12",
+                                "national_id": "GH#$%?&",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "last_name": "barry",
+                                "first_name": "mamadou",
+                                "birth_date": "1997-01-20",
+                                "national_id": "ML23456",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "Amary",
+                                "first_name": "Dijon",
+                                "birth_date": "2000-10-03",
+                                "national_id": "GH54356",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-15T21:50:07.698343",
+                "end_time": null,
+                "version": 1
             }
         ]
     }

@@ -1,8 +1,7 @@
 import os
 import json
 from models.player import Player
-#gestion des erreur self.path
- 
+
 class PlayerController:
     def __init__(self, file_path="data/players.json"):
         """Initialise le contrôleur des joueurs avec un chemin de fichier JSON."""
@@ -27,7 +26,7 @@ class PlayerController:
         try:
             os.makedirs(os.path.dirname(self.file_path), exist_ok=True)  # Assure que le dossier existe
             with open(self.file_path, "w") as file:
-                json.dump([p.to_dict() for p in self.players], file, indent=4)
+                json.dump([player.to_dict() for player in self.players], file, indent=4)
             print(f"Tous les joueurs ont été sauvegardés dans {self.file_path}.")
         except Exception as e:
             print(f"Erreur lors de la sauvegarde des joueurs : {e}")
@@ -35,16 +34,19 @@ class PlayerController:
     def load_all_players(self):
         """Charge tous les joueurs depuis le fichier JSON."""
         if not os.path.exists(self.file_path):
-            print(f"Fichier introuvable : {self.file_path}")
+            print(f"Fichier introuvable : {self.file_path}. Aucun joueur chargé.")
             return
         try:
             with open(self.file_path, "r") as file:
-                self.players = [Player.from_dict(data) for data in json.load(file)]
-            print(f"{len(self.players)} joueurs chargés depuis {self.file_path}.")
+                players_data = json.load(file)  # Charge les données JSON
+                self.players = [Player.from_dict(data) for data in players_data]
+            print(f"{len(self.players)} joueur(s) chargé(s) depuis {self.file_path}.")
         except json.JSONDecodeError as e:
             print(f"Erreur de décodage JSON dans le fichier {self.file_path} : {e}")
+            self.players = []  # Réinitialiser la liste en cas d'erreur
         except IOError as e:
             print(f"Erreur lors de la lecture du fichier {self.file_path} : {e}")
+            self.players = []  # Réinitialiser la liste en cas d'erreur
 
     def get_all_players(self):
         """Renvoie la liste de tous les joueurs enregistrés."""

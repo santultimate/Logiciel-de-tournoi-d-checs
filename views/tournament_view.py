@@ -1,38 +1,47 @@
 class TournamentView:
     @staticmethod
-    def display_tournament(tournament):
-        print(f"\n=== Tournoi : {tournament.name} ===")
-        print(f"Lieu : {tournament.location}")
-        print(f"Dates : {tournament.start_date} - {tournament.end_date}")
-        print(f"Description : {tournament.description}")
-        print("Joueurs inscrits :")
-        for player in tournament.players:
-            print(
-                f"  - {player.first_name} {player.last_name} (ID : {player.national_id}, Score : {player.score})"
-            )
-        print("")
-    
+    def display_round(round_obj):
+        """Affiche les informations d'un tour."""
+        print(f"\n=== {round_obj.name} ===")
+        print(f"Début : {round_obj.start_time}")
+        print("Matchs :")
+        for i, match in enumerate(round_obj.matches, 1):
+            players = list(match.players.items())
+            player1, score1 = players[0]
+            if len(players) > 1:  # Match normal
+                player2, score2 = players[1]
+                print(f"  Match {i}: {player1.first_name} {player1.last_name} ({score1} pts) vs "
+                    f"{player2.first_name} {player2.last_name} ({score2} pts)")
+            else:  # Exemption
+                print(f"  Match {i}: {player1.first_name} {player1.last_name} est exempté.")
+        print("=========================\n")
+
     @staticmethod
     def get_tournament_data():
         """Collecte les données nécessaires à la création d'un tournoi."""
         print("\n=== Création d'un tournoi ===")
-        name = input("Nom du tournoi : ").strip()
-        location = input("Lieu : ").strip()
-        start_date = input("Date de début (YYYY-MM-DD) : ").strip()
-        end_date = input("Date de fin (YYYY-MM-DD) : ").strip()
-        description = input("Description : ").strip()
-
-        if not name or not location or not start_date or not end_date:
-            print("Erreur : Toutes les informations sont obligatoires.")
+        try:
+            name = input("Nom du tournoi : ").strip()
+            if not name:
+                raise ValueError("Le nom du tournoi est obligatoire.")
+            location = input("Lieu : ").strip()
+            if not location:
+                raise ValueError("Le lieu est obligatoire.")
+            start_date = input("Date de début (YYYY-MM-DD) : ").strip()
+            datetime.strptime(start_date, "%Y-%m-%d")  # Valide le format
+            end_date = input("Date de fin (YYYY-MM-DD) : ").strip()
+            datetime.strptime(end_date, "%Y-%m-%d")  # Valide le format
+            description = input("Description : ").strip()
+            return {
+                "name": name,
+                "location": location,
+                "start_date": start_date,
+                "end_date": end_date,
+                "description": description,
+            }
+        except ValueError as e:
+            print(f"Erreur : {e}")
             return None
-
-        return {
-            "name": name,
-            "location": location,
-            "start_date": start_date,
-            "end_date": end_date,
-            "description": description,
-        }
 
     @staticmethod
     def get_tournament_file():
@@ -74,44 +83,37 @@ class TournamentView:
         }
 
     @staticmethod
-    def display_round(round):
+    def display_round(round_obj):
         """Affiche les informations d'un tour."""
-        print(f"\n=== {round.name} ===")
-        print(f"Début : {round.start_time}")
-        if round.end_time:
-            print(f"Fin : {round.end_time}")
+        print(f"\n=== {round_obj.name} ===")
+        print(f"Début : {round_obj.start_time}")
         print("Matchs :")
-        for i, match in enumerate(round.matches, 1):
-            player1, score1 = match[0]
-            player2, score2 = match[1]
-
-            if player2 is None:
+        for i, match in enumerate(round_obj.matches, 1):
+            players = list(match.players.items())
+            player1, score1 = players[0]
+            if len(players) > 1:  # Match normal
+                player2, score2 = players[1]
+                print(f"  Match {i}: {player1.first_name} {player1.last_name} ({score1} pts) vs "
+                    f"{player2.first_name} {player2.last_name} ({score2} pts)")
+            else:  # Exemption
                 print(f"  Match {i}: {player1.first_name} {player1.last_name} est exempté.")
-            else:
-                print(
-                    f"  Match {i}: "
-                    f"{player1.first_name} {player1.last_name} ({score1} pts) "
-                    f"vs "
-                    f"{player2.first_name} {player2.last_name} ({score2} pts)"
-                )
-        print("")
-        
+        print("=========================\n")
+
     @staticmethod
     def get_match_results():
-        """
-        Collecte les résultats d'un match.
-        :return: Index du match, score du joueur 1 et score du joueur 2.
-        """
+        """Collecte les résultats d'un match."""
         print("\n=== Saisie des Résultats du Match ===")
         try:
             match_index = int(input("Entrez le numéro du match : ")) - 1
+            if match_index < 0:
+                raise ValueError("L'indice du match doit être un entier positif.")
             score1 = float(input("Entrez le score du joueur 1 : "))
             score2 = float(input("Entrez le score du joueur 2 : "))
             return match_index, score1, score2
-        except ValueError:
-            print("Entrée invalide. Veuillez réessayer.")
+        except ValueError as e:
+            print(f"Erreur : {e}")
             return None
-        
+
     @staticmethod
     def display_player_scores(players):
         """Affiche les scores de tous les joueurs."""
@@ -139,3 +141,32 @@ class TournamentView:
         print("5. Liste de tous les rounds et matchs d’un tournoi")
         print("6. Retour au menu principal")
         return input("Votre choix : ")
+    
+    @staticmethod
+    def display_player_list(players):
+        if not players:
+            print("Aucun joueur enregistré.")
+            return
+        print("\n=== Liste des Joueurs ===")
+        for player in players:
+            print(f"{player.first_name} {player.last_name} - ID : {player.national_id}")
+        print("=========================\n")
+
+    @staticmethod
+    def display_rounds_and_matches(rounds):
+        if not rounds:
+            print("Aucun round enregistré pour ce tournoi.")
+            return
+        for round_obj in rounds:
+            print(f"\n=== {round_obj.name} ===")
+            print(f"Début : {round_obj.start_time}")
+            print("Matchs :")
+            for i, match in enumerate(round_obj.matches, 1):
+                players = list(match.players.items())
+                player1, score1 = players[0]
+                if len(players) > 1:
+                    player2, score2 = players[1]
+                    print(f"  Match {i}: {player1.first_name} {player1.last_name} ({score1} pts) vs {player2.first_name} {player2.last_name} ({score2} pts)")
+                else:
+                    print(f"  Match {i}: {player1.first_name} {player1.last_name} est exempté.")
+            print("=========================\n")
