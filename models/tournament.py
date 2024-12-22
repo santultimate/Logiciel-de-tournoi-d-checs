@@ -1,5 +1,7 @@
 from models.round import Round
 from models.player import Player
+from datetime import datetime
+
 
 class Tournament:
     def __init__(self, name, location, start_date, end_date, description="", num_rounds=4):
@@ -86,7 +88,7 @@ class Tournament:
             print("Aucun joueur n'est enregistré dans le tournoi.")
             return None
 
-        # Trier les joueurs par score
+        # Trier les joueurs par score décroissant
         self.players.sort(key=lambda player: player.score, reverse=True)
 
         # Créer un nouveau tour
@@ -95,9 +97,9 @@ class Tournament:
 
         # Générer les matchs pour ce tour
         try:
-            new_round.generate_matches(self.players)
-            self.rounds.append(new_round)  # Ajouter à la liste des tours
-            self.current_round += 1
+            new_round.generate_matches(self.players)  # Génération des matchs
+            self.rounds.append(new_round)  # Ajouter le tour à la liste des tours
+            self.current_round += 1  # Passer au tour suivant
             print(f"{round_name} créé avec succès.")
             return new_round
         except Exception as e:

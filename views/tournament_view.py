@@ -1,3 +1,5 @@
+from datetime import datetime
+
 class TournamentView:
     @staticmethod
     def display_round(round_obj):
@@ -6,13 +8,13 @@ class TournamentView:
         print(f"Début : {round_obj.start_time}")
         print("Matchs :")
         for i, match in enumerate(round_obj.matches, 1):
-            players = list(match.players.items())
-            player1, score1 = players[0]
-            if len(players) > 1:  # Match normal
-                player2, score2 = players[1]
+            player1, player2 = list(match.players.keys())
+            score1, score2 = list(match.players.values())
+            
+            if player2:  # Vérifier si player2 n'est pas None
                 print(f"  Match {i}: {player1.first_name} {player1.last_name} ({score1} pts) vs "
                     f"{player2.first_name} {player2.last_name} ({score2} pts)")
-            else:  # Exemption
+            else:
                 print(f"  Match {i}: {player1.first_name} {player1.last_name} est exempté.")
         print("=========================\n")
 
@@ -82,9 +84,9 @@ class TournamentView:
             "national_id": national_id,
         }
 
-    @staticmethod
+    """@staticmethod
     def display_round(round_obj):
-        """Affiche les informations d'un tour."""
+        Affiche les informations d'un tour.
         print(f"\n=== {round_obj.name} ===")
         print(f"Début : {round_obj.start_time}")
         print("Matchs :")
@@ -97,7 +99,7 @@ class TournamentView:
                     f"{player2.first_name} {player2.last_name} ({score2} pts)")
             else:  # Exemption
                 print(f"  Match {i}: {player1.first_name} {player1.last_name} est exempté.")
-        print("=========================\n")
+        print("=========================\n")"""
 
     @staticmethod
     def get_match_results():

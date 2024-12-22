@@ -34,5 +34,68 @@
         "score": 0,
         "matches_played": [],
         "rank": null
+    },
+    {
+        "last_name": "Diallo",
+        "first_name": "Adama",
+        "birth_date": "2000-10-10",
+        "national_id": "ML23456",
+        "score": 0,
+        "matches_played": [],
+        "rank": null
+    },
+    {
+        "last_name": "CAMARA",
+        "first_name": "AMINATA",
+        "birth_date": "1999-12-12",
+        "national_id": "GN12345",
+        "score": 0,
+        "matches_played": [],
+        "rank": null
+    },
+    {
+        "last_name": "SALL",
+        "first_name": "COURA",
+        "birth_date": "1984-03-05",
+        "national_id": "SN76543",
+        "score": 0,
+        "matches_played": [],
+        "rank": null
+    },
+    {
+        "last_name": "MAHMOUD",
+        "first_name": "SALT",
+        "birth_date": "2010-09-09",
+        "national_id": "MR65432",
+        "score": 0,
+        "matches_played": [],
+        "rank": null
+    },
+    {
+        "last_name": "JEAN",
+        "first_name": "DUPONT",
+        "birth_date": "1987-04-09",
+        "national_id": "FR45678",
+        "score": 0,
+        "matches_played": [],
+        "rank": null
+    },
+    {
+        "last_name": "MARTIN",
+        "first_name": "DUBOIS",
+        "birth_date": "1976-10-10",
+        "national_id": "TN889900",
+        "score": 0,
+        "matches_played": [],
+        "rank": null
+    },
+    {
+        "last_name": "BLANC",
+        "first_name": "LAURENT",
+        "birth_date": "1955-12-03",
+        "national_id": "BG45678",
+        "score": 0,
+        "matches_played": [],
+        "rank": null
     }
 ]

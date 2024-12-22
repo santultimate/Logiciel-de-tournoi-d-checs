@@ -786,25 +786,16 @@
         "end_date": "2024-12-20",
         "description": "bko",
         "num_rounds": 4,
-        "current_round": 3,
+        "current_round": 5,
         "players": [
             {
-                "last_name": "diallo",
-                "first_name": "aminata",
-                "birth_date": "2000-02-02",
-                "national_id": "ML12345",
+                "last_name": "Amary",
+                "first_name": "Dijon",
+                "birth_date": "2000-10-03",
+                "national_id": "GH54356",
                 "score": 0,
                 "matches_played": [],
-                "rank": null
-            },
-            {
-                "last_name": "moussa",
-                "first_name": "Ba",
-                "birth_date": "1987-04-12",
-                "national_id": "GH#$%?&",
-                "score": 0,
-                "matches_played": [],
-                "rank": null
+                "rank": 1
             },
             {
                 "last_name": "barry",
@@ -813,16 +804,25 @@
                 "national_id": "ML23456",
                 "score": 0,
                 "matches_played": [],
-                "rank": null
+                "rank": 2
             },
             {
-                "last_name": "Amary",
-                "first_name": "Dijon",
-                "birth_date": "2000-10-03",
-                "national_id": "GH54356",
+                "last_name": "diallo",
+                "first_name": "aminata",
+                "birth_date": "2000-02-02",
+                "national_id": "ML12345",
                 "score": 0,
                 "matches_played": [],
-                "rank": null
+                "rank": 3
+            },
+            {
+                "last_name": "moussa",
+                "first_name": "Ba",
+                "birth_date": "1987-04-12",
+                "national_id": "GH#$%?&",
+                "score": 0,
+                "matches_played": [],
+                "rank": 4
             }
         ],
         "rounds": [
@@ -900,7 +900,7 @@
                                 "matches_played": [],
                                 "rank": null
                             },
-                            0
+                            2.0
                         ],
                         [
                             {
@@ -912,7 +912,7 @@
                                 "matches_played": [],
                                 "rank": null
                             },
-                            0
+                            5.0
                         ]
                     ],
                     [
@@ -926,7 +926,7 @@
                                 "matches_played": [],
                                 "rank": null
                             },
-                            0
+                            4.0
                         ],
                         [
                             {
@@ -938,11 +938,311 @@
                                 "matches_played": [],
                                 "rank": null
                             },
-                            0
+                            2.0
                         ]
                     ]
                 ],
                 "start_time": "2024-12-15T21:50:07.698343",
+                "end_time": "2024-12-22T08:33:05.856059",
+                "version": 1
+            },
+            {
+                "name": "Round 3",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "Amary",
+                                "first_name": "Dijon",
+                                "birth_date": "2000-10-03",
+                                "national_id": "GH54356",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": 1
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "barry",
+                                "first_name": "mamadou",
+                                "birth_date": "1997-01-20",
+                                "national_id": "ML23456",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": 2
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "last_name": "diallo",
+                                "first_name": "aminata",
+                                "birth_date": "2000-02-02",
+                                "national_id": "ML12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": 3
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "moussa",
+                                "first_name": "Ba",
+                                "birth_date": "1987-04-12",
+                                "national_id": "GH#$%?&",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": 4
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-22T08:50:05.217599",
+                "end_time": null,
+                "version": 1
+            },
+            {
+                "name": "Round 4",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "Amary",
+                                "first_name": "Dijon",
+                                "birth_date": "2000-10-03",
+                                "national_id": "GH54356",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": 1
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "barry",
+                                "first_name": "mamadou",
+                                "birth_date": "1997-01-20",
+                                "national_id": "ML23456",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": 2
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "last_name": "diallo",
+                                "first_name": "aminata",
+                                "birth_date": "2000-02-02",
+                                "national_id": "ML12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": 3
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "moussa",
+                                "first_name": "Ba",
+                                "birth_date": "1987-04-12",
+                                "national_id": "GH#$%?&",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": 4
+                            },
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-22T08:50:15.987453",
+                "end_time": null,
+                "version": 1
+            }
+        ]
+    },
+    {
+        "name": "99",
+        "location": "inde",
+        "start_date": "2024-12-22",
+        "end_date": "2024-12-25",
+        "description": "test99",
+        "num_rounds": 4,
+        "current_round": 1,
+        "players": [
+            {
+                "last_name": "Diallo",
+                "first_name": "Adama",
+                "birth_date": "2000-10-10",
+                "national_id": "ML23456",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "CAMARA",
+                "first_name": "AMINATA",
+                "birth_date": "1999-12-12",
+                "national_id": "GN12345",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "SALL",
+                "first_name": "COURA",
+                "birth_date": "1984-03-05",
+                "national_id": "SN76543",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "MAHMOUD",
+                "first_name": "SALT",
+                "birth_date": "2010-09-09",
+                "national_id": "MR65432",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "JEAN",
+                "first_name": "DUPONT",
+                "birth_date": "1987-04-09",
+                "national_id": "FR45678",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "MARTIN",
+                "first_name": "DUBOIS",
+                "birth_date": "1976-10-10",
+                "national_id": "TN889900",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            },
+            {
+                "last_name": "BLANC",
+                "first_name": "LAURENT",
+                "birth_date": "1955-12-03",
+                "national_id": "BG45678",
+                "score": 0,
+                "matches_played": [],
+                "rank": null
+            }
+        ],
+        "rounds": [
+            {
+                "name": "Round 0",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "Diallo",
+                                "first_name": "Adama",
+                                "birth_date": "2000-10-10",
+                                "national_id": "ML23456",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "CAMARA",
+                                "first_name": "AMINATA",
+                                "birth_date": "1999-12-12",
+                                "national_id": "GN12345",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "last_name": "SALL",
+                                "first_name": "COURA",
+                                "birth_date": "1984-03-05",
+                                "national_id": "SN76543",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "MAHMOUD",
+                                "first_name": "SALT",
+                                "birth_date": "2010-09-09",
+                                "national_id": "MR65432",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "last_name": "JEAN",
+                                "first_name": "DUPONT",
+                                "birth_date": "1987-04-09",
+                                "national_id": "FR45678",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            {
+                                "last_name": "MARTIN",
+                                "first_name": "DUBOIS",
+                                "birth_date": "1976-10-10",
+                                "national_id": "TN889900",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ]
+                    ],
+                    [
+                        [
+                            {
+                                "last_name": "BLANC",
+                                "first_name": "LAURENT",
+                                "birth_date": "1955-12-03",
+                                "national_id": "BG45678",
+                                "score": 0,
+                                "matches_played": [],
+                                "rank": null
+                            },
+                            0
+                        ],
+                        [
+                            null,
+                            0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-22T09:33:56.806722",
                 "end_time": null,
                 "version": 1
             }

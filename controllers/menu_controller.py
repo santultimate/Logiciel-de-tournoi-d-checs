@@ -230,3 +230,23 @@ class MenuController:
         for player in sorted_players:
             print(f"{player.last_name} {player.first_name} - ID: {player.national_id}, Score: {player.score}")
         print("=================================")
+        
+    def end_tournament(self):
+        """Termine le tournoi et affiche les classements finaux."""
+        if not self.current_tournament:
+            print("Aucun tournoi actif.")
+            return
+
+        # Calculer les classements
+        self.current_tournament.calculate_rankings()
+
+        # Afficher les classements
+        TournamentView.display_rankings(self.current_tournament.players)
+
+        # Marquer le tournoi comme terminé
+        print(f"Le tournoi '{self.current_tournament.name}' est terminé.")
+        
+        # Sauvegarder le tournoi
+        self.tournament_controller.save_all_tournaments()
+        print("Le tournoi est terminé et les résultats ont été sauvegardés.")
+        print("=================================")

@@ -57,7 +57,9 @@ class Player:
         self.score = score
 
     def add_points(self, points):
+        """Ajoute des points au score du joueur."""
         self.score += points
+
         
     def __str__(self):
         return (f"{self.first_name} {self.last_name} (ID: {self.national_id}) - "
