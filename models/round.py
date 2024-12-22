@@ -74,22 +74,22 @@ class Round:
 
     def generate_matches(self, players):
         """Génère les matchs pour le tour en cours."""
-        matches = []
+        self.matches = []
         num_players = len(players)
 
         # Crée les paires de joueurs
         for i in range(0, num_players - 1, 2):
             player1 = players[i]
             player2 = players[i + 1]
-            matches.append(Match(player1, player2))  # Ajout du match
+            self.matches.append(Match(player1, player2))
 
         # Gère le joueur exempté (si le nombre est impair)
         if num_players % 2 != 0:
             last_player = players[-1]
             print(f"{last_player.first_name} {last_player.last_name} est exempté ce tour.")
-            matches.append(Match(last_player, None))  # Aucun adversaire pour ce joueur
-
-        self.matches = matches
+            exempt_match = Match(last_player, None)
+            exempt_match.winner = True  # Match terminé par défaut
+            self.matches.append(exempt_match)
 
     def mark_match_as_finished(self, match_index, score1, score2):
         """Marque un match comme terminé et met à jour les scores."""

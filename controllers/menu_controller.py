@@ -99,26 +99,46 @@ class MenuController:
             print(f"Erreur lors de la création d'un nouveau tour : {e}")
 
     def record_match_results(self):
-        """Enregistre les résultats d'un match."""
+        """Enregistre les résultats d'un match pour le tour actuel."""
         if not self.current_tournament or not self.current_tournament.rounds:
             print("Aucun tournoi ou aucun tour actif.")
             return
 
+        # Obtenir le dernier tour
         current_round = self.current_tournament.rounds[-1]
+
+        # Vérifier si des matchs sont disponibles
         if not current_round.matches:
             print("Aucun match disponible pour ce tour.")
             return
 
+        # Collecter les résultats
         result = TournamentView.get_match_results()
-        if result:
-            match_index, score1, score2 = result
-            if 0 <= match_index < len(current_round.matches):
-                match = current_round.matches[match_index]
-                match.set_result(score1, score2)
-                self.tournament_controller.save_all_tournaments()
-                print(f"Scores enregistrés pour le match {match_index + 1}.")
-            else:
-                print("Numéro de match invalide.")
+        if result is None:
+            return
+
+        match_index, score1, score2 = result
+
+        # Vérifier l'index du match
+        if match_index < 0 or match_index >= len(current_round.matches):
+            print("Numéro de match invalide.")
+            return
+
+        # Vérifier si un joueur est exempté
+        match = current_round.matches[match_index]
+        if None in match.players:  # Si un joueur est exempté
+            print("Ce joueur est exempté. Aucun résultat n'est requis.")
+            return
+
+        # Mettre à jour les scores
+        match.set_result(score1, score2)
+
+        # Marquer le match comme terminé
+        match.winner = True
+
+        # Sauvegarder les données
+        self.tournament_controller.save_all_tournaments()
+        print(f"Scores enregistrés pour le match {match_index + 1}.")
 
     def display_reports(self):
         """Affiche les rapports disponibles."""
