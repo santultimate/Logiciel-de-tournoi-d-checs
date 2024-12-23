@@ -111,34 +111,38 @@ class MenuController:
         if not current_round.matches:
             print("Aucun match disponible pour ce tour.")
             return
+        try:
+            # Collecter les résultats
+            result = TournamentView.get_match_results()
+            if result is None:
+                return
 
-        # Collecter les résultats
-        result = TournamentView.get_match_results()
-        if result is None:
-            return
+            match_index, score1, score2 = result
 
-        match_index, score1, score2 = result
+            # Vérifier l'index du match
+            if match_index < 0 or match_index >= len(current_round.matches):
+                print("Numéro de match invalide.")
+                return
 
-        # Vérifier l'index du match
-        if match_index < 0 or match_index >= len(current_round.matches):
-            print("Numéro de match invalide.")
-            return
+            # Vérifier si un joueur est exempté
+            match = current_round.matches[match_index]
+            if None in match.players:  # Si un joueur est exempté
+                print("Ce joueur est exempté. Aucun résultat n'est requis.")
+                return
 
-        # Vérifier si un joueur est exempté
-        match = current_round.matches[match_index]
-        if None in match.players:  # Si un joueur est exempté
-            print("Ce joueur est exempté. Aucun résultat n'est requis.")
-            return
+            # Enregistrer les scores
+            match.set_result(score1, score2)
 
-        # Mettre à jour les scores
-        match.set_result(score1, score2)
+            # Sauvegarder les changements
+            self.tournament_controller.save_all_tournaments()
+            print(f"Scores enregistrés pour le match {match_index + 1}.")
 
-        # Marquer le match comme terminé
-        match.winner = True
-
-        # Sauvegarder les données
-        self.tournament_controller.save_all_tournaments()
-        print(f"Scores enregistrés pour le match {match_index + 1}.")
+        except ValueError as ve:
+            print(f"Erreur de validation des scores : {ve}")
+        except IndexError as ie:
+            print(f"Erreur : Index du match invalide. {ie}")
+        except Exception as e:
+            print(f"Erreur inattendue lors de l'enregistrement des scores : {e}")
 
     def display_reports(self):
         """Affiche les rapports disponibles."""
@@ -270,3 +274,10 @@ class MenuController:
         self.tournament_controller.save_all_tournaments()
         print("Le tournoi est terminé et les résultats ont été sauvegardés.")
         print("=================================")
+    
+    def validate_choice(choice, valid_choices):
+        """Valide un choix utilisateur parmi une liste de choix valides."""
+        if choice not in valid_choices:
+            print(f"Choix invalide. Veuillez entrer un nombre parmi {', '.join(valid_choices)}.")
+            return False
+        return True

@@ -8,15 +8,7 @@
         "matches_played": [],
         "rank": null
     },
-    {
-        "last_name": "moussa",
-        "first_name": "Ba",
-        "birth_date": "1987-04-12",
-        "national_id": "GH#$%?&",
-        "score": 0,
-        "matches_played": [],
-        "rank": null
-    },
+
     {
         "last_name": "barry",
         "first_name": "mamadou",
@@ -81,19 +73,28 @@
         "rank": null
     },
     {
-        "last_name": "MARTIN",
-        "first_name": "DUBOIS",
-        "birth_date": "1976-10-10",
-        "national_id": "TN889900",
+        "last_name": "BLANC",
+        "first_name": "LAURENT",
+        "birth_date": "1955-12-03",
+        "national_id": "BG45678",
         "score": 0,
         "matches_played": [],
         "rank": null
     },
     {
-        "last_name": "BLANC",
-        "first_name": "LAURENT",
-        "birth_date": "1955-12-03",
-        "national_id": "BG45678",
+        "last_name": "blanc",
+        "first_name": "dupont",
+        "birth_date": "2000-10-10",
+        "national_id": "AB12345",
+        "score": 0,
+        "matches_played": [],
+        "rank": null
+    },
+    {
+        "last_name": "martin",
+        "first_name": "bleu",
+        "birth_date": "1987-12-12",
+        "national_id": "GN23456",
         "score": 0,
         "matches_played": [],
         "rank": null

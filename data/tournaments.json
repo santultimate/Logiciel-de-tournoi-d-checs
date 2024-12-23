@@ -9,19 +9,10 @@
         "current_round": 3,
         "players": [
             {
-                "last_name": "ballo",
-                "first_name": "adama",
-                "birth_date": "2000-03-03",
-                "national_id": "LM112233",
-                "score": 0,
-                "matches_played": [],
-                "rank": null
-            },
-            {
                 "last_name": "diallo",
                 "first_name": "amadou",
                 "birth_date": "1999-01-01",
-                "national_id": "ML668877",
+                "national_id": "ML66887",
                 "score": 0,
                 "matches_played": [],
                 "rank": null
@@ -37,8 +28,8 @@
                                 "last_name": "ballo",
                                 "first_name": "adama",
                                 "birth_date": "2000-03-03",
-                                "national_id": "LM112233",
-                                "score": 0,
+                                "national_id": "LM12233",
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -49,8 +40,8 @@
                                 "last_name": "diallo",
                                 "first_name": "amadou",
                                 "birth_date": "1999-01-01",
-                                "national_id": "ML668877",
-                                "score": 0,
+                                "national_id": "ML66887",
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -71,8 +62,8 @@
                                 "last_name": "ballo",
                                 "first_name": "adama",
                                 "birth_date": "2000-03-03",
-                                "national_id": "LM112233",
-                                "score": 0,
+                                "national_id": "LM11223",
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -83,8 +74,8 @@
                                 "last_name": "diallo",
                                 "first_name": "amadou",
                                 "birth_date": "1999-01-01",
-                                "national_id": "ML668877",
-                                "score": 0,
+                                "national_id": "ML66887",
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -111,7 +102,7 @@
                 "last_name": "dupont",
                 "first_name": "blanc",
                 "birth_date": "2000-10-10",
-                "national_id": "AB332211",
+                "national_id": "AB33221",
                 "score": 0,
                 "matches_played": [],
                 "rank": null
@@ -120,7 +111,7 @@
                 "last_name": "diallo",
                 "first_name": "adama",
                 "birth_date": "1988-03-03",
-                "national_id": "ML554433",
+                "national_id": "ML54433",
                 "score": 0,
                 "matches_played": [],
                 "rank": null
@@ -136,8 +127,8 @@
                                 "last_name": "dupont",
                                 "first_name": "blanc",
                                 "birth_date": "2000-10-10",
-                                "national_id": "AB332211",
-                                "score": 0,
+                                "national_id": "AB32211",
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -148,8 +139,8 @@
                                 "last_name": "diallo",
                                 "first_name": "adama",
                                 "birth_date": "1988-03-03",
-                                "national_id": "ML554433",
-                                "score": 0,
+                                "national_id": "ML55443",
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -229,7 +220,7 @@
                                 "first_name": "Jean",
                                 "birth_date": "1980-01-01",
                                 "national_id": "FR12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -241,7 +232,7 @@
                                 "first_name": "Paul",
                                 "birth_date": "1985-06-15",
                                 "national_id": "FR67908",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -263,7 +254,7 @@
                                 "first_name": "Jean",
                                 "birth_date": "1980-01-01",
                                 "national_id": "FR12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -275,7 +266,7 @@
                                 "first_name": "Paul",
                                 "birth_date": "1985-06-15",
                                 "national_id": "FR67908",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -297,7 +288,7 @@
                                 "first_name": "Jean",
                                 "birth_date": "1980-01-01",
                                 "national_id": "FR12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -309,7 +300,7 @@
                                 "first_name": "Paul",
                                 "birth_date": "1985-06-15",
                                 "national_id": "FR67908",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -331,7 +322,7 @@
                                 "first_name": "Jean",
                                 "birth_date": "1980-01-01",
                                 "national_id": "FR12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -343,7 +334,7 @@
                                 "first_name": "Paul",
                                 "birth_date": "1985-06-15",
                                 "national_id": "FR67908",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -357,7 +348,7 @@
                                 "first_name": "blanc",
                                 "birth_date": "1987-03-03",
                                 "national_id": "FR12345",
-                                "score": 0,
+                                "score": 2,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -414,7 +405,7 @@
                                 "first_name": "martin",
                                 "birth_date": "1987-07-07",
                                 "national_id": "FR12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -426,7 +417,7 @@
                                 "first_name": "Martin",
                                 "birth_date": "2000-10-10",
                                 "national_id": "ML34567",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -493,7 +484,7 @@
                                 "first_name": "Jeqn",
                                 "birth_date": "1985-03-15",
                                 "national_id": "FR12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": 1
                             },
@@ -505,7 +496,7 @@
                                 "first_name": "Paul",
                                 "birth_date": "1990-07-20",
                                 "national_id": "FR67890",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": 2
                             },
@@ -558,7 +549,7 @@
                                 "first_name": "Martin",
                                 "birth_date": "1987-07-07",
                                 "national_id": "FR12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -570,7 +561,7 @@
                                 "first_name": "Blanc",
                                 "birth_date": "2000-12-12",
                                 "national_id": "ML45678",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -606,7 +597,7 @@
                 "last_name": "marie",
                 "first_name": "dubois",
                 "birth_date": "2000-12-01",
-                "national_id": "FR$%?&*",
+                "national_id": "FR45678",
                 "score": 0,
                 "matches_played": [],
                 "rank": null
@@ -623,7 +614,7 @@
                                 "first_name": "jean",
                                 "birth_date": "1987-12-12",
                                 "national_id": "AB12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -634,8 +625,8 @@
                                 "last_name": "marie",
                                 "first_name": "dubois",
                                 "birth_date": "2000-12-01",
-                                "national_id": "FR$%?&*",
-                                "score": 0,
+                                "national_id": "FR12345",
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -688,7 +679,7 @@
                                 "first_name": "Paul",
                                 "birth_date": "2000-12-12",
                                 "national_id": "FR12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -700,7 +691,7 @@
                                 "first_name": "Jean",
                                 "birth_date": "1987-09-09",
                                 "national_id": "FR56789",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -753,7 +744,7 @@
                                 "first_name": "bam",
                                 "birth_date": "2000-12-12",
                                 "national_id": "AB12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -765,7 +756,7 @@
                                 "first_name": "dabi",
                                 "birth_date": "2010-10-10",
                                 "national_id": "TN12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -819,7 +810,7 @@
                 "last_name": "moussa",
                 "first_name": "Ba",
                 "birth_date": "1987-04-12",
-                "national_id": "GH#$%?&",
+                "national_id": "GH23456",
                 "score": 0,
                 "matches_played": [],
                 "rank": 4
@@ -836,7 +827,7 @@
                                 "first_name": "aminata",
                                 "birth_date": "2000-02-02",
                                 "national_id": "ML12345",
-                                "score": 0,
+                                "score": 2,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -847,8 +838,8 @@
                                 "last_name": "moussa",
                                 "first_name": "Ba",
                                 "birth_date": "1987-04-12",
-                                "national_id": "GH#$%?&",
-                                "score": 0,
+                                "national_id": "GH76543",
+                                "score": 1,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -862,7 +853,7 @@
                                 "first_name": "mamadou",
                                 "birth_date": "1997-01-20",
                                 "national_id": "ML23456",
-                                "score": 0,
+                                "score": 1,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -874,7 +865,7 @@
                                 "first_name": "Dijon",
                                 "birth_date": "2000-10-03",
                                 "national_id": "GH54356",
-                                "score": 0,
+                                "score": 2,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -896,7 +887,7 @@
                                 "first_name": "aminata",
                                 "birth_date": "2000-02-02",
                                 "national_id": "ML12345",
-                                "score": 0,
+                                "score": 1,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -907,8 +898,8 @@
                                 "last_name": "moussa",
                                 "first_name": "Ba",
                                 "birth_date": "1987-04-12",
-                                "national_id": "GH#$%?&",
-                                "score": 0,
+                                "national_id": "GH12345",
+                                "score": 2,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -922,7 +913,7 @@
                                 "first_name": "mamadou",
                                 "birth_date": "1997-01-20",
                                 "national_id": "ML23456",
-                                "score": 0,
+                                "score": 2,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -934,7 +925,7 @@
                                 "first_name": "Dijon",
                                 "birth_date": "2000-10-03",
                                 "national_id": "GH54356",
-                                "score": 0,
+                                "score": 1,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -956,7 +947,7 @@
                                 "first_name": "Dijon",
                                 "birth_date": "2000-10-03",
                                 "national_id": "GH54356",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": 1
                             },
@@ -968,7 +959,7 @@
                                 "first_name": "mamadou",
                                 "birth_date": "1997-01-20",
                                 "national_id": "ML23456",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": 2
                             },
@@ -982,7 +973,7 @@
                                 "first_name": "aminata",
                                 "birth_date": "2000-02-02",
                                 "national_id": "ML12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": 3
                             },
@@ -993,8 +984,8 @@
                                 "last_name": "moussa",
                                 "first_name": "Ba",
                                 "birth_date": "1987-04-12",
-                                "national_id": "GH#$%?&",
-                                "score": 0,
+                                "national_id": "GH87654",
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": 4
                             },
@@ -1016,7 +1007,7 @@
                                 "first_name": "Dijon",
                                 "birth_date": "2000-10-03",
                                 "national_id": "GH54356",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": 1
                             },
@@ -1028,7 +1019,7 @@
                                 "first_name": "mamadou",
                                 "birth_date": "1997-01-20",
                                 "national_id": "ML23456",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": 2
                             },
@@ -1042,7 +1033,7 @@
                                 "first_name": "aminata",
                                 "birth_date": "2000-02-02",
                                 "national_id": "ML12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": 3
                             },
@@ -1053,8 +1044,8 @@
                                 "last_name": "moussa",
                                 "first_name": "Ba",
                                 "birth_date": "1987-04-12",
-                                "national_id": "GH#$%?&",
-                                "score": 0,
+                                "national_id": "GH65432",
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": 4
                             },
@@ -1126,7 +1117,7 @@
                 "last_name": "MARTIN",
                 "first_name": "DUBOIS",
                 "birth_date": "1976-10-10",
-                "national_id": "TN889900",
+                "national_id": "TN88990",
                 "score": 0,
                 "matches_played": [],
                 "rank": 6
@@ -1152,7 +1143,7 @@
                                 "first_name": "Adama",
                                 "birth_date": "2000-10-10",
                                 "national_id": "ML23456",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1164,7 +1155,7 @@
                                 "first_name": "AMINATA",
                                 "birth_date": "1999-12-12",
                                 "national_id": "GN12345",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1178,7 +1169,7 @@
                                 "first_name": "COURA",
                                 "birth_date": "1984-03-05",
                                 "national_id": "SN76543",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1190,7 +1181,7 @@
                                 "first_name": "SALT",
                                 "birth_date": "2010-09-09",
                                 "national_id": "MR65432",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1204,7 +1195,7 @@
                                 "first_name": "DUPONT",
                                 "birth_date": "1987-04-09",
                                 "national_id": "FR45678",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1215,8 +1206,8 @@
                                 "last_name": "MARTIN",
                                 "first_name": "DUBOIS",
                                 "birth_date": "1976-10-10",
-                                "national_id": "TN889900",
-                                "score": 0,
+                                "national_id": "TN88900",
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1230,7 +1221,7 @@
                                 "first_name": "LAURENT",
                                 "birth_date": "1955-12-03",
                                 "national_id": "BG45678",
-                                "score": 0,
+                                "score": 2,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1256,7 +1247,7 @@
                                 "first_name": "Adama",
                                 "birth_date": "2000-10-10",
                                 "national_id": "ML23456",
-                                "score": 0,
+                                "score": 2,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1268,7 +1259,7 @@
                                 "first_name": "AMINATA",
                                 "birth_date": "1999-12-12",
                                 "national_id": "GN12345",
-                                "score": 0,
+                                "score": 1,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1282,7 +1273,7 @@
                                 "first_name": "COURA",
                                 "birth_date": "1984-03-05",
                                 "national_id": "SN76543",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1294,7 +1285,7 @@
                                 "first_name": "SALT",
                                 "birth_date": "2010-09-09",
                                 "national_id": "MR65432",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1308,7 +1299,7 @@
                                 "first_name": "DUPONT",
                                 "birth_date": "1987-04-09",
                                 "national_id": "FR45678",
-                                "score": 0,
+                                "score": 1,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1319,8 +1310,8 @@
                                 "last_name": "MARTIN",
                                 "first_name": "DUBOIS",
                                 "birth_date": "1976-10-10",
-                                "national_id": "TN889900",
-                                "score": 0,
+                                "national_id": "TN89900",
+                                "score": 2,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1334,7 +1325,7 @@
                                 "first_name": "LAURENT",
                                 "birth_date": "1955-12-03",
                                 "national_id": "BG45678",
-                                "score": 0,
+                                "score": 2,
                                 "matches_played": [],
                                 "rank": null
                             },
@@ -1360,7 +1351,7 @@
                                 "first_name": "Adama",
                                 "birth_date": "2000-10-10",
                                 "national_id": "ML23456",
-                                "score": 0,
+                                "score": 2,
                                 "matches_played": [],
                                 "rank": 3
                             },
@@ -1372,7 +1363,7 @@
                                 "first_name": "AMINATA",
                                 "birth_date": "1999-12-12",
                                 "national_id": "GN12345",
-                                "score": 0,
+                                "score": 1,
                                 "matches_played": [],
                                 "rank": 2
                             },
@@ -1386,7 +1377,7 @@
                                 "first_name": "COURA",
                                 "birth_date": "1984-03-05",
                                 "national_id": "SN76543",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": 7
                             },
@@ -1398,7 +1389,7 @@
                                 "first_name": "SALT",
                                 "birth_date": "2010-09-09",
                                 "national_id": "MR65432",
-                                "score": 0,
+                                "score": 0.5,
                                 "matches_played": [],
                                 "rank": 5
                             },
@@ -1412,7 +1403,7 @@
                                 "first_name": "DUPONT",
                                 "birth_date": "1987-04-09",
                                 "national_id": "FR45678",
-                                "score": 0,
+                                "score": 2,
                                 "matches_played": [],
                                 "rank": 4
                             },
@@ -1423,8 +1414,8 @@
                                 "last_name": "MARTIN",
                                 "first_name": "DUBOIS",
                                 "birth_date": "1976-10-10",
-                                "national_id": "TN889900",
-                                "score": 0,
+                                "national_id": "TN88900",
+                                "score": 1,
                                 "matches_played": [],
                                 "rank": 6
                             },
@@ -1438,7 +1429,7 @@
                                 "first_name": "LAURENT",
                                 "birth_date": "1955-12-03",
                                 "national_id": "BG45678",
-                                "score": 0,
+                                "score": 2,
                                 "matches_played": [],
                                 "rank": 1
                             },
@@ -1452,6 +1443,71 @@
                 ],
                 "start_time": "2024-12-22T09:48:25.874762",
                 "end_time": "2024-12-22T09:49:28.528261",
+                "version": 1
+            }
+        ]
+    },
+    {
+        "name": "33",
+        "location": "Madrid",
+        "start_date": "2024-12-12",
+        "end_date": "2024-12-31",
+        "description": "test33",
+        "num_rounds": 4,
+        "current_round": 1,
+        "players": [
+            {
+                "last_name": "blanc",
+                "first_name": "dupont",
+                "birth_date": "2000-10-10",
+                "national_id": "AB12345",
+                "score": 0,
+                "matches_played": [],
+                "rank": 1
+            },
+            {
+                "last_name": "martin",
+                "first_name": "bleu",
+                "birth_date": "1987-12-12",
+                "national_id": "GN23456",
+                "score": 0,
+                "matches_played": [],
+                "rank": 2
+            }
+        ],
+        "rounds": [
+            {
+                "name": "Round 0",
+                "matches": [
+                    [
+                        [
+                            {
+                                "last_name": "blanc",
+                                "first_name": "dupont",
+                                "birth_date": "2000-10-10",
+                                "national_id": "AB12345",
+                                "score": 1,
+                                "matches_played": [],
+                                "rank": 1
+                            },
+                            2.0
+                        ],
+                        [
+                            {
+                                "last_name": "martin",
+                                "first_name": "bleu",
+                                "birth_date": "1987-12-12",
+                                "national_id": "GN23456",
+                                "score": 2,
+                                "matches_played": [],
+                                "rank": 2
+                            },
+                            3.0
+                        ]
+                    ]
+                ],
+                "start_time": "2024-12-22T10:37:19.445226",
+                "end_time": "2024-12-22T10:37:52.277438",
                 "version": 1
             }
         ]

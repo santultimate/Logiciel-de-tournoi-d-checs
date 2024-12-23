@@ -16,20 +16,37 @@ class Match:
         :param score1: Score du joueur 1
         :param score2: Score du joueur 2
         """
+        if score1 < 0 or score2 < 0:
+            raise ValueError("La valeur de score doit être positive")
+
         # Récupérer les joueurs
         player1, player2 = list(self.players.keys())
 
-        # Mettre à jour les scores dans le dictionnaire
+        if player2 is None:  # Cas où un joueur est exempté
+            self.winner = player1
+            player1.add_points(2)  # Victoire automatique
+            return
+
+        # Mettre à jour les scores
         self.players[player1] = score1
         self.players[player2] = score2
 
-        # Déterminer le gagnant
+        # Attribuer les points et déterminer le gagnant
         if score1 > score2:
             self.winner = player1
+            player1.add_points(2)
+            player2.add_points(1)
         elif score2 > score1:
             self.winner = player2
-        else:
-            self.winner = None  # Match nul
+            player1.add_points(1)
+            player2.add_points(2)
+        else:  # Match nul
+            self.winner = None
+            player1.add_points(0.5)
+            player2.add_points(0.5)
+
+    # Sérialisation et désérialisation (inchangées)
+
 
     def to_tuple(self):
         """
