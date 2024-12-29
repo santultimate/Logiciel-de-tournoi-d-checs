@@ -8,7 +8,6 @@
         "matches_played": [],
         "rank": null
     },
-
     {
         "last_name": "barry",
         "first_name": "mamadou",
@@ -95,6 +94,24 @@
         "first_name": "bleu",
         "birth_date": "1987-12-12",
         "national_id": "GN23456",
+        "score": 0,
+        "matches_played": [],
+        "rank": null
+    },
+    {
+        "last_name": "jean",
+        "first_name": "dupoi",
+        "birth_date": "2000-12-23",
+        "national_id": "ES12345",
+        "score": 0,
+        "matches_played": [],
+        "rank": null
+    },
+    {
+        "last_name": "mari",
+        "first_name": "bleu",
+        "birth_date": "1999-10-10",
+        "national_id": "RE12345",
         "score": 0,
         "matches_played": [],
         "rank": null

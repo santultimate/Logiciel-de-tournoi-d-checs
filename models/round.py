@@ -71,3 +71,12 @@ class Round:
             return True
         print(f"Certains matchs de {self.name} ne sont pas encore terminés.")
         return False
+    
+    def check_and_finish_round(self):
+        """Vérifie si tous les matchs sont terminés et marque la fin du tour."""
+        if all(match.is_finished for match in self.matches):
+            self.end_round()  # Marquer la fin du round
+            print(f"{self.name} terminé à {self.end_time}.")
+            return True
+        print(f"Certains matchs de {self.name} ne sont pas encore terminés.")
+        return False

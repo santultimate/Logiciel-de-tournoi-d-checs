@@ -72,7 +72,7 @@ class Tournament:
     def calculate_rankings(self):
         """Calcule les classements des joueurs en fonction de leurs scores."""
         # Trier les joueurs par score décroissant
-        self.players.sort(key=lambda player: (-player.score, player.last_name, player.first_name))
+        self.players.sort(key=lambda player: player.score, reverse=True)
 
         # Attribuer les rangs
         for rank, player in enumerate(self.players, start=1):
@@ -88,18 +88,18 @@ class Tournament:
             print("Aucun joueur n'est enregistré dans le tournoi.")
             return None
 
-        # Trier les joueurs par score décroissant
+        # Trier les joueurs par score
         self.players.sort(key=lambda player: player.score, reverse=True)
 
-        # Créer un nouveau tour
-        round_name = f"Round {self.current_round}"
+        # Déterminer le nom du tour basé sur le numéro du tour
+        round_name = f"Round {self.current_round}"  # Numérotation commence à 1
         new_round = Round(name=round_name)
 
         # Générer les matchs pour ce tour
         try:
-            new_round.generate_matches(self.players)  # Génération des matchs
-            self.rounds.append(new_round)  # Ajouter le tour à la liste des tours
-            self.current_round += 1  # Passer au tour suivant
+            new_round.generate_matches(self.players)
+            self.rounds.append(new_round)  # Ajouter à la liste des tours
+            self.current_round += 1
             print(f"{round_name} créé avec succès.")
             return new_round
         except Exception as e:

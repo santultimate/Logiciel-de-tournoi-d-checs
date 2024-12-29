@@ -164,20 +164,28 @@ class MenuController:
                 print("Choix invalide. Veuillez entrer un nombre entre 1 et 6.")
 
     def end_current_round(self):
-        """Termine le tour actuel si tous les matchs sont terminés."""
+        """Termine le tour actuel si tous les matchs sont terminés ou si c'est le dernier tour."""
         if not self.current_tournament or not self.current_tournament.rounds:
             print("Aucun tournoi ou aucun tour actif.")
             return
 
         current_round = self.current_tournament.rounds[-1]  # Dernier tour
 
-        # Vérifie si tous les matchs sont terminés
-        if all(match.winner is not None for match in current_round.matches):  # Tous les matchs doivent avoir un gagnant
+        # Vérifie si c'est le dernier tour du tournoi
+        if self.current_tournament.current_round > self.current_tournament.num_rounds:
             current_round.end_time = datetime.now().isoformat()
-            print(f"{current_round.name} terminé à {current_round.end_time}.")
+            print(f"{current_round.name} (dernier tour) terminé avec succès.")
+            self.tournament_controller.save_all_tournaments()
+            return
+
+        # Vérifie si tous les matchs sont terminés pour les autres tours
+        if all(match.winner is not None for match in current_round.matches):
+            current_round.end_time = datetime.now().isoformat()
+            print(f"{current_round.name} terminé avec succès.")
             self.tournament_controller.save_all_tournaments()
         else:
             print(f"Impossible de terminer {current_round.name} : certains matchs ne sont pas terminés.")
+
    
     def display_all_tournaments(self):
         """Affiche tous les tournois enregistrés."""
