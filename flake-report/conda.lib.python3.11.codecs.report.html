@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/codecs.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.codecs.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/codecs.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  21
+               </span>
+               <strong>F405:</strong> 'register' may be undefined, or defined from star imports: _codecs
+               
+                  (and 5 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'decode' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l20">
+                  <tt><i>20</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;register&quot;</span><span class="p">,</span> <span class="s2">&quot;lookup&quot;</span><span class="p">,</span> <span class="s2">&quot;open&quot;</span><span class="p">,</span> <span class="s2">&quot;EncodedFile&quot;</span><span class="p">,</span> <span class="s2">&quot;BOM&quot;</span><span class="p">,</span> <span class="s2">&quot;BOM_BE&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'encode' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l20">
+                  <tt><i>20</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;register&quot;</span><span class="p">,</span> <span class="s2">&quot;lookup&quot;</span><span class="p">,</span> <span class="s2">&quot;open&quot;</span><span class="p">,</span> <span class="s2">&quot;EncodedFile&quot;</span><span class="p">,</span> <span class="s2">&quot;BOM&quot;</span><span class="p">,</span> <span class="s2">&quot;BOM_BE&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l20">
+                  <tt><i>20</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;register&quot;</span><span class="p">,</span> <span class="s2">&quot;lookup&quot;</span><span class="p">,</span> <span class="s2">&quot;open&quot;</span><span class="p">,</span> <span class="s2">&quot;EncodedFile&quot;</span><span class="p">,</span> <span class="s2">&quot;BOM&quot;</span><span class="p">,</span> <span class="s2">&quot;BOM_BE&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup_error' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l20">
+                  <tt><i>20</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;register&quot;</span><span class="p">,</span> <span class="s2">&quot;lookup&quot;</span><span class="p">,</span> <span class="s2">&quot;open&quot;</span><span class="p">,</span> <span class="s2">&quot;EncodedFile&quot;</span><span class="p">,</span> <span class="s2">&quot;BOM&quot;</span><span class="p">,</span> <span class="s2">&quot;BOM_BE&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'register' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l20">
+                  <tt><i>20</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;register&quot;</span><span class="p">,</span> <span class="s2">&quot;lookup&quot;</span><span class="p">,</span> <span class="s2">&quot;open&quot;</span><span class="p">,</span> <span class="s2">&quot;EncodedFile&quot;</span><span class="p">,</span> <span class="s2">&quot;BOM&quot;</span><span class="p">,</span> <span class="s2">&quot;BOM_BE&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'register_error' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l20">
+                  <tt><i>20</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;register&quot;</span><span class="p">,</span> <span class="s2">&quot;lookup&quot;</span><span class="p">,</span> <span class="s2">&quot;open&quot;</span><span class="p">,</span> <span class="s2">&quot;EncodedFile&quot;</span><span class="p">,</span> <span class="s2">&quot;BOM&quot;</span><span class="p">,</span> <span class="s2">&quot;BOM_BE&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l923">
+                  <tt><i>923</i>         <span class="n">info</span> <span class="o">=</span> <span class="n">lookup</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l959">
+                  <tt><i>959</i>     <span class="n">data_info</span> <span class="o">=</span> <span class="n">lookup</span><span class="p">(</span><span class="n">data_encoding</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l960">
+                  <tt><i>960</i>     <span class="n">file_info</span> <span class="o">=</span> <span class="n">lookup</span><span class="p">(</span><span class="n">file_encoding</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l978">
+                  <tt><i>978</i>     <span class="k">return</span> <span class="n">lookup</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l988">
+                  <tt><i>988</i>     <span class="k">return</span> <span class="n">lookup</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l999">
+                  <tt><i>999</i>     <span class="n">encoder</span> <span class="o">=</span> <span class="n">lookup</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span><span class="o">.</span><span class="n">incrementalencoder</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1013">
+                  <tt><i>1013</i>     <span class="n">decoder</span> <span class="o">=</span> <span class="n">lookup</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span><span class="o">.</span><span class="n">incrementaldecoder</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1026">
+                  <tt><i>1026</i>     <span class="k">return</span> <span class="n">lookup</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span><span class="o">.</span><span class="n">streamreader</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1036">
+                  <tt><i>1036</i>     <span class="k">return</span> <span class="n">lookup</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span><span class="o">.</span><span class="n">streamwriter</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup_error' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1110">
+                  <tt><i>1110</i>     <span class="n">strict_errors</span> <span class="o">=</span> <span class="n">lookup_error</span><span class="p">(</span><span class="s2">&quot;strict&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup_error' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1111">
+                  <tt><i>1111</i>     <span class="n">ignore_errors</span> <span class="o">=</span> <span class="n">lookup_error</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup_error' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1112">
+                  <tt><i>1112</i>     <span class="n">replace_errors</span> <span class="o">=</span> <span class="n">lookup_error</span><span class="p">(</span><span class="s2">&quot;replace&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup_error' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1113">
+                  <tt><i>1113</i>     <span class="n">xmlcharrefreplace_errors</span> <span class="o">=</span> <span class="n">lookup_error</span><span class="p">(</span><span class="s2">&quot;xmlcharrefreplace&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup_error' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1114">
+                  <tt><i>1114</i>     <span class="n">backslashreplace_errors</span> <span class="o">=</span> <span class="n">lookup_error</span><span class="p">(</span><span class="s2">&quot;backslashreplace&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'lookup_error' may be undefined, or defined from star imports: _codecs:</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1115">
+                  <tt><i>1115</i>     <span class="n">namereplace_errors</span> <span class="o">=</span> <span class="n">lookup_error</span><span class="p">(</span><span class="s2">&quot;namereplace&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F401:</strong> 'encodings' imported but unused
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1129">
+                  <tt><i>1129</i>     <span class="kn">import</span> <span class="nn">encodings</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from _codecs import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l16">
+                  <tt><i>16</i>     <span class="kn">from</span> <span class="nn">_codecs</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  21
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l114">
+                  <tt><i>114</i> <span class="k">class</span> <span class="nc">Codec</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l180">
+                  <tt><i>180</i> <span class="k">class</span> <span class="nc">IncrementalEncoder</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l220">
+                  <tt><i>220</i> <span class="k">class</span> <span class="nc">BufferedIncrementalEncoder</span><span class="p">(</span><span class="n">IncrementalEncoder</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l254">
+                  <tt><i>254</i> <span class="k">class</span> <span class="nc">IncrementalDecoder</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l303">
+                  <tt><i>303</i> <span class="k">class</span> <span class="nc">BufferedIncrementalDecoder</span><span class="p">(</span><span class="n">IncrementalDecoder</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l346">
+                  <tt><i>346</i> <span class="k">class</span> <span class="nc">StreamWriter</span><span class="p">(</span><span class="n">Codec</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l422">
+                  <tt><i>422</i> <span class="k">class</span> <span class="nc">StreamReader</span><span class="p">(</span><span class="n">Codec</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l674">
+                  <tt><i>674</i> <span class="k">class</span> <span class="nc">StreamReaderWriter</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l764">
+                  <tt><i>764</i> <span class="k">class</span> <span class="nc">StreamRecoder</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l883">
+                  <tt><i>883</i> <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;strict&#39;</span><span class="p">,</span> <span class="n">buffering</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l932">
+                  <tt><i>932</i> <span class="k">def</span> <span class="nf">EncodedFile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">data_encoding</span><span class="p">,</span> <span class="n">file_encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;strict&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l970">
+                  <tt><i>970</i> <span class="k">def</span> <span class="nf">getencoder</span><span class="p">(</span><span class="n">encoding</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l980">
+                  <tt><i>980</i> <span class="k">def</span> <span class="nf">getdecoder</span><span class="p">(</span><span class="n">encoding</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l990">
+                  <tt><i>990</i> <span class="k">def</span> <span class="nf">getincrementalencoder</span><span class="p">(</span><span class="n">encoding</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1004">
+                  <tt><i>1004</i> <span class="k">def</span> <span class="nf">getincrementaldecoder</span><span class="p">(</span><span class="n">encoding</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1018">
+                  <tt><i>1018</i> <span class="k">def</span> <span class="nf">getreader</span><span class="p">(</span><span class="n">encoding</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1028">
+                  <tt><i>1028</i> <span class="k">def</span> <span class="nf">getwriter</span><span class="p">(</span><span class="n">encoding</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1038">
+                  <tt><i>1038</i> <span class="k">def</span> <span class="nf">iterencode</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;strict&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1056">
+                  <tt><i>1056</i> <span class="k">def</span> <span class="nf">iterdecode</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;strict&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1076">
+                  <tt><i>1076</i> <span class="k">def</span> <span class="nf">make_identity_dict</span><span class="p">(</span><span class="n">rng</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1086">
+                  <tt><i>1086</i> <span class="k">def</span> <span class="nf">make_encoding_map</span><span class="p">(</span><span class="n">decoding_map</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E266">
+               <span class="count sev-2">
+                  8
+               </span>
+               <strong>E266:</strong> too many leading '#' for block comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l13">
+                  <tt><i>13</i> <span class="c1">### Registry and builtin stateless codec functions</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l35">
+                  <tt><i>35</i> <span class="c1">### Constants</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l81">
+                  <tt><i>81</i> <span class="c1">### Codec base classes (defining the API)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l881">
+                  <tt><i>881</i> <span class="c1">### Shortcuts</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l968">
+                  <tt><i>968</i> <span class="c1">### Helpers for codec lookup</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1074">
+                  <tt><i>1074</i> <span class="c1">### Helpers for charmap-based codecs</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1107">
+                  <tt><i>1107</i> <span class="c1">### error handlers</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1131">
+                  <tt><i>1131</i> <span class="c1">### Tests</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l95">
+                  <tt><i>95</i>         <span class="n">incrementalencoder</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">incrementaldecoder</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l96">
+                  <tt><i>96</i>         <span class="o">*</span><span class="p">,</span> <span class="n">_is_text_encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E231:</strong> missing whitespace after ':'
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1084">
+                  <tt><i>1084</i>     <span class="k">return</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">rng</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1100">
+                  <tt><i>1100</i>     <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">decoding_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l92">
+                  <tt><i>92</i>     <span class="n">_is_text_encoding</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># Assume codecs are text encodings by default</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l591">
+                  <tt><i>591</i>                 <span class="k">if</span> <span class="n">line0withend</span> <span class="o">!=</span> <span class="n">line0withoutend</span><span class="p">:</span> <span class="c1"># We really have a line end</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E125">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E125:</strong> continuation line with same indent as next logical line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l96">
+                  <tt><i>96</i>         <span class="o">*</span><span class="p">,</span> <span class="n">_is_text_encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l513">
+                  <tt><i>513</i>                     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span><span class="o">&lt;=</span><span class="mi">1</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1109">
+                  <tt><i>1109</i> <span class="k">try</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E713">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E713:</strong> test for membership should be 'not in'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l1101">
+                  <tt><i>1101</i>         <span class="k">if</span> <span class="ow">not</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">m</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.codecs.source.html#l928">
+                  <tt><i>928</i>     <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

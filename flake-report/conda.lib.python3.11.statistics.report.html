@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/statistics.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.statistics.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/statistics.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F541">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F541:</strong> f-string is missing placeholders
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l676">
+                  <tt><i>676</i>         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Value cannot be converted to a float&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F811">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F811:</strong> redefinition of unused '_normal_dist_inv_cdf' from line 1089
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1165">
+                  <tt><i>1165</i>     <span class="kn">from</span> <span class="nn">_statistics</span> <span class="kn">import</span> <span class="n">_normal_dist_inv_cdf</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  36
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1101">
+                  <tt><i>1101</i>                      <span class="mf">6.72657_70927_00870_0853e+4</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1102">
+                  <tt><i>1102</i>                      <span class="mf">4.59219_53931_54987_1457e+4</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1103">
+                  <tt><i>1103</i>                      <span class="mf">1.37316_93765_50946_1125e+4</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1104">
+                  <tt><i>1104</i>                      <span class="mf">1.97159_09503_06551_4427e+3</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1105">
+                  <tt><i>1105</i>                      <span class="mf">1.33141_66789_17843_7745e+2</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1106">
+                  <tt><i>1106</i>                      <span class="mf">3.38713_28727_96366_6080e+0</span><span class="p">)</span> <span class="o">*</span> <span class="n">q</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1109">
+                  <tt><i>1109</i>                      <span class="mf">3.93078_95800_09271_0610e+4</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1110">
+                  <tt><i>1110</i>                      <span class="mf">2.12137_94301_58659_5867e+4</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1111">
+                  <tt><i>1111</i>                      <span class="mf">5.39419_60214_24751_1077e+3</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1112">
+                  <tt><i>1112</i>                      <span class="mf">6.87187_00749_20579_0830e+2</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1113">
+                  <tt><i>1113</i>                      <span class="mf">4.23133_30701_60091_1252e+1</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1114">
+                  <tt><i>1114</i>                      <span class="mf">1.0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1124">
+                  <tt><i>1124</i>                      <span class="mf">2.41780_72517_74506_11770e-1</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1125">
+                  <tt><i>1125</i>                      <span class="mf">1.27045_82524_52368_38258e+0</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1126">
+                  <tt><i>1126</i>                      <span class="mf">3.64784_83247_63204_60504e+0</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1127">
+                  <tt><i>1127</i>                      <span class="mf">5.76949_72214_60691_40550e+0</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1128">
+                  <tt><i>1128</i>                      <span class="mf">4.63033_78461_56545_29590e+0</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1129">
+                  <tt><i>1129</i>                      <span class="mf">1.42343_71107_49683_57734e+0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1132">
+                  <tt><i>1132</i>                      <span class="mf">1.51986_66563_61645_71966e-2</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1133">
+                  <tt><i>1133</i>                      <span class="mf">1.48103_97642_74800_74590e-1</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1134">
+                  <tt><i>1134</i>                      <span class="mf">6.89767_33498_51000_04550e-1</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1135">
+                  <tt><i>1135</i>                      <span class="mf">1.67638_48301_83803_84940e+0</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1136">
+                  <tt><i>1136</i>                      <span class="mf">2.05319_16266_37758_82187e+0</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1137">
+                  <tt><i>1137</i>                      <span class="mf">1.0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1143">
+                  <tt><i>1143</i>                      <span class="mf">1.24266_09473_88078_43860e-3</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1144">
+                  <tt><i>1144</i>                      <span class="mf">2.65321_89526_57612_30930e-2</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1145">
+                  <tt><i>1145</i>                      <span class="mf">2.96560_57182_85048_91230e-1</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1146">
+                  <tt><i>1146</i>                      <span class="mf">1.78482_65399_17291_33580e+0</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1147">
+                  <tt><i>1147</i>                      <span class="mf">5.46378_49111_64114_36990e+0</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1148">
+                  <tt><i>1148</i>                      <span class="mf">6.65790_46435_01103_77720e+0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1151">
+                  <tt><i>1151</i>                      <span class="mf">1.84631_83175_10054_68180e-5</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1152">
+                  <tt><i>1152</i>                      <span class="mf">7.86869_13114_56132_59100e-4</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1153">
+                  <tt><i>1153</i>                      <span class="mf">1.48753_61290_85061_48525e-2</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1154">
+                  <tt><i>1154</i>                      <span class="mf">1.36929_88092_27358_05310e-1</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1155">
+                  <tt><i>1155</i>                      <span class="mf">5.99832_20655_58879_37690e-1</span><span class="p">)</span> <span class="o">*</span> <span class="n">r</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1156">
+                  <tt><i>1156</i>                      <span class="mf">1.0</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E272">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E272:</strong> multiple spaces before keyword
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l267">
+                  <tt><i>267</i>     <span class="k">if</span> <span class="n">T</span> <span class="ow">is</span> <span class="n">S</span><span class="p">:</span>  <span class="k">return</span> <span class="n">T</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l269">
+                  <tt><i>269</i>     <span class="k">if</span> <span class="n">S</span> <span class="ow">is</span> <span class="nb">int</span> <span class="ow">or</span> <span class="n">S</span> <span class="ow">is</span> <span class="nb">bool</span><span class="p">:</span>  <span class="k">return</span> <span class="n">T</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l270">
+                  <tt><i>270</i>     <span class="k">if</span> <span class="n">T</span> <span class="ow">is</span> <span class="nb">int</span><span class="p">:</span>  <span class="k">return</span> <span class="n">S</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l272">
+                  <tt><i>272</i>     <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>  <span class="k">return</span> <span class="n">S</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l273">
+                  <tt><i>273</i>     <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">S</span><span class="p">):</span>  <span class="k">return</span> <span class="n">T</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l275">
+                  <tt><i>275</i>     <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>  <span class="k">return</span> <span class="n">S</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l276">
+                  <tt><i>276</i>     <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>  <span class="k">return</span> <span class="n">T</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l267">
+                  <tt><i>267</i>     <span class="k">if</span> <span class="n">T</span> <span class="ow">is</span> <span class="n">S</span><span class="p">:</span>  <span class="k">return</span> <span class="n">T</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l269">
+                  <tt><i>269</i>     <span class="k">if</span> <span class="n">S</span> <span class="ow">is</span> <span class="nb">int</span> <span class="ow">or</span> <span class="n">S</span> <span class="ow">is</span> <span class="nb">bool</span><span class="p">:</span>  <span class="k">return</span> <span class="n">T</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l270">
+                  <tt><i>270</i>     <span class="k">if</span> <span class="n">T</span> <span class="ow">is</span> <span class="nb">int</span><span class="p">:</span>  <span class="k">return</span> <span class="n">S</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l272">
+                  <tt><i>272</i>     <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>  <span class="k">return</span> <span class="n">S</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l273">
+                  <tt><i>273</i>     <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">S</span><span class="p">):</span>  <span class="k">return</span> <span class="n">T</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l275">
+                  <tt><i>275</i>     <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>  <span class="k">return</span> <span class="n">S</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l276">
+                  <tt><i>276</i>     <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>  <span class="k">return</span> <span class="n">T</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l148">
+                  <tt><i>148</i> <span class="k">class</span> <span class="nc">StatisticsError</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l549">
+                  <tt><i>549</i> <span class="k">def</span> <span class="nf">median</span><span class="p">(</span><span class="n">data</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E266">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E266:</strong> too many leading '#' for block comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l1086">
+                  <tt><i>1086</i> <span class="c1">## Normal Distribution #####################################################</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E306">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E306:</strong> expected 1 blank line before a nested definition, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.statistics.source.html#l450">
+                  <tt><i>450</i>         <span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

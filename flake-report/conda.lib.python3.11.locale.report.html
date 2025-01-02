@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/locale.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.locale.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/locale.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  3
+               </span>
+               <strong>F405:</strong> 'CODESET' may be undefined, or defined from star imports: _locale
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'CODESET' may be undefined, or defined from star imports: _locale:</p>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l665">
+                  <tt><i>665</i>     <span class="n">CODESET</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'EncodingWarning' may be undefined, or defined from star imports: _locale:</p>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l673">
+                  <tt><i>673</i>                 <span class="n">EncodingWarning</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'EncodingWarning' may be undefined, or defined from star imports: _locale:</p>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l687">
+                  <tt><i>687</i>                 <span class="n">EncodingWarning</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from _locale import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l47">
+                  <tt><i>47</i>     <span class="kn">from</span> <span class="nn">_locale</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  208
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1506">
+                  <tt><i>1506</i>     <span class="mh">0x0436</span><span class="p">:</span> <span class="s2">&quot;af_ZA&quot;</span><span class="p">,</span> <span class="c1"># Afrikaans</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1507">
+                  <tt><i>1507</i>     <span class="mh">0x041c</span><span class="p">:</span> <span class="s2">&quot;sq_AL&quot;</span><span class="p">,</span> <span class="c1"># Albanian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1508">
+                  <tt><i>1508</i>     <span class="mh">0x0484</span><span class="p">:</span> <span class="s2">&quot;gsw_FR&quot;</span><span class="p">,</span><span class="c1"># Alsatian - France</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1509">
+                  <tt><i>1509</i>     <span class="mh">0x045e</span><span class="p">:</span> <span class="s2">&quot;am_ET&quot;</span><span class="p">,</span> <span class="c1"># Amharic - Ethiopia</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1510">
+                  <tt><i>1510</i>     <span class="mh">0x0401</span><span class="p">:</span> <span class="s2">&quot;ar_SA&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Saudi Arabia</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1511">
+                  <tt><i>1511</i>     <span class="mh">0x0801</span><span class="p">:</span> <span class="s2">&quot;ar_IQ&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Iraq</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1512">
+                  <tt><i>1512</i>     <span class="mh">0x0c01</span><span class="p">:</span> <span class="s2">&quot;ar_EG&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Egypt</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1513">
+                  <tt><i>1513</i>     <span class="mh">0x1001</span><span class="p">:</span> <span class="s2">&quot;ar_LY&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Libya</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1514">
+                  <tt><i>1514</i>     <span class="mh">0x1401</span><span class="p">:</span> <span class="s2">&quot;ar_DZ&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Algeria</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1515">
+                  <tt><i>1515</i>     <span class="mh">0x1801</span><span class="p">:</span> <span class="s2">&quot;ar_MA&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Morocco</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1516">
+                  <tt><i>1516</i>     <span class="mh">0x1c01</span><span class="p">:</span> <span class="s2">&quot;ar_TN&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Tunisia</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1517">
+                  <tt><i>1517</i>     <span class="mh">0x2001</span><span class="p">:</span> <span class="s2">&quot;ar_OM&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Oman</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1518">
+                  <tt><i>1518</i>     <span class="mh">0x2401</span><span class="p">:</span> <span class="s2">&quot;ar_YE&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Yemen</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1519">
+                  <tt><i>1519</i>     <span class="mh">0x2801</span><span class="p">:</span> <span class="s2">&quot;ar_SY&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Syria</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1520">
+                  <tt><i>1520</i>     <span class="mh">0x2c01</span><span class="p">:</span> <span class="s2">&quot;ar_JO&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Jordan</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1521">
+                  <tt><i>1521</i>     <span class="mh">0x3001</span><span class="p">:</span> <span class="s2">&quot;ar_LB&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Lebanon</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1522">
+                  <tt><i>1522</i>     <span class="mh">0x3401</span><span class="p">:</span> <span class="s2">&quot;ar_KW&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Kuwait</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1523">
+                  <tt><i>1523</i>     <span class="mh">0x3801</span><span class="p">:</span> <span class="s2">&quot;ar_AE&quot;</span><span class="p">,</span> <span class="c1"># Arabic - United Arab Emirates</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1524">
+                  <tt><i>1524</i>     <span class="mh">0x3c01</span><span class="p">:</span> <span class="s2">&quot;ar_BH&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Bahrain</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1525">
+                  <tt><i>1525</i>     <span class="mh">0x4001</span><span class="p">:</span> <span class="s2">&quot;ar_QA&quot;</span><span class="p">,</span> <span class="c1"># Arabic - Qatar</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1526">
+                  <tt><i>1526</i>     <span class="mh">0x042b</span><span class="p">:</span> <span class="s2">&quot;hy_AM&quot;</span><span class="p">,</span> <span class="c1"># Armenian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1527">
+                  <tt><i>1527</i>     <span class="mh">0x044d</span><span class="p">:</span> <span class="s2">&quot;as_IN&quot;</span><span class="p">,</span> <span class="c1"># Assamese - India</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1528">
+                  <tt><i>1528</i>     <span class="mh">0x042c</span><span class="p">:</span> <span class="s2">&quot;az_AZ&quot;</span><span class="p">,</span> <span class="c1"># Azeri - Latin</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1529">
+                  <tt><i>1529</i>     <span class="mh">0x082c</span><span class="p">:</span> <span class="s2">&quot;az_AZ&quot;</span><span class="p">,</span> <span class="c1"># Azeri - Cyrillic</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1530">
+                  <tt><i>1530</i>     <span class="mh">0x046d</span><span class="p">:</span> <span class="s2">&quot;ba_RU&quot;</span><span class="p">,</span> <span class="c1"># Bashkir</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1531">
+                  <tt><i>1531</i>     <span class="mh">0x042d</span><span class="p">:</span> <span class="s2">&quot;eu_ES&quot;</span><span class="p">,</span> <span class="c1"># Basque - Russia</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1532">
+                  <tt><i>1532</i>     <span class="mh">0x0423</span><span class="p">:</span> <span class="s2">&quot;be_BY&quot;</span><span class="p">,</span> <span class="c1"># Belarusian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1533">
+                  <tt><i>1533</i>     <span class="mh">0x0445</span><span class="p">:</span> <span class="s2">&quot;bn_IN&quot;</span><span class="p">,</span> <span class="c1"># Begali</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1534">
+                  <tt><i>1534</i>     <span class="mh">0x201a</span><span class="p">:</span> <span class="s2">&quot;bs_BA&quot;</span><span class="p">,</span> <span class="c1"># Bosnian - Cyrillic</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1535">
+                  <tt><i>1535</i>     <span class="mh">0x141a</span><span class="p">:</span> <span class="s2">&quot;bs_BA&quot;</span><span class="p">,</span> <span class="c1"># Bosnian - Latin</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1536">
+                  <tt><i>1536</i>     <span class="mh">0x047e</span><span class="p">:</span> <span class="s2">&quot;br_FR&quot;</span><span class="p">,</span> <span class="c1"># Breton - France</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1537">
+                  <tt><i>1537</i>     <span class="mh">0x0402</span><span class="p">:</span> <span class="s2">&quot;bg_BG&quot;</span><span class="p">,</span> <span class="c1"># Bulgarian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1539">
+                  <tt><i>1539</i>     <span class="mh">0x0403</span><span class="p">:</span> <span class="s2">&quot;ca_ES&quot;</span><span class="p">,</span> <span class="c1"># Catalan</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1540">
+                  <tt><i>1540</i>     <span class="mh">0x0004</span><span class="p">:</span> <span class="s2">&quot;zh_CHS&quot;</span><span class="p">,</span><span class="c1"># Chinese - Simplified</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1541">
+                  <tt><i>1541</i>     <span class="mh">0x0404</span><span class="p">:</span> <span class="s2">&quot;zh_TW&quot;</span><span class="p">,</span> <span class="c1"># Chinese - Taiwan</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1542">
+                  <tt><i>1542</i>     <span class="mh">0x0804</span><span class="p">:</span> <span class="s2">&quot;zh_CN&quot;</span><span class="p">,</span> <span class="c1"># Chinese - PRC</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1543">
+                  <tt><i>1543</i>     <span class="mh">0x0c04</span><span class="p">:</span> <span class="s2">&quot;zh_HK&quot;</span><span class="p">,</span> <span class="c1"># Chinese - Hong Kong S.A.R.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1544">
+                  <tt><i>1544</i>     <span class="mh">0x1004</span><span class="p">:</span> <span class="s2">&quot;zh_SG&quot;</span><span class="p">,</span> <span class="c1"># Chinese - Singapore</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1545">
+                  <tt><i>1545</i>     <span class="mh">0x1404</span><span class="p">:</span> <span class="s2">&quot;zh_MO&quot;</span><span class="p">,</span> <span class="c1"># Chinese - Macao S.A.R.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1546">
+                  <tt><i>1546</i>     <span class="mh">0x7c04</span><span class="p">:</span> <span class="s2">&quot;zh_CHT&quot;</span><span class="p">,</span><span class="c1"># Chinese - Traditional</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1547">
+                  <tt><i>1547</i>     <span class="mh">0x0483</span><span class="p">:</span> <span class="s2">&quot;co_FR&quot;</span><span class="p">,</span> <span class="c1"># Corsican - France</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1548">
+                  <tt><i>1548</i>     <span class="mh">0x041a</span><span class="p">:</span> <span class="s2">&quot;hr_HR&quot;</span><span class="p">,</span> <span class="c1"># Croatian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1549">
+                  <tt><i>1549</i>     <span class="mh">0x101a</span><span class="p">:</span> <span class="s2">&quot;hr_BA&quot;</span><span class="p">,</span> <span class="c1"># Croatian - Bosnia</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1550">
+                  <tt><i>1550</i>     <span class="mh">0x0405</span><span class="p">:</span> <span class="s2">&quot;cs_CZ&quot;</span><span class="p">,</span> <span class="c1"># Czech</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1551">
+                  <tt><i>1551</i>     <span class="mh">0x0406</span><span class="p">:</span> <span class="s2">&quot;da_DK&quot;</span><span class="p">,</span> <span class="c1"># Danish</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1552">
+                  <tt><i>1552</i>     <span class="mh">0x048c</span><span class="p">:</span> <span class="s2">&quot;gbz_AF&quot;</span><span class="p">,</span><span class="c1"># Dari - Afghanistan</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1553">
+                  <tt><i>1553</i>     <span class="mh">0x0465</span><span class="p">:</span> <span class="s2">&quot;div_MV&quot;</span><span class="p">,</span><span class="c1"># Divehi - Maldives</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1554">
+                  <tt><i>1554</i>     <span class="mh">0x0413</span><span class="p">:</span> <span class="s2">&quot;nl_NL&quot;</span><span class="p">,</span> <span class="c1"># Dutch - The Netherlands</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1555">
+                  <tt><i>1555</i>     <span class="mh">0x0813</span><span class="p">:</span> <span class="s2">&quot;nl_BE&quot;</span><span class="p">,</span> <span class="c1"># Dutch - Belgium</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1556">
+                  <tt><i>1556</i>     <span class="mh">0x0409</span><span class="p">:</span> <span class="s2">&quot;en_US&quot;</span><span class="p">,</span> <span class="c1"># English - United States</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1557">
+                  <tt><i>1557</i>     <span class="mh">0x0809</span><span class="p">:</span> <span class="s2">&quot;en_GB&quot;</span><span class="p">,</span> <span class="c1"># English - United Kingdom</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1558">
+                  <tt><i>1558</i>     <span class="mh">0x0c09</span><span class="p">:</span> <span class="s2">&quot;en_AU&quot;</span><span class="p">,</span> <span class="c1"># English - Australia</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1559">
+                  <tt><i>1559</i>     <span class="mh">0x1009</span><span class="p">:</span> <span class="s2">&quot;en_CA&quot;</span><span class="p">,</span> <span class="c1"># English - Canada</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1560">
+                  <tt><i>1560</i>     <span class="mh">0x1409</span><span class="p">:</span> <span class="s2">&quot;en_NZ&quot;</span><span class="p">,</span> <span class="c1"># English - New Zealand</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1561">
+                  <tt><i>1561</i>     <span class="mh">0x1809</span><span class="p">:</span> <span class="s2">&quot;en_IE&quot;</span><span class="p">,</span> <span class="c1"># English - Ireland</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1562">
+                  <tt><i>1562</i>     <span class="mh">0x1c09</span><span class="p">:</span> <span class="s2">&quot;en_ZA&quot;</span><span class="p">,</span> <span class="c1"># English - South Africa</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1563">
+                  <tt><i>1563</i>     <span class="mh">0x2009</span><span class="p">:</span> <span class="s2">&quot;en_JA&quot;</span><span class="p">,</span> <span class="c1"># English - Jamaica</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1564">
+                  <tt><i>1564</i>     <span class="mh">0x2409</span><span class="p">:</span> <span class="s2">&quot;en_CB&quot;</span><span class="p">,</span> <span class="c1"># English - Caribbean</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1565">
+                  <tt><i>1565</i>     <span class="mh">0x2809</span><span class="p">:</span> <span class="s2">&quot;en_BZ&quot;</span><span class="p">,</span> <span class="c1"># English - Belize</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1566">
+                  <tt><i>1566</i>     <span class="mh">0x2c09</span><span class="p">:</span> <span class="s2">&quot;en_TT&quot;</span><span class="p">,</span> <span class="c1"># English - Trinidad</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1567">
+                  <tt><i>1567</i>     <span class="mh">0x3009</span><span class="p">:</span> <span class="s2">&quot;en_ZW&quot;</span><span class="p">,</span> <span class="c1"># English - Zimbabwe</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1568">
+                  <tt><i>1568</i>     <span class="mh">0x3409</span><span class="p">:</span> <span class="s2">&quot;en_PH&quot;</span><span class="p">,</span> <span class="c1"># English - Philippines</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1569">
+                  <tt><i>1569</i>     <span class="mh">0x4009</span><span class="p">:</span> <span class="s2">&quot;en_IN&quot;</span><span class="p">,</span> <span class="c1"># English - India</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1570">
+                  <tt><i>1570</i>     <span class="mh">0x4409</span><span class="p">:</span> <span class="s2">&quot;en_MY&quot;</span><span class="p">,</span> <span class="c1"># English - Malaysia</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1571">
+                  <tt><i>1571</i>     <span class="mh">0x4809</span><span class="p">:</span> <span class="s2">&quot;en_IN&quot;</span><span class="p">,</span> <span class="c1"># English - Singapore</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1572">
+                  <tt><i>1572</i>     <span class="mh">0x0425</span><span class="p">:</span> <span class="s2">&quot;et_EE&quot;</span><span class="p">,</span> <span class="c1"># Estonian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1573">
+                  <tt><i>1573</i>     <span class="mh">0x0438</span><span class="p">:</span> <span class="s2">&quot;fo_FO&quot;</span><span class="p">,</span> <span class="c1"># Faroese</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1574">
+                  <tt><i>1574</i>     <span class="mh">0x0464</span><span class="p">:</span> <span class="s2">&quot;fil_PH&quot;</span><span class="p">,</span><span class="c1"># Filipino</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1575">
+                  <tt><i>1575</i>     <span class="mh">0x040b</span><span class="p">:</span> <span class="s2">&quot;fi_FI&quot;</span><span class="p">,</span> <span class="c1"># Finnish</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1576">
+                  <tt><i>1576</i>     <span class="mh">0x040c</span><span class="p">:</span> <span class="s2">&quot;fr_FR&quot;</span><span class="p">,</span> <span class="c1"># French - France</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1577">
+                  <tt><i>1577</i>     <span class="mh">0x080c</span><span class="p">:</span> <span class="s2">&quot;fr_BE&quot;</span><span class="p">,</span> <span class="c1"># French - Belgium</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1578">
+                  <tt><i>1578</i>     <span class="mh">0x0c0c</span><span class="p">:</span> <span class="s2">&quot;fr_CA&quot;</span><span class="p">,</span> <span class="c1"># French - Canada</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1579">
+                  <tt><i>1579</i>     <span class="mh">0x100c</span><span class="p">:</span> <span class="s2">&quot;fr_CH&quot;</span><span class="p">,</span> <span class="c1"># French - Switzerland</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1580">
+                  <tt><i>1580</i>     <span class="mh">0x140c</span><span class="p">:</span> <span class="s2">&quot;fr_LU&quot;</span><span class="p">,</span> <span class="c1"># French - Luxembourg</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1581">
+                  <tt><i>1581</i>     <span class="mh">0x180c</span><span class="p">:</span> <span class="s2">&quot;fr_MC&quot;</span><span class="p">,</span> <span class="c1"># French - Monaco</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1582">
+                  <tt><i>1582</i>     <span class="mh">0x0462</span><span class="p">:</span> <span class="s2">&quot;fy_NL&quot;</span><span class="p">,</span> <span class="c1"># Frisian - Netherlands</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1583">
+                  <tt><i>1583</i>     <span class="mh">0x0456</span><span class="p">:</span> <span class="s2">&quot;gl_ES&quot;</span><span class="p">,</span> <span class="c1"># Galician</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1584">
+                  <tt><i>1584</i>     <span class="mh">0x0437</span><span class="p">:</span> <span class="s2">&quot;ka_GE&quot;</span><span class="p">,</span> <span class="c1"># Georgian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1585">
+                  <tt><i>1585</i>     <span class="mh">0x0407</span><span class="p">:</span> <span class="s2">&quot;de_DE&quot;</span><span class="p">,</span> <span class="c1"># German - Germany</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1586">
+                  <tt><i>1586</i>     <span class="mh">0x0807</span><span class="p">:</span> <span class="s2">&quot;de_CH&quot;</span><span class="p">,</span> <span class="c1"># German - Switzerland</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1587">
+                  <tt><i>1587</i>     <span class="mh">0x0c07</span><span class="p">:</span> <span class="s2">&quot;de_AT&quot;</span><span class="p">,</span> <span class="c1"># German - Austria</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1588">
+                  <tt><i>1588</i>     <span class="mh">0x1007</span><span class="p">:</span> <span class="s2">&quot;de_LU&quot;</span><span class="p">,</span> <span class="c1"># German - Luxembourg</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1589">
+                  <tt><i>1589</i>     <span class="mh">0x1407</span><span class="p">:</span> <span class="s2">&quot;de_LI&quot;</span><span class="p">,</span> <span class="c1"># German - Liechtenstein</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1590">
+                  <tt><i>1590</i>     <span class="mh">0x0408</span><span class="p">:</span> <span class="s2">&quot;el_GR&quot;</span><span class="p">,</span> <span class="c1"># Greek</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1591">
+                  <tt><i>1591</i>     <span class="mh">0x046f</span><span class="p">:</span> <span class="s2">&quot;kl_GL&quot;</span><span class="p">,</span> <span class="c1"># Greenlandic - Greenland</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1592">
+                  <tt><i>1592</i>     <span class="mh">0x0447</span><span class="p">:</span> <span class="s2">&quot;gu_IN&quot;</span><span class="p">,</span> <span class="c1"># Gujarati</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1593">
+                  <tt><i>1593</i>     <span class="mh">0x0468</span><span class="p">:</span> <span class="s2">&quot;ha_NG&quot;</span><span class="p">,</span> <span class="c1"># Hausa - Latin</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1594">
+                  <tt><i>1594</i>     <span class="mh">0x040d</span><span class="p">:</span> <span class="s2">&quot;he_IL&quot;</span><span class="p">,</span> <span class="c1"># Hebrew</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1595">
+                  <tt><i>1595</i>     <span class="mh">0x0439</span><span class="p">:</span> <span class="s2">&quot;hi_IN&quot;</span><span class="p">,</span> <span class="c1"># Hindi</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1596">
+                  <tt><i>1596</i>     <span class="mh">0x040e</span><span class="p">:</span> <span class="s2">&quot;hu_HU&quot;</span><span class="p">,</span> <span class="c1"># Hungarian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1597">
+                  <tt><i>1597</i>     <span class="mh">0x040f</span><span class="p">:</span> <span class="s2">&quot;is_IS&quot;</span><span class="p">,</span> <span class="c1"># Icelandic</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1598">
+                  <tt><i>1598</i>     <span class="mh">0x0421</span><span class="p">:</span> <span class="s2">&quot;id_ID&quot;</span><span class="p">,</span> <span class="c1"># Indonesian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1599">
+                  <tt><i>1599</i>     <span class="mh">0x045d</span><span class="p">:</span> <span class="s2">&quot;iu_CA&quot;</span><span class="p">,</span> <span class="c1"># Inuktitut - Syllabics</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1600">
+                  <tt><i>1600</i>     <span class="mh">0x085d</span><span class="p">:</span> <span class="s2">&quot;iu_CA&quot;</span><span class="p">,</span> <span class="c1"># Inuktitut - Latin</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1601">
+                  <tt><i>1601</i>     <span class="mh">0x083c</span><span class="p">:</span> <span class="s2">&quot;ga_IE&quot;</span><span class="p">,</span> <span class="c1"># Irish - Ireland</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1602">
+                  <tt><i>1602</i>     <span class="mh">0x0410</span><span class="p">:</span> <span class="s2">&quot;it_IT&quot;</span><span class="p">,</span> <span class="c1"># Italian - Italy</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1603">
+                  <tt><i>1603</i>     <span class="mh">0x0810</span><span class="p">:</span> <span class="s2">&quot;it_CH&quot;</span><span class="p">,</span> <span class="c1"># Italian - Switzerland</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1604">
+                  <tt><i>1604</i>     <span class="mh">0x0411</span><span class="p">:</span> <span class="s2">&quot;ja_JP&quot;</span><span class="p">,</span> <span class="c1"># Japanese</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1605">
+                  <tt><i>1605</i>     <span class="mh">0x044b</span><span class="p">:</span> <span class="s2">&quot;kn_IN&quot;</span><span class="p">,</span> <span class="c1"># Kannada - India</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1606">
+                  <tt><i>1606</i>     <span class="mh">0x043f</span><span class="p">:</span> <span class="s2">&quot;kk_KZ&quot;</span><span class="p">,</span> <span class="c1"># Kazakh</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1607">
+                  <tt><i>1607</i>     <span class="mh">0x0453</span><span class="p">:</span> <span class="s2">&quot;kh_KH&quot;</span><span class="p">,</span> <span class="c1"># Khmer - Cambodia</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1608">
+                  <tt><i>1608</i>     <span class="mh">0x0486</span><span class="p">:</span> <span class="s2">&quot;qut_GT&quot;</span><span class="p">,</span><span class="c1"># K&#39;iche - Guatemala</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1609">
+                  <tt><i>1609</i>     <span class="mh">0x0487</span><span class="p">:</span> <span class="s2">&quot;rw_RW&quot;</span><span class="p">,</span> <span class="c1"># Kinyarwanda - Rwanda</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1610">
+                  <tt><i>1610</i>     <span class="mh">0x0457</span><span class="p">:</span> <span class="s2">&quot;kok_IN&quot;</span><span class="p">,</span><span class="c1"># Konkani</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1611">
+                  <tt><i>1611</i>     <span class="mh">0x0412</span><span class="p">:</span> <span class="s2">&quot;ko_KR&quot;</span><span class="p">,</span> <span class="c1"># Korean</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1612">
+                  <tt><i>1612</i>     <span class="mh">0x0440</span><span class="p">:</span> <span class="s2">&quot;ky_KG&quot;</span><span class="p">,</span> <span class="c1"># Kyrgyz</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1613">
+                  <tt><i>1613</i>     <span class="mh">0x0454</span><span class="p">:</span> <span class="s2">&quot;lo_LA&quot;</span><span class="p">,</span> <span class="c1"># Lao - Lao PDR</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1614">
+                  <tt><i>1614</i>     <span class="mh">0x0426</span><span class="p">:</span> <span class="s2">&quot;lv_LV&quot;</span><span class="p">,</span> <span class="c1"># Latvian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1615">
+                  <tt><i>1615</i>     <span class="mh">0x0427</span><span class="p">:</span> <span class="s2">&quot;lt_LT&quot;</span><span class="p">,</span> <span class="c1"># Lithuanian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1616">
+                  <tt><i>1616</i>     <span class="mh">0x082e</span><span class="p">:</span> <span class="s2">&quot;dsb_DE&quot;</span><span class="p">,</span><span class="c1"># Lower Sorbian - Germany</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1617">
+                  <tt><i>1617</i>     <span class="mh">0x046e</span><span class="p">:</span> <span class="s2">&quot;lb_LU&quot;</span><span class="p">,</span> <span class="c1"># Luxembourgish</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1618">
+                  <tt><i>1618</i>     <span class="mh">0x042f</span><span class="p">:</span> <span class="s2">&quot;mk_MK&quot;</span><span class="p">,</span> <span class="c1"># FYROM Macedonian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1619">
+                  <tt><i>1619</i>     <span class="mh">0x043e</span><span class="p">:</span> <span class="s2">&quot;ms_MY&quot;</span><span class="p">,</span> <span class="c1"># Malay - Malaysia</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1620">
+                  <tt><i>1620</i>     <span class="mh">0x083e</span><span class="p">:</span> <span class="s2">&quot;ms_BN&quot;</span><span class="p">,</span> <span class="c1"># Malay - Brunei Darussalam</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1621">
+                  <tt><i>1621</i>     <span class="mh">0x044c</span><span class="p">:</span> <span class="s2">&quot;ml_IN&quot;</span><span class="p">,</span> <span class="c1"># Malayalam - India</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1622">
+                  <tt><i>1622</i>     <span class="mh">0x043a</span><span class="p">:</span> <span class="s2">&quot;mt_MT&quot;</span><span class="p">,</span> <span class="c1"># Maltese</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1623">
+                  <tt><i>1623</i>     <span class="mh">0x0481</span><span class="p">:</span> <span class="s2">&quot;mi_NZ&quot;</span><span class="p">,</span> <span class="c1"># Maori</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1624">
+                  <tt><i>1624</i>     <span class="mh">0x047a</span><span class="p">:</span> <span class="s2">&quot;arn_CL&quot;</span><span class="p">,</span><span class="c1"># Mapudungun</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1625">
+                  <tt><i>1625</i>     <span class="mh">0x044e</span><span class="p">:</span> <span class="s2">&quot;mr_IN&quot;</span><span class="p">,</span> <span class="c1"># Marathi</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1626">
+                  <tt><i>1626</i>     <span class="mh">0x047c</span><span class="p">:</span> <span class="s2">&quot;moh_CA&quot;</span><span class="p">,</span><span class="c1"># Mohawk - Canada</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1627">
+                  <tt><i>1627</i>     <span class="mh">0x0450</span><span class="p">:</span> <span class="s2">&quot;mn_MN&quot;</span><span class="p">,</span> <span class="c1"># Mongolian - Cyrillic</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1628">
+                  <tt><i>1628</i>     <span class="mh">0x0850</span><span class="p">:</span> <span class="s2">&quot;mn_CN&quot;</span><span class="p">,</span> <span class="c1"># Mongolian - PRC</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1629">
+                  <tt><i>1629</i>     <span class="mh">0x0461</span><span class="p">:</span> <span class="s2">&quot;ne_NP&quot;</span><span class="p">,</span> <span class="c1"># Nepali</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1630">
+                  <tt><i>1630</i>     <span class="mh">0x0414</span><span class="p">:</span> <span class="s2">&quot;nb_NO&quot;</span><span class="p">,</span> <span class="c1"># Norwegian - Bokmal</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1631">
+                  <tt><i>1631</i>     <span class="mh">0x0814</span><span class="p">:</span> <span class="s2">&quot;nn_NO&quot;</span><span class="p">,</span> <span class="c1"># Norwegian - Nynorsk</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1632">
+                  <tt><i>1632</i>     <span class="mh">0x0482</span><span class="p">:</span> <span class="s2">&quot;oc_FR&quot;</span><span class="p">,</span> <span class="c1"># Occitan - France</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1633">
+                  <tt><i>1633</i>     <span class="mh">0x0448</span><span class="p">:</span> <span class="s2">&quot;or_IN&quot;</span><span class="p">,</span> <span class="c1"># Oriya - India</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1634">
+                  <tt><i>1634</i>     <span class="mh">0x0463</span><span class="p">:</span> <span class="s2">&quot;ps_AF&quot;</span><span class="p">,</span> <span class="c1"># Pashto - Afghanistan</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1635">
+                  <tt><i>1635</i>     <span class="mh">0x0429</span><span class="p">:</span> <span class="s2">&quot;fa_IR&quot;</span><span class="p">,</span> <span class="c1"># Persian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1636">
+                  <tt><i>1636</i>     <span class="mh">0x0415</span><span class="p">:</span> <span class="s2">&quot;pl_PL&quot;</span><span class="p">,</span> <span class="c1"># Polish</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1637">
+                  <tt><i>1637</i>     <span class="mh">0x0416</span><span class="p">:</span> <span class="s2">&quot;pt_BR&quot;</span><span class="p">,</span> <span class="c1"># Portuguese - Brazil</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1638">
+                  <tt><i>1638</i>     <span class="mh">0x0816</span><span class="p">:</span> <span class="s2">&quot;pt_PT&quot;</span><span class="p">,</span> <span class="c1"># Portuguese - Portugal</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1639">
+                  <tt><i>1639</i>     <span class="mh">0x0446</span><span class="p">:</span> <span class="s2">&quot;pa_IN&quot;</span><span class="p">,</span> <span class="c1"># Punjabi</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1640">
+                  <tt><i>1640</i>     <span class="mh">0x046b</span><span class="p">:</span> <span class="s2">&quot;quz_BO&quot;</span><span class="p">,</span><span class="c1"># Quechua (Bolivia)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1641">
+                  <tt><i>1641</i>     <span class="mh">0x086b</span><span class="p">:</span> <span class="s2">&quot;quz_EC&quot;</span><span class="p">,</span><span class="c1"># Quechua (Ecuador)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1642">
+                  <tt><i>1642</i>     <span class="mh">0x0c6b</span><span class="p">:</span> <span class="s2">&quot;quz_PE&quot;</span><span class="p">,</span><span class="c1"># Quechua (Peru)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1643">
+                  <tt><i>1643</i>     <span class="mh">0x0418</span><span class="p">:</span> <span class="s2">&quot;ro_RO&quot;</span><span class="p">,</span> <span class="c1"># Romanian - Romania</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1644">
+                  <tt><i>1644</i>     <span class="mh">0x0417</span><span class="p">:</span> <span class="s2">&quot;rm_CH&quot;</span><span class="p">,</span> <span class="c1"># Romansh</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1645">
+                  <tt><i>1645</i>     <span class="mh">0x0419</span><span class="p">:</span> <span class="s2">&quot;ru_RU&quot;</span><span class="p">,</span> <span class="c1"># Russian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1646">
+                  <tt><i>1646</i>     <span class="mh">0x243b</span><span class="p">:</span> <span class="s2">&quot;smn_FI&quot;</span><span class="p">,</span><span class="c1"># Sami Finland</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1647">
+                  <tt><i>1647</i>     <span class="mh">0x103b</span><span class="p">:</span> <span class="s2">&quot;smj_NO&quot;</span><span class="p">,</span><span class="c1"># Sami Norway</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1648">
+                  <tt><i>1648</i>     <span class="mh">0x143b</span><span class="p">:</span> <span class="s2">&quot;smj_SE&quot;</span><span class="p">,</span><span class="c1"># Sami Sweden</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1649">
+                  <tt><i>1649</i>     <span class="mh">0x043b</span><span class="p">:</span> <span class="s2">&quot;se_NO&quot;</span><span class="p">,</span> <span class="c1"># Sami Northern Norway</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1650">
+                  <tt><i>1650</i>     <span class="mh">0x083b</span><span class="p">:</span> <span class="s2">&quot;se_SE&quot;</span><span class="p">,</span> <span class="c1"># Sami Northern Sweden</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1651">
+                  <tt><i>1651</i>     <span class="mh">0x0c3b</span><span class="p">:</span> <span class="s2">&quot;se_FI&quot;</span><span class="p">,</span> <span class="c1"># Sami Northern Finland</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1652">
+                  <tt><i>1652</i>     <span class="mh">0x203b</span><span class="p">:</span> <span class="s2">&quot;sms_FI&quot;</span><span class="p">,</span><span class="c1"># Sami Skolt</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1653">
+                  <tt><i>1653</i>     <span class="mh">0x183b</span><span class="p">:</span> <span class="s2">&quot;sma_NO&quot;</span><span class="p">,</span><span class="c1"># Sami Southern Norway</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1654">
+                  <tt><i>1654</i>     <span class="mh">0x1c3b</span><span class="p">:</span> <span class="s2">&quot;sma_SE&quot;</span><span class="p">,</span><span class="c1"># Sami Southern Sweden</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1655">
+                  <tt><i>1655</i>     <span class="mh">0x044f</span><span class="p">:</span> <span class="s2">&quot;sa_IN&quot;</span><span class="p">,</span> <span class="c1"># Sanskrit</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1656">
+                  <tt><i>1656</i>     <span class="mh">0x0c1a</span><span class="p">:</span> <span class="s2">&quot;sr_SP&quot;</span><span class="p">,</span> <span class="c1"># Serbian - Cyrillic</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1657">
+                  <tt><i>1657</i>     <span class="mh">0x1c1a</span><span class="p">:</span> <span class="s2">&quot;sr_BA&quot;</span><span class="p">,</span> <span class="c1"># Serbian - Bosnia Cyrillic</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1658">
+                  <tt><i>1658</i>     <span class="mh">0x081a</span><span class="p">:</span> <span class="s2">&quot;sr_SP&quot;</span><span class="p">,</span> <span class="c1"># Serbian - Latin</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1659">
+                  <tt><i>1659</i>     <span class="mh">0x181a</span><span class="p">:</span> <span class="s2">&quot;sr_BA&quot;</span><span class="p">,</span> <span class="c1"># Serbian - Bosnia Latin</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1660">
+                  <tt><i>1660</i>     <span class="mh">0x045b</span><span class="p">:</span> <span class="s2">&quot;si_LK&quot;</span><span class="p">,</span> <span class="c1"># Sinhala - Sri Lanka</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1661">
+                  <tt><i>1661</i>     <span class="mh">0x046c</span><span class="p">:</span> <span class="s2">&quot;ns_ZA&quot;</span><span class="p">,</span> <span class="c1"># Northern Sotho</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1662">
+                  <tt><i>1662</i>     <span class="mh">0x0432</span><span class="p">:</span> <span class="s2">&quot;tn_ZA&quot;</span><span class="p">,</span> <span class="c1"># Setswana - Southern Africa</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1663">
+                  <tt><i>1663</i>     <span class="mh">0x041b</span><span class="p">:</span> <span class="s2">&quot;sk_SK&quot;</span><span class="p">,</span> <span class="c1"># Slovak</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1664">
+                  <tt><i>1664</i>     <span class="mh">0x0424</span><span class="p">:</span> <span class="s2">&quot;sl_SI&quot;</span><span class="p">,</span> <span class="c1"># Slovenian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1665">
+                  <tt><i>1665</i>     <span class="mh">0x040a</span><span class="p">:</span> <span class="s2">&quot;es_ES&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Spain</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1666">
+                  <tt><i>1666</i>     <span class="mh">0x080a</span><span class="p">:</span> <span class="s2">&quot;es_MX&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Mexico</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1667">
+                  <tt><i>1667</i>     <span class="mh">0x0c0a</span><span class="p">:</span> <span class="s2">&quot;es_ES&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Spain (Modern)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1668">
+                  <tt><i>1668</i>     <span class="mh">0x100a</span><span class="p">:</span> <span class="s2">&quot;es_GT&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Guatemala</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1669">
+                  <tt><i>1669</i>     <span class="mh">0x140a</span><span class="p">:</span> <span class="s2">&quot;es_CR&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Costa Rica</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1670">
+                  <tt><i>1670</i>     <span class="mh">0x180a</span><span class="p">:</span> <span class="s2">&quot;es_PA&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Panama</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1671">
+                  <tt><i>1671</i>     <span class="mh">0x1c0a</span><span class="p">:</span> <span class="s2">&quot;es_DO&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Dominican Republic</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1672">
+                  <tt><i>1672</i>     <span class="mh">0x200a</span><span class="p">:</span> <span class="s2">&quot;es_VE&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Venezuela</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1673">
+                  <tt><i>1673</i>     <span class="mh">0x240a</span><span class="p">:</span> <span class="s2">&quot;es_CO&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Colombia</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1674">
+                  <tt><i>1674</i>     <span class="mh">0x280a</span><span class="p">:</span> <span class="s2">&quot;es_PE&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Peru</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1675">
+                  <tt><i>1675</i>     <span class="mh">0x2c0a</span><span class="p">:</span> <span class="s2">&quot;es_AR&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Argentina</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1676">
+                  <tt><i>1676</i>     <span class="mh">0x300a</span><span class="p">:</span> <span class="s2">&quot;es_EC&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Ecuador</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1677">
+                  <tt><i>1677</i>     <span class="mh">0x340a</span><span class="p">:</span> <span class="s2">&quot;es_CL&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Chile</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1678">
+                  <tt><i>1678</i>     <span class="mh">0x380a</span><span class="p">:</span> <span class="s2">&quot;es_UR&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Uruguay</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1679">
+                  <tt><i>1679</i>     <span class="mh">0x3c0a</span><span class="p">:</span> <span class="s2">&quot;es_PY&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Paraguay</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1680">
+                  <tt><i>1680</i>     <span class="mh">0x400a</span><span class="p">:</span> <span class="s2">&quot;es_BO&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Bolivia</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1681">
+                  <tt><i>1681</i>     <span class="mh">0x440a</span><span class="p">:</span> <span class="s2">&quot;es_SV&quot;</span><span class="p">,</span> <span class="c1"># Spanish - El Salvador</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1682">
+                  <tt><i>1682</i>     <span class="mh">0x480a</span><span class="p">:</span> <span class="s2">&quot;es_HN&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Honduras</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1683">
+                  <tt><i>1683</i>     <span class="mh">0x4c0a</span><span class="p">:</span> <span class="s2">&quot;es_NI&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Nicaragua</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1684">
+                  <tt><i>1684</i>     <span class="mh">0x500a</span><span class="p">:</span> <span class="s2">&quot;es_PR&quot;</span><span class="p">,</span> <span class="c1"># Spanish - Puerto Rico</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1685">
+                  <tt><i>1685</i>     <span class="mh">0x540a</span><span class="p">:</span> <span class="s2">&quot;es_US&quot;</span><span class="p">,</span> <span class="c1"># Spanish - United States</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1687">
+                  <tt><i>1687</i>     <span class="mh">0x0441</span><span class="p">:</span> <span class="s2">&quot;sw_KE&quot;</span><span class="p">,</span> <span class="c1"># Swahili</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1688">
+                  <tt><i>1688</i>     <span class="mh">0x041d</span><span class="p">:</span> <span class="s2">&quot;sv_SE&quot;</span><span class="p">,</span> <span class="c1"># Swedish - Sweden</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1689">
+                  <tt><i>1689</i>     <span class="mh">0x081d</span><span class="p">:</span> <span class="s2">&quot;sv_FI&quot;</span><span class="p">,</span> <span class="c1"># Swedish - Finland</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1690">
+                  <tt><i>1690</i>     <span class="mh">0x045a</span><span class="p">:</span> <span class="s2">&quot;syr_SY&quot;</span><span class="p">,</span><span class="c1"># Syriac</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1691">
+                  <tt><i>1691</i>     <span class="mh">0x0428</span><span class="p">:</span> <span class="s2">&quot;tg_TJ&quot;</span><span class="p">,</span> <span class="c1"># Tajik - Cyrillic</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1692">
+                  <tt><i>1692</i>     <span class="mh">0x085f</span><span class="p">:</span> <span class="s2">&quot;tmz_DZ&quot;</span><span class="p">,</span><span class="c1"># Tamazight - Latin</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1693">
+                  <tt><i>1693</i>     <span class="mh">0x0449</span><span class="p">:</span> <span class="s2">&quot;ta_IN&quot;</span><span class="p">,</span> <span class="c1"># Tamil</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1694">
+                  <tt><i>1694</i>     <span class="mh">0x0444</span><span class="p">:</span> <span class="s2">&quot;tt_RU&quot;</span><span class="p">,</span> <span class="c1"># Tatar</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1695">
+                  <tt><i>1695</i>     <span class="mh">0x044a</span><span class="p">:</span> <span class="s2">&quot;te_IN&quot;</span><span class="p">,</span> <span class="c1"># Telugu</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1696">
+                  <tt><i>1696</i>     <span class="mh">0x041e</span><span class="p">:</span> <span class="s2">&quot;th_TH&quot;</span><span class="p">,</span> <span class="c1"># Thai</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1697">
+                  <tt><i>1697</i>     <span class="mh">0x0851</span><span class="p">:</span> <span class="s2">&quot;bo_BT&quot;</span><span class="p">,</span> <span class="c1"># Tibetan - Bhutan</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1698">
+                  <tt><i>1698</i>     <span class="mh">0x0451</span><span class="p">:</span> <span class="s2">&quot;bo_CN&quot;</span><span class="p">,</span> <span class="c1"># Tibetan - PRC</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1699">
+                  <tt><i>1699</i>     <span class="mh">0x041f</span><span class="p">:</span> <span class="s2">&quot;tr_TR&quot;</span><span class="p">,</span> <span class="c1"># Turkish</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1700">
+                  <tt><i>1700</i>     <span class="mh">0x0442</span><span class="p">:</span> <span class="s2">&quot;tk_TM&quot;</span><span class="p">,</span> <span class="c1"># Turkmen - Cyrillic</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1701">
+                  <tt><i>1701</i>     <span class="mh">0x0480</span><span class="p">:</span> <span class="s2">&quot;ug_CN&quot;</span><span class="p">,</span> <span class="c1"># Uighur - Arabic</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1702">
+                  <tt><i>1702</i>     <span class="mh">0x0422</span><span class="p">:</span> <span class="s2">&quot;uk_UA&quot;</span><span class="p">,</span> <span class="c1"># Ukrainian</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1703">
+                  <tt><i>1703</i>     <span class="mh">0x042e</span><span class="p">:</span> <span class="s2">&quot;wen_DE&quot;</span><span class="p">,</span><span class="c1"># Upper Sorbian - Germany</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1704">
+                  <tt><i>1704</i>     <span class="mh">0x0420</span><span class="p">:</span> <span class="s2">&quot;ur_PK&quot;</span><span class="p">,</span> <span class="c1"># Urdu</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1705">
+                  <tt><i>1705</i>     <span class="mh">0x0820</span><span class="p">:</span> <span class="s2">&quot;ur_IN&quot;</span><span class="p">,</span> <span class="c1"># Urdu - India</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1706">
+                  <tt><i>1706</i>     <span class="mh">0x0443</span><span class="p">:</span> <span class="s2">&quot;uz_UZ&quot;</span><span class="p">,</span> <span class="c1"># Uzbek - Latin</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1707">
+                  <tt><i>1707</i>     <span class="mh">0x0843</span><span class="p">:</span> <span class="s2">&quot;uz_UZ&quot;</span><span class="p">,</span> <span class="c1"># Uzbek - Cyrillic</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1708">
+                  <tt><i>1708</i>     <span class="mh">0x042a</span><span class="p">:</span> <span class="s2">&quot;vi_VN&quot;</span><span class="p">,</span> <span class="c1"># Vietnamese</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1709">
+                  <tt><i>1709</i>     <span class="mh">0x0452</span><span class="p">:</span> <span class="s2">&quot;cy_GB&quot;</span><span class="p">,</span> <span class="c1"># Welsh</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1710">
+                  <tt><i>1710</i>     <span class="mh">0x0488</span><span class="p">:</span> <span class="s2">&quot;wo_SN&quot;</span><span class="p">,</span> <span class="c1"># Wolof - Senegal</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1711">
+                  <tt><i>1711</i>     <span class="mh">0x0434</span><span class="p">:</span> <span class="s2">&quot;xh_ZA&quot;</span><span class="p">,</span> <span class="c1"># Xhosa - South Africa</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1712">
+                  <tt><i>1712</i>     <span class="mh">0x0485</span><span class="p">:</span> <span class="s2">&quot;sah_RU&quot;</span><span class="p">,</span><span class="c1"># Yakut - Cyrillic</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1713">
+                  <tt><i>1713</i>     <span class="mh">0x0478</span><span class="p">:</span> <span class="s2">&quot;ii_CN&quot;</span><span class="p">,</span> <span class="c1"># Yi - PRC</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1714">
+                  <tt><i>1714</i>     <span class="mh">0x046a</span><span class="p">:</span> <span class="s2">&quot;yo_NG&quot;</span><span class="p">,</span> <span class="c1"># Yoruba - Nigeria</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1715">
+                  <tt><i>1715</i>     <span class="mh">0x0435</span><span class="p">:</span> <span class="s2">&quot;zu_ZA&quot;</span><span class="p">,</span> <span class="c1"># Zulu</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  25
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l33">
+                  <tt><i>33</i> <span class="k">def</span> <span class="nf">_strcoll</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l39">
+                  <tt><i>39</i> <span class="k">def</span> <span class="nf">_strxfrm</span><span class="p">(</span><span class="n">s</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l108">
+                  <tt><i>108</i> <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">_localeconv</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l138">
+                  <tt><i>138</i> <span class="k">def</span> <span class="nf">_group</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">monetary</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l169">
+                  <tt><i>169</i> <span class="k">def</span> <span class="nf">_strip_padding</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l183">
+                  <tt><i>183</i> <span class="k">def</span> <span class="nf">_format</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">grouping</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">monetary</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">*</span><span class="n">additional</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l193">
+                  <tt><i>193</i> <span class="k">def</span> <span class="nf">_localize</span><span class="p">(</span><span class="n">formatted</span><span class="p">,</span> <span class="n">grouping</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">monetary</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l213">
+                  <tt><i>213</i> <span class="k">def</span> <span class="nf">format_string</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">grouping</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">monetary</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l250">
+                  <tt><i>250</i> <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">grouping</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">monetary</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">*</span><span class="n">additional</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l265">
+                  <tt><i>265</i> <span class="k">def</span> <span class="nf">currency</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">symbol</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">grouping</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">international</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l312">
+                  <tt><i>312</i> <span class="k">def</span> <span class="nf">str</span><span class="p">(</span><span class="n">val</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l316">
+                  <tt><i>316</i> <span class="k">def</span> <span class="nf">delocalize</span><span class="p">(</span><span class="n">string</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l332">
+                  <tt><i>332</i> <span class="k">def</span> <span class="nf">localize</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">grouping</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">monetary</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l336">
+                  <tt><i>336</i> <span class="k">def</span> <span class="nf">atof</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="nb">float</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l340">
+                  <tt><i>340</i> <span class="k">def</span> <span class="nf">atoi</span><span class="p">(</span><span class="n">string</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l344">
+                  <tt><i>344</i> <span class="k">def</span> <span class="nf">_test</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l362">
+                  <tt><i>362</i> <span class="k">def</span> <span class="nf">_replace_encoding</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l385">
+                  <tt><i>385</i> <span class="k">def</span> <span class="nf">_append_modifier</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">modifier</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l396">
+                  <tt><i>396</i> <span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">localename</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l479">
+                  <tt><i>479</i> <span class="k">def</span> <span class="nf">_parse_localename</span><span class="p">(</span><span class="n">localename</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l513">
+                  <tt><i>513</i> <span class="k">def</span> <span class="nf">_build_localename</span><span class="p">(</span><span class="n">localetuple</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l534">
+                  <tt><i>534</i> <span class="k">def</span> <span class="nf">getdefaultlocale</span><span class="p">(</span><span class="n">envvars</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;LC_ALL&#39;</span><span class="p">,</span> <span class="s1">&#39;LC_CTYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;LANG&#39;</span><span class="p">,</span> <span class="s1">&#39;LANGUAGE&#39;</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l612">
+                  <tt><i>612</i> <span class="k">def</span> <span class="nf">setlocale</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">locale</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l629">
+                  <tt><i>629</i> <span class="k">def</span> <span class="nf">resetlocale</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="n">LC_ALL</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1718">
+                  <tt><i>1718</i> <span class="k">def</span> <span class="nf">_print_locale</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  13
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l137">
+                  <tt><i>137</i> <span class="c1">#perform the grouping from right to left</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l321">
+                  <tt><i>321</i>     <span class="c1">#First, get rid of the grouping</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l326">
+                  <tt><i>326</i>     <span class="c1">#next, replace the decimal point with a dot</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l346">
+                  <tt><i>346</i>     <span class="c1">#do grouping</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l349">
+                  <tt><i>349</i>     <span class="c1">#standard formatting</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l369">
+                  <tt><i>369</i>     <span class="c1">#print(&#39;norm encoding: %r&#39; % norm_encoding)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l372">
+                  <tt><i>372</i>     <span class="c1">#print(&#39;aliased encoding: %r&#39; % norm_encoding)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l382">
+                  <tt><i>382</i>     <span class="c1">#print(&#39;found encoding %r&#39; % encoding)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l439">
+                  <tt><i>439</i>     <span class="c1">#print(&#39;first lookup failed&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l445">
+                  <tt><i>445</i>             <span class="c1">#print(&#39;lookup without modifier succeeded&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l450">
+                  <tt><i>450</i>         <span class="c1">#print(&#39;second lookup failed&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l459">
+                  <tt><i>459</i>             <span class="c1">#print(&#39;lookup without encoding succeeded&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l469">
+                  <tt><i>469</i>                 <span class="c1">#print(&#39;lookup without modifier and encoding succeeded&#39;)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  8
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l226">
+                  <tt><i>226</i>             <span class="k">if</span> <span class="n">perc</span><span class="o">.</span><span class="n">group</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;%&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l236">
+                  <tt><i>236</i>             <span class="k">if</span> <span class="n">perc</span><span class="o">.</span><span class="n">group</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;%&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l260">
+                  <tt><i>260</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">())</span><span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">percent</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l282">
+                  <tt><i>282</i>         <span class="n">precedes</span> <span class="o">=</span> <span class="n">conv</span><span class="p">[</span><span class="n">val</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="s1">&#39;n_cs_precedes&#39;</span> <span class="ow">or</span> <span class="s1">&#39;p_cs_precedes&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l283">
+                  <tt><i>283</i>         <span class="n">separated</span> <span class="o">=</span> <span class="n">conv</span><span class="p">[</span><span class="n">val</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="s1">&#39;n_sep_by_space&#39;</span> <span class="ow">or</span> <span class="s1">&#39;p_sep_by_space&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l292">
+                  <tt><i>292</i>     <span class="n">sign_pos</span> <span class="o">=</span> <span class="n">conv</span><span class="p">[</span><span class="n">val</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="s1">&#39;n_sign_posn&#39;</span> <span class="ow">or</span> <span class="s1">&#39;p_sign_posn&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l293">
+                  <tt><i>293</i>     <span class="n">sign</span> <span class="o">=</span> <span class="n">conv</span><span class="p">[</span><span class="n">val</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="s1">&#39;negative_sign&#39;</span> <span class="ow">or</span> <span class="s1">&#39;positive_sign&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1783">
+                  <tt><i>1783</i> <span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l33">
+                  <tt><i>33</i> <span class="k">def</span> <span class="nf">_strcoll</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l347">
+                  <tt><i>347</i>     <span class="n">s1</span> <span class="o">=</span> <span class="n">format_string</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">,</span> <span class="mi">123456789</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l584">
+                  <tt><i>584</i>         <span class="n">localename</span> <span class="o">=</span> <span class="n">lookup</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1724">
+                  <tt><i>1724</i>         <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1739">
+                  <tt><i>1739</i>     <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">category</span> <span class="ow">in</span> <span class="n">categories</span><span class="o">.</span><span class="n">items</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1750">
+                  <tt><i>1750</i>     <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">category</span> <span class="ow">in</span> <span class="n">categories</span><span class="o">.</span><span class="n">items</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1767">
+                  <tt><i>1767</i>         <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">category</span> <span class="ow">in</span> <span class="n">categories</span><span class="o">.</span><span class="n">items</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l241">
+                  <tt><i>241</i>                                       <span class="n">val</span><span class="p">[</span><span class="n">i</span><span class="p">],</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l242">
+                  <tt><i>242</i>                                       <span class="n">grouping</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l243">
+                  <tt><i>243</i>                                       <span class="n">monetary</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l244">
+                  <tt><i>244</i>                                       <span class="o">*</span><span class="n">val</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">+</span><span class="n">starcount</span><span class="p">]))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l45">
+                  <tt><i>45</i> <span class="k">try</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l180">
+                  <tt><i>180</i> <span class="n">_percent_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;%(?:\((?P&lt;key&gt;.*?)\))?&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l360">
+                  <tt><i>360</i> <span class="n">_setlocale</span> <span class="o">=</span> <span class="n">setlocale</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1776">
+                  <tt><i>1776</i> <span class="k">try</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E266">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E266:</strong> too many leading '#' for block comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l116">
+                  <tt><i>116</i> <span class="c1">### Number formatting APIs</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l353">
+                  <tt><i>353</i> <span class="c1">### Locale name aliasing engine</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l705">
+                  <tt><i>705</i> <span class="c1">### Database</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E122">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E122:</strong> continuation line missing indentation or outdented
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1538">
+                  <tt><i>1538</i> <span class="c1">#    0x0455: &quot;my_MM&quot;, # Burmese - Not supported</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1686">
+                  <tt><i>1686</i> <span class="c1">#    0x0430: &quot;&quot;, # Sutu - Not supported</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l201">
+                  <tt><i>201</i>                                               <span class="ow">or</span> <span class="s1">&#39;decimal_point&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E306">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E306:</strong> expected 1 blank line before a nested definition, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1723">
+                  <tt><i>1723</i>     <span class="k">def</span> <span class="nf">_init_categories</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="n">categories</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.locale.source.html#l1759">
+                  <tt><i>1759</i>     <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

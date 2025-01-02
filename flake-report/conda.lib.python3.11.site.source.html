@@ -1,0 +1,2234 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>.conda/lib/python3.11/site.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <h1>
+            <a href="conda.lib.python3.11.site.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/site.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="sd">&quot;&quot;&quot;Append module search paths for third-party packages to sys.path.</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> &nbsp;</tt>
+            </div>
+            <div id="l3"
+               class="code sev- "><tt><i>3</i> <span class="sd">****************************************************************</span></tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> <span class="sd">* This module is automatically imported during initialization. *</span></tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> <span class="sd">****************************************************************</span></tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i> &nbsp;</tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i> <span class="sd">This will append site-specific paths to the module search path.  On</span></tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i> <span class="sd">Unix (including Mac OSX), it starts with sys.prefix and</span></tt>
+            </div>
+            <div id="l9"
+               class="code sev- "><tt><i>9</i> <span class="sd">sys.exec_prefix (if different) and appends</span></tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i> <span class="sd">lib/python&lt;version&gt;/site-packages.</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i> <span class="sd">On other platforms (such as Windows), it tries each of the</span></tt>
+            </div>
+            <div id="l12"
+               class="code sev- "><tt><i>12</i> <span class="sd">prefixes directly, as well as with lib/site-packages appended.  The</span></tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i> <span class="sd">resulting directories, if they exist, are appended to sys.path, and</span></tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i> <span class="sd">also inspected for path configuration files.</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev- "><tt><i>15</i> &nbsp;</tt>
+            </div>
+            <div id="l16"
+               class="code sev- "><tt><i>16</i> <span class="sd">If a file named &quot;pyvenv.cfg&quot; exists one directory above sys.executable,</span></tt>
+            </div>
+            <div id="l17"
+               class="code sev- "><tt><i>17</i> <span class="sd">sys.prefix and sys.exec_prefix are set to that directory and</span></tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i> <span class="sd">it is also checked for site-packages (sys.base_prefix and</span></tt>
+            </div>
+            <div id="l19"
+               class="code sev- "><tt><i>19</i> <span class="sd">sys.base_exec_prefix will always be the &quot;real&quot; prefixes of the Python</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev- "><tt><i>20</i> <span class="sd">installation). If &quot;pyvenv.cfg&quot; (a bootstrap configuration file) contains</span></tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i> <span class="sd">the key &quot;include-system-site-packages&quot; set to anything other than &quot;false&quot;</span></tt>
+            </div>
+            <div id="l22"
+               class="code sev- "><tt><i>22</i> <span class="sd">(case-insensitive), the system-level prefixes will still also be</span></tt>
+            </div>
+            <div id="l23"
+               class="code sev- "><tt><i>23</i> <span class="sd">searched for site-packages; otherwise they won&#39;t.</span></tt>
+            </div>
+            <div id="l24"
+               class="code sev- "><tt><i>24</i> &nbsp;</tt>
+            </div>
+            <div id="l25"
+               class="code sev- "><tt><i>25</i> <span class="sd">All of the resulting site-specific directories, if they exist, are</span></tt>
+            </div>
+            <div id="l26"
+               class="code sev- "><tt><i>26</i> <span class="sd">appended to sys.path, and also inspected for path configuration</span></tt>
+            </div>
+            <div id="l27"
+               class="code sev- "><tt><i>27</i> <span class="sd">files.</span></tt>
+            </div>
+            <div id="l28"
+               class="code sev- "><tt><i>28</i> &nbsp;</tt>
+            </div>
+            <div id="l29"
+               class="code sev- "><tt><i>29</i> <span class="sd">A path configuration file is a file whose name has the form</span></tt>
+            </div>
+            <div id="l30"
+               class="code sev- "><tt><i>30</i> <span class="sd">&lt;package&gt;.pth; its contents are additional directories (one per line)</span></tt>
+            </div>
+            <div id="l31"
+               class="code sev- "><tt><i>31</i> <span class="sd">to be added to sys.path.  Non-existing directories (or</span></tt>
+            </div>
+            <div id="l32"
+               class="code sev- "><tt><i>32</i> <span class="sd">non-directories) are never added to sys.path; no directory is added to</span></tt>
+            </div>
+            <div id="l33"
+               class="code sev- "><tt><i>33</i> <span class="sd">sys.path more than once.  Blank lines and lines beginning with</span></tt>
+            </div>
+            <div id="l34"
+               class="code sev- "><tt><i>34</i> <span class="sd">&#39;#&#39; are skipped. Lines starting with &#39;import&#39; are executed.</span></tt>
+            </div>
+            <div id="l35"
+               class="code sev- "><tt><i>35</i> &nbsp;</tt>
+            </div>
+            <div id="l36"
+               class="code sev- "><tt><i>36</i> <span class="sd">For example, suppose sys.prefix and sys.exec_prefix are set to</span></tt>
+            </div>
+            <div id="l37"
+               class="code sev- "><tt><i>37</i> <span class="sd">/usr/local and there is a directory /usr/local/lib/python2.5/site-packages</span></tt>
+            </div>
+            <div id="l38"
+               class="code sev- "><tt><i>38</i> <span class="sd">with three subdirectories, foo, bar and spam, and two path</span></tt>
+            </div>
+            <div id="l39"
+               class="code sev- "><tt><i>39</i> <span class="sd">configuration files, foo.pth and bar.pth.  Assume foo.pth contains the</span></tt>
+            </div>
+            <div id="l40"
+               class="code sev- "><tt><i>40</i> <span class="sd">following:</span></tt>
+            </div>
+            <div id="l41"
+               class="code sev- "><tt><i>41</i> &nbsp;</tt>
+            </div>
+            <div id="l42"
+               class="code sev- "><tt><i>42</i> <span class="sd">  # foo package configuration</span></tt>
+            </div>
+            <div id="l43"
+               class="code sev- "><tt><i>43</i> <span class="sd">  foo</span></tt>
+            </div>
+            <div id="l44"
+               class="code sev- "><tt><i>44</i> <span class="sd">  bar</span></tt>
+            </div>
+            <div id="l45"
+               class="code sev- "><tt><i>45</i> <span class="sd">  bletch</span></tt>
+            </div>
+            <div id="l46"
+               class="code sev- "><tt><i>46</i> &nbsp;</tt>
+            </div>
+            <div id="l47"
+               class="code sev- "><tt><i>47</i> <span class="sd">and bar.pth contains:</span></tt>
+            </div>
+            <div id="l48"
+               class="code sev- "><tt><i>48</i> &nbsp;</tt>
+            </div>
+            <div id="l49"
+               class="code sev- "><tt><i>49</i> <span class="sd">  # bar package configuration</span></tt>
+            </div>
+            <div id="l50"
+               class="code sev- "><tt><i>50</i> <span class="sd">  bar</span></tt>
+            </div>
+            <div id="l51"
+               class="code sev- "><tt><i>51</i> &nbsp;</tt>
+            </div>
+            <div id="l52"
+               class="code sev- "><tt><i>52</i> <span class="sd">Then the following directories are added to sys.path, in this order:</span></tt>
+            </div>
+            <div id="l53"
+               class="code sev- "><tt><i>53</i> &nbsp;</tt>
+            </div>
+            <div id="l54"
+               class="code sev- "><tt><i>54</i> <span class="sd">  /usr/local/lib/python2.5/site-packages/bar</span></tt>
+            </div>
+            <div id="l55"
+               class="code sev- "><tt><i>55</i> <span class="sd">  /usr/local/lib/python2.5/site-packages/foo</span></tt>
+            </div>
+            <div id="l56"
+               class="code sev- "><tt><i>56</i> &nbsp;</tt>
+            </div>
+            <div id="l57"
+               class="code sev- "><tt><i>57</i> <span class="sd">Note that bletch is omitted because it doesn&#39;t exist; bar precedes foo</span></tt>
+            </div>
+            <div id="l58"
+               class="code sev- "><tt><i>58</i> <span class="sd">because bar.pth comes alphabetically before foo.pth; and spam is</span></tt>
+            </div>
+            <div id="l59"
+               class="code sev- "><tt><i>59</i> <span class="sd">omitted because it is not mentioned in either path configuration file.</span></tt>
+            </div>
+            <div id="l60"
+               class="code sev- "><tt><i>60</i> &nbsp;</tt>
+            </div>
+            <div id="l61"
+               class="code sev- "><tt><i>61</i> <span class="sd">The readline module is also automatically configured to enable</span></tt>
+            </div>
+            <div id="l62"
+               class="code sev- "><tt><i>62</i> <span class="sd">completion for systems that support it.  This can be overridden in</span></tt>
+            </div>
+            <div id="l63"
+               class="code sev- "><tt><i>63</i> <span class="sd">sitecustomize, usercustomize or PYTHONSTARTUP.  Starting Python in</span></tt>
+            </div>
+            <div id="l64"
+               class="code sev- "><tt><i>64</i> <span class="sd">isolated mode (-I) disables automatic readline configuration.</span></tt>
+            </div>
+            <div id="l65"
+               class="code sev- "><tt><i>65</i> &nbsp;</tt>
+            </div>
+            <div id="l66"
+               class="code sev- "><tt><i>66</i> <span class="sd">After these operations, an attempt is made to import a module</span></tt>
+            </div>
+            <div id="l67"
+               class="code sev- "><tt><i>67</i> <span class="sd">named sitecustomize, which can perform arbitrary additional</span></tt>
+            </div>
+            <div id="l68"
+               class="code sev- "><tt><i>68</i> <span class="sd">site-specific customizations.  If this import fails with an</span></tt>
+            </div>
+            <div id="l69"
+               class="code sev- "><tt><i>69</i> <span class="sd">ImportError exception, it is silently ignored.</span></tt>
+            </div>
+            <div id="l70"
+               class="code sev- "><tt><i>70</i> <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l71"
+               class="code sev- "><tt><i>71</i> &nbsp;</tt>
+            </div>
+            <div id="l72"
+               class="code sev- "><tt><i>72</i> <span class="kn">import</span> <span class="nn">sys</span></tt>
+            </div>
+            <div id="l73"
+               class="code sev- "><tt><i>73</i> <span class="kn">import</span> <span class="nn">os</span></tt>
+            </div>
+            <div id="l74"
+               class="code sev- "><tt><i>74</i> <span class="kn">import</span> <span class="nn">builtins</span></tt>
+            </div>
+            <div id="l75"
+               class="code sev- "><tt><i>75</i> <span class="kn">import</span> <span class="nn">_sitebuiltins</span></tt>
+            </div>
+            <div id="l76"
+               class="code sev- "><tt><i>76</i> <span class="kn">import</span> <span class="nn">io</span></tt>
+            </div>
+            <div id="l77"
+               class="code sev- "><tt><i>77</i> <span class="kn">import</span> <span class="nn">stat</span></tt>
+            </div>
+            <div id="l78"
+               class="code sev- "><tt><i>78</i> &nbsp;</tt>
+            </div>
+            <div id="l79"
+               class="code sev- "><tt><i>79</i> <span class="c1"># Prefixes for site-packages; add additional prefixes like /usr/local here</span></tt>
+            </div>
+            <div id="l80"
+               class="code sev- "><tt><i>80</i> <span class="n">PREFIXES</span> <span class="o">=</span> <span class="p">[</span><span class="n">sys</span><span class="o">.</span><span class="n">prefix</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">exec_prefix</span><span class="p">]</span></tt>
+            </div>
+            <div id="l81"
+               class="code sev- "><tt><i>81</i> <span class="c1"># Enable per user site-packages directory</span></tt>
+            </div>
+            <div id="l82"
+               class="code sev- "><tt><i>82</i> <span class="c1"># set it to False to disable the feature or True to force the feature</span></tt>
+            </div>
+            <div id="l83"
+               class="code sev- "><tt><i>83</i> <span class="n">ENABLE_USER_SITE</span> <span class="o">=</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l84"
+               class="code sev- "><tt><i>84</i> &nbsp;</tt>
+            </div>
+            <div id="l85"
+               class="code sev- "><tt><i>85</i> <span class="c1"># for distutils.commands.install</span></tt>
+            </div>
+            <div id="l86"
+               class="code sev- "><tt><i>86</i> <span class="c1"># These values are initialized by the getuserbase() and getusersitepackages()</span></tt>
+            </div>
+            <div id="l87"
+               class="code sev- "><tt><i>87</i> <span class="c1"># functions, through the main() function when Python starts.</span></tt>
+            </div>
+            <div id="l88"
+               class="code sev- "><tt><i>88</i> <span class="n">USER_SITE</span> <span class="o">=</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l89"
+               class="code sev- "><tt><i>89</i> <span class="n">USER_BASE</span> <span class="o">=</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l90"
+               class="code sev- "><tt><i>90</i> &nbsp;</tt>
+            </div>
+            <div id="l91"
+               class="code sev- "><tt><i>91</i> &nbsp;</tt>
+            </div>
+            <div id="l92"
+               class="code sev- "><tt><i>92</i> <span class="k">def</span> <span class="nf">_trace</span><span class="p">(</span><span class="n">message</span><span class="p">):</span></tt>
+            </div>
+            <div id="l93"
+               class="code sev- "><tt><i>93</i>     <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span></tt>
+            </div>
+            <div id="l94"
+               class="code sev- "><tt><i>94</i>         <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span></tt>
+            </div>
+            <div id="l95"
+               class="code sev- "><tt><i>95</i> &nbsp;</tt>
+            </div>
+            <div id="l96"
+               class="code sev- "><tt><i>96</i> &nbsp;</tt>
+            </div>
+            <div id="l97"
+               class="code sev- "><tt><i>97</i> <span class="k">def</span> <span class="nf">makepath</span><span class="p">(</span><span class="o">*</span><span class="n">paths</span><span class="p">):</span></tt>
+            </div>
+            <div id="l98"
+               class="code sev- "><tt><i>98</i>     <span class="nb">dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="o">*</span><span class="n">paths</span><span class="p">)</span></tt>
+            </div>
+            <div id="l99"
+               class="code sev- "><tt><i>99</i>     <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l100"
+               class="code sev- "><tt><i>100</i>         <span class="nb">dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span></tt>
+            </div>
+            <div id="l101"
+               class="code sev- "><tt><i>101</i>     <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l102"
+               class="code sev- "><tt><i>102</i>         <span class="k">pass</span></tt>
+            </div>
+            <div id="l103"
+               class="code sev- "><tt><i>103</i>     <span class="k">return</span> <span class="nb">dir</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normcase</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span></tt>
+            </div>
+            <div id="l104"
+               class="code sev- "><tt><i>104</i> &nbsp;</tt>
+            </div>
+            <div id="l105"
+               class="code sev- "><tt><i>105</i> &nbsp;</tt>
+            </div>
+            <div id="l106"
+               class="code sev- "><tt><i>106</i> <span class="k">def</span> <span class="nf">abs_paths</span><span class="p">():</span></tt>
+            </div>
+            <div id="l107"
+               class="code sev- "><tt><i>107</i>     <span class="sd">&quot;&quot;&quot;Set all module __file__ and __cached__ attributes to an absolute path&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l108"
+               class="code sev- "><tt><i>108</i>     <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span></tt>
+            </div>
+            <div id="l109"
+               class="code sev- "><tt><i>109</i>         <span class="n">loader_module</span> <span class="o">=</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l110"
+               class="code sev- "><tt><i>110</i>         <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l111"
+               class="code sev- "><tt><i>111</i>             <span class="n">loader_module</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">__loader__</span><span class="o">.</span><span class="vm">__module__</span></tt>
+            </div>
+            <div id="l112"
+               class="code sev- "><tt><i>112</i>         <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l113"
+               class="code sev- "><tt><i>113</i>             <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l114"
+               class="code sev- "><tt><i>114</i>                 <span class="n">loader_module</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">__spec__</span><span class="o">.</span><span class="n">loader</span><span class="o">.</span><span class="vm">__module__</span></tt>
+            </div>
+            <div id="l115"
+               class="code sev- "><tt><i>115</i>             <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l116"
+               class="code sev- "><tt><i>116</i>                 <span class="k">pass</span></tt>
+            </div>
+            <div id="l117"
+               class="code sev- "><tt><i>117</i>         <span class="k">if</span> <span class="n">loader_module</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;_frozen_importlib&#39;</span><span class="p">,</span> <span class="s1">&#39;_frozen_importlib_external&#39;</span><span class="p">}:</span></tt>
+            </div>
+            <div id="l118"
+               class="code sev- "><tt><i>118</i>             <span class="k">continue</span>   <span class="c1"># don&#39;t mess with a PEP 302-supplied __file__</span></tt>
+            </div>
+            <div id="l119"
+               class="code sev- "><tt><i>119</i>         <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l120"
+               class="code sev- "><tt><i>120</i>             <span class="n">m</span><span class="o">.</span><span class="vm">__file__</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span></tt>
+            </div>
+            <div id="l121"
+               class="code sev- "><tt><i>121</i>         <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span></tt>
+            </div>
+            <div id="l122"
+               class="code sev- "><tt><i>122</i>             <span class="k">pass</span></tt>
+            </div>
+            <div id="l123"
+               class="code sev- "><tt><i>123</i>         <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l124"
+               class="code sev- "><tt><i>124</i>             <span class="n">m</span><span class="o">.</span><span class="n">__cached__</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">__cached__</span><span class="p">)</span></tt>
+            </div>
+            <div id="l125"
+               class="code sev- "><tt><i>125</i>         <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span></tt>
+            </div>
+            <div id="l126"
+               class="code sev- "><tt><i>126</i>             <span class="k">pass</span></tt>
+            </div>
+            <div id="l127"
+               class="code sev- "><tt><i>127</i> &nbsp;</tt>
+            </div>
+            <div id="l128"
+               class="code sev- "><tt><i>128</i> &nbsp;</tt>
+            </div>
+            <div id="l129"
+               class="code sev- "><tt><i>129</i> <span class="k">def</span> <span class="nf">removeduppaths</span><span class="p">():</span></tt>
+            </div>
+            <div id="l130"
+               class="code sev- "><tt><i>130</i>     <span class="sd">&quot;&quot;&quot; Remove duplicate entries from sys.path along with making them</span></tt>
+            </div>
+            <div id="l131"
+               class="code sev- "><tt><i>131</i> <span class="sd">    absolute&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l132"
+               class="code sev- "><tt><i>132</i>     <span class="c1"># This ensures that the initial path provided by the interpreter contains</span></tt>
+            </div>
+            <div id="l133"
+               class="code sev- "><tt><i>133</i>     <span class="c1"># only absolute pathnames, even if we&#39;re running from the build directory.</span></tt>
+            </div>
+            <div id="l134"
+               class="code sev- "><tt><i>134</i>     <span class="n">L</span> <span class="o">=</span> <span class="p">[]</span></tt>
+            </div>
+            <div id="l135"
+               class="code sev- "><tt><i>135</i>     <span class="n">known_paths</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></tt>
+            </div>
+            <div id="l136"
+               class="code sev- "><tt><i>136</i>     <span class="k">for</span> <span class="nb">dir</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span></tt>
+            </div>
+            <div id="l137"
+               class="code sev- "><tt><i>137</i>         <span class="c1"># Filter out duplicate paths (on case-insensitive file systems also</span></tt>
+            </div>
+            <div id="l138"
+               class="code sev- "><tt><i>138</i>         <span class="c1"># if they only differ in case); turn relative paths into absolute</span></tt>
+            </div>
+            <div id="l139"
+               class="code sev- "><tt><i>139</i>         <span class="c1"># paths.</span></tt>
+            </div>
+            <div id="l140"
+               class="code sev- "><tt><i>140</i>         <span class="nb">dir</span><span class="p">,</span> <span class="n">dircase</span> <span class="o">=</span> <span class="n">makepath</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span></tt>
+            </div>
+            <div id="l141"
+               class="code sev- "><tt><i>141</i>         <span class="k">if</span> <span class="n">dircase</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">known_paths</span><span class="p">:</span></tt>
+            </div>
+            <div id="l142"
+               class="code sev- "><tt><i>142</i>             <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span></tt>
+            </div>
+            <div id="l143"
+               class="code sev- "><tt><i>143</i>             <span class="n">known_paths</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">dircase</span><span class="p">)</span></tt>
+            </div>
+            <div id="l144"
+               class="code sev- "><tt><i>144</i>     <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">L</span></tt>
+            </div>
+            <div id="l145"
+               class="code sev- "><tt><i>145</i>     <span class="k">return</span> <span class="n">known_paths</span></tt>
+            </div>
+            <div id="l146"
+               class="code sev- "><tt><i>146</i> &nbsp;</tt>
+            </div>
+            <div id="l147"
+               class="code sev- "><tt><i>147</i> &nbsp;</tt>
+            </div>
+            <div id="l148"
+               class="code sev- "><tt><i>148</i> <span class="k">def</span> <span class="nf">_init_pathinfo</span><span class="p">():</span></tt>
+            </div>
+            <div id="l149"
+               class="code sev- "><tt><i>149</i>     <span class="sd">&quot;&quot;&quot;Return a set containing all existing file system items from sys.path.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l150"
+               class="code sev- "><tt><i>150</i>     <span class="n">d</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></tt>
+            </div>
+            <div id="l151"
+               class="code sev- "><tt><i>151</i>     <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span></tt>
+            </div>
+            <div id="l152"
+               class="code sev- "><tt><i>152</i>         <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l153"
+               class="code sev- "><tt><i>153</i>             <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">item</span><span class="p">):</span></tt>
+            </div>
+            <div id="l154"
+               class="code sev- "><tt><i>154</i>                 <span class="n">_</span><span class="p">,</span> <span class="n">itemcase</span> <span class="o">=</span> <span class="n">makepath</span><span class="p">(</span><span class="n">item</span><span class="p">)</span></tt>
+            </div>
+            <div id="l155"
+               class="code sev- "><tt><i>155</i>                 <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">itemcase</span><span class="p">)</span></tt>
+            </div>
+            <div id="l156"
+               class="code sev- "><tt><i>156</i>         <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l157"
+               class="code sev- "><tt><i>157</i>             <span class="k">continue</span></tt>
+            </div>
+            <div id="l158"
+               class="code sev- "><tt><i>158</i>     <span class="k">return</span> <span class="n">d</span></tt>
+            </div>
+            <div id="l159"
+               class="code sev- "><tt><i>159</i> &nbsp;</tt>
+            </div>
+            <div id="l160"
+               class="code sev- "><tt><i>160</i> &nbsp;</tt>
+            </div>
+            <div id="l161"
+               class="code sev- "><tt><i>161</i> <span class="k">def</span> <span class="nf">addpackage</span><span class="p">(</span><span class="n">sitedir</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">known_paths</span><span class="p">):</span></tt>
+            </div>
+            <div id="l162"
+               class="code sev- "><tt><i>162</i>     <span class="sd">&quot;&quot;&quot;Process a .pth file within the site-packages directory:</span></tt>
+            </div>
+            <div id="l163"
+               class="code sev- "><tt><i>163</i> <span class="sd">       For each line in the file, either combine it with sitedir to a path</span></tt>
+            </div>
+            <div id="l164"
+               class="code sev- "><tt><i>164</i> <span class="sd">       and add that to known_paths, or execute it if it starts with &#39;import &#39;.</span></tt>
+            </div>
+            <div id="l165"
+               class="code sev- "><tt><i>165</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l166"
+               class="code sev- "><tt><i>166</i>     <span class="k">if</span> <span class="n">known_paths</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l167"
+               class="code sev- "><tt><i>167</i>         <span class="n">known_paths</span> <span class="o">=</span> <span class="n">_init_pathinfo</span><span class="p">()</span></tt>
+            </div>
+            <div id="l168"
+               class="code sev- "><tt><i>168</i>         <span class="n">reset</span> <span class="o">=</span> <span class="kc">True</span></tt>
+            </div>
+            <div id="l169"
+               class="code sev- "><tt><i>169</i>     <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l170"
+               class="code sev- "><tt><i>170</i>         <span class="n">reset</span> <span class="o">=</span> <span class="kc">False</span></tt>
+            </div>
+            <div id="l171"
+               class="code sev- "><tt><i>171</i>     <span class="n">fullname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sitedir</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></tt>
+            </div>
+            <div id="l172"
+               class="code sev- "><tt><i>172</i>     <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l173"
+               class="code sev- "><tt><i>173</i>         <span class="n">st</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">lstat</span><span class="p">(</span><span class="n">fullname</span><span class="p">)</span></tt>
+            </div>
+            <div id="l174"
+               class="code sev- "><tt><i>174</i>     <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l175"
+               class="code sev- "><tt><i>175</i>         <span class="k">return</span></tt>
+            </div>
+            <div id="l176"
+               class="code sev- "><tt><i>176</i>     <span class="k">if</span> <span class="p">((</span><span class="nb">getattr</span><span class="p">(</span><span class="n">st</span><span class="p">,</span> <span class="s1">&#39;st_flags&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">stat</span><span class="o">.</span><span class="n">UF_HIDDEN</span><span class="p">)</span> <span class="ow">or</span></tt>
+            </div>
+            <div id="l177"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E129
+                     </span>
+                     Visually indented line with same indent as next logical line</li>
+               
+               </ul><tt><i>177</i>         <span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">st</span><span class="p">,</span> <span class="s1">&#39;st_file_attributes&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">stat</span><span class="o">.</span><span class="n">FILE_ATTRIBUTE_HIDDEN</span><span class="p">)):</span></tt>
+            </div>
+            <div id="l178"
+               class="code sev- "><tt><i>178</i>         <span class="n">_trace</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Skipping hidden .pth file: </span><span class="si">{</span><span class="n">fullname</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l179"
+               class="code sev- "><tt><i>179</i>         <span class="k">return</span></tt>
+            </div>
+            <div id="l180"
+               class="code sev- "><tt><i>180</i>     <span class="n">_trace</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing .pth file: </span><span class="si">{</span><span class="n">fullname</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l181"
+               class="code sev- "><tt><i>181</i>     <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l182"
+               class="code sev- "><tt><i>182</i>         <span class="c1"># locale encoding is not ideal especially on Windows. But we have used</span></tt>
+            </div>
+            <div id="l183"
+               class="code sev- "><tt><i>183</i>         <span class="c1"># it for a long time. setuptools uses the locale encoding too.</span></tt>
+            </div>
+            <div id="l184"
+               class="code sev- "><tt><i>184</i>         <span class="n">f</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">TextIOWrapper</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">open_code</span><span class="p">(</span><span class="n">fullname</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;locale&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l185"
+               class="code sev- "><tt><i>185</i>     <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l186"
+               class="code sev- "><tt><i>186</i>         <span class="k">return</span></tt>
+            </div>
+            <div id="l187"
+               class="code sev- "><tt><i>187</i>     <span class="k">with</span> <span class="n">f</span><span class="p">:</span></tt>
+            </div>
+            <div id="l188"
+               class="code sev- "><tt><i>188</i>         <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">f</span><span class="p">):</span></tt>
+            </div>
+            <div id="l189"
+               class="code sev- "><tt><i>189</i>             <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">):</span></tt>
+            </div>
+            <div id="l190"
+               class="code sev- "><tt><i>190</i>                 <span class="k">continue</span></tt>
+            </div>
+            <div id="l191"
+               class="code sev- "><tt><i>191</i>             <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l192"
+               class="code sev- "><tt><i>192</i>                 <span class="k">continue</span></tt>
+            </div>
+            <div id="l193"
+               class="code sev- "><tt><i>193</i>             <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l194"
+               class="code sev- "><tt><i>194</i>                 <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">((</span><span class="s2">&quot;import &quot;</span><span class="p">,</span> <span class="s2">&quot;import</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)):</span></tt>
+            </div>
+            <div id="l195"
+               class="code sev- "><tt><i>195</i>                     <span class="n">exec</span><span class="p">(</span><span class="n">line</span><span class="p">)</span></tt>
+            </div>
+            <div id="l196"
+               class="code sev- "><tt><i>196</i>                     <span class="k">continue</span></tt>
+            </div>
+            <div id="l197"
+               class="code sev- "><tt><i>197</i>                 <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span></tt>
+            </div>
+            <div id="l198"
+               class="code sev- "><tt><i>198</i>                 <span class="nb">dir</span><span class="p">,</span> <span class="n">dircase</span> <span class="o">=</span> <span class="n">makepath</span><span class="p">(</span><span class="n">sitedir</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+            </div>
+            <div id="l199"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E713
+                     </span>
+                     Test for membership should be 'not in'</li>
+               
+               </ul><tt><i>199</i>                 <span class="k">if</span> <span class="ow">not</span> <span class="n">dircase</span> <span class="ow">in</span> <span class="n">known_paths</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="nb">dir</span><span class="p">):</span></tt>
+            </div>
+            <div id="l200"
+               class="code sev- "><tt><i>200</i>                     <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span></tt>
+            </div>
+            <div id="l201"
+               class="code sev- "><tt><i>201</i>                     <span class="n">known_paths</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">dircase</span><span class="p">)</span></tt>
+            </div>
+            <div id="l202"
+               class="code sev- "><tt><i>202</i>             <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span></tt>
+            </div>
+            <div id="l203"
+               class="code sev- "><tt><i>203</i>                 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error processing line </span><span class="si">{:d}</span><span class="s2"> of </span><span class="si">{}</span><span class="s2">:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">fullname</span><span class="p">),</span></tt>
+            </div>
+            <div id="l204"
+               class="code sev- "><tt><i>204</i>                       <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span></tt>
+            </div>
+            <div id="l205"
+               class="code sev- "><tt><i>205</i>                 <span class="kn">import</span> <span class="nn">traceback</span></tt>
+            </div>
+            <div id="l206"
+               class="code sev- "><tt><i>206</i>                 <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exception</span><span class="p">(</span><span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()):</span></tt>
+            </div>
+            <div id="l207"
+               class="code sev- "><tt><i>207</i>                     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">record</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span></tt>
+            </div>
+            <div id="l208"
+               class="code sev- "><tt><i>208</i>                         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="o">+</span><span class="n">line</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span></tt>
+            </div>
+            <div id="l209"
+               class="code sev- "><tt><i>209</i>                 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Remainder of file ignored&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span></tt>
+            </div>
+            <div id="l210"
+               class="code sev- "><tt><i>210</i>                 <span class="k">break</span></tt>
+            </div>
+            <div id="l211"
+               class="code sev- "><tt><i>211</i>     <span class="k">if</span> <span class="n">reset</span><span class="p">:</span></tt>
+            </div>
+            <div id="l212"
+               class="code sev- "><tt><i>212</i>         <span class="n">known_paths</span> <span class="o">=</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l213"
+               class="code sev- "><tt><i>213</i>     <span class="k">return</span> <span class="n">known_paths</span></tt>
+            </div>
+            <div id="l214"
+               class="code sev- "><tt><i>214</i> &nbsp;</tt>
+            </div>
+            <div id="l215"
+               class="code sev- "><tt><i>215</i> &nbsp;</tt>
+            </div>
+            <div id="l216"
+               class="code sev- "><tt><i>216</i> <span class="k">def</span> <span class="nf">addsitedir</span><span class="p">(</span><span class="n">sitedir</span><span class="p">,</span> <span class="n">known_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+            </div>
+            <div id="l217"
+               class="code sev- "><tt><i>217</i>     <span class="sd">&quot;&quot;&quot;Add &#39;sitedir&#39; argument to sys.path if missing and handle .pth files in</span></tt>
+            </div>
+            <div id="l218"
+               class="code sev- "><tt><i>218</i> <span class="sd">    &#39;sitedir&#39;&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l219"
+               class="code sev- "><tt><i>219</i>     <span class="n">_trace</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Adding directory: </span><span class="si">{</span><span class="n">sitedir</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l220"
+               class="code sev- "><tt><i>220</i>     <span class="k">if</span> <span class="n">known_paths</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l221"
+               class="code sev- "><tt><i>221</i>         <span class="n">known_paths</span> <span class="o">=</span> <span class="n">_init_pathinfo</span><span class="p">()</span></tt>
+            </div>
+            <div id="l222"
+               class="code sev- "><tt><i>222</i>         <span class="n">reset</span> <span class="o">=</span> <span class="kc">True</span></tt>
+            </div>
+            <div id="l223"
+               class="code sev- "><tt><i>223</i>     <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l224"
+               class="code sev- "><tt><i>224</i>         <span class="n">reset</span> <span class="o">=</span> <span class="kc">False</span></tt>
+            </div>
+            <div id="l225"
+               class="code sev- "><tt><i>225</i>     <span class="n">sitedir</span><span class="p">,</span> <span class="n">sitedircase</span> <span class="o">=</span> <span class="n">makepath</span><span class="p">(</span><span class="n">sitedir</span><span class="p">)</span></tt>
+            </div>
+            <div id="l226"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E713
+                     </span>
+                     Test for membership should be 'not in'</li>
+               
+               </ul><tt><i>226</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">sitedircase</span> <span class="ow">in</span> <span class="n">known_paths</span><span class="p">:</span></tt>
+            </div>
+            <div id="l227"
+               class="code sev- "><tt><i>227</i>         <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sitedir</span><span class="p">)</span>        <span class="c1"># Add path component</span></tt>
+            </div>
+            <div id="l228"
+               class="code sev- "><tt><i>228</i>         <span class="n">known_paths</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">sitedircase</span><span class="p">)</span></tt>
+            </div>
+            <div id="l229"
+               class="code sev- "><tt><i>229</i>     <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l230"
+               class="code sev- "><tt><i>230</i>         <span class="n">names</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">sitedir</span><span class="p">)</span></tt>
+            </div>
+            <div id="l231"
+               class="code sev- "><tt><i>231</i>     <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l232"
+               class="code sev- "><tt><i>232</i>         <span class="k">return</span></tt>
+            </div>
+            <div id="l233"
+               class="code sev- "><tt><i>233</i>     <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span></tt>
+            </div>
+            <div id="l234"
+               class="code sev- "><tt><i>234</i>              <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.pth&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)]</span></tt>
+            </div>
+            <div id="l235"
+               class="code sev- "><tt><i>235</i>     <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">):</span></tt>
+            </div>
+            <div id="l236"
+               class="code sev- "><tt><i>236</i>         <span class="n">addpackage</span><span class="p">(</span><span class="n">sitedir</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">known_paths</span><span class="p">)</span></tt>
+            </div>
+            <div id="l237"
+               class="code sev- "><tt><i>237</i>     <span class="k">if</span> <span class="n">reset</span><span class="p">:</span></tt>
+            </div>
+            <div id="l238"
+               class="code sev- "><tt><i>238</i>         <span class="n">known_paths</span> <span class="o">=</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l239"
+               class="code sev- "><tt><i>239</i>     <span class="k">return</span> <span class="n">known_paths</span></tt>
+            </div>
+            <div id="l240"
+               class="code sev- "><tt><i>240</i> &nbsp;</tt>
+            </div>
+            <div id="l241"
+               class="code sev- "><tt><i>241</i> &nbsp;</tt>
+            </div>
+            <div id="l242"
+               class="code sev- "><tt><i>242</i> <span class="k">def</span> <span class="nf">check_enableusersite</span><span class="p">():</span></tt>
+            </div>
+            <div id="l243"
+               class="code sev- "><tt><i>243</i>     <span class="sd">&quot;&quot;&quot;Check if user site directory is safe for inclusion</span></tt>
+            </div>
+            <div id="l244"
+               class="code sev- "><tt><i>244</i> &nbsp;</tt>
+            </div>
+            <div id="l245"
+               class="code sev- "><tt><i>245</i> <span class="sd">    The function tests for the command line flag (including environment var),</span></tt>
+            </div>
+            <div id="l246"
+               class="code sev- "><tt><i>246</i> <span class="sd">    process uid/gid equal to effective uid/gid.</span></tt>
+            </div>
+            <div id="l247"
+               class="code sev- "><tt><i>247</i> &nbsp;</tt>
+            </div>
+            <div id="l248"
+               class="code sev- "><tt><i>248</i> <span class="sd">    None: Disabled for security reasons</span></tt>
+            </div>
+            <div id="l249"
+               class="code sev- "><tt><i>249</i> <span class="sd">    False: Disabled by user (command line option)</span></tt>
+            </div>
+            <div id="l250"
+               class="code sev- "><tt><i>250</i> <span class="sd">    True: Safe and enabled</span></tt>
+            </div>
+            <div id="l251"
+               class="code sev- "><tt><i>251</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l252"
+               class="code sev- "><tt><i>252</i>     <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">no_user_site</span><span class="p">:</span></tt>
+            </div>
+            <div id="l253"
+               class="code sev- "><tt><i>253</i>         <span class="k">return</span> <span class="kc">False</span></tt>
+            </div>
+            <div id="l254"
+               class="code sev- "><tt><i>254</i> &nbsp;</tt>
+            </div>
+            <div id="l255"
+               class="code sev- "><tt><i>255</i>     <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">os</span><span class="p">,</span> <span class="s2">&quot;getuid&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">os</span><span class="p">,</span> <span class="s2">&quot;geteuid&quot;</span><span class="p">):</span></tt>
+            </div>
+            <div id="l256"
+               class="code sev- "><tt><i>256</i>         <span class="c1"># check process uid == effective uid</span></tt>
+            </div>
+            <div id="l257"
+               class="code sev- "><tt><i>257</i>         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">geteuid</span><span class="p">()</span> <span class="o">!=</span> <span class="n">os</span><span class="o">.</span><span class="n">getuid</span><span class="p">():</span></tt>
+            </div>
+            <div id="l258"
+               class="code sev- "><tt><i>258</i>             <span class="k">return</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l259"
+               class="code sev- "><tt><i>259</i>     <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">os</span><span class="p">,</span> <span class="s2">&quot;getgid&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">os</span><span class="p">,</span> <span class="s2">&quot;getegid&quot;</span><span class="p">):</span></tt>
+            </div>
+            <div id="l260"
+               class="code sev- "><tt><i>260</i>         <span class="c1"># check process gid == effective gid</span></tt>
+            </div>
+            <div id="l261"
+               class="code sev- "><tt><i>261</i>         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">getegid</span><span class="p">()</span> <span class="o">!=</span> <span class="n">os</span><span class="o">.</span><span class="n">getgid</span><span class="p">():</span></tt>
+            </div>
+            <div id="l262"
+               class="code sev- "><tt><i>262</i>             <span class="k">return</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l263"
+               class="code sev- "><tt><i>263</i> &nbsp;</tt>
+            </div>
+            <div id="l264"
+               class="code sev- "><tt><i>264</i>     <span class="k">return</span> <span class="kc">True</span></tt>
+            </div>
+            <div id="l265"
+               class="code sev- "><tt><i>265</i> &nbsp;</tt>
+            </div>
+            <div id="l266"
+               class="code sev- "><tt><i>266</i> &nbsp;</tt>
+            </div>
+            <div id="l267"
+               class="code sev- "><tt><i>267</i> <span class="c1"># NOTE: sysconfig and it&#39;s dependencies are relatively large but site module</span></tt>
+            </div>
+            <div id="l268"
+               class="code sev- "><tt><i>268</i> <span class="c1"># needs very limited part of them.</span></tt>
+            </div>
+            <div id="l269"
+               class="code sev- "><tt><i>269</i> <span class="c1"># To speedup startup time, we have copy of them.</span></tt>
+            </div>
+            <div id="l270"
+               class="code sev- "><tt><i>270</i> <span class="c1">#</span></tt>
+            </div>
+            <div id="l271"
+               class="code sev- "><tt><i>271</i> <span class="c1"># See https://bugs.python.org/issue29585</span></tt>
+            </div>
+            <div id="l272"
+               class="code sev- "><tt><i>272</i> &nbsp;</tt>
+            </div>
+            <div id="l273"
+               class="code sev- "><tt><i>273</i> <span class="c1"># Copy of sysconfig._getuserbase()</span></tt>
+            </div>
+            <div id="l274"
+               class="code sev- "><tt><i>274</i> <span class="k">def</span> <span class="nf">_getuserbase</span><span class="p">():</span></tt>
+            </div>
+            <div id="l275"
+               class="code sev- "><tt><i>275</i>     <span class="n">env_base</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;PYTHONUSERBASE&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></tt>
+            </div>
+            <div id="l276"
+               class="code sev- "><tt><i>276</i>     <span class="k">if</span> <span class="n">env_base</span><span class="p">:</span></tt>
+            </div>
+            <div id="l277"
+               class="code sev- "><tt><i>277</i>         <span class="k">return</span> <span class="n">env_base</span></tt>
+            </div>
+            <div id="l278"
+               class="code sev- "><tt><i>278</i> &nbsp;</tt>
+            </div>
+            <div id="l279"
+               class="code sev- "><tt><i>279</i>     <span class="c1"># Emscripten, VxWorks, and WASI have no home directories</span></tt>
+            </div>
+            <div id="l280"
+               class="code sev- "><tt><i>280</i>     <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">&quot;emscripten&quot;</span><span class="p">,</span> <span class="s2">&quot;vxworks&quot;</span><span class="p">,</span> <span class="s2">&quot;wasi&quot;</span><span class="p">}:</span></tt>
+            </div>
+            <div id="l281"
+               class="code sev- "><tt><i>281</i>         <span class="k">return</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l282"
+               class="code sev- "><tt><i>282</i> &nbsp;</tt>
+            </div>
+            <div id="l283"
+               class="code sev- "><tt><i>283</i>     <span class="k">def</span> <span class="nf">joinuser</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+            </div>
+            <div id="l284"
+               class="code sev- "><tt><i>284</i>         <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">))</span></tt>
+            </div>
+            <div id="l285"
+               class="code sev- "><tt><i>285</i> &nbsp;</tt>
+            </div>
+            <div id="l286"
+               class="code sev- "><tt><i>286</i>     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;nt&quot;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l287"
+               class="code sev- "><tt><i>287</i>         <span class="n">base</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;APPDATA&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;~&quot;</span></tt>
+            </div>
+            <div id="l288"
+               class="code sev- "><tt><i>288</i>         <span class="k">return</span> <span class="n">joinuser</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l289"
+               class="code sev- "><tt><i>289</i> &nbsp;</tt>
+            </div>
+            <div id="l290"
+               class="code sev- "><tt><i>290</i>     <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s2">&quot;darwin&quot;</span> <span class="ow">and</span> <span class="n">sys</span><span class="o">.</span><span class="n">_framework</span><span class="p">:</span></tt>
+            </div>
+            <div id="l291"
+               class="code sev- "><tt><i>291</i>         <span class="k">return</span> <span class="n">joinuser</span><span class="p">(</span><span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;Library&quot;</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">_framework</span><span class="p">,</span></tt>
+            </div>
+            <div id="l292"
+               class="code sev- "><tt><i>292</i>                         <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span></tt>
+            </div>
+            <div id="l293"
+               class="code sev- "><tt><i>293</i> &nbsp;</tt>
+            </div>
+            <div id="l294"
+               class="code sev- "><tt><i>294</i>     <span class="k">return</span> <span class="n">joinuser</span><span class="p">(</span><span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;.local&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l295"
+               class="code sev- "><tt><i>295</i> &nbsp;</tt>
+            </div>
+            <div id="l296"
+               class="code sev- "><tt><i>296</i> &nbsp;</tt>
+            </div>
+            <div id="l297"
+               class="code sev- "><tt><i>297</i> <span class="c1"># Same to sysconfig.get_path(&#39;purelib&#39;, os.name+&#39;_user&#39;)</span></tt>
+            </div>
+            <div id="l298"
+               class="code sev- "><tt><i>298</i> <span class="k">def</span> <span class="nf">_get_path</span><span class="p">(</span><span class="n">userbase</span><span class="p">):</span></tt>
+            </div>
+            <div id="l299"
+               class="code sev- "><tt><i>299</i>     <span class="n">version</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span></tt>
+            </div>
+            <div id="l300"
+               class="code sev- "><tt><i>300</i> &nbsp;</tt>
+            </div>
+            <div id="l301"
+               class="code sev- "><tt><i>301</i>     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;nt&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l302"
+               class="code sev- "><tt><i>302</i>         <span class="n">ver_nodot</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">winver</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l303"
+               class="code sev- "><tt><i>303</i>         <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">userbase</span><span class="si">}</span><span class="se">\\</span><span class="s1">Python</span><span class="si">{</span><span class="n">ver_nodot</span><span class="si">}</span><span class="se">\\</span><span class="s1">site-packages&#39;</span></tt>
+            </div>
+            <div id="l304"
+               class="code sev- "><tt><i>304</i> &nbsp;</tt>
+            </div>
+            <div id="l305"
+               class="code sev- "><tt><i>305</i>     <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;darwin&#39;</span> <span class="ow">and</span> <span class="n">sys</span><span class="o">.</span><span class="n">_framework</span><span class="p">:</span></tt>
+            </div>
+            <div id="l306"
+               class="code sev- "><tt><i>306</i>         <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">userbase</span><span class="si">}</span><span class="s1">/lib/python/site-packages&#39;</span></tt>
+            </div>
+            <div id="l307"
+               class="code sev- "><tt><i>307</i> &nbsp;</tt>
+            </div>
+            <div id="l308"
+               class="code sev- "><tt><i>308</i>     <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">userbase</span><span class="si">}</span><span class="s1">/lib/python</span><span class="si">{</span><span class="n">version</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">.</span><span class="si">{</span><span class="n">version</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">/site-packages&#39;</span></tt>
+            </div>
+            <div id="l309"
+               class="code sev- "><tt><i>309</i> &nbsp;</tt>
+            </div>
+            <div id="l310"
+               class="code sev- "><tt><i>310</i> &nbsp;</tt>
+            </div>
+            <div id="l311"
+               class="code sev- "><tt><i>311</i> <span class="k">def</span> <span class="nf">getuserbase</span><span class="p">():</span></tt>
+            </div>
+            <div id="l312"
+               class="code sev- "><tt><i>312</i>     <span class="sd">&quot;&quot;&quot;Returns the `user base` directory path.</span></tt>
+            </div>
+            <div id="l313"
+               class="code sev- "><tt><i>313</i> &nbsp;</tt>
+            </div>
+            <div id="l314"
+               class="code sev- "><tt><i>314</i> <span class="sd">    The `user base` directory can be used to store data. If the global</span></tt>
+            </div>
+            <div id="l315"
+               class="code sev- "><tt><i>315</i> <span class="sd">    variable ``USER_BASE`` is not initialized yet, this function will also set</span></tt>
+            </div>
+            <div id="l316"
+               class="code sev- "><tt><i>316</i> <span class="sd">    it.</span></tt>
+            </div>
+            <div id="l317"
+               class="code sev- "><tt><i>317</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l318"
+               class="code sev- "><tt><i>318</i>     <span class="k">global</span> <span class="n">USER_BASE</span></tt>
+            </div>
+            <div id="l319"
+               class="code sev- "><tt><i>319</i>     <span class="k">if</span> <span class="n">USER_BASE</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l320"
+               class="code sev- "><tt><i>320</i>         <span class="n">USER_BASE</span> <span class="o">=</span> <span class="n">_getuserbase</span><span class="p">()</span></tt>
+            </div>
+            <div id="l321"
+               class="code sev- "><tt><i>321</i>     <span class="k">return</span> <span class="n">USER_BASE</span></tt>
+            </div>
+            <div id="l322"
+               class="code sev- "><tt><i>322</i> &nbsp;</tt>
+            </div>
+            <div id="l323"
+               class="code sev- "><tt><i>323</i> &nbsp;</tt>
+            </div>
+            <div id="l324"
+               class="code sev- "><tt><i>324</i> <span class="k">def</span> <span class="nf">getusersitepackages</span><span class="p">():</span></tt>
+            </div>
+            <div id="l325"
+               class="code sev- "><tt><i>325</i>     <span class="sd">&quot;&quot;&quot;Returns the user-specific site-packages directory path.</span></tt>
+            </div>
+            <div id="l326"
+               class="code sev- "><tt><i>326</i> &nbsp;</tt>
+            </div>
+            <div id="l327"
+               class="code sev- "><tt><i>327</i> <span class="sd">    If the global variable ``USER_SITE`` is not initialized yet, this</span></tt>
+            </div>
+            <div id="l328"
+               class="code sev- "><tt><i>328</i> <span class="sd">    function will also set it.</span></tt>
+            </div>
+            <div id="l329"
+               class="code sev- "><tt><i>329</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l330"
+               class="code sev- "><tt><i>330</i>     <span class="k">global</span> <span class="n">USER_SITE</span><span class="p">,</span> <span class="n">ENABLE_USER_SITE</span></tt>
+            </div>
+            <div id="l331"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E261
+                     </span>
+                     At least two spaces before inline comment</li>
+               
+               </ul><tt><i>331</i>     <span class="n">userbase</span> <span class="o">=</span> <span class="n">getuserbase</span><span class="p">()</span> <span class="c1"># this will also set USER_BASE</span></tt>
+            </div>
+            <div id="l332"
+               class="code sev- "><tt><i>332</i> &nbsp;</tt>
+            </div>
+            <div id="l333"
+               class="code sev- "><tt><i>333</i>     <span class="k">if</span> <span class="n">USER_SITE</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l334"
+               class="code sev- "><tt><i>334</i>         <span class="k">if</span> <span class="n">userbase</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l335"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E261
+                     </span>
+                     At least two spaces before inline comment</li>
+               
+               </ul><tt><i>335</i>             <span class="n">ENABLE_USER_SITE</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># disable user site and return None</span></tt>
+            </div>
+            <div id="l336"
+               class="code sev- "><tt><i>336</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l337"
+               class="code sev- "><tt><i>337</i>             <span class="n">USER_SITE</span> <span class="o">=</span> <span class="n">_get_path</span><span class="p">(</span><span class="n">userbase</span><span class="p">)</span></tt>
+            </div>
+            <div id="l338"
+               class="code sev- "><tt><i>338</i> &nbsp;</tt>
+            </div>
+            <div id="l339"
+               class="code sev- "><tt><i>339</i>     <span class="k">return</span> <span class="n">USER_SITE</span></tt>
+            </div>
+            <div id="l340"
+               class="code sev- "><tt><i>340</i> &nbsp;</tt>
+            </div>
+            <div id="l341"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>341</i> <span class="k">def</span> <span class="nf">addusersitepackages</span><span class="p">(</span><span class="n">known_paths</span><span class="p">):</span></tt>
+            </div>
+            <div id="l342"
+               class="code sev- "><tt><i>342</i>     <span class="sd">&quot;&quot;&quot;Add a per user site-package to sys.path</span></tt>
+            </div>
+            <div id="l343"
+               class="code sev- "><tt><i>343</i> &nbsp;</tt>
+            </div>
+            <div id="l344"
+               class="code sev- "><tt><i>344</i> <span class="sd">    Each user has its own python directory with site-packages in the</span></tt>
+            </div>
+            <div id="l345"
+               class="code sev- "><tt><i>345</i> <span class="sd">    home directory.</span></tt>
+            </div>
+            <div id="l346"
+               class="code sev- "><tt><i>346</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l347"
+               class="code sev- "><tt><i>347</i>     <span class="c1"># get the per user site-package path</span></tt>
+            </div>
+            <div id="l348"
+               class="code sev- "><tt><i>348</i>     <span class="c1"># this call will also make sure USER_BASE and USER_SITE are set</span></tt>
+            </div>
+            <div id="l349"
+               class="code sev- "><tt><i>349</i>     <span class="n">_trace</span><span class="p">(</span><span class="s2">&quot;Processing user site-packages&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l350"
+               class="code sev- "><tt><i>350</i>     <span class="n">user_site</span> <span class="o">=</span> <span class="n">getusersitepackages</span><span class="p">()</span></tt>
+            </div>
+            <div id="l351"
+               class="code sev- "><tt><i>351</i> &nbsp;</tt>
+            </div>
+            <div id="l352"
+               class="code sev- "><tt><i>352</i>     <span class="k">if</span> <span class="n">ENABLE_USER_SITE</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">user_site</span><span class="p">):</span></tt>
+            </div>
+            <div id="l353"
+               class="code sev- "><tt><i>353</i>         <span class="n">addsitedir</span><span class="p">(</span><span class="n">user_site</span><span class="p">,</span> <span class="n">known_paths</span><span class="p">)</span></tt>
+            </div>
+            <div id="l354"
+               class="code sev- "><tt><i>354</i>     <span class="k">return</span> <span class="n">known_paths</span></tt>
+            </div>
+            <div id="l355"
+               class="code sev- "><tt><i>355</i> &nbsp;</tt>
+            </div>
+            <div id="l356"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>356</i> <span class="k">def</span> <span class="nf">getsitepackages</span><span class="p">(</span><span class="n">prefixes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+            </div>
+            <div id="l357"
+               class="code sev- "><tt><i>357</i>     <span class="sd">&quot;&quot;&quot;Returns a list containing all global site-packages directories.</span></tt>
+            </div>
+            <div id="l358"
+               class="code sev- "><tt><i>358</i> &nbsp;</tt>
+            </div>
+            <div id="l359"
+               class="code sev- "><tt><i>359</i> <span class="sd">    For each directory present in ``prefixes`` (or the global ``PREFIXES``),</span></tt>
+            </div>
+            <div id="l360"
+               class="code sev- "><tt><i>360</i> <span class="sd">    this function will find its `site-packages` subdirectory depending on the</span></tt>
+            </div>
+            <div id="l361"
+               class="code sev- "><tt><i>361</i> <span class="sd">    system environment, and will return a list of full paths.</span></tt>
+            </div>
+            <div id="l362"
+               class="code sev- "><tt><i>362</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l363"
+               class="code sev- "><tt><i>363</i>     <span class="n">sitepackages</span> <span class="o">=</span> <span class="p">[]</span></tt>
+            </div>
+            <div id="l364"
+               class="code sev- "><tt><i>364</i>     <span class="n">seen</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></tt>
+            </div>
+            <div id="l365"
+               class="code sev- "><tt><i>365</i> &nbsp;</tt>
+            </div>
+            <div id="l366"
+               class="code sev- "><tt><i>366</i>     <span class="k">if</span> <span class="n">prefixes</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l367"
+               class="code sev- "><tt><i>367</i>         <span class="n">prefixes</span> <span class="o">=</span> <span class="n">PREFIXES</span></tt>
+            </div>
+            <div id="l368"
+               class="code sev- "><tt><i>368</i> &nbsp;</tt>
+            </div>
+            <div id="l369"
+               class="code sev- "><tt><i>369</i>     <span class="k">for</span> <span class="n">prefix</span> <span class="ow">in</span> <span class="n">prefixes</span><span class="p">:</span></tt>
+            </div>
+            <div id="l370"
+               class="code sev- "><tt><i>370</i>         <span class="k">if</span> <span class="ow">not</span> <span class="n">prefix</span> <span class="ow">or</span> <span class="n">prefix</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span></tt>
+            </div>
+            <div id="l371"
+               class="code sev- "><tt><i>371</i>             <span class="k">continue</span></tt>
+            </div>
+            <div id="l372"
+               class="code sev- "><tt><i>372</i>         <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span></tt>
+            </div>
+            <div id="l373"
+               class="code sev- "><tt><i>373</i> &nbsp;</tt>
+            </div>
+            <div id="l374"
+               class="code sev- "><tt><i>374</i>         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span> <span class="o">==</span> <span class="s1">&#39;/&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l375"
+               class="code sev- "><tt><i>375</i>             <span class="n">libdirs</span> <span class="o">=</span> <span class="p">[</span><span class="n">sys</span><span class="o">.</span><span class="n">platlibdir</span><span class="p">]</span></tt>
+            </div>
+            <div id="l376"
+               class="code sev- "><tt><i>376</i>             <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platlibdir</span> <span class="o">!=</span> <span class="s2">&quot;lib&quot;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l377"
+               class="code sev- "><tt><i>377</i>                 <span class="n">libdirs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;lib&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l378"
+               class="code sev- "><tt><i>378</i> &nbsp;</tt>
+            </div>
+            <div id="l379"
+               class="code sev- "><tt><i>379</i>             <span class="k">for</span> <span class="n">libdir</span> <span class="ow">in</span> <span class="n">libdirs</span><span class="p">:</span></tt>
+            </div>
+            <div id="l380"
+               class="code sev- "><tt><i>380</i>                 <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">libdir</span><span class="p">,</span></tt>
+            </div>
+            <div id="l381"
+               class="code sev- "><tt><i>381</i>                                     <span class="s2">&quot;python</span><span class="si">%d</span><span class="s2">.</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span></tt>
+            </div>
+            <div id="l382"
+               class="code sev- "><tt><i>382</i>                                     <span class="s2">&quot;site-packages&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l383"
+               class="code sev- "><tt><i>383</i>                 <span class="n">sitepackages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></tt>
+            </div>
+            <div id="l384"
+               class="code sev- "><tt><i>384</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l385"
+               class="code sev- "><tt><i>385</i>             <span class="n">sitepackages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span></tt>
+            </div>
+            <div id="l386"
+               class="code sev- "><tt><i>386</i>             <span class="n">sitepackages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="s2">&quot;Lib&quot;</span><span class="p">,</span> <span class="s2">&quot;site-packages&quot;</span><span class="p">))</span></tt>
+            </div>
+            <div id="l387"
+               class="code sev- "><tt><i>387</i>     <span class="k">return</span> <span class="n">sitepackages</span></tt>
+            </div>
+            <div id="l388"
+               class="code sev- "><tt><i>388</i> &nbsp;</tt>
+            </div>
+            <div id="l389"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>389</i> <span class="k">def</span> <span class="nf">addsitepackages</span><span class="p">(</span><span class="n">known_paths</span><span class="p">,</span> <span class="n">prefixes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+            </div>
+            <div id="l390"
+               class="code sev- "><tt><i>390</i>     <span class="sd">&quot;&quot;&quot;Add site-packages to sys.path&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l391"
+               class="code sev- "><tt><i>391</i>     <span class="n">_trace</span><span class="p">(</span><span class="s2">&quot;Processing global site-packages&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l392"
+               class="code sev- "><tt><i>392</i>     <span class="k">for</span> <span class="n">sitedir</span> <span class="ow">in</span> <span class="n">getsitepackages</span><span class="p">(</span><span class="n">prefixes</span><span class="p">):</span></tt>
+            </div>
+            <div id="l393"
+               class="code sev- "><tt><i>393</i>         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">sitedir</span><span class="p">):</span></tt>
+            </div>
+            <div id="l394"
+               class="code sev- "><tt><i>394</i>             <span class="n">addsitedir</span><span class="p">(</span><span class="n">sitedir</span><span class="p">,</span> <span class="n">known_paths</span><span class="p">)</span></tt>
+            </div>
+            <div id="l395"
+               class="code sev- "><tt><i>395</i> &nbsp;</tt>
+            </div>
+            <div id="l396"
+               class="code sev- "><tt><i>396</i>     <span class="k">return</span> <span class="n">known_paths</span></tt>
+            </div>
+            <div id="l397"
+               class="code sev- "><tt><i>397</i> &nbsp;</tt>
+            </div>
+            <div id="l398"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>398</i> <span class="k">def</span> <span class="nf">setquit</span><span class="p">():</span></tt>
+            </div>
+            <div id="l399"
+               class="code sev- "><tt><i>399</i>     <span class="sd">&quot;&quot;&quot;Define new builtins &#39;quit&#39; and &#39;exit&#39;.</span></tt>
+            </div>
+            <div id="l400"
+               class="code sev- "><tt><i>400</i> &nbsp;</tt>
+            </div>
+            <div id="l401"
+               class="code sev- "><tt><i>401</i> <span class="sd">    These are objects which make the interpreter exit when called.</span></tt>
+            </div>
+            <div id="l402"
+               class="code sev- "><tt><i>402</i> <span class="sd">    The repr of each object contains a hint at how it works.</span></tt>
+            </div>
+            <div id="l403"
+               class="code sev- "><tt><i>403</i> &nbsp;</tt>
+            </div>
+            <div id="l404"
+               class="code sev- "><tt><i>404</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l405"
+               class="code sev- "><tt><i>405</i>     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l406"
+               class="code sev- "><tt><i>406</i>         <span class="n">eof</span> <span class="o">=</span> <span class="s1">&#39;Ctrl-Z plus Return&#39;</span></tt>
+            </div>
+            <div id="l407"
+               class="code sev- "><tt><i>407</i>     <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l408"
+               class="code sev- "><tt><i>408</i>         <span class="n">eof</span> <span class="o">=</span> <span class="s1">&#39;Ctrl-D (i.e. EOF)&#39;</span></tt>
+            </div>
+            <div id="l409"
+               class="code sev- "><tt><i>409</i> &nbsp;</tt>
+            </div>
+            <div id="l410"
+               class="code sev- "><tt><i>410</i>     <span class="n">builtins</span><span class="o">.</span><span class="n">quit</span> <span class="o">=</span> <span class="n">_sitebuiltins</span><span class="o">.</span><span class="n">Quitter</span><span class="p">(</span><span class="s1">&#39;quit&#39;</span><span class="p">,</span> <span class="n">eof</span><span class="p">)</span></tt>
+            </div>
+            <div id="l411"
+               class="code sev- "><tt><i>411</i>     <span class="n">builtins</span><span class="o">.</span><span class="n">exit</span> <span class="o">=</span> <span class="n">_sitebuiltins</span><span class="o">.</span><span class="n">Quitter</span><span class="p">(</span><span class="s1">&#39;exit&#39;</span><span class="p">,</span> <span class="n">eof</span><span class="p">)</span></tt>
+            </div>
+            <div id="l412"
+               class="code sev- "><tt><i>412</i> &nbsp;</tt>
+            </div>
+            <div id="l413"
+               class="code sev- "><tt><i>413</i> &nbsp;</tt>
+            </div>
+            <div id="l414"
+               class="code sev- "><tt><i>414</i> <span class="k">def</span> <span class="nf">setcopyright</span><span class="p">():</span></tt>
+            </div>
+            <div id="l415"
+               class="code sev- "><tt><i>415</i>     <span class="sd">&quot;&quot;&quot;Set &#39;copyright&#39; and &#39;credits&#39; in builtins&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l416"
+               class="code sev- "><tt><i>416</i>     <span class="n">builtins</span><span class="o">.</span><span class="n">copyright</span> <span class="o">=</span> <span class="n">_sitebuiltins</span><span class="o">.</span><span class="n">_Printer</span><span class="p">(</span><span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">copyright</span><span class="p">)</span></tt>
+            </div>
+            <div id="l417"
+               class="code sev- "><tt><i>417</i>     <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;java&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l418"
+               class="code sev- "><tt><i>418</i>         <span class="n">builtins</span><span class="o">.</span><span class="n">credits</span> <span class="o">=</span> <span class="n">_sitebuiltins</span><span class="o">.</span><span class="n">_Printer</span><span class="p">(</span></tt>
+            </div>
+            <div id="l419"
+               class="code sev- "><tt><i>419</i>             <span class="s2">&quot;credits&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l420"
+               class="code sev- "><tt><i>420</i>             <span class="s2">&quot;Jython is maintained by the Jython developers (www.jython.org).&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l421"
+               class="code sev- "><tt><i>421</i>     <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l422"
+               class="code sev- "><tt><i>422</i>         <span class="n">builtins</span><span class="o">.</span><span class="n">credits</span> <span class="o">=</span> <span class="n">_sitebuiltins</span><span class="o">.</span><span class="n">_Printer</span><span class="p">(</span><span class="s2">&quot;credits&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span></tt>
+            </div>
+            <div id="l423"
+               class="code sev- "><tt><i>423</i> <span class="s2">    Thanks to CWI, CNRI, BeOpen.com, Zope Corporation and a cast of thousands</span></tt>
+            </div>
+            <div id="l424"
+               class="code sev- "><tt><i>424</i> <span class="s2">    for supporting Python development.  See www.python.org for more information.&quot;&quot;&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l425"
+               class="code sev- "><tt><i>425</i>     <span class="n">files</span><span class="p">,</span> <span class="n">dirs</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span></tt>
+            </div>
+            <div id="l426"
+               class="code sev- "><tt><i>426</i>     <span class="c1"># Not all modules are required to have a __file__ attribute.  See</span></tt>
+            </div>
+            <div id="l427"
+               class="code sev- "><tt><i>427</i>     <span class="c1"># PEP 420 for more details.</span></tt>
+            </div>
+            <div id="l428"
+               class="code sev- "><tt><i>428</i>     <span class="n">here</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span> <span class="s1">&#39;_stdlib_dir&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></tt>
+            </div>
+            <div id="l429"
+               class="code sev- "><tt><i>429</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">here</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">os</span><span class="p">,</span> <span class="s1">&#39;__file__&#39;</span><span class="p">):</span></tt>
+            </div>
+            <div id="l430"
+               class="code sev- "><tt><i>430</i>         <span class="n">here</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span></tt>
+            </div>
+            <div id="l431"
+               class="code sev- "><tt><i>431</i>     <span class="k">if</span> <span class="n">here</span><span class="p">:</span></tt>
+            </div>
+            <div id="l432"
+               class="code sev- "><tt><i>432</i>         <span class="n">files</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;LICENSE.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;LICENSE&quot;</span><span class="p">])</span></tt>
+            </div>
+            <div id="l433"
+               class="code sev- "><tt><i>433</i>         <span class="n">dirs</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">here</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">pardir</span><span class="p">),</span> <span class="n">here</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">])</span></tt>
+            </div>
+            <div id="l434"
+               class="code sev- "><tt><i>434</i>     <span class="n">builtins</span><span class="o">.</span><span class="n">license</span> <span class="o">=</span> <span class="n">_sitebuiltins</span><span class="o">.</span><span class="n">_Printer</span><span class="p">(</span></tt>
+            </div>
+            <div id="l435"
+               class="code sev- "><tt><i>435</i>         <span class="s2">&quot;license&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l436"
+               class="code sev- "><tt><i>436</i>         <span class="s2">&quot;See https://www.python.org/psf/license/&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l437"
+               class="code sev- "><tt><i>437</i>         <span class="n">files</span><span class="p">,</span> <span class="n">dirs</span><span class="p">)</span></tt>
+            </div>
+            <div id="l438"
+               class="code sev- "><tt><i>438</i> &nbsp;</tt>
+            </div>
+            <div id="l439"
+               class="code sev- "><tt><i>439</i> &nbsp;</tt>
+            </div>
+            <div id="l440"
+               class="code sev- "><tt><i>440</i> <span class="k">def</span> <span class="nf">sethelper</span><span class="p">():</span></tt>
+            </div>
+            <div id="l441"
+               class="code sev- "><tt><i>441</i>     <span class="n">builtins</span><span class="o">.</span><span class="n">help</span> <span class="o">=</span> <span class="n">_sitebuiltins</span><span class="o">.</span><span class="n">_Helper</span><span class="p">()</span></tt>
+            </div>
+            <div id="l442"
+               class="code sev- "><tt><i>442</i> &nbsp;</tt>
+            </div>
+            <div id="l443"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>443</i> <span class="k">def</span> <span class="nf">enablerlcompleter</span><span class="p">():</span></tt>
+            </div>
+            <div id="l444"
+               class="code sev- "><tt><i>444</i>     <span class="sd">&quot;&quot;&quot;Enable default readline configuration on interactive prompts, by</span></tt>
+            </div>
+            <div id="l445"
+               class="code sev- "><tt><i>445</i> <span class="sd">    registering a sys.__interactivehook__.</span></tt>
+            </div>
+            <div id="l446"
+               class="code sev- "><tt><i>446</i> &nbsp;</tt>
+            </div>
+            <div id="l447"
+               class="code sev- "><tt><i>447</i> <span class="sd">    If the readline module can be imported, the hook will set the Tab key</span></tt>
+            </div>
+            <div id="l448"
+               class="code sev- "><tt><i>448</i> <span class="sd">    as completion key and register ~/.python_history as history file.</span></tt>
+            </div>
+            <div id="l449"
+               class="code sev- "><tt><i>449</i> <span class="sd">    This can be overridden in the sitecustomize or usercustomize module,</span></tt>
+            </div>
+            <div id="l450"
+               class="code sev- "><tt><i>450</i> <span class="sd">    or in a PYTHONSTARTUP file.</span></tt>
+            </div>
+            <div id="l451"
+               class="code sev- "><tt><i>451</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l452"
+               class="code sev- "><tt><i>452</i>     <span class="k">def</span> <span class="nf">register_readline</span><span class="p">():</span></tt>
+            </div>
+            <div id="l453"
+               class="code sev- "><tt><i>453</i>         <span class="kn">import</span> <span class="nn">atexit</span></tt>
+            </div>
+            <div id="l454"
+               class="code sev- "><tt><i>454</i>         <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l455"
+               class="code sev- "><tt><i>455</i>             <span class="kn">import</span> <span class="nn">readline</span></tt>
+            </div>
+            <div id="l456"
+               class="code sev-1  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-1">
+                        F401
+                     </span>
+                     'rlcompleter' imported but unused</li>
+               
+               </ul><tt><i>456</i>             <span class="kn">import</span> <span class="nn">rlcompleter</span></tt>
+            </div>
+            <div id="l457"
+               class="code sev- "><tt><i>457</i>         <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l458"
+               class="code sev- "><tt><i>458</i>             <span class="k">return</span></tt>
+            </div>
+            <div id="l459"
+               class="code sev- "><tt><i>459</i> &nbsp;</tt>
+            </div>
+            <div id="l460"
+               class="code sev- "><tt><i>460</i>         <span class="c1"># Reading the initialization (config) file may not be enough to set a</span></tt>
+            </div>
+            <div id="l461"
+               class="code sev- "><tt><i>461</i>         <span class="c1"># completion key, so we set one first and then read the file.</span></tt>
+            </div>
+            <div id="l462"
+               class="code sev- "><tt><i>462</i>         <span class="n">readline_doc</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">readline</span><span class="p">,</span> <span class="s1">&#39;__doc__&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l463"
+               class="code sev- "><tt><i>463</i>         <span class="k">if</span> <span class="n">readline_doc</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="s1">&#39;libedit&#39;</span> <span class="ow">in</span> <span class="n">readline_doc</span><span class="p">:</span></tt>
+            </div>
+            <div id="l464"
+               class="code sev- "><tt><i>464</i>             <span class="n">readline</span><span class="o">.</span><span class="n">parse_and_bind</span><span class="p">(</span><span class="s1">&#39;bind ^I rl_complete&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l465"
+               class="code sev- "><tt><i>465</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l466"
+               class="code sev- "><tt><i>466</i>             <span class="n">readline</span><span class="o">.</span><span class="n">parse_and_bind</span><span class="p">(</span><span class="s1">&#39;tab: complete&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l467"
+               class="code sev- "><tt><i>467</i> &nbsp;</tt>
+            </div>
+            <div id="l468"
+               class="code sev- "><tt><i>468</i>         <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l469"
+               class="code sev- "><tt><i>469</i>             <span class="n">readline</span><span class="o">.</span><span class="n">read_init_file</span><span class="p">()</span></tt>
+            </div>
+            <div id="l470"
+               class="code sev- "><tt><i>470</i>         <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l471"
+               class="code sev- "><tt><i>471</i>             <span class="c1"># An OSError here could have many causes, but the most likely one</span></tt>
+            </div>
+            <div id="l472"
+               class="code sev- "><tt><i>472</i>             <span class="c1"># is that there&#39;s no .inputrc file (or .editrc file in the case of</span></tt>
+            </div>
+            <div id="l473"
+               class="code sev- "><tt><i>473</i>             <span class="c1"># Mac OS X + libedit) in the expected location.  In that case, we</span></tt>
+            </div>
+            <div id="l474"
+               class="code sev- "><tt><i>474</i>             <span class="c1"># want to ignore the exception.</span></tt>
+            </div>
+            <div id="l475"
+               class="code sev- "><tt><i>475</i>             <span class="k">pass</span></tt>
+            </div>
+            <div id="l476"
+               class="code sev- "><tt><i>476</i> &nbsp;</tt>
+            </div>
+            <div id="l477"
+               class="code sev- "><tt><i>477</i>         <span class="k">if</span> <span class="n">readline</span><span class="o">.</span><span class="n">get_current_history_length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span></tt>
+            </div>
+            <div id="l478"
+               class="code sev- "><tt><i>478</i>             <span class="c1"># If no history was loaded, default to .python_history.</span></tt>
+            </div>
+            <div id="l479"
+               class="code sev- "><tt><i>479</i>             <span class="c1"># The guard is necessary to avoid doubling history size at</span></tt>
+            </div>
+            <div id="l480"
+               class="code sev- "><tt><i>480</i>             <span class="c1"># each interpreter exit when readline was already configured</span></tt>
+            </div>
+            <div id="l481"
+               class="code sev- "><tt><i>481</i>             <span class="c1"># through a PYTHONSTARTUP hook, see:</span></tt>
+            </div>
+            <div id="l482"
+               class="code sev- "><tt><i>482</i>             <span class="c1"># http://bugs.python.org/issue5845#msg198636</span></tt>
+            </div>
+            <div id="l483"
+               class="code sev- "><tt><i>483</i>             <span class="n">history</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">),</span></tt>
+            </div>
+            <div id="l484"
+               class="code sev- "><tt><i>484</i>                                    <span class="s1">&#39;.python_history&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l485"
+               class="code sev- "><tt><i>485</i>             <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l486"
+               class="code sev- "><tt><i>486</i>                 <span class="n">readline</span><span class="o">.</span><span class="n">read_history_file</span><span class="p">(</span><span class="n">history</span><span class="p">)</span></tt>
+            </div>
+            <div id="l487"
+               class="code sev- "><tt><i>487</i>             <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l488"
+               class="code sev- "><tt><i>488</i>                 <span class="k">pass</span></tt>
+            </div>
+            <div id="l489"
+               class="code sev- "><tt><i>489</i> &nbsp;</tt>
+            </div>
+            <div id="l490"
+               class="code sev- "><tt><i>490</i>             <span class="k">def</span> <span class="nf">write_history</span><span class="p">():</span></tt>
+            </div>
+            <div id="l491"
+               class="code sev- "><tt><i>491</i>                 <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l492"
+               class="code sev- "><tt><i>492</i>                     <span class="n">readline</span><span class="o">.</span><span class="n">write_history_file</span><span class="p">(</span><span class="n">history</span><span class="p">)</span></tt>
+            </div>
+            <div id="l493"
+               class="code sev- "><tt><i>493</i>                 <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l494"
+               class="code sev- "><tt><i>494</i>                     <span class="c1"># bpo-19891, bpo-41193: Home directory does not exist</span></tt>
+            </div>
+            <div id="l495"
+               class="code sev- "><tt><i>495</i>                     <span class="c1"># or is not writable, or the filesystem is read-only.</span></tt>
+            </div>
+            <div id="l496"
+               class="code sev- "><tt><i>496</i>                     <span class="k">pass</span></tt>
+            </div>
+            <div id="l497"
+               class="code sev- "><tt><i>497</i> &nbsp;</tt>
+            </div>
+            <div id="l498"
+               class="code sev- "><tt><i>498</i>             <span class="n">atexit</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">write_history</span><span class="p">)</span></tt>
+            </div>
+            <div id="l499"
+               class="code sev- "><tt><i>499</i> &nbsp;</tt>
+            </div>
+            <div id="l500"
+               class="code sev- "><tt><i>500</i>     <span class="n">sys</span><span class="o">.</span><span class="n">__interactivehook__</span> <span class="o">=</span> <span class="n">register_readline</span></tt>
+            </div>
+            <div id="l501"
+               class="code sev- "><tt><i>501</i> &nbsp;</tt>
+            </div>
+            <div id="l502"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>502</i> <span class="k">def</span> <span class="nf">venv</span><span class="p">(</span><span class="n">known_paths</span><span class="p">):</span></tt>
+            </div>
+            <div id="l503"
+               class="code sev- "><tt><i>503</i>     <span class="k">global</span> <span class="n">PREFIXES</span><span class="p">,</span> <span class="n">ENABLE_USER_SITE</span></tt>
+            </div>
+            <div id="l504"
+               class="code sev- "><tt><i>504</i> &nbsp;</tt>
+            </div>
+            <div id="l505"
+               class="code sev- "><tt><i>505</i>     <span class="n">env</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span></tt>
+            </div>
+            <div id="l506"
+               class="code sev- "><tt><i>506</i>     <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;darwin&#39;</span> <span class="ow">and</span> <span class="s1">&#39;__PYVENV_LAUNCHER__&#39;</span> <span class="ow">in</span> <span class="n">env</span><span class="p">:</span></tt>
+            </div>
+            <div id="l507"
+               class="code sev- "><tt><i>507</i>         <span class="n">executable</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">_base_executable</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;__PYVENV_LAUNCHER__&#39;</span><span class="p">]</span></tt>
+            </div>
+            <div id="l508"
+               class="code sev- "><tt><i>508</i>     <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l509"
+               class="code sev- "><tt><i>509</i>         <span class="n">executable</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span></tt>
+            </div>
+            <div id="l510"
+               class="code sev- "><tt><i>510</i>     <span class="n">exe_dir</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">executable</span><span class="p">))</span></tt>
+            </div>
+            <div id="l511"
+               class="code sev- "><tt><i>511</i>     <span class="n">site_prefix</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">exe_dir</span><span class="p">)</span></tt>
+            </div>
+            <div id="l512"
+               class="code sev- "><tt><i>512</i>     <span class="n">sys</span><span class="o">.</span><span class="n">_home</span> <span class="o">=</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l513"
+               class="code sev- "><tt><i>513</i>     <span class="n">conf_basename</span> <span class="o">=</span> <span class="s1">&#39;pyvenv.cfg&#39;</span></tt>
+            </div>
+            <div id="l514"
+               class="code sev- "><tt><i>514</i>     <span class="n">candidate_confs</span> <span class="o">=</span> <span class="p">[</span></tt>
+            </div>
+            <div id="l515"
+               class="code sev- "><tt><i>515</i>         <span class="n">conffile</span> <span class="k">for</span> <span class="n">conffile</span> <span class="ow">in</span> <span class="p">(</span></tt>
+            </div>
+            <div id="l516"
+               class="code sev- "><tt><i>516</i>             <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">exe_dir</span><span class="p">,</span> <span class="n">conf_basename</span><span class="p">),</span></tt>
+            </div>
+            <div id="l517"
+               class="code sev- "><tt><i>517</i>             <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">site_prefix</span><span class="p">,</span> <span class="n">conf_basename</span><span class="p">)</span></tt>
+            </div>
+            <div id="l518"
+               class="code sev- "><tt><i>518</i>             <span class="p">)</span></tt>
+            </div>
+            <div id="l519"
+               class="code sev- "><tt><i>519</i>         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">conffile</span><span class="p">)</span></tt>
+            </div>
+            <div id="l520"
+               class="code sev- "><tt><i>520</i>         <span class="p">]</span></tt>
+            </div>
+            <div id="l521"
+               class="code sev- "><tt><i>521</i> &nbsp;</tt>
+            </div>
+            <div id="l522"
+               class="code sev- "><tt><i>522</i>     <span class="k">if</span> <span class="n">candidate_confs</span><span class="p">:</span></tt>
+            </div>
+            <div id="l523"
+               class="code sev- "><tt><i>523</i>         <span class="n">virtual_conf</span> <span class="o">=</span> <span class="n">candidate_confs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></tt>
+            </div>
+            <div id="l524"
+               class="code sev- "><tt><i>524</i>         <span class="n">system_site</span> <span class="o">=</span> <span class="s2">&quot;true&quot;</span></tt>
+            </div>
+            <div id="l525"
+               class="code sev- "><tt><i>525</i>         <span class="c1"># Issue 25185: Use UTF-8, as that&#39;s what the venv module uses when</span></tt>
+            </div>
+            <div id="l526"
+               class="code sev- "><tt><i>526</i>         <span class="c1"># writing the file.</span></tt>
+            </div>
+            <div id="l527"
+               class="code sev- "><tt><i>527</i>         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">virtual_conf</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span></tt>
+            </div>
+            <div id="l528"
+               class="code sev- "><tt><i>528</i>             <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span></tt>
+            </div>
+            <div id="l529"
+               class="code sev- "><tt><i>529</i>                 <span class="k">if</span> <span class="s1">&#39;=&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span></tt>
+            </div>
+            <div id="l530"
+               class="code sev- "><tt><i>530</i>                     <span class="n">key</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l531"
+               class="code sev- "><tt><i>531</i>                     <span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></tt>
+            </div>
+            <div id="l532"
+               class="code sev- "><tt><i>532</i>                     <span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span></tt>
+            </div>
+            <div id="l533"
+               class="code sev- "><tt><i>533</i>                     <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;include-system-site-packages&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l534"
+               class="code sev- "><tt><i>534</i>                         <span class="n">system_site</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></tt>
+            </div>
+            <div id="l535"
+               class="code sev- "><tt><i>535</i>                     <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;home&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l536"
+               class="code sev- "><tt><i>536</i>                         <span class="n">sys</span><span class="o">.</span><span class="n">_home</span> <span class="o">=</span> <span class="n">value</span></tt>
+            </div>
+            <div id="l537"
+               class="code sev- "><tt><i>537</i> &nbsp;</tt>
+            </div>
+            <div id="l538"
+               class="code sev- "><tt><i>538</i>         <span class="n">sys</span><span class="o">.</span><span class="n">prefix</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exec_prefix</span> <span class="o">=</span> <span class="n">site_prefix</span></tt>
+            </div>
+            <div id="l539"
+               class="code sev- "><tt><i>539</i> &nbsp;</tt>
+            </div>
+            <div id="l540"
+               class="code sev- "><tt><i>540</i>         <span class="c1"># Doing this here ensures venv takes precedence over user-site</span></tt>
+            </div>
+            <div id="l541"
+               class="code sev- "><tt><i>541</i>         <span class="n">addsitepackages</span><span class="p">(</span><span class="n">known_paths</span><span class="p">,</span> <span class="p">[</span><span class="n">sys</span><span class="o">.</span><span class="n">prefix</span><span class="p">])</span></tt>
+            </div>
+            <div id="l542"
+               class="code sev- "><tt><i>542</i> &nbsp;</tt>
+            </div>
+            <div id="l543"
+               class="code sev- "><tt><i>543</i>         <span class="c1"># addsitepackages will process site_prefix again if its in PREFIXES,</span></tt>
+            </div>
+            <div id="l544"
+               class="code sev- "><tt><i>544</i>         <span class="c1"># but that&#39;s ok; known_paths will prevent anything being added twice</span></tt>
+            </div>
+            <div id="l545"
+               class="code sev- "><tt><i>545</i>         <span class="k">if</span> <span class="n">system_site</span> <span class="o">==</span> <span class="s2">&quot;true&quot;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l546"
+               class="code sev- "><tt><i>546</i>             <span class="n">PREFIXES</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">prefix</span><span class="p">)</span></tt>
+            </div>
+            <div id="l547"
+               class="code sev- "><tt><i>547</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l548"
+               class="code sev- "><tt><i>548</i>             <span class="n">PREFIXES</span> <span class="o">=</span> <span class="p">[</span><span class="n">sys</span><span class="o">.</span><span class="n">prefix</span><span class="p">]</span></tt>
+            </div>
+            <div id="l549"
+               class="code sev- "><tt><i>549</i>             <span class="n">ENABLE_USER_SITE</span> <span class="o">=</span> <span class="kc">False</span></tt>
+            </div>
+            <div id="l550"
+               class="code sev- "><tt><i>550</i> &nbsp;</tt>
+            </div>
+            <div id="l551"
+               class="code sev- "><tt><i>551</i>     <span class="k">return</span> <span class="n">known_paths</span></tt>
+            </div>
+            <div id="l552"
+               class="code sev- "><tt><i>552</i> &nbsp;</tt>
+            </div>
+            <div id="l553"
+               class="code sev- "><tt><i>553</i> &nbsp;</tt>
+            </div>
+            <div id="l554"
+               class="code sev- "><tt><i>554</i> <span class="k">def</span> <span class="nf">execsitecustomize</span><span class="p">():</span></tt>
+            </div>
+            <div id="l555"
+               class="code sev- "><tt><i>555</i>     <span class="sd">&quot;&quot;&quot;Run custom site specific code, if available.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l556"
+               class="code sev- "><tt><i>556</i>     <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l557"
+               class="code sev- "><tt><i>557</i>         <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l558"
+               class="code sev-1  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-1">
+                        F401
+                     </span>
+                     'sitecustomize' imported but unused</li>
+               
+               </ul><tt><i>558</i>             <span class="kn">import</span> <span class="nn">sitecustomize</span></tt>
+            </div>
+            <div id="l559"
+               class="code sev- "><tt><i>559</i>         <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span></tt>
+            </div>
+            <div id="l560"
+               class="code sev- "><tt><i>560</i>             <span class="k">if</span> <span class="n">exc</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;sitecustomize&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l561"
+               class="code sev- "><tt><i>561</i>                 <span class="k">pass</span></tt>
+            </div>
+            <div id="l562"
+               class="code sev- "><tt><i>562</i>             <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l563"
+               class="code sev- "><tt><i>563</i>                 <span class="k">raise</span></tt>
+            </div>
+            <div id="l564"
+               class="code sev- "><tt><i>564</i>     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span></tt>
+            </div>
+            <div id="l565"
+               class="code sev- "><tt><i>565</i>         <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span></tt>
+            </div>
+            <div id="l566"
+               class="code sev- "><tt><i>566</i>             <span class="n">sys</span><span class="o">.</span><span class="n">excepthook</span><span class="p">(</span><span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">())</span></tt>
+            </div>
+            <div id="l567"
+               class="code sev- "><tt><i>567</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l568"
+               class="code sev- "><tt><i>568</i>             <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span></tt>
+            </div>
+            <div id="l569"
+               class="code sev- "><tt><i>569</i>                 <span class="s2">&quot;Error in sitecustomize; set PYTHONVERBOSE for traceback:</span><span class="se">\n</span><span class="s2">&quot;</span></tt>
+            </div>
+            <div id="l570"
+               class="code sev- "><tt><i>570</i>                 <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span></tt>
+            </div>
+            <div id="l571"
+               class="code sev- "><tt><i>571</i>                 <span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">err</span><span class="p">))</span></tt>
+            </div>
+            <div id="l572"
+               class="code sev- "><tt><i>572</i> &nbsp;</tt>
+            </div>
+            <div id="l573"
+               class="code sev- "><tt><i>573</i> &nbsp;</tt>
+            </div>
+            <div id="l574"
+               class="code sev- "><tt><i>574</i> <span class="k">def</span> <span class="nf">execusercustomize</span><span class="p">():</span></tt>
+            </div>
+            <div id="l575"
+               class="code sev- "><tt><i>575</i>     <span class="sd">&quot;&quot;&quot;Run custom user specific code, if available.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l576"
+               class="code sev- "><tt><i>576</i>     <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l577"
+               class="code sev- "><tt><i>577</i>         <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l578"
+               class="code sev-1  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-1">
+                        F401
+                     </span>
+                     'usercustomize' imported but unused</li>
+               
+               </ul><tt><i>578</i>             <span class="kn">import</span> <span class="nn">usercustomize</span></tt>
+            </div>
+            <div id="l579"
+               class="code sev- "><tt><i>579</i>         <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span></tt>
+            </div>
+            <div id="l580"
+               class="code sev- "><tt><i>580</i>             <span class="k">if</span> <span class="n">exc</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;usercustomize&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l581"
+               class="code sev- "><tt><i>581</i>                 <span class="k">pass</span></tt>
+            </div>
+            <div id="l582"
+               class="code sev- "><tt><i>582</i>             <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l583"
+               class="code sev- "><tt><i>583</i>                 <span class="k">raise</span></tt>
+            </div>
+            <div id="l584"
+               class="code sev- "><tt><i>584</i>     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span></tt>
+            </div>
+            <div id="l585"
+               class="code sev- "><tt><i>585</i>         <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span></tt>
+            </div>
+            <div id="l586"
+               class="code sev- "><tt><i>586</i>             <span class="n">sys</span><span class="o">.</span><span class="n">excepthook</span><span class="p">(</span><span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">())</span></tt>
+            </div>
+            <div id="l587"
+               class="code sev- "><tt><i>587</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l588"
+               class="code sev- "><tt><i>588</i>             <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span></tt>
+            </div>
+            <div id="l589"
+               class="code sev- "><tt><i>589</i>                 <span class="s2">&quot;Error in usercustomize; set PYTHONVERBOSE for traceback:</span><span class="se">\n</span><span class="s2">&quot;</span></tt>
+            </div>
+            <div id="l590"
+               class="code sev- "><tt><i>590</i>                 <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span></tt>
+            </div>
+            <div id="l591"
+               class="code sev- "><tt><i>591</i>                 <span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">err</span><span class="p">))</span></tt>
+            </div>
+            <div id="l592"
+               class="code sev- "><tt><i>592</i> &nbsp;</tt>
+            </div>
+            <div id="l593"
+               class="code sev- "><tt><i>593</i> &nbsp;</tt>
+            </div>
+            <div id="l594"
+               class="code sev- "><tt><i>594</i> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span></tt>
+            </div>
+            <div id="l595"
+               class="code sev- "><tt><i>595</i>     <span class="sd">&quot;&quot;&quot;Add standard site-specific directories to the module search path.</span></tt>
+            </div>
+            <div id="l596"
+               class="code sev- "><tt><i>596</i> &nbsp;</tt>
+            </div>
+            <div id="l597"
+               class="code sev- "><tt><i>597</i> <span class="sd">    This function is called automatically when this module is imported,</span></tt>
+            </div>
+            <div id="l598"
+               class="code sev- "><tt><i>598</i> <span class="sd">    unless the python interpreter was started with the -S flag.</span></tt>
+            </div>
+            <div id="l599"
+               class="code sev- "><tt><i>599</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l600"
+               class="code sev- "><tt><i>600</i>     <span class="k">global</span> <span class="n">ENABLE_USER_SITE</span></tt>
+            </div>
+            <div id="l601"
+               class="code sev- "><tt><i>601</i> &nbsp;</tt>
+            </div>
+            <div id="l602"
+               class="code sev- "><tt><i>602</i>     <span class="n">orig_path</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">[:]</span></tt>
+            </div>
+            <div id="l603"
+               class="code sev- "><tt><i>603</i>     <span class="n">known_paths</span> <span class="o">=</span> <span class="n">removeduppaths</span><span class="p">()</span></tt>
+            </div>
+            <div id="l604"
+               class="code sev- "><tt><i>604</i>     <span class="k">if</span> <span class="n">orig_path</span> <span class="o">!=</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span></tt>
+            </div>
+            <div id="l605"
+               class="code sev- "><tt><i>605</i>         <span class="c1"># removeduppaths() might make sys.path absolute.</span></tt>
+            </div>
+            <div id="l606"
+               class="code sev- "><tt><i>606</i>         <span class="c1"># fix __file__ and __cached__ of already imported modules too.</span></tt>
+            </div>
+            <div id="l607"
+               class="code sev- "><tt><i>607</i>         <span class="n">abs_paths</span><span class="p">()</span></tt>
+            </div>
+            <div id="l608"
+               class="code sev- "><tt><i>608</i> &nbsp;</tt>
+            </div>
+            <div id="l609"
+               class="code sev- "><tt><i>609</i>     <span class="n">known_paths</span> <span class="o">=</span> <span class="n">venv</span><span class="p">(</span><span class="n">known_paths</span><span class="p">)</span></tt>
+            </div>
+            <div id="l610"
+               class="code sev- "><tt><i>610</i>     <span class="k">if</span> <span class="n">ENABLE_USER_SITE</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l611"
+               class="code sev- "><tt><i>611</i>         <span class="n">ENABLE_USER_SITE</span> <span class="o">=</span> <span class="n">check_enableusersite</span><span class="p">()</span></tt>
+            </div>
+            <div id="l612"
+               class="code sev- "><tt><i>612</i>     <span class="n">known_paths</span> <span class="o">=</span> <span class="n">addusersitepackages</span><span class="p">(</span><span class="n">known_paths</span><span class="p">)</span></tt>
+            </div>
+            <div id="l613"
+               class="code sev- "><tt><i>613</i>     <span class="n">known_paths</span> <span class="o">=</span> <span class="n">addsitepackages</span><span class="p">(</span><span class="n">known_paths</span><span class="p">)</span></tt>
+            </div>
+            <div id="l614"
+               class="code sev- "><tt><i>614</i>     <span class="n">setquit</span><span class="p">()</span></tt>
+            </div>
+            <div id="l615"
+               class="code sev- "><tt><i>615</i>     <span class="n">setcopyright</span><span class="p">()</span></tt>
+            </div>
+            <div id="l616"
+               class="code sev- "><tt><i>616</i>     <span class="n">sethelper</span><span class="p">()</span></tt>
+            </div>
+            <div id="l617"
+               class="code sev- "><tt><i>617</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">sys</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">isolated</span><span class="p">:</span></tt>
+            </div>
+            <div id="l618"
+               class="code sev- "><tt><i>618</i>         <span class="n">enablerlcompleter</span><span class="p">()</span></tt>
+            </div>
+            <div id="l619"
+               class="code sev- "><tt><i>619</i>     <span class="n">execsitecustomize</span><span class="p">()</span></tt>
+            </div>
+            <div id="l620"
+               class="code sev- "><tt><i>620</i>     <span class="k">if</span> <span class="n">ENABLE_USER_SITE</span><span class="p">:</span></tt>
+            </div>
+            <div id="l621"
+               class="code sev- "><tt><i>621</i>         <span class="n">execusercustomize</span><span class="p">()</span></tt>
+            </div>
+            <div id="l622"
+               class="code sev- "><tt><i>622</i> &nbsp;</tt>
+            </div>
+            <div id="l623"
+               class="code sev- "><tt><i>623</i> <span class="c1"># Prevent extending of sys.path when python was started with -S and</span></tt>
+            </div>
+            <div id="l624"
+               class="code sev- "><tt><i>624</i> <span class="c1"># site is imported later.</span></tt>
+            </div>
+            <div id="l625"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E305
+                     </span>
+                     Expected 2 blank lines after class or function definition, found 1</li>
+               
+               </ul><tt><i>625</i> <span class="k">if</span> <span class="ow">not</span> <span class="n">sys</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">no_site</span><span class="p">:</span></tt>
+            </div>
+            <div id="l626"
+               class="code sev- "><tt><i>626</i>     <span class="n">main</span><span class="p">()</span></tt>
+            </div>
+            <div id="l627"
+               class="code sev- "><tt><i>627</i> &nbsp;</tt>
+            </div>
+            <div id="l628"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>628</i> <span class="k">def</span> <span class="nf">_script</span><span class="p">():</span></tt>
+            </div>
+            <div id="l629"
+               class="code sev- "><tt><i>629</i>     <span class="n">help</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span></tt>
+            </div>
+            <div id="l630"
+               class="code sev- "><tt><i>630</i> <span class="s2">    </span><span class="si">%s</span><span class="s2"> [--user-base] [--user-site]</span></tt>
+            </div>
+            <div id="l631"
+               class="code sev- "><tt><i>631</i> &nbsp;</tt>
+            </div>
+            <div id="l632"
+               class="code sev- "><tt><i>632</i> <span class="s2">    Without arguments print some useful information</span></tt>
+            </div>
+            <div id="l633"
+               class="code sev- "><tt><i>633</i> <span class="s2">    With arguments print the value of USER_BASE and/or USER_SITE separated</span></tt>
+            </div>
+            <div id="l634"
+               class="code sev- "><tt><i>634</i> <span class="s2">    by &#39;</span><span class="si">%s</span><span class="s2">&#39;.</span></tt>
+            </div>
+            <div id="l635"
+               class="code sev- "><tt><i>635</i> &nbsp;</tt>
+            </div>
+            <div id="l636"
+               class="code sev- "><tt><i>636</i> <span class="s2">    Exit codes with --user-base or --user-site:</span></tt>
+            </div>
+            <div id="l637"
+               class="code sev- "><tt><i>637</i> <span class="s2">      0 - user site directory is enabled</span></tt>
+            </div>
+            <div id="l638"
+               class="code sev- "><tt><i>638</i> <span class="s2">      1 - user site directory is disabled by user</span></tt>
+            </div>
+            <div id="l639"
+               class="code sev- "><tt><i>639</i> <span class="s2">      2 - user site directory is disabled by super user</span></tt>
+            </div>
+            <div id="l640"
+               class="code sev- "><tt><i>640</i> <span class="s2">          or for security reasons</span></tt>
+            </div>
+            <div id="l641"
+               class="code sev- "><tt><i>641</i> <span class="s2">     &gt;2 - unknown error</span></tt>
+            </div>
+            <div id="l642"
+               class="code sev- "><tt><i>642</i> <span class="s2">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l643"
+               class="code sev- "><tt><i>643</i>     <span class="n">args</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span></tt>
+            </div>
+            <div id="l644"
+               class="code sev- "><tt><i>644</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="p">:</span></tt>
+            </div>
+            <div id="l645"
+               class="code sev- "><tt><i>645</i>         <span class="n">user_base</span> <span class="o">=</span> <span class="n">getuserbase</span><span class="p">()</span></tt>
+            </div>
+            <div id="l646"
+               class="code sev- "><tt><i>646</i>         <span class="n">user_site</span> <span class="o">=</span> <span class="n">getusersitepackages</span><span class="p">()</span></tt>
+            </div>
+            <div id="l647"
+               class="code sev- "><tt><i>647</i>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sys.path = [&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l648"
+               class="code sev- "><tt><i>648</i>         <span class="k">for</span> <span class="nb">dir</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span></tt>
+            </div>
+            <div id="l649"
+               class="code sev- "><tt><i>649</i>             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;    </span><span class="si">%r</span><span class="s2">,&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">dir</span><span class="p">,))</span></tt>
+            </div>
+            <div id="l650"
+               class="code sev- "><tt><i>650</i>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;]&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l651"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E306
+                     </span>
+                     Expected 1 blank line before a nested definition, found 0</li>
+               
+               </ul><tt><i>651</i>         <span class="k">def</span> <span class="nf">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span></tt>
+            </div>
+            <div id="l652"
+               class="code sev- "><tt><i>652</i>             <span class="k">if</span> <span class="n">path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span></tt>
+            </div>
+            <div id="l653"
+               class="code sev- "><tt><i>653</i>                 <span class="k">return</span> <span class="s2">&quot;exists&quot;</span></tt>
+            </div>
+            <div id="l654"
+               class="code sev- "><tt><i>654</i>             <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l655"
+               class="code sev- "><tt><i>655</i>                 <span class="k">return</span> <span class="s2">&quot;doesn&#39;t exist&quot;</span></tt>
+            </div>
+            <div id="l656"
+               class="code sev- "><tt><i>656</i>         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;USER_BASE: </span><span class="si">{</span><span class="n">user_base</span><span class="si">!r}</span><span class="s2"> (</span><span class="si">{</span><span class="n">exists</span><span class="p">(</span><span class="n">user_base</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l657"
+               class="code sev- "><tt><i>657</i>         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;USER_SITE: </span><span class="si">{</span><span class="n">user_site</span><span class="si">!r}</span><span class="s2"> (</span><span class="si">{</span><span class="n">exists</span><span class="p">(</span><span class="n">user_site</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l658"
+               class="code sev- "><tt><i>658</i>         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ENABLE_USER_SITE: </span><span class="si">{</span><span class="n">ENABLE_USER_SITE</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l659"
+               class="code sev- "><tt><i>659</i>         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></tt>
+            </div>
+            <div id="l660"
+               class="code sev- "><tt><i>660</i> &nbsp;</tt>
+            </div>
+            <div id="l661"
+               class="code sev- "><tt><i>661</i>     <span class="n">buffer</span> <span class="o">=</span> <span class="p">[]</span></tt>
+            </div>
+            <div id="l662"
+               class="code sev- "><tt><i>662</i>     <span class="k">if</span> <span class="s1">&#39;--user-base&#39;</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span></tt>
+            </div>
+            <div id="l663"
+               class="code sev- "><tt><i>663</i>         <span class="n">buffer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">USER_BASE</span><span class="p">)</span></tt>
+            </div>
+            <div id="l664"
+               class="code sev- "><tt><i>664</i>     <span class="k">if</span> <span class="s1">&#39;--user-site&#39;</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span></tt>
+            </div>
+            <div id="l665"
+               class="code sev- "><tt><i>665</i>         <span class="n">buffer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">USER_SITE</span><span class="p">)</span></tt>
+            </div>
+            <div id="l666"
+               class="code sev- "><tt><i>666</i> &nbsp;</tt>
+            </div>
+            <div id="l667"
+               class="code sev- "><tt><i>667</i>     <span class="k">if</span> <span class="n">buffer</span><span class="p">:</span></tt>
+            </div>
+            <div id="l668"
+               class="code sev- "><tt><i>668</i>         <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">pathsep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">buffer</span><span class="p">))</span></tt>
+            </div>
+            <div id="l669"
+               class="code sev- "><tt><i>669</i>         <span class="k">if</span> <span class="n">ENABLE_USER_SITE</span><span class="p">:</span></tt>
+            </div>
+            <div id="l670"
+               class="code sev- "><tt><i>670</i>             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></tt>
+            </div>
+            <div id="l671"
+               class="code sev- "><tt><i>671</i>         <span class="k">elif</span> <span class="n">ENABLE_USER_SITE</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span></tt>
+            </div>
+            <div id="l672"
+               class="code sev- "><tt><i>672</i>             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></tt>
+            </div>
+            <div id="l673"
+               class="code sev- "><tt><i>673</i>         <span class="k">elif</span> <span class="n">ENABLE_USER_SITE</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l674"
+               class="code sev- "><tt><i>674</i>             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span></tt>
+            </div>
+            <div id="l675"
+               class="code sev- "><tt><i>675</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l676"
+               class="code sev- "><tt><i>676</i>             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span></tt>
+            </div>
+            <div id="l677"
+               class="code sev- "><tt><i>677</i>     <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l678"
+               class="code sev- "><tt><i>678</i>         <span class="kn">import</span> <span class="nn">textwrap</span></tt>
+            </div>
+            <div id="l679"
+               class="code sev- "><tt><i>679</i>         <span class="nb">print</span><span class="p">(</span><span class="n">textwrap</span><span class="o">.</span><span class="n">dedent</span><span class="p">(</span><span class="n">help</span> <span class="o">%</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">os</span><span class="o">.</span><span class="n">pathsep</span><span class="p">)))</span></tt>
+            </div>
+            <div id="l680"
+               class="code sev- "><tt><i>680</i>         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span></tt>
+            </div>
+            <div id="l681"
+               class="code sev- "><tt><i>681</i> &nbsp;</tt>
+            </div>
+            <div id="l682"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E305
+                     </span>
+                     Expected 2 blank lines after class or function definition, found 1</li>
+               
+               </ul><tt><i>682</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l683"
+               class="code sev- "><tt><i>683</i>     <span class="n">_script</span><span class="p">()</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>

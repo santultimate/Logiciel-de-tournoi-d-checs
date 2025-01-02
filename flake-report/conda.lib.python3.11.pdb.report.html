@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/pdb.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.pdb.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/pdb.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  12
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l448">
+                  <tt><i>448</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l622">
+                  <tt><i>622</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l723">
+                  <tt><i>723</i>                 <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l734">
+                  <tt><i>734</i>                 <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l910">
+                  <tt><i>910</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1233">
+                  <tt><i>1233</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1243">
+                  <tt><i>1243</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1255">
+                  <tt><i>1255</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1259">
+                  <tt><i>1259</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1361">
+                  <tt><i>1361</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1399">
+                  <tt><i>1399</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1791">
+                  <tt><i>1791</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  11
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l97">
+                  <tt><i>97</i> <span class="k">def</span> <span class="nf">find_function</span><span class="p">(</span><span class="n">funcname</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l110">
+                  <tt><i>110</i> <span class="k">def</span> <span class="nf">lasti2lineno</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">lasti</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l214">
+                  <tt><i>214</i> <span class="k">class</span> <span class="nc">Pdb</span><span class="p">(</span><span class="n">bdb</span><span class="o">.</span><span class="n">Bdb</span><span class="p">,</span> <span class="n">cmd</span><span class="o">.</span><span class="n">Cmd</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1682">
+                  <tt><i>1682</i> <span class="k">def</span> <span class="nf">runeval</span><span class="p">(</span><span class="n">expression</span><span class="p">,</span> <span class="nb">globals</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">locals</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1685">
+                  <tt><i>1685</i> <span class="k">def</span> <span class="nf">runctx</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="nb">globals</span><span class="p">,</span> <span class="nb">locals</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1689">
+                  <tt><i>1689</i> <span class="k">def</span> <span class="nf">runcall</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1692">
+                  <tt><i>1692</i> <span class="k">def</span> <span class="nf">set_trace</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1700">
+                  <tt><i>1700</i> <span class="k">def</span> <span class="nf">post_mortem</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1714">
+                  <tt><i>1714</i> <span class="k">def</span> <span class="nf">pm</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1722">
+                  <tt><i>1722</i> <span class="k">def</span> <span class="nf">test</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1726">
+                  <tt><i>1726</i> <span class="k">def</span> <span class="nf">help</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l255">
+                  <tt><i>255</i>         <span class="bp">self</span><span class="o">.</span><span class="n">commands</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># associates a command list to breakpoint numbers</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l256">
+                  <tt><i>256</i>         <span class="bp">self</span><span class="o">.</span><span class="n">commands_doprompt</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># for each bp num, tells if the prompt</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l258">
+                  <tt><i>258</i>         <span class="bp">self</span><span class="o">.</span><span class="n">commands_silent</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># for each bp num, tells if the stack trace</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l260">
+                  <tt><i>260</i>         <span class="bp">self</span><span class="o">.</span><span class="n">commands_defining</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># True while in the process of defining</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l262">
+                  <tt><i>262</i>         <span class="bp">self</span><span class="o">.</span><span class="n">commands_bnum</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># The breakpoint number for which we are</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l741">
+                  <tt><i>741</i>                     <span class="n">funcname</span> <span class="o">=</span> <span class="n">ok</span> <span class="c1"># ok contains a function name</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l979">
+                  <tt><i>979</i>     <span class="n">do_cl</span> <span class="o">=</span> <span class="n">do_clear</span> <span class="c1"># &#39;c&#39; is already an abbreviation for &#39;continue&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l431">
+                  <tt><i>431</i>         <span class="k">if</span> <span class="n">line</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;!&#39;</span><span class="p">:</span> <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l791">
+                  <tt><i>791</i>         <span class="k">if</span> <span class="nb">id</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span> <span class="k">return</span> <span class="n">failed</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1210">
+                  <tt><i>1210</i>         <span class="k">if</span> <span class="n">co</span><span class="o">.</span><span class="n">co_flags</span> <span class="o">&amp;</span> <span class="n">inspect</span><span class="o">.</span><span class="n">CO_VARARGS</span><span class="p">:</span> <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1211">
+                  <tt><i>1211</i>         <span class="k">if</span> <span class="n">co</span><span class="o">.</span><span class="n">co_flags</span> <span class="o">&amp;</span> <span class="n">inspect</span><span class="o">.</span><span class="n">CO_VARKEYWORDS</span><span class="p">:</span> <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1518">
+                  <tt><i>1518</i>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E116">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E116:</strong> unexpected indentation (comment)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l257">
+                  <tt><i>257</i>                                     <span class="c1"># must be disp. after execing the cmd list</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l259">
+                  <tt><i>259</i>                                   <span class="c1"># must be disp. after execing the cmd list</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l261">
+                  <tt><i>261</i>                                        <span class="c1"># a command list</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l263">
+                  <tt><i>263</i>                                   <span class="c1"># defining a list</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l335">
+                  <tt><i>335</i>                <span class="bp">self</span><span class="o">.</span><span class="n">currentbp</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l373">
+                  <tt><i>373</i>                                     <span class="ow">and</span> <span class="n">exc_type</span> <span class="ow">is</span> <span class="ne">StopIteration</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l461">
+                  <tt><i>461</i>                                       <span class="n">tmpArg</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l829">
+                  <tt><i>829</i>              <span class="p">(</span><span class="n">line</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;&quot;&quot;&quot;&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">line</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&#39;&#39;&#39;&quot;</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E114">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E114:</strong> indentation is not a multiple of      (comment)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l259">
+                  <tt><i>259</i>                                   <span class="c1"># must be disp. after execing the cmd list</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l261">
+                  <tt><i>261</i>                                        <span class="c1"># a command list</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l263">
+                  <tt><i>263</i>                                   <span class="c1"># defining a list</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l94">
+                  <tt><i>94</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;pm&quot;</span><span class="p">,</span> <span class="s2">&quot;Pdb&quot;</span><span class="p">,</span> <span class="s2">&quot;runeval&quot;</span><span class="p">,</span> <span class="s2">&quot;runctx&quot;</span><span class="p">,</span> <span class="s2">&quot;runcall&quot;</span><span class="p">,</span> <span class="s2">&quot;set_trace&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1660">
+                  <tt><i>1660</i> <span class="k">if</span> <span class="vm">__doc__</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1730">
+                  <tt><i>1730</i> <span class="n">_usage</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E251">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E251:</strong> unexpected spaces around keyword / parameter equals
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l665">
+                  <tt><i>665</i>     <span class="k">def</span> <span class="nf">do_break</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">temporary</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l729">
+                  <tt><i>729</i>                     <span class="c1">#use co_name to identify the bkpt (function names</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l730">
+                  <tt><i>730</i>                     <span class="c1">#could be aliased, but co_name is invariant)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E271">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E271:</strong> multiple spaces after keyword
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1607">
+                  <tt><i>1607</i>         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isabs</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="ow">and</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l1610">
+                  <tt><i>1610</i>         <span class="k">if</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">canonic</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">mainpyfile</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l375">
+                  <tt><i>375</i>             <span class="n">traceback</span><span class="o">.</span><span class="n">format_exception_only</span><span class="p">(</span><span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E129">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E129:</strong> visually indented line with same indent as next logical line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.pdb.source.html#l321">
+                  <tt><i>321</i>                 <span class="ow">or</span> <span class="n">frame</span><span class="o">.</span><span class="n">f_lineno</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/email/errors.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.email.errors.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/email/errors.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  19
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l45">
+                  <tt><i>45</i> <span class="k">class</span> <span class="nc">NoBoundaryInMultipartDefect</span><span class="p">(</span><span class="n">MessageDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l48">
+                  <tt><i>48</i> <span class="k">class</span> <span class="nc">StartBoundaryNotFoundDefect</span><span class="p">(</span><span class="n">MessageDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l51">
+                  <tt><i>51</i> <span class="k">class</span> <span class="nc">CloseBoundaryNotFoundDefect</span><span class="p">(</span><span class="n">MessageDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l54">
+                  <tt><i>54</i> <span class="k">class</span> <span class="nc">FirstHeaderLineIsContinuationDefect</span><span class="p">(</span><span class="n">MessageDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l57">
+                  <tt><i>57</i> <span class="k">class</span> <span class="nc">MisplacedEnvelopeHeaderDefect</span><span class="p">(</span><span class="n">MessageDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l60">
+                  <tt><i>60</i> <span class="k">class</span> <span class="nc">MissingHeaderBodySeparatorDefect</span><span class="p">(</span><span class="n">MessageDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l65">
+                  <tt><i>65</i> <span class="k">class</span> <span class="nc">MultipartInvariantViolationDefect</span><span class="p">(</span><span class="n">MessageDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l68">
+                  <tt><i>68</i> <span class="k">class</span> <span class="nc">InvalidMultipartContentTransferEncodingDefect</span><span class="p">(</span><span class="n">MessageDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l71">
+                  <tt><i>71</i> <span class="k">class</span> <span class="nc">UndecodableBytesDefect</span><span class="p">(</span><span class="n">MessageDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l74">
+                  <tt><i>74</i> <span class="k">class</span> <span class="nc">InvalidBase64PaddingDefect</span><span class="p">(</span><span class="n">MessageDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l77">
+                  <tt><i>77</i> <span class="k">class</span> <span class="nc">InvalidBase64CharactersDefect</span><span class="p">(</span><span class="n">MessageDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l80">
+                  <tt><i>80</i> <span class="k">class</span> <span class="nc">InvalidBase64LengthDefect</span><span class="p">(</span><span class="n">MessageDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l85">
+                  <tt><i>85</i> <span class="k">class</span> <span class="nc">HeaderDefect</span><span class="p">(</span><span class="n">MessageDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l91">
+                  <tt><i>91</i> <span class="k">class</span> <span class="nc">InvalidHeaderDefect</span><span class="p">(</span><span class="n">HeaderDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l94">
+                  <tt><i>94</i> <span class="k">class</span> <span class="nc">HeaderMissingRequiredValue</span><span class="p">(</span><span class="n">HeaderDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l97">
+                  <tt><i>97</i> <span class="k">class</span> <span class="nc">NonPrintableDefect</span><span class="p">(</span><span class="n">HeaderDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l108">
+                  <tt><i>108</i> <span class="k">class</span> <span class="nc">ObsoleteHeaderDefect</span><span class="p">(</span><span class="n">HeaderDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l111">
+                  <tt><i>111</i> <span class="k">class</span> <span class="nc">NonASCIILocalPartDefect</span><span class="p">(</span><span class="n">HeaderDefect</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l116">
+                  <tt><i>116</i> <span class="k">class</span> <span class="nc">InvalidDateDefect</span><span class="p">(</span><span class="n">HeaderDefect</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l106">
+                  <tt><i>106</i>             <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">non_printables</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.email.errors.source.html#l63">
+                  <tt><i>63</i> <span class="n">MalformedHeaderDefect</span> <span class="o">=</span> <span class="n">MissingHeaderBodySeparatorDefect</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

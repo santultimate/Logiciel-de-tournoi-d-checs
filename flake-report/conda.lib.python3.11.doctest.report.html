@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/doctest.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.doctest.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/doctest.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  35
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 0
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l132">
+                  <tt><i>132</i> <span class="k">def</span> <span class="nf">register_optionflag</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l183">
+                  <tt><i>183</i> <span class="k">def</span> <span class="nf">_extract_future_flags</span><span class="p">(</span><span class="n">globs</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l195">
+                  <tt><i>195</i> <span class="k">def</span> <span class="nf">_normalize_module</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l214">
+                  <tt><i>214</i> <span class="k">def</span> <span class="nf">_newline_convert</span><span class="p">(</span><span class="n">data</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l218">
+                  <tt><i>218</i> <span class="k">def</span> <span class="nf">_load_testfile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">package</span><span class="p">,</span> <span class="n">module_relative</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l236">
+                  <tt><i>236</i> <span class="k">def</span> <span class="nf">_indent</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l244">
+                  <tt><i>244</i> <span class="k">def</span> <span class="nf">_exception_traceback</span><span class="p">(</span><span class="n">exc_info</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l256">
+                  <tt><i>256</i> <span class="k">class</span> <span class="nc">_SpoofOut</span><span class="p">(</span><span class="n">StringIO</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l271">
+                  <tt><i>271</i> <span class="k">def</span> <span class="nf">_ellipsis_match</span><span class="p">(</span><span class="n">want</span><span class="p">,</span> <span class="n">got</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l320">
+                  <tt><i>320</i> <span class="k">def</span> <span class="nf">_comment_line</span><span class="p">(</span><span class="n">line</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l328">
+                  <tt><i>328</i> <span class="k">def</span> <span class="nf">_strip_exception_details</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l354">
+                  <tt><i>354</i> <span class="k">class</span> <span class="nc">_OutputRedirectingPdb</span><span class="p">(</span><span class="n">pdb</span><span class="o">.</span><span class="n">Pdb</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l391">
+                  <tt><i>391</i> <span class="k">def</span> <span class="nf">_module_relative_path</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">test_path</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l437">
+                  <tt><i>437</i> <span class="k">class</span> <span class="nc">Example</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l505">
+                  <tt><i>505</i> <span class="k">class</span> <span class="nc">DocTest</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l582">
+                  <tt><i>582</i> <span class="k">class</span> <span class="nc">DocTestParser</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1147">
+                  <tt><i>1147</i> <span class="k">class</span> <span class="nc">DocTestRunner</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1604">
+                  <tt><i>1604</i> <span class="k">class</span> <span class="nc">OutputChecker</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1750">
+                  <tt><i>1750</i> <span class="k">class</span> <span class="nc">DocTestFailure</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1769">
+                  <tt><i>1769</i> <span class="k">class</span> <span class="nc">UnexpectedException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1788">
+                  <tt><i>1788</i> <span class="k">class</span> <span class="nc">DebugRunner</span><span class="p">(</span><span class="n">DocTestRunner</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1900">
+                  <tt><i>1900</i> <span class="k">def</span> <span class="nf">testmod</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">globs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2004">
+                  <tt><i>2004</i> <span class="k">def</span> <span class="nf">testfile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">module_relative</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">package</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2127">
+                  <tt><i>2127</i> <span class="k">def</span> <span class="nf">run_docstring_examples</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">globs</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;NoName&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2156">
+                  <tt><i>2156</i> <span class="k">def</span> <span class="nf">set_unittest_reportflags</span><span class="p">(</span><span class="n">flags</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2355">
+                  <tt><i>2355</i> <span class="k">class</span> <span class="nc">SkipDocTestCase</span><span class="p">(</span><span class="n">DocTestCase</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2442">
+                  <tt><i>2442</i> <span class="k">class</span> <span class="nc">DocFileCase</span><span class="p">(</span><span class="n">DocTestCase</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2455">
+                  <tt><i>2455</i> <span class="k">def</span> <span class="nf">DocFileTest</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">module_relative</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">package</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2481">
+                  <tt><i>2481</i> <span class="k">def</span> <span class="nf">DocFileSuite</span><span class="p">(</span><span class="o">*</span><span class="n">paths</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2554">
+                  <tt><i>2554</i> <span class="k">def</span> <span class="nf">script_from_examples</span><span class="p">(</span><span class="n">s</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2636">
+                  <tt><i>2636</i> <span class="k">def</span> <span class="nf">testsource</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2652">
+                  <tt><i>2652</i> <span class="k">def</span> <span class="nf">debug_src</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">pm</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">globs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2657">
+                  <tt><i>2657</i> <span class="k">def</span> <span class="nf">debug_script</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">pm</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">globs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2677">
+                  <tt><i>2677</i> <span class="k">def</span> <span class="nf">debug</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">pm</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2691">
+                  <tt><i>2691</i> <span class="k">class</span> <span class="nc">_TestClass</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  18
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l495">
+                  <tt><i>495</i>                <span class="bp">self</span><span class="o">.</span><span class="n">want</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">want</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l496">
+                  <tt><i>496</i>                <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">lineno</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l497">
+                  <tt><i>497</i>                <span class="bp">self</span><span class="o">.</span><span class="n">indent</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">indent</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l498">
+                  <tt><i>498</i>                <span class="bp">self</span><span class="o">.</span><span class="n">options</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">options</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l499">
+                  <tt><i>499</i>                <span class="bp">self</span><span class="o">.</span><span class="n">exc_msg</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">exc_msg</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l559">
+                  <tt><i>559</i>                <span class="bp">self</span><span class="o">.</span><span class="n">docstring</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">docstring</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l560">
+                  <tt><i>560</i>                <span class="bp">self</span><span class="o">.</span><span class="n">globs</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">globs</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l561">
+                  <tt><i>561</i>                <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l562">
+                  <tt><i>562</i>                <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">filename</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l563">
+                  <tt><i>563</i>                <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">lineno</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l654">
+                  <tt><i>654</i>                      <span class="bp">self</span><span class="o">.</span><span class="n">_parse_example</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">lineno</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1045">
+                  <tt><i>1045</i>                       <span class="nb">isinstance</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="nb">property</span><span class="p">))</span> <span class="ow">and</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1046">
+                  <tt><i>1046</i>                       <span class="bp">self</span><span class="o">.</span><span class="n">_from_module</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">val</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2337">
+                  <tt><i>2337</i>                <span class="bp">self</span><span class="o">.</span><span class="n">_dt_optionflags</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">_dt_optionflags</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2338">
+                  <tt><i>2338</i>                <span class="bp">self</span><span class="o">.</span><span class="n">_dt_setUp</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">_dt_setUp</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2339">
+                  <tt><i>2339</i>                <span class="bp">self</span><span class="o">.</span><span class="n">_dt_tearDown</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">_dt_tearDown</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2340">
+                  <tt><i>2340</i>                <span class="bp">self</span><span class="o">.</span><span class="n">_dt_checker</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">_dt_checker</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2825">
+                  <tt><i>2825</i>                                      <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">,</span> <span class="n">optionflags</span><span class="o">=</span><span class="n">options</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E266">
+               <span class="count sev-2">
+                  18
+               </span>
+               <strong>E266:</strong> too many leading '#' for block comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l167">
+                  <tt><i>167</i> <span class="c1">## Table of Contents</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l180">
+                  <tt><i>180</i> <span class="c1">## 1. Utility Functions</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l426">
+                  <tt><i>426</i> <span class="c1">## 2. Example &amp; DocTest</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l428">
+                  <tt><i>428</i> <span class="c1">## - An &quot;example&quot; is a &lt;source, want&gt; pair, where &quot;source&quot; is a</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l429">
+                  <tt><i>429</i> <span class="c1">##   fragment of source code, and &quot;want&quot; is the expected output for</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l430">
+                  <tt><i>430</i> <span class="c1">##   &quot;source.&quot;  The Example class also includes information about</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l431">
+                  <tt><i>431</i> <span class="c1">##   where the example was extracted from.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l433">
+                  <tt><i>433</i> <span class="c1">## - A &quot;doctest&quot; is a collection of examples, typically extracted from</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l434">
+                  <tt><i>434</i> <span class="c1">##   a string (such as an object&#39;s docstring).  The DocTest class also</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l435">
+                  <tt><i>435</i> <span class="c1">##   includes information about where the string was extracted from.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l579">
+                  <tt><i>579</i> <span class="c1">## 3. DocTestParser</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l814">
+                  <tt><i>814</i> <span class="c1">## 4. DocTest Finder</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1144">
+                  <tt><i>1144</i> <span class="c1">## 5. DocTest Runner</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1694">
+                  <tt><i>1694</i>         <span class="c1">##    return False</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1892">
+                  <tt><i>1892</i> <span class="c1">## 6. Test Functions</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2151">
+                  <tt><i>2151</i> <span class="c1">## 7. Unittest Support</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2551">
+                  <tt><i>2551</i> <span class="c1">## 8. Debugging Support</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2689">
+                  <tt><i>2689</i> <span class="c1">## 9. Example Usage</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  10
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1239">
+                  <tt><i>1239</i>     <span class="c1">#/////////////////////////////////////////////////////////////////</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1241">
+                  <tt><i>1241</i>     <span class="c1">#/////////////////////////////////////////////////////////////////</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1294">
+                  <tt><i>1294</i>     <span class="c1">#/////////////////////////////////////////////////////////////////</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1296">
+                  <tt><i>1296</i>     <span class="c1">#/////////////////////////////////////////////////////////////////</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1531">
+                  <tt><i>1531</i>     <span class="c1">#/////////////////////////////////////////////////////////////////</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1533">
+                  <tt><i>1533</i>     <span class="c1">#/////////////////////////////////////////////////////////////////</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1588">
+                  <tt><i>1588</i>     <span class="c1">#/////////////////////////////////////////////////////////////////</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1590">
+                  <tt><i>1590</i>     <span class="c1">#/////////////////////////////////////////////////////////////////</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1597">
+                  <tt><i>1597</i>                 <span class="c1">#print(&quot;*** DocTestRunner.merge: &#39;&quot; + name + &quot;&#39; in both&quot; \</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1693">
+                  <tt><i>1693</i>         <span class="c1">##if optionflags &amp; ELLIPSIS and ELLIPSIS_MARKER in want:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l968">
+                  <tt><i>968</i>                 <span class="k">return</span> <span class="kc">True</span> <span class="c1"># [XX] no easy way to tell otherwise</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l975">
+                  <tt><i>975</i>             <span class="k">return</span> <span class="kc">True</span> <span class="c1"># [XX] no way not be sure.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1315">
+                  <tt><i>1315</i>         <span class="n">SUCCESS</span><span class="p">,</span> <span class="n">FAILURE</span><span class="p">,</span> <span class="n">BOOM</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># `outcome` state</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1357">
+                  <tt><i>1357</i>                 <span class="bp">self</span><span class="o">.</span><span class="n">debugger</span><span class="o">.</span><span class="n">set_continue</span><span class="p">()</span> <span class="c1"># ==== Example Finished ====</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1363">
+                  <tt><i>1363</i>                 <span class="bp">self</span><span class="o">.</span><span class="n">debugger</span><span class="o">.</span><span class="n">set_continue</span><span class="p">()</span> <span class="c1"># ==== Example Finished ====</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1725">
+                  <tt><i>1725</i>                 <span class="n">diff</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">diff</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span> <span class="c1"># strip the diff header</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1729">
+                  <tt><i>1729</i>                 <span class="n">diff</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">diff</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span> <span class="c1"># strip the diff header</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l486">
+                  <tt><i>486</i>         <span class="k">if</span> <span class="n">options</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{}</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l911">
+                  <tt><i>911</i>                 <span class="k">if</span> <span class="ow">not</span> <span class="n">file</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span> <span class="o">==</span> <span class="s1">&#39;&lt;]&gt;&#39;</span><span class="p">:</span> <span class="n">file</span> <span class="o">=</span> <span class="kc">None</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1116">
+                  <tt><i>1116</i>         <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">ismethod</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__func__</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1122">
+                  <tt><i>1122</i>         <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">istraceback</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">tb_frame</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1123">
+                  <tt><i>1123</i>         <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isframe</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">f_code</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l658">
+                  <tt><i>658</i>                                     <span class="n">lineno</span><span class="o">=</span><span class="n">lineno</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l659">
+                  <tt><i>659</i>                                     <span class="n">indent</span><span class="o">=</span><span class="n">min_indent</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s1">&#39;indent&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l660">
+                  <tt><i>660</i>                                     <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span> <span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l888">
+                  <tt><i>888</i>                         <span class="s2">&quot;when obj.__name__ doesn&#39;t exist: </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l136">
+                  <tt><i>136</i> <span class="n">DONT_ACCEPT_TRUE_FOR_1</span> <span class="o">=</span> <span class="n">register_optionflag</span><span class="p">(</span><span class="s1">&#39;DONT_ACCEPT_TRUE_FOR_1&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1898">
+                  <tt><i>1898</i> <span class="n">master</span> <span class="o">=</span> <span class="kc">None</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2154">
+                  <tt><i>2154</i> <span class="n">_unittest_reportflags</span> <span class="o">=</span> <span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2735">
+                  <tt><i>2735</i> <span class="n">__test__</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;_TestClass&quot;</span><span class="p">:</span> <span class="n">_TestClass</span><span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1445">
+                  <tt><i>1445</i>         <span class="n">f2</span><span class="p">,</span> <span class="n">t2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name2ft</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1645">
+                  <tt><i>1645</i>             <span class="k">if</span> <span class="p">(</span><span class="n">got</span><span class="p">,</span><span class="n">want</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="s2">&quot;True</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;1</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1647">
+                  <tt><i>1647</i>             <span class="k">if</span> <span class="p">(</span><span class="n">got</span><span class="p">,</span><span class="n">want</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="s2">&quot;False</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;0</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E741">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E741:</strong> ambiguous variable name 'l'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l642">
+                  <tt><i>642</i>             <span class="n">string</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">l</span><span class="p">[</span><span class="n">min_indent</span><span class="p">:]</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)])</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2621">
+                  <tt><i>2621</i>                 <span class="n">output</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;## &#39;</span><span class="o">+</span><span class="n">l</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">want</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2625">
+                  <tt><i>2625</i>                        <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">piece</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E129">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E129:</strong> visually indented line with same indent as next logical line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l763">
+                  <tt><i>763</i>                     <span class="n">option</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">OPTIONFLAGS_BY_NAME</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1015">
+                  <tt><i>1015</i>                     <span class="bp">self</span><span class="o">.</span><span class="n">_from_module</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">val</span><span class="p">)):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E201">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E201:</strong> whitespace after '('
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l657">
+                  <tt><i>657</i>                 <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">Example</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">want</span><span class="p">,</span> <span class="n">exc_msg</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1559">
+                  <tt><i>1559</i>                 <span class="n">passed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E202">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E202:</strong> whitespace before ')'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l660">
+                  <tt><i>660</i>                                     <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span> <span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1559">
+                  <tt><i>1559</i>                 <span class="n">passed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l406">
+                  <tt><i>406</i>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2421">
+                  <tt><i>2421</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">tests</span> <span class="ow">and</span> <span class="n">sys</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">optimize</span> <span class="o">&gt;=</span><span class="mi">2</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1361">
+                  <tt><i>1361</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2669">
+                  <tt><i>2669</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E124">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E124:</strong> closing bracket does not match visual indentation
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l2783">
+                  <tt><i>2783</i>            <span class="p">}</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.doctest.source.html#l1453">
+                  <tt><i>1453</i>     <span class="k">def</span> <span class="nf">__patched_linecache_getlines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">module_globals</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

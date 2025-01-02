@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/os.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.os.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/os.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  32
+               </span>
+               <strong>F405:</strong> 'stat' may be undefined, or defined from star imports: nt, posix
+               
+                  (and 15 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'stat' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l138">
+                  <tt><i>138</i>     <span class="n">_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">stat</span><span class="p">)</span> <span class="c1"># fstat always works</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'mkdir' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l225">
+                  <tt><i>225</i>         <span class="n">mkdir</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'rmdir' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l243">
+                  <tt><i>243</i>     <span class="n">rmdir</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'rmdir' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l249">
+                  <tt><i>249</i>             <span class="n">rmdir</span><span class="p">(</span><span class="n">head</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'rename' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l272">
+                  <tt><i>272</i>     <span class="n">rename</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'scandir' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l358">
+                  <tt><i>358</i>         <span class="n">scandir_it</span> <span class="o">=</span> <span class="n">scandir</span><span class="p">(</span><span class="n">top</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'scandir' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l429">
+                  <tt><i>429</i> <span class="k">if</span> <span class="p">{</span><span class="nb">open</span><span class="p">,</span> <span class="n">stat</span><span class="p">}</span> <span class="o">&lt;=</span> <span class="n">supports_dir_fd</span> <span class="ow">and</span> <span class="p">{</span><span class="n">scandir</span><span class="p">,</span> <span class="n">stat</span><span class="p">}</span> <span class="o">&lt;=</span> <span class="n">supports_fd</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'stat' may be undefined, or defined from star imports: nt, posix (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l429">
+                  <tt><i>429</i> <span class="k">if</span> <span class="p">{</span><span class="nb">open</span><span class="p">,</span> <span class="n">stat</span><span class="p">}</span> <span class="o">&lt;=</span> <span class="n">supports_dir_fd</span> <span class="ow">and</span> <span class="p">{</span><span class="n">scandir</span><span class="p">,</span> <span class="n">stat</span><span class="p">}</span> <span class="o">&lt;=</span> <span class="n">supports_fd</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'stat' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l469">
+                  <tt><i>469</i>             <span class="n">orig_st</span> <span class="o">=</span> <span class="n">stat</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">follow_symlinks</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dir_fd</span><span class="o">=</span><span class="n">dir_fd</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'O_NONBLOCK' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l470">
+                  <tt><i>470</i>         <span class="n">topfd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">O_RDONLY</span> <span class="o">|</span> <span class="n">O_NONBLOCK</span><span class="p">,</span> <span class="n">dir_fd</span><span class="o">=</span><span class="n">dir_fd</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'O_RDONLY' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l470">
+                  <tt><i>470</i>         <span class="n">topfd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">O_RDONLY</span> <span class="o">|</span> <span class="n">O_NONBLOCK</span><span class="p">,</span> <span class="n">dir_fd</span><span class="o">=</span><span class="n">dir_fd</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'stat' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l473">
+                  <tt><i>473</i>                                     <span class="n">path</span><span class="o">.</span><span class="n">samestat</span><span class="p">(</span><span class="n">orig_st</span><span class="p">,</span> <span class="n">stat</span><span class="p">(</span><span class="n">topfd</span><span class="p">)))):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'close' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l477">
+                  <tt><i>477</i>             <span class="n">close</span><span class="p">(</span><span class="n">topfd</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'scandir' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l484">
+                  <tt><i>484</i>         <span class="n">scandir_it</span> <span class="o">=</span> <span class="n">scandir</span><span class="p">(</span><span class="n">topfd</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'stat' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l514">
+                  <tt><i>514</i>                         <span class="n">orig_st</span> <span class="o">=</span> <span class="n">stat</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">dir_fd</span><span class="o">=</span><span class="n">topfd</span><span class="p">,</span> <span class="n">follow_symlinks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'O_NONBLOCK' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l519">
+                  <tt><i>519</i>                 <span class="n">dirfd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">O_RDONLY</span> <span class="o">|</span> <span class="n">O_NONBLOCK</span><span class="p">,</span> <span class="n">dir_fd</span><span class="o">=</span><span class="n">topfd</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'O_RDONLY' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l519">
+                  <tt><i>519</i>                 <span class="n">dirfd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">O_RDONLY</span> <span class="o">|</span> <span class="n">O_NONBLOCK</span><span class="p">,</span> <span class="n">dir_fd</span><span class="o">=</span><span class="n">topfd</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'stat' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l525">
+                  <tt><i>525</i>                 <span class="k">if</span> <span class="n">follow_symlinks</span> <span class="ow">or</span> <span class="n">path</span><span class="o">.</span><span class="n">samestat</span><span class="p">(</span><span class="n">orig_st</span><span class="p">,</span> <span class="n">stat</span><span class="p">(</span><span class="n">dirfd</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'close' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l530">
+                  <tt><i>530</i>                 <span class="n">close</span><span class="p">(</span><span class="n">dirfd</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'execv' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l542">
+                  <tt><i>542</i>     <span class="n">execv</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'execve' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l550">
+                  <tt><i>550</i>     <span class="n">execve</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">args</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">env</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'execve' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l589">
+                  <tt><i>589</i>         <span class="n">exec_func</span> <span class="o">=</span> <span class="n">execve</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'execv' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l592">
+                  <tt><i>592</i>         <span class="n">exec_func</span> <span class="o">=</span> <span class="n">execv</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'putenv' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l685">
+                  <tt><i>685</i>         <span class="n">putenv</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'unsetenv' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l690">
+                  <tt><i>690</i>         <span class="n">unsetenv</span><span class="p">(</span><span class="n">encodedkey</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'fork' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l853">
+                  <tt><i>853</i>         <span class="n">pid</span> <span class="o">=</span> <span class="n">fork</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'waitpid' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l868">
+                  <tt><i>868</i>                 <span class="n">wpid</span><span class="p">,</span> <span class="n">sts</span> <span class="o">=</span> <span class="n">waitpid</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'WIFSTOPPED' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l869">
+                  <tt><i>869</i>                 <span class="k">if</span> <span class="n">WIFSTOPPED</span><span class="p">(</span><span class="n">sts</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'waitstatus_to_exitcode' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l872">
+                  <tt><i>872</i>                 <span class="k">return</span> <span class="n">waitstatus_to_exitcode</span><span class="p">(</span><span class="n">sts</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'execv' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l881">
+                  <tt><i>881</i>         <span class="k">return</span> <span class="n">_spawnvef</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">execv</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'execve' may be undefined, or defined from star imports: nt, posix:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l891">
+                  <tt><i>891</i>         <span class="k">return</span> <span class="n">_spawnvef</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">execve</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  2
+               </span>
+               <strong>F403:</strong> 'from posix import *' used; unable to detect undefined names
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'from posix import *' used; unable to detect undefined names:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l55">
+                  <tt><i>55</i>     <span class="kn">from</span> <span class="nn">posix</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'from nt import *' used; unable to detect undefined names:</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l75">
+                  <tt><i>75</i>     <span class="kn">from</span> <span class="nn">nt</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  18
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l41">
+                  <tt><i>41</i> <span class="k">def</span> <span class="nf">_exists</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l44">
+                  <tt><i>44</i> <span class="k">def</span> <span class="nf">_get_exports_list</span><span class="p">(</span><span class="n">module</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l200">
+                  <tt><i>200</i> <span class="k">def</span> <span class="nf">makedirs</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="mo">0o777</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l232">
+                  <tt><i>232</i> <span class="k">def</span> <span class="nf">removedirs</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l254">
+                  <tt><i>254</i> <span class="k">def</span> <span class="nf">renames</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l282">
+                  <tt><i>282</i> <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">topdown</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">onerror</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">followlinks</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l345">
+                  <tt><i>345</i> <span class="k">def</span> <span class="nf">_walk</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">topdown</span><span class="p">,</span> <span class="n">onerror</span><span class="p">,</span> <span class="n">followlinks</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l537">
+                  <tt><i>537</i> <span class="k">def</span> <span class="nf">execl</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l544">
+                  <tt><i>544</i> <span class="k">def</span> <span class="nf">execle</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l552">
+                  <tt><i>552</i> <span class="k">def</span> <span class="nf">execlp</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l559">
+                  <tt><i>559</i> <span class="k">def</span> <span class="nf">execlpe</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l568">
+                  <tt><i>568</i> <span class="k">def</span> <span class="nf">execvp</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l576">
+                  <tt><i>576</i> <span class="k">def</span> <span class="nf">execvpe</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">env</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l587">
+                  <tt><i>587</i> <span class="k">def</span> <span class="nf">_execvpe</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l666">
+                  <tt><i>666</i> <span class="k">class</span> <span class="nc">_Environ</span><span class="p">(</span><span class="n">MutableMapping</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l739">
+                  <tt><i>739</i> <span class="k">def</span> <span class="nf">_createenviron</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l802">
+                  <tt><i>802</i> <span class="k">def</span> <span class="nf">_fscodec</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l1025">
+                  <tt><i>1025</i> <span class="k">def</span> <span class="nf">fdopen</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">buffering</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  10
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l104">
+                  <tt><i>104</i>     <span class="k">def</span> <span class="nf">_add</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">fn</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l1004">
+                  <tt><i>1004</i>         <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l1013">
+                  <tt><i>1013</i>         <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l1015">
+                  <tt><i>1015</i>         <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l1017">
+                  <tt><i>1017</i>         <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l1019">
+                  <tt><i>1019</i>         <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l1096">
+                  <tt><i>1096</i>         <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l1099">
+                  <tt><i>1099</i>         <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l1101">
+                  <tt><i>1101</i>         <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l1103">
+                  <tt><i>1103</i>         <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  8
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l52">
+                  <tt><i>52</i> <span class="k">if</span> <span class="s1">&#39;posix&#39;</span> <span class="ow">in</span> <span class="n">_names</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l280">
+                  <tt><i>280</i> <span class="n">__all__</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;makedirs&quot;</span><span class="p">,</span> <span class="s2">&quot;removedirs&quot;</span><span class="p">,</span> <span class="s2">&quot;renames&quot;</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l427">
+                  <tt><i>427</i> <span class="n">__all__</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;walk&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l585">
+                  <tt><i>585</i> <span class="n">__all__</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;execl&quot;</span><span class="p">,</span><span class="s2">&quot;execle&quot;</span><span class="p">,</span><span class="s2">&quot;execlp&quot;</span><span class="p">,</span><span class="s2">&quot;execlpe&quot;</span><span class="p">,</span><span class="s2">&quot;execvp&quot;</span><span class="p">,</span><span class="s2">&quot;execvpe&quot;</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l769">
+                  <tt><i>769</i> <span class="n">environ</span> <span class="o">=</span> <span class="n">_createenviron</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l779">
+                  <tt><i>779</i> <span class="n">supports_bytes_environ</span> <span class="o">=</span> <span class="p">(</span><span class="n">name</span> <span class="o">!=</span> <span class="s1">&#39;nt&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l832">
+                  <tt><i>832</i> <span class="n">fsencode</span><span class="p">,</span> <span class="n">fsdecode</span> <span class="o">=</span> <span class="n">_fscodec</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l1067">
+                  <tt><i>1067</i> <span class="k">if</span> <span class="ow">not</span> <span class="n">_exists</span><span class="p">(</span><span class="s1">&#39;fspath&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l97">
+                  <tt><i>97</i>     <span class="n">devnull</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l765">
+                  <tt><i>765</i>         <span class="n">encodekey</span><span class="p">,</span> <span class="n">decode</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l766">
+                  <tt><i>766</i>         <span class="n">encode</span><span class="p">,</span> <span class="n">decode</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l790">
+                  <tt><i>790</i>         <span class="n">_check_bytes</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l791">
+                  <tt><i>791</i>         <span class="n">_check_bytes</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ',' (in 5 places):</p>
+               
+               <a href="conda.lib.python3.11.os.source.html#l585">
+                  <tt><i>585</i> <span class="n">__all__</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;execl&quot;</span><span class="p">,</span><span class="s2">&quot;execle&quot;</span><span class="p">,</span><span class="s2">&quot;execlp&quot;</span><span class="p">,</span><span class="s2">&quot;execlpe&quot;</span><span class="p">,</span><span class="s2">&quot;execvp&quot;</span><span class="p">,</span><span class="s2">&quot;execvpe&quot;</span><span class="p">])</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l138">
+                  <tt><i>138</i>     <span class="n">_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">stat</span><span class="p">)</span> <span class="c1"># fstat always works</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l143">
+                  <tt><i>143</i>     <span class="k">if</span> <span class="n">_exists</span><span class="p">(</span><span class="s2">&quot;statvfs&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_exists</span><span class="p">(</span><span class="s2">&quot;fstatvfs&quot;</span><span class="p">):</span> <span class="c1"># mac os x10.3</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l174">
+                  <tt><i>174</i>     <span class="k">if</span> <span class="n">_exists</span><span class="p">(</span><span class="s2">&quot;lchown&quot;</span><span class="p">):</span> <span class="c1"># mac os x10.3</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l866">
+                  <tt><i>866</i>                 <span class="k">return</span> <span class="n">pid</span> <span class="c1"># Caller is responsible for waiting!</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E303:</strong> too many blank lines (2)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l916">
+                  <tt><i>916</i>     <span class="n">__all__</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;spawnv&quot;</span><span class="p">,</span> <span class="s2">&quot;spawnve&quot;</span><span class="p">,</span> <span class="s2">&quot;spawnvp&quot;</span><span class="p">,</span> <span class="s2">&quot;spawnvpe&quot;</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l944">
+                  <tt><i>944</i>     <span class="n">__all__</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;spawnl&quot;</span><span class="p">,</span> <span class="s2">&quot;spawnle&quot;</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l972">
+                  <tt><i>972</i>     <span class="n">__all__</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;spawnlp&quot;</span><span class="p">,</span> <span class="s2">&quot;spawnlpe&quot;</span><span class="p">])</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E306">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E306:</strong> expected 1 blank line before a nested definition, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l748">
+                  <tt><i>748</i>         <span class="k">def</span> <span class="nf">encodekey</span><span class="p">(</span><span class="n">key</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l756">
+                  <tt><i>756</i>         <span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l760">
+                  <tt><i>760</i>         <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E402">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E402:</strong> module level import not at top of file
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l96">
+                  <tt><i>96</i> <span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="p">(</span><span class="n">curdir</span><span class="p">,</span> <span class="n">pardir</span><span class="p">,</span> <span class="n">sep</span><span class="p">,</span> <span class="n">pathsep</span><span class="p">,</span> <span class="n">defpath</span><span class="p">,</span> <span class="n">extsep</span><span class="p">,</span> <span class="n">altsep</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l664">
+                  <tt><i>664</i> <span class="kn">from</span> <span class="nn">_collections_abc</span> <span class="kn">import</span> <span class="n">MutableMapping</span><span class="p">,</span> <span class="n">Mapping</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l24">
+                  <tt><i>24</i> <span class="c1">#&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.os.source.html#l861">
+                  <tt><i>861</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

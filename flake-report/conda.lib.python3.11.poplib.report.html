@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/poplib.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.poplib.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/poplib.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F811">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F811:</strong> redefinition of unused 'sys' from line 19
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l470">
+                  <tt><i>470</i>     <span class="kn">import</span> <span class="nn">sys</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  24
+               </span>
+               <strong>E303:</strong> too many blank lines (2)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l120">
+                  <tt><i>120</i>     <span class="c1"># Internal: send one command to the server (through _putline())</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l128">
+                  <tt><i>128</i>     <span class="c1"># Internal: return one line from the server, stripping CRLF.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l150">
+                  <tt><i>150</i>     <span class="c1"># Internal: get a response from the server.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l161">
+                  <tt><i>161</i>     <span class="c1"># Internal: get a response plus following text from the server.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l177">
+                  <tt><i>177</i>     <span class="c1"># Internal: send a command and get the response</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l184">
+                  <tt><i>184</i>     <span class="c1"># Internal: send a command and get the response plus following text</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l191">
+                  <tt><i>191</i>     <span class="c1"># These can be useful:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l197">
+                  <tt><i>197</i>     <span class="k">def</span> <span class="nf">set_debuglevel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l201">
+                  <tt><i>201</i>     <span class="c1"># Here are all the POP commands:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l211">
+                  <tt><i>211</i>     <span class="k">def</span> <span class="nf">pass_</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pswd</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l221">
+                  <tt><i>221</i>     <span class="k">def</span> <span class="nf">stat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l234">
+                  <tt><i>234</i>     <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l248">
+                  <tt><i>248</i>     <span class="k">def</span> <span class="nf">retr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">which</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l256">
+                  <tt><i>256</i>     <span class="k">def</span> <span class="nf">dele</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">which</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l264">
+                  <tt><i>264</i>     <span class="k">def</span> <span class="nf">noop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l272">
+                  <tt><i>272</i>     <span class="k">def</span> <span class="nf">rset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l277">
+                  <tt><i>277</i>     <span class="k">def</span> <span class="nf">quit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l309">
+                  <tt><i>309</i>     <span class="c1"># optional commands:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l316">
+                  <tt><i>316</i>     <span class="n">timestamp</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">br</span><span class="s1">&#39;\+OK.[^&lt;]*(&lt;.*&gt;)&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l339">
+                  <tt><i>339</i>     <span class="k">def</span> <span class="nf">top</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">which</span><span class="p">,</span> <span class="n">howmuch</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l348">
+                  <tt><i>348</i>     <span class="k">def</span> <span class="nf">uidl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l360">
+                  <tt><i>360</i>     <span class="k">def</span> <span class="nf">utf8</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l366">
+                  <tt><i>366</i>     <span class="k">def</span> <span class="nf">capa</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l395">
+                  <tt><i>395</i>     <span class="k">def</span> <span class="nf">stls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  9
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l122">
+                  <tt><i>122</i>     <span class="k">def</span> <span class="nf">_putcmd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l132">
+                  <tt><i>132</i>     <span class="k">def</span> <span class="nf">_getline</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l153">
+                  <tt><i>153</i>     <span class="k">def</span> <span class="nf">_getresp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l163">
+                  <tt><i>163</i>     <span class="k">def</span> <span class="nf">_getlongresp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l179">
+                  <tt><i>179</i>     <span class="k">def</span> <span class="nf">_shortcmd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l186">
+                  <tt><i>186</i>     <span class="k">def</span> <span class="nf">_longcmd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l193">
+                  <tt><i>193</i>     <span class="k">def</span> <span class="nf">getwelcome</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l203">
+                  <tt><i>203</i>     <span class="k">def</span> <span class="nf">user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l311">
+                  <tt><i>311</i>     <span class="k">def</span> <span class="nf">rpop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l31">
+                  <tt><i>31</i> <span class="k">class</span> <span class="nc">error_proto</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l115">
+                  <tt><i>115</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_debugging</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*put*&#39;</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">line</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l123">
+                  <tt><i>123</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_debugging</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*cmd*&#39;</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">line</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l137">
+                  <tt><i>137</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_debugging</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*get*&#39;</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">line</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l138">
+                  <tt><i>138</i>         <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="p">:</span> <span class="k">raise</span> <span class="n">error_proto</span><span class="p">(</span><span class="s1">&#39;-ERR EOF&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l155">
+                  <tt><i>155</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_debugging</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*resp*&#39;</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">resp</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l228">
+                  <tt><i>228</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_debugging</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*stat*&#39;</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">rets</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l27">
+                  <tt><i>27</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POP3&quot;</span><span class="p">,</span><span class="s2">&quot;error_proto&quot;</span><span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l306">
+                  <tt><i>306</i>     <span class="c1">#__del__ = quit</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l31">
+                  <tt><i>31</i> <span class="k">class</span> <span class="nc">error_proto</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l34">
+                  <tt><i>34</i> <span class="n">POP3_PORT</span> <span class="o">=</span> <span class="mi">110</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E702">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E702:</strong> multiple statements on one line (semicolon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l165">
+                  <tt><i>165</i>         <span class="nb">list</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">octets</span> <span class="o">=</span> <span class="mi">0</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E713">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E713:</strong> test for membership should be 'not in'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.poplib.source.html#l405">
+                  <tt><i>405</i>         <span class="k">if</span> <span class="ow">not</span> <span class="s1">&#39;STLS&#39;</span> <span class="ow">in</span> <span class="n">caps</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

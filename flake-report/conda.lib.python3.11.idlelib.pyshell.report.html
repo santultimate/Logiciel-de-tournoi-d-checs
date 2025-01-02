@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/idlelib/pyshell.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.idlelib.pyshell.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/idlelib/pyshell.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  10
+               </span>
+               <strong>F405:</strong> 'END' may be undefined, or defined from star imports: tkinter
+               
+                  (and 6 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'END' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l224">
+                  <tt><i>224</i>             <span class="n">text</span><span class="o">.</span><span class="n">tag_remove</span><span class="p">(</span><span class="s2">&quot;BREAK&quot;</span><span class="p">,</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span> <span class="n">END</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'TclError' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l360">
+                  <tt><i>360</i>         <span class="k">except</span> <span class="n">TclError</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'TclError' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l369">
+                  <tt><i>369</i>         <span class="k">except</span> <span class="n">TclError</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Toplevel' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l650">
+                  <tt><i>650</i>         <span class="n">top</span> <span class="o">=</span> <span class="n">Toplevel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tkconsole</span><span class="o">.</span><span class="n">root</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Tk' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l890">
+                  <tt><i>890</i>             <span class="n">root</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'TclError' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1439">
+                  <tt><i>1439</i>         <span class="k">except</span> <span class="n">TclError</span><span class="p">:</span> <span class="c1"># no selection, so the index &#39;sel.first&#39; doesn&#39;t exist</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NoDefaultRoot' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1608">
+                  <tt><i>1608</i>         <span class="n">NoDefaultRoot</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Tk' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1609">
+                  <tt><i>1609</i>     <span class="n">root</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">(</span><span class="n">className</span><span class="o">=</span><span class="s2">&quot;Idle&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'TkVersion' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1620">
+                  <tt><i>1620</i>         <span class="k">if</span> <span class="n">TkVersion</span> <span class="o">&gt;=</span> <span class="mf">8.6</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'PhotoImage' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1628">
+                  <tt><i>1628</i>         <span class="n">icons</span> <span class="o">=</span> <span class="p">[</span><span class="n">PhotoImage</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">root</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">iconfile</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from tkinter import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l8">
+                  <tt><i>8</i>     <span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F841:</strong> local variable 'was_executing' is assigned to but never used
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l506">
+                  <tt><i>506</i>         <span class="n">was_executing</span> <span class="o">=</span> <span class="n">console</span><span class="o">.</span><span class="n">executing</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  14
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l57">
+                  <tt><i>57</i> <span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span> <span class="c1"># python execution server on localhost loopback</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l64">
+                  <tt><i>64</i> <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span> <span class="c1"># In case python started with -S.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l185">
+                  <tt><i>185</i>         <span class="k">except</span><span class="p">:</span> <span class="c1"># but debugger may not be active right now....</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l730">
+                  <tt><i>730</i>             <span class="n">lineno</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1">#mark end of offending line</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l942">
+                  <tt><i>942</i>             <span class="kn">import</span> <span class="nn">pydoc</span> <span class="c1"># import must be done here to capture i/o rebinding.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1060">
+                  <tt><i>1060</i>         <span class="k">pass</span> <span class="c1"># All we need is the variable</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1204">
+                  <tt><i>1204</i>                 <span class="k">return</span> <span class="c1"># Active selection -- always use default binding</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1225">
+                  <tt><i>1225</i>             <span class="k">return</span> <span class="c1"># Let the default binding (delete next char) take over</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1228">
+                  <tt><i>1228</i>             <span class="k">return</span> <span class="c1"># Let the default binding (delete next char) take over</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1249">
+                  <tt><i>1249</i>             <span class="k">return</span> <span class="c1"># Let the default binding (insert &#39;\n&#39;) take over</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1321">
+                  <tt><i>1321</i>             <span class="bp">self</span><span class="o">.</span><span class="n">top</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span> <span class="c1"># Break out of recursive mainloop()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1427">
+                  <tt><i>1427</i>             <span class="k">raise</span> <span class="c1">###pass  # ### 11Aug07 KBK if we are expecting exceptions</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1439">
+                  <tt><i>1439</i>         <span class="k">except</span> <span class="n">TclError</span><span class="p">:</span> <span class="c1"># no selection, so the index &#39;sel.first&#39; doesn&#39;t exist</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1650">
+                  <tt><i>1650</i>             <span class="k">return</span> <span class="c1"># couldn&#39;t open shell</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  13
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l269">
+                  <tt><i>269</i>                     <span class="n">message</span><span class="o">=</span><span class="s1">&#39;Unable to update breakpoint list:</span><span class="se">\n</span><span class="si">%s</span><span class="s1">&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l270">
+                  <tt><i>270</i>                         <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l469">
+                  <tt><i>469</i>                                            <span class="n">socket</span><span class="o">.</span><span class="n">SO_REUSEADDR</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l679">
+                  <tt><i>679</i>                  <span class="s1">&#39;Traceback (most recent call last):&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l778">
+                  <tt><i>778</i>                                                         <span class="p">(</span><span class="n">code</span><span class="p">,),</span> <span class="p">{})</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1044">
+                  <tt><i>1044</i>                 <span class="s2">&quot;You can only toggle the debugger when idle&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1045">
+                  <tt><i>1045</i>                 <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1154">
+                  <tt><i>1154</i>                     <span class="s2">&quot;WARNING: Running IDLE without a Subprocess is deprecated</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1155">
+                  <tt><i>1155</i>                     <span class="s2">&quot;and will be removed in a later version. See Help/IDLE Help</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1156">
+                  <tt><i>1156</i>                     <span class="s2">&quot;for details.</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1376">
+                  <tt><i>1376</i>                 <span class="s2">&quot;There is no stack trace yet.</span><span class="se">\n</span><span class="s2">&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1377">
+                  <tt><i>1377</i>                 <span class="s2">&quot;(sys.last_value is not defined)&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1378">
+                  <tt><i>1378</i>                 <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  11
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l185">
+                  <tt><i>185</i>         <span class="k">except</span><span class="p">:</span> <span class="c1"># but debugger may not be active right now....</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l206">
+                  <tt><i>206</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l213">
+                  <tt><i>213</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l228">
+                  <tt><i>228</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l500">
+                  <tt><i>500</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l795">
+                  <tt><i>795</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l945">
+                  <tt><i>945</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1205">
+                  <tt><i>1205</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1258">
+                  <tt><i>1258</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1374">
+                  <tt><i>1374</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1426">
+                  <tt><i>1426</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l73">
+                  <tt><i>73</i> <span class="k">def</span> <span class="nf">idle_showwarning</span><span class="p">(</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l92">
+                  <tt><i>92</i> <span class="k">def</span> <span class="nf">capture_warnings</span><span class="p">(</span><span class="n">capture</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l107">
+                  <tt><i>107</i> <span class="k">def</span> <span class="nf">extended_linecache_checkcache</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l401">
+                  <tt><i>401</i> <span class="k">def</span> <span class="nf">restart_line</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>  <span class="c1"># See bpo-38141.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1521">
+                  <tt><i>1521</i> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l90">
+                  <tt><i>90</i> <span class="n">_warnings_showwarning</span> <span class="o">=</span> <span class="kc">None</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l105">
+                  <tt><i>105</i> <span class="n">capture_warnings</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l127">
+                  <tt><i>127</i> <span class="n">linecache</span><span class="o">.</span><span class="n">checkcache</span> <span class="o">=</span> <span class="n">extended_linecache_checkcache</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1078">
+                  <tt><i>1078</i>                                                            <span class="bp">self</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1141">
+                  <tt><i>1141</i>           <span class="s1">&#39;Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license()&quot; for more information.&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l409">
+                  <tt><i>409</i>         <span class="n">div</span><span class="p">,</span> <span class="n">mod</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">((</span><span class="n">width</span> <span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">tag</span><span class="p">)),</span> <span class="mi">2</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l436">
+                  <tt><i>436</i>         <span class="k">assert</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="o">!=</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1444">
+                  <tt><i>1444</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">compare</span><span class="p">(</span><span class="s1">&#39;insert&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="s1">&#39;iomark&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E262">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E262:</strong> inline comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l730">
+                  <tt><i>730</i>             <span class="n">lineno</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1">#mark end of offending line</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1427">
+                  <tt><i>1427</i>             <span class="k">raise</span> <span class="c1">###pass  # ### 11Aug07 KBK if we are expecting exceptions</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l140">
+                  <tt><i>140</i>         <span class="c1">#TODO: don&#39;t read/write this from/to .idlerc when testing</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l471">
+                  <tt><i>471</i>         <span class="c1">#time.sleep(20) # test to simulate GUI not accepting connection</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E114">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E114:</strong> indentation is not a multiple of      (comment)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1428">
+                  <tt><i>1428</i>                            <span class="c1"># let&#39;s find out what they are and be specific.</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E116">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E116:</strong> unexpected indentation (comment)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1428">
+                  <tt><i>1428</i>                            <span class="c1"># let&#39;s find out what they are and be specific.</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E129">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E129:</strong> visually indented line with same indent as next logical line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l789">
+                  <tt><i>789</i>                     <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">tkconsole</span><span class="o">.</span><span class="n">text</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E131">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E131:</strong> continuation line unaligned for hanging indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1464">
+                  <tt><i>1464</i>                         <span class="n">root</span><span class="o">.</span><span class="n">bind_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s1">&#39;&lt;&lt;Paste&gt;&gt;&#39;</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E221">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E221:</strong> multiple spaces before operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1343">
+                  <tt><i>1343</i>                 <span class="n">new_base_indent</span>  <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^([ \t]*)&#39;</span><span class="p">,</span> <span class="n">prefix</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1355">
+                  <tt><i>1355</i>     <span class="k">def</span> <span class="nf">runit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E303:</strong> too many blank lines (2)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1007">
+                  <tt><i>1007</i>     <span class="k">def</span> <span class="nf">copy_with_prompts_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E502">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E502:</strong> the backslash is redundant between brackets
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l208">
+                  <tt><i>208</i>         <span class="n">text</span><span class="o">.</span><span class="n">tag_remove</span><span class="p">(</span><span class="s2">&quot;BREAK&quot;</span><span class="p">,</span> <span class="s2">&quot;insert linestart&quot;</span><span class="p">,</span>\</tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E713">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E713:</strong> test for membership should be 'not in'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.pyshell.source.html#l1593">
+                  <tt><i>1593</i>             <span class="k">if</span> <span class="ow">not</span> <span class="nb">dir</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

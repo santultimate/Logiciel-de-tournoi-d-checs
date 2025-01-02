@@ -31,12 +31,12 @@ class Match:
 
         if score1 > score2:
             self.winner = player1
-            player1.add_points(2)
+            player1.add_points(1)
             player2.add_points(0)
         elif score2 > score1:
             self.winner = player2
             player1.add_points(0)
-            player2.add_points(2)
+            player2.add_points(1)
         else:  # Match nul
             self.winner = None
             player1.add_points(0.5)

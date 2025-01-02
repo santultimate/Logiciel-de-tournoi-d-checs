@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/lib2to3/fixes/fix_types.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/lib2to3/fixes/fix_types.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  12
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l27">
+                  <tt><i>27</i>         <span class="s1">&#39;BooleanType&#39;</span> <span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l28">
+                  <tt><i>28</i>         <span class="s1">&#39;BufferType&#39;</span> <span class="p">:</span> <span class="s1">&#39;memoryview&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l29">
+                  <tt><i>29</i>         <span class="s1">&#39;ClassType&#39;</span> <span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l30">
+                  <tt><i>30</i>         <span class="s1">&#39;ComplexType&#39;</span> <span class="p">:</span> <span class="s1">&#39;complex&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l32">
+                  <tt><i>32</i>         <span class="s1">&#39;DictionaryType&#39;</span> <span class="p">:</span> <span class="s1">&#39;dict&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l33">
+                  <tt><i>33</i>         <span class="s1">&#39;EllipsisType&#39;</span> <span class="p">:</span> <span class="s1">&#39;type(Ellipsis)&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l39">
+                  <tt><i>39</i>         <span class="s1">&#39;ObjectType&#39;</span> <span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l41">
+                  <tt><i>41</i>         <span class="s1">&#39;NotImplementedType&#39;</span> <span class="p">:</span> <span class="s1">&#39;type(NotImplemented)&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l42">
+                  <tt><i>42</i>         <span class="s1">&#39;SliceType&#39;</span> <span class="p">:</span> <span class="s1">&#39;slice&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l44">
+                  <tt><i>44</i>         <span class="s1">&#39;StringTypes&#39;</span> <span class="p">:</span> <span class="s1">&#39;(str,)&#39;</span><span class="p">,</span> <span class="c1"># XXX ?</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l46">
+                  <tt><i>46</i>         <span class="s1">&#39;TypeType&#39;</span> <span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l48">
+                  <tt><i>48</i>         <span class="s1">&#39;XRangeType&#39;</span> <span class="p">:</span> <span class="s1">&#39;range&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l43">
+                  <tt><i>43</i>         <span class="s1">&#39;StringType&#39;</span><span class="p">:</span> <span class="s1">&#39;bytes&#39;</span><span class="p">,</span> <span class="c1"># XXX ?</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l44">
+                  <tt><i>44</i>         <span class="s1">&#39;StringTypes&#39;</span> <span class="p">:</span> <span class="s1">&#39;(str,)&#39;</span><span class="p">,</span> <span class="c1"># XXX ?</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l34">
+                  <tt><i>34</i>         <span class="c1">#&#39;FileType&#39; : &#39;io.IOBase&#39;,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.fixes.fix_types.source.html#l53">
+                  <tt><i>53</i> <span class="k">class</span> <span class="nc">FixTypes</span><span class="p">(</span><span class="n">fixer_base</span><span class="o">.</span><span class="n">BaseFix</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

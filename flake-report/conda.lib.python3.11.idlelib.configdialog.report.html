@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/idlelib/configdialog.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.idlelib.configdialog.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/idlelib/configdialog.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F841:</strong> local variable 'cursor_blink_title' is assigned to but never used
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l1662">
+                  <tt><i>1662</i>         <span class="n">cursor_blink_title</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">frame_cursor</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Cursor Blink&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l1661">
+                  <tt><i>1661</i>                     <span class="n">state</span><span class="o">=</span><span class="s2">&quot;readonly&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)),</span> <span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l1677">
+                  <tt><i>1677</i>                 <span class="s2">&quot;opener&quot;</span><span class="p">,</span><span class="s2">&quot;parens&quot;</span><span class="p">,</span><span class="s2">&quot;expression&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l1981">
+                  <tt><i>1981</i>                     <span class="n">def_obj</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;True&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;False&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">}[</span><span class="n">def_str</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l2288">
+                  <tt><i>2288</i>     <span class="s1">&#39;Fonts/Tabs&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l167">
+                  <tt><i>167</i>                        <span class="n">takefocus</span><span class="o">=</span><span class="n">FALSE</span><span class="p">,</span> <span class="o">**</span><span class="n">padding_args</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l898">
+                  <tt><i>898</i>                 <span class="n">idleConf</span><span class="o">.</span><span class="n">GetSectionList</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;highlight&#39;</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l1394">
+                  <tt><i>1394</i>                 <span class="n">current_key_sequences</span><span class="p">)</span><span class="o">.</span><span class="n">result</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l1418">
+                  <tt><i>1418</i>                 <span class="n">idleConf</span><span class="o">.</span><span class="n">GetSectionList</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;keys&#39;</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l1926">
+                  <tt><i>1926</i>                                <span class="n">text</span><span class="o">=</span><span class="s1">&#39; Help Menu Extensions &#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l388">
+                  <tt><i>388</i>         <span class="n">font_bold</span>  <span class="o">=</span> <span class="n">configured_font</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;bold&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l625">
+                  <tt><i>625</i>         <span class="n">string_tags</span><span class="o">=</span><span class="p">(</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l1934">
+                  <tt><i>1934</i>         <span class="bp">self</span><span class="o">.</span><span class="n">extension_list</span><span class="o">.</span><span class="n">yscrollcommand</span><span class="o">=</span><span class="n">scroll</span><span class="o">.</span><span class="n">set</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E131">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E131:</strong> continuation line unaligned for hanging indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l1681">
+                  <tt><i>1681</i>                                   <span class="s1">&#39;(0 is until next input)&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l2317">
+                  <tt><i>2317</i>      <span class="s1">&#39;General&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E306">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E306:</strong> expected 1 blank line before a nested definition, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l1556">
+                  <tt><i>1556</i>         <span class="k">def</span> <span class="nf">is_digits_or_empty</span><span class="p">(</span><span class="n">s</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l1766">
+                  <tt><i>1766</i>         <span class="k">def</span> <span class="nf">is_digits_or_empty</span><span class="p">(</span><span class="n">s</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E124">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E124:</strong> closing bracket does not match visual indentation
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l2004">
+                  <tt><i>2004</i>                                                  <span class="p">})</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E129">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E129:</strong> visually indented line with same indent as next logical line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l165">
+                  <tt><i>165</i>             <span class="p">(</span><span class="s1">&#39;Help&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">help</span><span class="p">)):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E221">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E221:</strong> multiple spaces before operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l388">
+                  <tt><i>388</i>         <span class="n">font_bold</span>  <span class="o">=</span> <span class="n">configured_font</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;bold&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l666">
+                  <tt><i>666</i>                 <span class="n">highlightthickness</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#, command=self.set_highlight_targetBinding</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E262">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E262:</strong> inline comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l666">
+                  <tt><i>666</i>                 <span class="n">highlightthickness</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#, command=self.set_highlight_targetBinding</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E303:</strong> too many blank lines (2)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.configdialog.source.html#l1956">
+                  <tt><i>1956</i>         <span class="n">frame_ext</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="s1">&#39;nsew&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

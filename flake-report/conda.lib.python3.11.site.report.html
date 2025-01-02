@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/site.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.site.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/site.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  3
+               </span>
+               <strong>F401:</strong> 'rlcompleter' imported but unused
+               
+                  (and 2 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'rlcompleter' imported but unused:</p>
+               
+               <a href="conda.lib.python3.11.site.source.html#l456">
+                  <tt><i>456</i>             <span class="kn">import</span> <span class="nn">rlcompleter</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'sitecustomize' imported but unused:</p>
+               
+               <a href="conda.lib.python3.11.site.source.html#l558">
+                  <tt><i>558</i>             <span class="kn">import</span> <span class="nn">sitecustomize</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'usercustomize' imported but unused:</p>
+               
+               <a href="conda.lib.python3.11.site.source.html#l578">
+                  <tt><i>578</i>             <span class="kn">import</span> <span class="nn">usercustomize</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l341">
+                  <tt><i>341</i> <span class="k">def</span> <span class="nf">addusersitepackages</span><span class="p">(</span><span class="n">known_paths</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l356">
+                  <tt><i>356</i> <span class="k">def</span> <span class="nf">getsitepackages</span><span class="p">(</span><span class="n">prefixes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l389">
+                  <tt><i>389</i> <span class="k">def</span> <span class="nf">addsitepackages</span><span class="p">(</span><span class="n">known_paths</span><span class="p">,</span> <span class="n">prefixes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l398">
+                  <tt><i>398</i> <span class="k">def</span> <span class="nf">setquit</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l443">
+                  <tt><i>443</i> <span class="k">def</span> <span class="nf">enablerlcompleter</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l502">
+                  <tt><i>502</i> <span class="k">def</span> <span class="nf">venv</span><span class="p">(</span><span class="n">known_paths</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l628">
+                  <tt><i>628</i> <span class="k">def</span> <span class="nf">_script</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l331">
+                  <tt><i>331</i>     <span class="n">userbase</span> <span class="o">=</span> <span class="n">getuserbase</span><span class="p">()</span> <span class="c1"># this will also set USER_BASE</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l335">
+                  <tt><i>335</i>             <span class="n">ENABLE_USER_SITE</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># disable user site and return None</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l625">
+                  <tt><i>625</i> <span class="k">if</span> <span class="ow">not</span> <span class="n">sys</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">no_site</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l682">
+                  <tt><i>682</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E713">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E713:</strong> test for membership should be 'not in'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l199">
+                  <tt><i>199</i>                 <span class="k">if</span> <span class="ow">not</span> <span class="n">dircase</span> <span class="ow">in</span> <span class="n">known_paths</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="nb">dir</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l226">
+                  <tt><i>226</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">sitedircase</span> <span class="ow">in</span> <span class="n">known_paths</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E129">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E129:</strong> visually indented line with same indent as next logical line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l177">
+                  <tt><i>177</i>         <span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">st</span><span class="p">,</span> <span class="s1">&#39;st_file_attributes&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">stat</span><span class="o">.</span><span class="n">FILE_ATTRIBUTE_HIDDEN</span><span class="p">)):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E306">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E306:</strong> expected 1 blank line before a nested definition, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.site.source.html#l651">
+                  <tt><i>651</i>         <span class="k">def</span> <span class="nf">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

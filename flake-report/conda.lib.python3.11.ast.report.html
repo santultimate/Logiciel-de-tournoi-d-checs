@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/ast.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.ast.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/ast.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  71
+               </span>
+               <strong>F405:</strong> 'PyCF_ONLY_AST' may be undefined, or defined from star imports: _ast
+               
+                  (and 28 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'PyCF_ONLY_AST' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l40">
+                  <tt><i>40</i>     <span class="n">flags</span> <span class="o">=</span> <span class="n">PyCF_ONLY_AST</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'PyCF_TYPE_COMMENTS' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l42">
+                  <tt><i>42</i>         <span class="n">flags</span> <span class="o">|=</span> <span class="n">PyCF_TYPE_COMMENTS</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Expression' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l65">
+                  <tt><i>65</i>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node_or_string</span><span class="p">,</span> <span class="n">Expression</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l73">
+                  <tt><i>73</i>         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Constant</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">type</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">complex</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'UAdd' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l77">
+                  <tt><i>77</i>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">UnaryOp</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">op</span><span class="p">,</span> <span class="p">(</span><span class="n">UAdd</span><span class="p">,</span> <span class="n">USub</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'USub' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l77">
+                  <tt><i>77</i>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">UnaryOp</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">op</span><span class="p">,</span> <span class="p">(</span><span class="n">UAdd</span><span class="p">,</span> <span class="n">USub</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'UnaryOp' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l77">
+                  <tt><i>77</i>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">UnaryOp</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">op</span><span class="p">,</span> <span class="p">(</span><span class="n">UAdd</span><span class="p">,</span> <span class="n">USub</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'UAdd' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l79">
+                  <tt><i>79</i>             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">op</span><span class="p">,</span> <span class="n">UAdd</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l85">
+                  <tt><i>85</i>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Constant</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Tuple' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l87">
+                  <tt><i>87</i>         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'List' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l89">
+                  <tt><i>89</i>         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">List</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Set' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l91">
+                  <tt><i>91</i>         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Set</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Call' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l93">
+                  <tt><i>93</i>         <span class="k">elif</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Call</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">func</span><span class="p">,</span> <span class="n">Name</span><span class="p">)</span> <span class="ow">and</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Name' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l93">
+                  <tt><i>93</i>         <span class="k">elif</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Call</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">func</span><span class="p">,</span> <span class="n">Name</span><span class="p">)</span> <span class="ow">and</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Dict' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l96">
+                  <tt><i>96</i>         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Dict</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Add' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l101">
+                  <tt><i>101</i>         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">BinOp</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">op</span><span class="p">,</span> <span class="p">(</span><span class="n">Add</span><span class="p">,</span> <span class="n">Sub</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'BinOp' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l101">
+                  <tt><i>101</i>         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">BinOp</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">op</span><span class="p">,</span> <span class="p">(</span><span class="n">Add</span><span class="p">,</span> <span class="n">Sub</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Sub' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l101">
+                  <tt><i>101</i>         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">BinOp</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">op</span><span class="p">,</span> <span class="p">(</span><span class="n">Add</span><span class="p">,</span> <span class="n">Sub</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Add' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l105">
+                  <tt><i>105</i>                 <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">op</span><span class="p">,</span> <span class="n">Add</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AST' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l133">
+                  <tt><i>133</i>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">AST</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AST' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l173">
+                  <tt><i>173</i>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">AST</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'TypeIgnore' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l241">
+                  <tt><i>241</i>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">TypeIgnore</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AST' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l273">
+                  <tt><i>273</i>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">AST</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AST' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l277">
+                  <tt><i>277</i>                 <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">AST</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AsyncFunctionDef' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l290">
+                  <tt><i>290</i>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="p">(</span><span class="n">AsyncFunctionDef</span><span class="p">,</span> <span class="n">FunctionDef</span><span class="p">,</span> <span class="n">ClassDef</span><span class="p">,</span> <span class="n">Module</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ClassDef' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l290">
+                  <tt><i>290</i>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="p">(</span><span class="n">AsyncFunctionDef</span><span class="p">,</span> <span class="n">FunctionDef</span><span class="p">,</span> <span class="n">ClassDef</span><span class="p">,</span> <span class="n">Module</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'FunctionDef' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l290">
+                  <tt><i>290</i>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="p">(</span><span class="n">AsyncFunctionDef</span><span class="p">,</span> <span class="n">FunctionDef</span><span class="p">,</span> <span class="n">ClassDef</span><span class="p">,</span> <span class="n">Module</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Module' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l290">
+                  <tt><i>290</i>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="p">(</span><span class="n">AsyncFunctionDef</span><span class="p">,</span> <span class="n">FunctionDef</span><span class="p">,</span> <span class="n">ClassDef</span><span class="p">,</span> <span class="n">Module</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Expr' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l292">
+                  <tt><i>292</i>     <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">body</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Expr</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l297">
+                  <tt><i>297</i>     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Constant</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AST' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l425">
+                  <tt><i>425</i>                     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">AST</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AST' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l427">
+                  <tt><i>427</i>             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">AST</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AST' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l493">
+                  <tt><i>493</i>                     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">AST</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AST' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l497">
+                  <tt><i>497</i>                         <span class="k">elif</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">AST</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AST' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l502">
+                  <tt><i>502</i>             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">old_value</span><span class="p">,</span> <span class="n">AST</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l512">
+                  <tt><i>512</i> <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">Constant</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l523">
+                  <tt><i>523</i>     <span class="n">Constant</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">_getter</span><span class="p">,</span> <span class="n">_setter</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l524">
+                  <tt><i>524</i>     <span class="n">Constant</span><span class="o">.</span><span class="n">s</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">_getter</span><span class="p">,</span> <span class="n">_setter</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l532">
+                  <tt><i>532</i>         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">inst</span><span class="p">,</span> <span class="n">Constant</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l555">
+                  <tt><i>555</i>         <span class="k">return</span> <span class="n">Constant</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l556">
+                  <tt><i>556</i>     <span class="k">return</span> <span class="n">Constant</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l558">
+                  <tt><i>558</i> <span class="k">class</span> <span class="nc">Num</span><span class="p">(</span><span class="n">Constant</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">_ABC</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l562">
+                  <tt><i>562</i> <span class="k">class</span> <span class="nc">Str</span><span class="p">(</span><span class="n">Constant</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">_ABC</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l566">
+                  <tt><i>566</i> <span class="k">class</span> <span class="nc">Bytes</span><span class="p">(</span><span class="n">Constant</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">_ABC</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l570">
+                  <tt><i>570</i> <span class="k">class</span> <span class="nc">NameConstant</span><span class="p">(</span><span class="n">Constant</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">_ABC</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l573">
+                  <tt><i>573</i> <span class="k">class</span> <span class="nc">Ellipsis</span><span class="p">(</span><span class="n">Constant</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">_ABC</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l578">
+                  <tt><i>578</i>             <span class="k">return</span> <span class="n">Constant</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l579">
+                  <tt><i>579</i>         <span class="k">return</span> <span class="n">Constant</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AST' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l603">
+                  <tt><i>603</i> <span class="k">class</span> <span class="nc">slice</span><span class="p">(</span><span class="n">AST</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Load' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l614">
+                  <tt><i>614</i>         <span class="k">return</span> <span class="n">Tuple</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">dims</span><span class="p">),</span> <span class="n">Load</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Tuple' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l614">
+                  <tt><i>614</i>         <span class="k">return</span> <span class="n">Tuple</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">dims</span><span class="p">),</span> <span class="n">Load</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Tuple' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l617">
+                  <tt><i>617</i> <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">Tuple</span><span class="p">,</span> <span class="s1">&#39;dims&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Tuple' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l628">
+                  <tt><i>628</i>     <span class="n">Tuple</span><span class="o">.</span><span class="n">dims</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">_dims_getter</span><span class="p">,</span> <span class="n">_dims_setter</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'mod' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l630">
+                  <tt><i>630</i> <span class="k">class</span> <span class="nc">Suite</span><span class="p">(</span><span class="n">mod</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'expr_context' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l633">
+                  <tt><i>633</i> <span class="k">class</span> <span class="nc">AugLoad</span><span class="p">(</span><span class="n">expr_context</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'expr_context' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l636">
+                  <tt><i>636</i> <span class="k">class</span> <span class="nc">AugStore</span><span class="p">(</span><span class="n">expr_context</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'expr_context' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l639">
+                  <tt><i>639</i> <span class="k">class</span> <span class="nc">Param</span><span class="p">(</span><span class="n">expr_context</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AsyncFunctionDef' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l789">
+                  <tt><i>789</i>             <span class="n">node</span><span class="p">,</span> <span class="p">(</span><span class="n">AsyncFunctionDef</span><span class="p">,</span> <span class="n">FunctionDef</span><span class="p">,</span> <span class="n">ClassDef</span><span class="p">,</span> <span class="n">Module</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ClassDef' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l789">
+                  <tt><i>789</i>             <span class="n">node</span><span class="p">,</span> <span class="p">(</span><span class="n">AsyncFunctionDef</span><span class="p">,</span> <span class="n">FunctionDef</span><span class="p">,</span> <span class="n">ClassDef</span><span class="p">,</span> <span class="n">Module</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'FunctionDef' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l789">
+                  <tt><i>789</i>             <span class="n">node</span><span class="p">,</span> <span class="p">(</span><span class="n">AsyncFunctionDef</span><span class="p">,</span> <span class="n">FunctionDef</span><span class="p">,</span> <span class="n">ClassDef</span><span class="p">,</span> <span class="n">Module</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Module' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l789">
+                  <tt><i>789</i>             <span class="n">node</span><span class="p">,</span> <span class="p">(</span><span class="n">AsyncFunctionDef</span><span class="p">,</span> <span class="n">FunctionDef</span><span class="p">,</span> <span class="n">ClassDef</span><span class="p">,</span> <span class="n">Module</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Expr' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l793">
+                  <tt><i>793</i>         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Expr</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l796">
+                  <tt><i>796</i>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Constant</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Name' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l887">
+                  <tt><i>887</i>         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">delimit_if</span><span class="p">(</span><span class="s2">&quot;(&quot;</span><span class="p">,</span> <span class="s2">&quot;)&quot;</span><span class="p">,</span> <span class="ow">not</span> <span class="n">node</span><span class="o">.</span><span class="n">simple</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">Name</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'If' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l1077">
+                  <tt><i>1077</i>         <span class="k">while</span> <span class="n">node</span><span class="o">.</span><span class="n">orelse</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">orelse</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">orelse</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">If</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l1173">
+                  <tt><i>1173</i>                 <span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">buffer</span><span class="p">),</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Constant</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'JoinedStr' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l1207">
+                  <tt><i>1207</i>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">JoinedStr</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l1211">
+                  <tt><i>1211</i>         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Constant</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'FormattedValue' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l1214">
+                  <tt><i>1214</i>         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">FormattedValue</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Constant' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l1483">
+                  <tt><i>1483</i>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">Constant</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Tuple' may be undefined, or defined from star imports: _ast:</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l1509">
+                  <tt><i>1509</i>                 <span class="nb">isinstance</span><span class="p">(</span><span class="n">slice_value</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from _ast import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l28">
+                  <tt><i>28</i> <span class="kn">from</span> <span class="nn">_ast</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F541">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F541:</strong> f-string is missing placeholders
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l957">
+                  <tt><i>957</i>                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Node can&#39;t use cause without an exception.&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  17
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l526">
+                  <tt><i>526</i> <span class="k">class</span> <span class="nc">_ABC</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l546">
+                  <tt><i>546</i> <span class="k">def</span> <span class="nf">_new</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l558">
+                  <tt><i>558</i> <span class="k">class</span> <span class="nc">Num</span><span class="p">(</span><span class="n">Constant</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">_ABC</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l562">
+                  <tt><i>562</i> <span class="k">class</span> <span class="nc">Str</span><span class="p">(</span><span class="n">Constant</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">_ABC</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l566">
+                  <tt><i>566</i> <span class="k">class</span> <span class="nc">Bytes</span><span class="p">(</span><span class="n">Constant</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">_ABC</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l570">
+                  <tt><i>570</i> <span class="k">class</span> <span class="nc">NameConstant</span><span class="p">(</span><span class="n">Constant</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">_ABC</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l573">
+                  <tt><i>573</i> <span class="k">class</span> <span class="nc">Ellipsis</span><span class="p">(</span><span class="n">Constant</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">_ABC</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l603">
+                  <tt><i>603</i> <span class="k">class</span> <span class="nc">slice</span><span class="p">(</span><span class="n">AST</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l606">
+                  <tt><i>606</i> <span class="k">class</span> <span class="nc">Index</span><span class="p">(</span><span class="nb">slice</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l611">
+                  <tt><i>611</i> <span class="k">class</span> <span class="nc">ExtSlice</span><span class="p">(</span><span class="nb">slice</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l630">
+                  <tt><i>630</i> <span class="k">class</span> <span class="nc">Suite</span><span class="p">(</span><span class="n">mod</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l633">
+                  <tt><i>633</i> <span class="k">class</span> <span class="nc">AugLoad</span><span class="p">(</span><span class="n">expr_context</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l636">
+                  <tt><i>636</i> <span class="k">class</span> <span class="nc">AugStore</span><span class="p">(</span><span class="n">expr_context</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l639">
+                  <tt><i>639</i> <span class="k">class</span> <span class="nc">Param</span><span class="p">(</span><span class="n">expr_context</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l647">
+                  <tt><i>647</i> <span class="nd">@_simple_enum</span><span class="p">(</span><span class="n">IntEnum</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l683">
+                  <tt><i>683</i> <span class="k">class</span> <span class="nc">_Unparser</span><span class="p">(</span><span class="n">NodeVisitor</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l1722">
+                  <tt><i>1722</i> <span class="k">def</span> <span class="nf">unparse</span><span class="p">(</span><span class="n">ast_obj</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E251">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E251:</strong> unexpected spaces around keyword / parameter equals
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l734">
+                  <tt><i>734</i>     <span class="k">def</span> <span class="nf">buffered</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">buffer</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l744">
+                  <tt><i>744</i>     <span class="k">def</span> <span class="nf">block</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">extra</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l1013">
+                  <tt><i>1013</i>         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">delimit_if</span><span class="p">(</span><span class="s2">&quot;(&quot;</span><span class="p">,</span> <span class="s2">&quot;)&quot;</span><span class="p">,</span> <span class="n">condition</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">bases</span> <span class="ow">or</span> <span class="n">node</span><span class="o">.</span><span class="n">keywords</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E306">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E306:</strong> expected 1 blank line before a nested definition, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l67">
+                  <tt><i>67</i>     <span class="k">def</span> <span class="nf">_raise_malformed_node</span><span class="p">(</span><span class="n">node</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l72">
+                  <tt><i>72</i>     <span class="k">def</span> <span class="nf">_convert_num</span><span class="p">(</span><span class="n">node</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l76">
+                  <tt><i>76</i>     <span class="k">def</span> <span class="nf">_convert_signed_num</span><span class="p">(</span><span class="n">node</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l84">
+                  <tt><i>84</i>     <span class="k">def</span> <span class="nf">_convert</span><span class="p">(</span><span class="n">node</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l581">
+                  <tt><i>581</i> <span class="n">_const_types</span> <span class="o">=</span> <span class="p">{</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l617">
+                  <tt><i>617</i> <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">Tuple</span><span class="p">,</span> <span class="s1">&#39;dims&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l1751">
+                  <tt><i>1751</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E114">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E114:</strong> indentation is not a multiple of      (comment)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l659">
+                  <tt><i>659</i>                              <span class="c1"># &#39;in&#39;, &#39;not in&#39;, &#39;is&#39;, &#39;is not&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E116">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E116:</strong> unexpected indentation (comment)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l659">
+                  <tt><i>659</i>                              <span class="c1"># &#39;in&#39;, &#39;not in&#39;, &#39;is&#39;, &#39;is not&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.ast.source.html#l1422">
+                  <tt><i>1422</i>     <span class="k">def</span> <span class="nf">visit_BinOp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

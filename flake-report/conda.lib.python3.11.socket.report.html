@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/socket.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.socket.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/socket.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  55
+               </span>
+               <strong>F405:</strong> 'AddressFamily' may be undefined, or defined from star imports: _socket
+               
+                  (and 18 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'AddressFamily' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l65">
+                  <tt><i>65</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;fromfd&quot;</span><span class="p">,</span> <span class="s2">&quot;getfqdn&quot;</span><span class="p">,</span> <span class="s2">&quot;create_connection&quot;</span><span class="p">,</span> <span class="s2">&quot;create_server&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SocketKind' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l65">
+                  <tt><i>65</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;fromfd&quot;</span><span class="p">,</span> <span class="s2">&quot;getfqdn&quot;</span><span class="p">,</span> <span class="s2">&quot;create_connection&quot;</span><span class="p">,</span> <span class="s2">&quot;create_server&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AF_INET' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l227">
+                  <tt><i>227</i>                 <span class="n">family</span> <span class="o">=</span> <span class="n">AF_INET</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SOCK_STREAM' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l229">
+                  <tt><i>229</i>                 <span class="nb">type</span> <span class="o">=</span> <span class="n">SOCK_STREAM</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'error' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l262">
+                  <tt><i>262</i>             <span class="k">except</span> <span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'error' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l268">
+                  <tt><i>268</i>             <span class="k">except</span> <span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'dup' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l282">
+                  <tt><i>282</i>         <span class="n">fd</span> <span class="o">=</span> <span class="n">dup</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fileno</span><span class="p">())</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'getdefaulttimeout' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l299">
+                  <tt><i>299</i>         <span class="k">if</span> <span class="n">getdefaulttimeout</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">gettimeout</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SOCK_STREAM' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l456">
+                  <tt><i>456</i>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">&amp;</span> <span class="n">SOCK_STREAM</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AddressFamily' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l519">
+                  <tt><i>519</i>         <span class="k">return</span> <span class="n">_intenum_converter</span><span class="p">(</span><span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">family</span><span class="p">,</span> <span class="n">AddressFamily</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SocketKind' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l525">
+                  <tt><i>525</i>         <span class="k">return</span> <span class="n">_intenum_converter</span><span class="p">(</span><span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">SocketKind</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'dup' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l546">
+                  <tt><i>546</i>     <span class="n">nfd</span> <span class="o">=</span> <span class="n">dup</span><span class="p">(</span><span class="n">fd</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AF_INET' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l596">
+                  <tt><i>596</i> <span class="k">def</span> <span class="nf">_fallback_socketpair</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="n">AF_INET</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="n">proto</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SOCK_STREAM' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l596">
+                  <tt><i>596</i> <span class="k">def</span> <span class="nf">_fallback_socketpair</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="n">AF_INET</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="n">proto</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AF_INET' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l597">
+                  <tt><i>597</i>     <span class="k">if</span> <span class="n">family</span> <span class="o">==</span> <span class="n">AF_INET</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AF_INET6' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l599">
+                  <tt><i>599</i>     <span class="k">elif</span> <span class="n">family</span> <span class="o">==</span> <span class="n">AF_INET6</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SOCK_STREAM' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l604">
+                  <tt><i>604</i>     <span class="k">if</span> <span class="nb">type</span> <span class="o">!=</span> <span class="n">SOCK_STREAM</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SOCK_STREAM' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l651">
+                  <tt><i>651</i>     <span class="k">def</span> <span class="nf">socketpair</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="n">proto</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AF_UNIX' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l654">
+                  <tt><i>654</i>                 <span class="n">family</span> <span class="o">=</span> <span class="n">AF_UNIX</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AF_INET' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l656">
+                  <tt><i>656</i>                 <span class="n">family</span> <span class="o">=</span> <span class="n">AF_INET</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'timeout' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l719">
+                  <tt><i>719</i>             <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'error' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l722">
+                  <tt><i>722</i>             <span class="k">except</span> <span class="n">error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'error' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l737">
+                  <tt><i>737</i>         <span class="k">except</span> <span class="n">error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'gethostname' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l804">
+                  <tt><i>804</i>         <span class="n">name</span> <span class="o">=</span> <span class="n">gethostname</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'gethostbyaddr' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l806">
+                  <tt><i>806</i>         <span class="n">hostname</span><span class="p">,</span> <span class="n">aliases</span><span class="p">,</span> <span class="n">ipaddrs</span> <span class="o">=</span> <span class="n">gethostbyaddr</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'error' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l807">
+                  <tt><i>807</i>     <span class="k">except</span> <span class="n">error</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SOCK_STREAM' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l839">
+                  <tt><i>839</i>     <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'error' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l853">
+                  <tt><i>853</i>         <span class="k">except</span> <span class="n">error</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ExceptionGroup' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l864">
+                  <tt><i>864</i>             <span class="k">raise</span> <span class="n">ExceptionGroup</span><span class="p">(</span><span class="s2">&quot;create_connection failed&quot;</span><span class="p">,</span> <span class="n">exceptions</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'error' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l869">
+                  <tt><i>869</i>         <span class="k">raise</span> <span class="n">error</span><span class="p">(</span><span class="s2">&quot;getaddrinfo returns an empty list&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'has_ipv6' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l876">
+                  <tt><i>876</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">has_ipv6</span> \</tt>
+               </a>
+            </li><li>
+               
+               <p>'AF_INET6' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l881">
+                  <tt><i>881</i>         <span class="k">with</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET6</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">)</span> <span class="k">as</span> <span class="n">sock</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SOCK_STREAM' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l881">
+                  <tt><i>881</i>         <span class="k">with</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET6</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">)</span> <span class="k">as</span> <span class="n">sock</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'IPPROTO_IPV6' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l882">
+                  <tt><i>882</i>             <span class="n">sock</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">IPPROTO_IPV6</span><span class="p">,</span> <span class="n">IPV6_V6ONLY</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'IPV6_V6ONLY' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l882">
+                  <tt><i>882</i>             <span class="n">sock</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">IPPROTO_IPV6</span><span class="p">,</span> <span class="n">IPV6_V6ONLY</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'error' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l884">
+                  <tt><i>884</i>     <span class="k">except</span> <span class="n">error</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AF_INET' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l888">
+                  <tt><i>888</i> <span class="k">def</span> <span class="nf">create_server</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">backlog</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reuse_port</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AF_INET6' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l912">
+                  <tt><i>912</i>         <span class="k">if</span> <span class="n">family</span> <span class="o">!=</span> <span class="n">AF_INET6</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SOCK_STREAM' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l914">
+                  <tt><i>914</i>     <span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">family</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SOL_SOCKET' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l928">
+                  <tt><i>928</i>                 <span class="n">sock</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">SO_REUSEADDR</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SO_REUSEADDR' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l928">
+                  <tt><i>928</i>                 <span class="n">sock</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">SO_REUSEADDR</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'error' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l929">
+                  <tt><i>929</i>             <span class="k">except</span> <span class="n">error</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SOL_SOCKET' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l934">
+                  <tt><i>934</i>             <span class="n">sock</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">SO_REUSEPORT</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SO_REUSEPORT' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l934">
+                  <tt><i>934</i>             <span class="n">sock</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">SO_REUSEPORT</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AF_INET6' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l935">
+                  <tt><i>935</i>         <span class="k">if</span> <span class="n">has_ipv6</span> <span class="ow">and</span> <span class="n">family</span> <span class="o">==</span> <span class="n">AF_INET6</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'has_ipv6' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l935">
+                  <tt><i>935</i>         <span class="k">if</span> <span class="n">has_ipv6</span> <span class="ow">and</span> <span class="n">family</span> <span class="o">==</span> <span class="n">AF_INET6</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'IPPROTO_IPV6' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l937">
+                  <tt><i>937</i>                 <span class="n">sock</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">IPPROTO_IPV6</span><span class="p">,</span> <span class="n">IPV6_V6ONLY</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'IPV6_V6ONLY' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l937">
+                  <tt><i>937</i>                 <span class="n">sock</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">IPPROTO_IPV6</span><span class="p">,</span> <span class="n">IPV6_V6ONLY</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'IPPROTO_IPV6' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l940">
+                  <tt><i>940</i>                 <span class="n">sock</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">IPPROTO_IPV6</span><span class="p">,</span> <span class="n">IPV6_V6ONLY</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'IPV6_V6ONLY' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l940">
+                  <tt><i>940</i>                 <span class="n">sock</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">IPPROTO_IPV6</span><span class="p">,</span> <span class="n">IPV6_V6ONLY</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'error' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l943">
+                  <tt><i>943</i>         <span class="k">except</span> <span class="n">error</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'error' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l946">
+                  <tt><i>946</i>             <span class="k">raise</span> <span class="n">error</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">errno</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'error' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l952">
+                  <tt><i>952</i>     <span class="k">except</span> <span class="n">error</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AddressFamily' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l976">
+                  <tt><i>976</i>         <span class="n">addrlist</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">_intenum_converter</span><span class="p">(</span><span class="n">af</span><span class="p">,</span> <span class="n">AddressFamily</span><span class="p">),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SocketKind' may be undefined, or defined from star imports: _socket:</p>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l977">
+                  <tt><i>977</i>                          <span class="n">_intenum_converter</span><span class="p">(</span><span class="n">socktype</span><span class="p">,</span> <span class="n">SocketKind</span><span class="p">),</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from _socket import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l52">
+                  <tt><i>52</i> <span class="kn">from</span> <span class="nn">_socket</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F811">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F811:</strong> redefinition of unused 'array' from line 550
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l562">
+                  <tt><i>562</i>     <span class="kn">import</span> <span class="nn">array</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l540">
+                  <tt><i>540</i> <span class="k">def</span> <span class="nf">fromfd</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">proto</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l596">
+                  <tt><i>596</i> <span class="k">def</span> <span class="nf">_fallback_socketpair</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="n">AF_INET</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="n">proto</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l675">
+                  <tt><i>675</i> <span class="k">class</span> <span class="nc">SocketIO</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">RawIOBase</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l821">
+                  <tt><i>821</i> <span class="k">def</span> <span class="nf">create_connection</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">_GLOBAL_DEFAULT_TIMEOUT</span><span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l558">
+                  <tt><i>558</i>             <span class="n">_socket</span><span class="o">.</span><span class="n">SCM_RIGHTS</span><span class="p">,</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="n">fds</span><span class="p">))])</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l574">
+                  <tt><i>574</i>             <span class="n">_socket</span><span class="o">.</span><span class="n">CMSG_LEN</span><span class="p">(</span><span class="n">maxfds</span> <span class="o">*</span> <span class="n">fds</span><span class="o">.</span><span class="n">itemsize</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l578">
+                  <tt><i>578</i>                         <span class="nb">len</span><span class="p">(</span><span class="n">cmsg_data</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cmsg_data</span><span class="p">)</span> <span class="o">%</span> <span class="n">fds</span><span class="o">.</span><span class="n">itemsize</span><span class="p">)])</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l530">
+                  <tt><i>530</i>         <span class="k">def</span> <span class="nf">set_inheritable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inheritable</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l535">
+                  <tt><i>535</i>         <span class="k">def</span> <span class="nf">set_inheritable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inheritable</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l549">
+                  <tt><i>549</i> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">_socket</span><span class="o">.</span><span class="n">socket</span><span class="p">,</span> <span class="s2">&quot;sendmsg&quot;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l650">
+                  <tt><i>650</i> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">_socket</span><span class="p">,</span> <span class="s2">&quot;socketpair&quot;</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l626">
+                  <tt><i>626</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l641">
+                  <tt><i>641</i>     <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E201">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E201:</strong> whitespace after '{'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l673">
+                  <tt><i>673</i> <span class="n">_blocking_errnos</span> <span class="o">=</span> <span class="p">{</span> <span class="n">EAGAIN</span><span class="p">,</span> <span class="n">EWOULDBLOCK</span> <span class="p">}</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E202">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E202:</strong> whitespace before '}'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l673">
+                  <tt><i>673</i> <span class="n">_blocking_errnos</span> <span class="o">=</span> <span class="p">{</span> <span class="n">EAGAIN</span><span class="p">,</span> <span class="n">EWOULDBLOCK</span> <span class="p">}</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E221">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E221:</strong> multiple spaces before operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l95">
+                  <tt><i>95</i> <span class="n">_LOCALHOST</span>    <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E401">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E401:</strong> multiple imports on one line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l54">
+                  <tt><i>54</i> <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">io</span><span class="o">,</span> <span class="nn">selectors</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.socket.source.html#l211">
+                  <tt><i>211</i> <span class="k">class</span> <span class="nc">_GiveupOnSendfile</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

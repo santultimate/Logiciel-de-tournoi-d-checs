@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>.conda/lib/python3.11/ctypes/_aix.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <h1>
+            <a href="conda.lib.python3.11.ctypes._aix.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/ctypes/_aix.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> <span class="sd">Lib/ctypes.util.find_library() support for AIX</span></tt>
+            </div>
+            <div id="l3"
+               class="code sev- "><tt><i>3</i> <span class="sd">Similar approach as done for Darwin support by using separate files</span></tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> <span class="sd">but unlike Darwin - no extension such as ctypes.macholib.*</span></tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> &nbsp;</tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i> <span class="sd">dlopen() is an interface to AIX initAndLoad() - primary documentation at:</span></tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i> <span class="sd">https://www.ibm.com/support/knowledgecenter/en/ssw_aix_61/com.ibm.aix.basetrf1/dlopen.htm</span></tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i> <span class="sd">https://www.ibm.com/support/knowledgecenter/en/ssw_aix_61/com.ibm.aix.basetrf1/load.htm</span></tt>
+            </div>
+            <div id="l9"
+               class="code sev- "><tt><i>9</i> &nbsp;</tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i> <span class="sd">AIX supports two styles for dlopen(): svr4 (System V Release 4) which is common on posix</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i> <span class="sd">platforms, but also a BSD style - aka SVR3.</span></tt>
+            </div>
+            <div id="l12"
+               class="code sev- "><tt><i>12</i> &nbsp;</tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i> <span class="sd">From AIX 5.3 Difference Addendum (December 2004)</span></tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i> <span class="sd">2.9 SVR4 linking affinity</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev- "><tt><i>15</i> <span class="sd">Nowadays, there are two major object file formats used by the operating systems:</span></tt>
+            </div>
+            <div id="l16"
+               class="code sev- "><tt><i>16</i> <span class="sd">XCOFF: The COFF enhanced by IBM and others. The original COFF (Common</span></tt>
+            </div>
+            <div id="l17"
+               class="code sev- "><tt><i>17</i> <span class="sd">Object File Format) was the base of SVR3 and BSD 4.2 systems.</span></tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i> <span class="sd">ELF:   Executable and Linking Format that was developed by AT&amp;T and is a</span></tt>
+            </div>
+            <div id="l19"
+               class="code sev- "><tt><i>19</i> <span class="sd">base for SVR4 UNIX.</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev- "><tt><i>20</i> &nbsp;</tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i> <span class="sd">While the shared library content is identical on AIX - one is located as a filepath name</span></tt>
+            </div>
+            <div id="l22"
+               class="code sev- "><tt><i>22</i> <span class="sd">(svr4 style) and the other is located as a member of an archive (and the archive</span></tt>
+            </div>
+            <div id="l23"
+               class="code sev- "><tt><i>23</i> <span class="sd">is located as a filepath name).</span></tt>
+            </div>
+            <div id="l24"
+               class="code sev- "><tt><i>24</i> &nbsp;</tt>
+            </div>
+            <div id="l25"
+               class="code sev- "><tt><i>25</i> <span class="sd">The key difference arises when supporting multiple abi formats (i.e., 32 and 64 bit).</span></tt>
+            </div>
+            <div id="l26"
+               class="code sev- "><tt><i>26</i> <span class="sd">For svr4 either only one ABI is supported, or there are two directories, or there</span></tt>
+            </div>
+            <div id="l27"
+               class="code sev- "><tt><i>27</i> <span class="sd">are different file names. The most common solution for multiple ABI is multiple</span></tt>
+            </div>
+            <div id="l28"
+               class="code sev- "><tt><i>28</i> <span class="sd">directories.</span></tt>
+            </div>
+            <div id="l29"
+               class="code sev- "><tt><i>29</i> &nbsp;</tt>
+            </div>
+            <div id="l30"
+               class="code sev- "><tt><i>30</i> <span class="sd">For the XCOFF (aka AIX) style - one directory (one archive file) is sufficient</span></tt>
+            </div>
+            <div id="l31"
+               class="code sev- "><tt><i>31</i> <span class="sd">as multiple shared libraries can be in the archive - even sharing the same name.</span></tt>
+            </div>
+            <div id="l32"
+               class="code sev- "><tt><i>32</i> <span class="sd">In documentation the archive is also referred to as the &quot;base&quot; and the shared</span></tt>
+            </div>
+            <div id="l33"
+               class="code sev- "><tt><i>33</i> <span class="sd">library object is referred to as the &quot;member&quot;.</span></tt>
+            </div>
+            <div id="l34"
+               class="code sev- "><tt><i>34</i> &nbsp;</tt>
+            </div>
+            <div id="l35"
+               class="code sev- "><tt><i>35</i> <span class="sd">For dlopen() on AIX (read initAndLoad()) the calls are similar.</span></tt>
+            </div>
+            <div id="l36"
+               class="code sev- "><tt><i>36</i> <span class="sd">Default activity occurs when no path information is provided. When path</span></tt>
+            </div>
+            <div id="l37"
+               class="code sev- "><tt><i>37</i> <span class="sd">information is provided dlopen() does not search any other directories.</span></tt>
+            </div>
+            <div id="l38"
+               class="code sev- "><tt><i>38</i> &nbsp;</tt>
+            </div>
+            <div id="l39"
+               class="code sev- "><tt><i>39</i> <span class="sd">For SVR4 - the shared library name is the name of the file expected: libFOO.so</span></tt>
+            </div>
+            <div id="l40"
+               class="code sev- "><tt><i>40</i> <span class="sd">For AIX - the shared library is expressed as base(member). The search is for the</span></tt>
+            </div>
+            <div id="l41"
+               class="code sev- "><tt><i>41</i> <span class="sd">base (e.g., libFOO.a) and once the base is found the shared library - identified by</span></tt>
+            </div>
+            <div id="l42"
+               class="code sev- "><tt><i>42</i> <span class="sd">member (e.g., libFOO.so, or shr.o) is located and loaded.</span></tt>
+            </div>
+            <div id="l43"
+               class="code sev- "><tt><i>43</i> &nbsp;</tt>
+            </div>
+            <div id="l44"
+               class="code sev- "><tt><i>44</i> <span class="sd">The mode bit RTLD_MEMBER tells initAndLoad() that it needs to use the AIX (SVR3)</span></tt>
+            </div>
+            <div id="l45"
+               class="code sev- "><tt><i>45</i> <span class="sd">naming style.</span></tt>
+            </div>
+            <div id="l46"
+               class="code sev- "><tt><i>46</i> <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l47"
+               class="code sev- "><tt><i>47</i> <span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Michael Felt &lt;aixtools@felt.demon.nl&gt;&quot;</span></tt>
+            </div>
+            <div id="l48"
+               class="code sev- "><tt><i>48</i> &nbsp;</tt>
+            </div>
+            <div id="l49"
+               class="code sev- "><tt><i>49</i> <span class="kn">import</span> <span class="nn">re</span></tt>
+            </div>
+            <div id="l50"
+               class="code sev- "><tt><i>50</i> <span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">environ</span><span class="p">,</span> <span class="n">path</span></tt>
+            </div>
+            <div id="l51"
+               class="code sev- "><tt><i>51</i> <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">executable</span></tt>
+            </div>
+            <div id="l52"
+               class="code sev- "><tt><i>52</i> <span class="kn">from</span> <span class="nn">ctypes</span> <span class="kn">import</span> <span class="n">c_void_p</span><span class="p">,</span> <span class="n">sizeof</span></tt>
+            </div>
+            <div id="l53"
+               class="code sev- "><tt><i>53</i> <span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">Popen</span><span class="p">,</span> <span class="n">PIPE</span><span class="p">,</span> <span class="n">DEVNULL</span></tt>
+            </div>
+            <div id="l54"
+               class="code sev- "><tt><i>54</i> &nbsp;</tt>
+            </div>
+            <div id="l55"
+               class="code sev- "><tt><i>55</i> <span class="c1"># Executable bit size - 32 or 64</span></tt>
+            </div>
+            <div id="l56"
+               class="code sev- "><tt><i>56</i> <span class="c1"># Used to filter the search in an archive by size, e.g., -X64</span></tt>
+            </div>
+            <div id="l57"
+               class="code sev- "><tt><i>57</i> <span class="n">AIX_ABI</span> <span class="o">=</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">c_void_p</span><span class="p">)</span> <span class="o">*</span> <span class="mi">8</span></tt>
+            </div>
+            <div id="l58"
+               class="code sev- "><tt><i>58</i> &nbsp;</tt>
+            </div>
+            <div id="l59"
+               class="code sev- "><tt><i>59</i> &nbsp;</tt>
+            </div>
+            <div id="l60"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E402
+                     </span>
+                     Module level import not at top of file</li>
+               
+               </ul><tt><i>60</i> <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">maxsize</span></tt>
+            </div>
+            <div id="l61"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 0</li>
+               
+               </ul><tt><i>61</i> <span class="k">def</span> <span class="nf">_last_version</span><span class="p">(</span><span class="n">libnames</span><span class="p">,</span> <span class="n">sep</span><span class="p">):</span></tt>
+            </div>
+            <div id="l62"
+               class="code sev- "><tt><i>62</i>     <span class="k">def</span> <span class="nf">_num_version</span><span class="p">(</span><span class="n">libname</span><span class="p">):</span></tt>
+            </div>
+            <div id="l63"
+               class="code sev- "><tt><i>63</i>         <span class="c1"># &quot;libxyz.so.MAJOR.MINOR&quot; =&gt; [MAJOR, MINOR]</span></tt>
+            </div>
+            <div id="l64"
+               class="code sev- "><tt><i>64</i>         <span class="n">parts</span> <span class="o">=</span> <span class="n">libname</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="p">)</span></tt>
+            </div>
+            <div id="l65"
+               class="code sev- "><tt><i>65</i>         <span class="n">nums</span> <span class="o">=</span> <span class="p">[]</span></tt>
+            </div>
+            <div id="l66"
+               class="code sev- "><tt><i>66</i>         <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l67"
+               class="code sev- "><tt><i>67</i>             <span class="k">while</span> <span class="n">parts</span><span class="p">:</span></tt>
+            </div>
+            <div id="l68"
+               class="code sev- "><tt><i>68</i>                 <span class="n">nums</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">parts</span><span class="o">.</span><span class="n">pop</span><span class="p">()))</span></tt>
+            </div>
+            <div id="l69"
+               class="code sev- "><tt><i>69</i>         <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l70"
+               class="code sev- "><tt><i>70</i>             <span class="k">pass</span></tt>
+            </div>
+            <div id="l71"
+               class="code sev- "><tt><i>71</i>         <span class="k">return</span> <span class="n">nums</span> <span class="ow">or</span> <span class="p">[</span><span class="n">maxsize</span><span class="p">]</span></tt>
+            </div>
+            <div id="l72"
+               class="code sev- "><tt><i>72</i>     <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">libnames</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="n">_num_version</span><span class="p">)</span></tt>
+            </div>
+            <div id="l73"
+               class="code sev- "><tt><i>73</i> &nbsp;</tt>
+            </div>
+            <div id="l74"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>74</i> <span class="k">def</span> <span class="nf">get_ld_header</span><span class="p">(</span><span class="n">p</span><span class="p">):</span></tt>
+            </div>
+            <div id="l75"
+               class="code sev- "><tt><i>75</i>     <span class="c1"># &quot;nested-function, but placed at module level</span></tt>
+            </div>
+            <div id="l76"
+               class="code sev- "><tt><i>76</i>     <span class="n">ld_header</span> <span class="o">=</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l77"
+               class="code sev- "><tt><i>77</i>     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">stdout</span><span class="p">:</span></tt>
+            </div>
+            <div id="l78"
+               class="code sev- "><tt><i>78</i>         <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">((</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="s1">&#39;../&#39;</span><span class="p">)):</span></tt>
+            </div>
+            <div id="l79"
+               class="code sev- "><tt><i>79</i>             <span class="n">ld_header</span> <span class="o">=</span> <span class="n">line</span></tt>
+            </div>
+            <div id="l80"
+               class="code sev- "><tt><i>80</i>         <span class="k">elif</span> <span class="s2">&quot;INDEX&quot;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span></tt>
+            </div>
+            <div id="l81"
+               class="code sev- "><tt><i>81</i>             <span class="k">return</span> <span class="n">ld_header</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l82"
+               class="code sev- "><tt><i>82</i>     <span class="k">return</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l83"
+               class="code sev- "><tt><i>83</i> &nbsp;</tt>
+            </div>
+            <div id="l84"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>84</i> <span class="k">def</span> <span class="nf">get_ld_header_info</span><span class="p">(</span><span class="n">p</span><span class="p">):</span></tt>
+            </div>
+            <div id="l85"
+               class="code sev- "><tt><i>85</i>     <span class="c1"># &quot;nested-function, but placed at module level</span></tt>
+            </div>
+            <div id="l86"
+               class="code sev- "><tt><i>86</i>     <span class="c1"># as an ld_header was found, return known paths, archives and members</span></tt>
+            </div>
+            <div id="l87"
+               class="code sev- "><tt><i>87</i>     <span class="c1"># these lines start with a digit</span></tt>
+            </div>
+            <div id="l88"
+               class="code sev- "><tt><i>88</i>     <span class="n">info</span> <span class="o">=</span> <span class="p">[]</span></tt>
+            </div>
+            <div id="l89"
+               class="code sev- "><tt><i>89</i>     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">stdout</span><span class="p">:</span></tt>
+            </div>
+            <div id="l90"
+               class="code sev- "><tt><i>90</i>         <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;[0-9]&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span></tt>
+            </div>
+            <div id="l91"
+               class="code sev- "><tt><i>91</i>             <span class="n">info</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span></tt>
+            </div>
+            <div id="l92"
+               class="code sev- "><tt><i>92</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l93"
+               class="code sev- "><tt><i>93</i>             <span class="c1"># blank line (separator), consume line and end for loop</span></tt>
+            </div>
+            <div id="l94"
+               class="code sev- "><tt><i>94</i>             <span class="k">break</span></tt>
+            </div>
+            <div id="l95"
+               class="code sev- "><tt><i>95</i>     <span class="k">return</span> <span class="n">info</span></tt>
+            </div>
+            <div id="l96"
+               class="code sev- "><tt><i>96</i> &nbsp;</tt>
+            </div>
+            <div id="l97"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>97</i> <span class="k">def</span> <span class="nf">get_ld_headers</span><span class="p">(</span><span class="n">file</span><span class="p">):</span></tt>
+            </div>
+            <div id="l98"
+               class="code sev- "><tt><i>98</i>     <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l99"
+               class="code sev- "><tt><i>99</i> <span class="sd">    Parse the header of the loader section of executable and archives</span></tt>
+            </div>
+            <div id="l100"
+               class="code sev- "><tt><i>100</i> <span class="sd">    This function calls /usr/bin/dump -H as a subprocess</span></tt>
+            </div>
+            <div id="l101"
+               class="code sev- "><tt><i>101</i> <span class="sd">    and returns a list of (ld_header, ld_header_info) tuples.</span></tt>
+            </div>
+            <div id="l102"
+               class="code sev- "><tt><i>102</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l103"
+               class="code sev- "><tt><i>103</i>     <span class="c1"># get_ld_headers parsing:</span></tt>
+            </div>
+            <div id="l104"
+               class="code sev- "><tt><i>104</i>     <span class="c1"># 1. Find a line that starts with /, ./, or ../ - set as ld_header</span></tt>
+            </div>
+            <div id="l105"
+               class="code sev- "><tt><i>105</i>     <span class="c1"># 2. If &quot;INDEX&quot; in occurs in a following line - return ld_header</span></tt>
+            </div>
+            <div id="l106"
+               class="code sev- "><tt><i>106</i>     <span class="c1"># 3. get info (lines starting with [0-9])</span></tt>
+            </div>
+            <div id="l107"
+               class="code sev- "><tt><i>107</i>     <span class="n">ldr_headers</span> <span class="o">=</span> <span class="p">[]</span></tt>
+            </div>
+            <div id="l108"
+               class="code sev- "><tt><i>108</i>     <span class="n">p</span> <span class="o">=</span> <span class="n">Popen</span><span class="p">([</span><span class="s2">&quot;/usr/bin/dump&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;-X</span><span class="si">{</span><span class="n">AIX_ABI</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;-H&quot;</span><span class="p">,</span> <span class="n">file</span><span class="p">],</span></tt>
+            </div>
+            <div id="l109"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E128
+                     </span>
+                     Continuation line under-indented for visual indent</li>
+               
+               </ul><tt><i>109</i>         <span class="n">universal_newlines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">DEVNULL</span><span class="p">)</span></tt>
+            </div>
+            <div id="l110"
+               class="code sev- "><tt><i>110</i>     <span class="c1"># be sure to read to the end-of-file - getting all entries</span></tt>
+            </div>
+            <div id="l111"
+               class="code sev- "><tt><i>111</i>     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span></tt>
+            </div>
+            <div id="l112"
+               class="code sev- "><tt><i>112</i>         <span class="n">ld_header</span> <span class="o">=</span> <span class="n">get_ld_header</span><span class="p">(</span><span class="n">p</span><span class="p">)</span></tt>
+            </div>
+            <div id="l113"
+               class="code sev- "><tt><i>113</i>         <span class="k">if</span> <span class="n">ld_header</span><span class="p">:</span></tt>
+            </div>
+            <div id="l114"
+               class="code sev- "><tt><i>114</i>             <span class="n">ldr_headers</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">ld_header</span><span class="p">,</span> <span class="n">get_ld_header_info</span><span class="p">(</span><span class="n">p</span><span class="p">)))</span></tt>
+            </div>
+            <div id="l115"
+               class="code sev- "><tt><i>115</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l116"
+               class="code sev- "><tt><i>116</i>             <span class="k">break</span></tt>
+            </div>
+            <div id="l117"
+               class="code sev- "><tt><i>117</i>     <span class="n">p</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></tt>
+            </div>
+            <div id="l118"
+               class="code sev- "><tt><i>118</i>     <span class="n">p</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span></tt>
+            </div>
+            <div id="l119"
+               class="code sev- "><tt><i>119</i>     <span class="k">return</span> <span class="n">ldr_headers</span></tt>
+            </div>
+            <div id="l120"
+               class="code sev- "><tt><i>120</i> &nbsp;</tt>
+            </div>
+            <div id="l121"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>121</i> <span class="k">def</span> <span class="nf">get_shared</span><span class="p">(</span><span class="n">ld_headers</span><span class="p">):</span></tt>
+            </div>
+            <div id="l122"
+               class="code sev- "><tt><i>122</i>     <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l123"
+               class="code sev- "><tt><i>123</i> <span class="sd">    extract the shareable objects from ld_headers</span></tt>
+            </div>
+            <div id="l124"
+               class="code sev- "><tt><i>124</i> <span class="sd">    character &quot;[&quot; is used to strip off the path information.</span></tt>
+            </div>
+            <div id="l125"
+               class="code sev- "><tt><i>125</i> <span class="sd">    Note: the &quot;[&quot; and &quot;]&quot; characters that are part of dump -H output</span></tt>
+            </div>
+            <div id="l126"
+               class="code sev- "><tt><i>126</i> <span class="sd">    are not removed here.</span></tt>
+            </div>
+            <div id="l127"
+               class="code sev- "><tt><i>127</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l128"
+               class="code sev- "><tt><i>128</i>     <span class="n">shared</span> <span class="o">=</span> <span class="p">[]</span></tt>
+            </div>
+            <div id="l129"
+               class="code sev- "><tt><i>129</i>     <span class="k">for</span> <span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="ow">in</span> <span class="n">ld_headers</span><span class="p">:</span></tt>
+            </div>
+            <div id="l130"
+               class="code sev- "><tt><i>130</i>         <span class="c1"># potential member lines contain &quot;[&quot;</span></tt>
+            </div>
+            <div id="l131"
+               class="code sev- "><tt><i>131</i>         <span class="c1"># otherwise, no processing needed</span></tt>
+            </div>
+            <div id="l132"
+               class="code sev- "><tt><i>132</i>         <span class="k">if</span> <span class="s2">&quot;[&quot;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span></tt>
+            </div>
+            <div id="l133"
+               class="code sev- "><tt><i>133</i>             <span class="c1"># Strip off trailing colon (:)</span></tt>
+            </div>
+            <div id="l134"
+               class="code sev- "><tt><i>134</i>             <span class="n">shared</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="p">):</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></tt>
+            </div>
+            <div id="l135"
+               class="code sev- "><tt><i>135</i>     <span class="k">return</span> <span class="n">shared</span></tt>
+            </div>
+            <div id="l136"
+               class="code sev- "><tt><i>136</i> &nbsp;</tt>
+            </div>
+            <div id="l137"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>137</i> <span class="k">def</span> <span class="nf">get_one_match</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">lines</span><span class="p">):</span></tt>
+            </div>
+            <div id="l138"
+               class="code sev- "><tt><i>138</i>     <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l139"
+               class="code sev- "><tt><i>139</i> <span class="sd">    Must be only one match, otherwise result is None.</span></tt>
+            </div>
+            <div id="l140"
+               class="code sev- "><tt><i>140</i> <span class="sd">    When there is a match, strip leading &quot;[&quot; and trailing &quot;]&quot;</span></tt>
+            </div>
+            <div id="l141"
+               class="code sev- "><tt><i>141</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l142"
+               class="code sev- "><tt><i>142</i>     <span class="c1"># member names in the ld_headers output are between square brackets</span></tt>
+            </div>
+            <div id="l143"
+               class="code sev- "><tt><i>143</i>     <span class="n">expr</span> <span class="o">=</span> <span class="sa">rf</span><span class="s1">&#39;\[(</span><span class="si">{</span><span class="n">expr</span><span class="si">}</span><span class="s1">)\]&#39;</span></tt>
+            </div>
+            <div id="l144"
+               class="code sev- "><tt><i>144</i>     <span class="n">matches</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">)))</span></tt>
+            </div>
+            <div id="l145"
+               class="code sev- "><tt><i>145</i>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">matches</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span></tt>
+            </div>
+            <div id="l146"
+               class="code sev- "><tt><i>146</i>         <span class="k">return</span> <span class="n">matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></tt>
+            </div>
+            <div id="l147"
+               class="code sev- "><tt><i>147</i>     <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l148"
+               class="code sev- "><tt><i>148</i>         <span class="k">return</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l149"
+               class="code sev- "><tt><i>149</i> &nbsp;</tt>
+            </div>
+            <div id="l150"
+               class="code sev- "><tt><i>150</i> <span class="c1"># additional processing to deal with AIX legacy names for 64-bit members</span></tt>
+            </div>
+            <div id="l151"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>151</i> <span class="k">def</span> <span class="nf">get_legacy</span><span class="p">(</span><span class="n">members</span><span class="p">):</span></tt>
+            </div>
+            <div id="l152"
+               class="code sev- "><tt><i>152</i>     <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l153"
+               class="code sev- "><tt><i>153</i> <span class="sd">    This routine provides historical aka legacy naming schemes started</span></tt>
+            </div>
+            <div id="l154"
+               class="code sev- "><tt><i>154</i> <span class="sd">    in AIX4 shared library support for library members names.</span></tt>
+            </div>
+            <div id="l155"
+               class="code sev- "><tt><i>155</i> <span class="sd">    e.g., in /usr/lib/libc.a the member name shr.o for 32-bit binary and</span></tt>
+            </div>
+            <div id="l156"
+               class="code sev- "><tt><i>156</i> <span class="sd">    shr_64.o for 64-bit binary.</span></tt>
+            </div>
+            <div id="l157"
+               class="code sev- "><tt><i>157</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l158"
+               class="code sev- "><tt><i>158</i>     <span class="k">if</span> <span class="n">AIX_ABI</span> <span class="o">==</span> <span class="mi">64</span><span class="p">:</span></tt>
+            </div>
+            <div id="l159"
+               class="code sev- "><tt><i>159</i>         <span class="c1"># AIX 64-bit member is one of shr64.o, shr_64.o, or shr4_64.o</span></tt>
+            </div>
+            <div id="l160"
+               class="code sev- "><tt><i>160</i>         <span class="n">expr</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;shr4?_?64\.o&#39;</span></tt>
+            </div>
+            <div id="l161"
+               class="code sev- "><tt><i>161</i>         <span class="n">member</span> <span class="o">=</span> <span class="n">get_one_match</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">members</span><span class="p">)</span></tt>
+            </div>
+            <div id="l162"
+               class="code sev- "><tt><i>162</i>         <span class="k">if</span> <span class="n">member</span><span class="p">:</span></tt>
+            </div>
+            <div id="l163"
+               class="code sev- "><tt><i>163</i>             <span class="k">return</span> <span class="n">member</span></tt>
+            </div>
+            <div id="l164"
+               class="code sev- "><tt><i>164</i>     <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l165"
+               class="code sev- "><tt><i>165</i>         <span class="c1"># 32-bit legacy names - both shr.o and shr4.o exist.</span></tt>
+            </div>
+            <div id="l166"
+               class="code sev- "><tt><i>166</i>         <span class="c1"># shr.o is the preferred name so we look for shr.o first</span></tt>
+            </div>
+            <div id="l167"
+               class="code sev- "><tt><i>167</i>         <span class="c1">#  i.e., shr4.o is returned only when shr.o does not exist</span></tt>
+            </div>
+            <div id="l168"
+               class="code sev- "><tt><i>168</i>         <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;shr.o&#39;</span><span class="p">,</span> <span class="s1">&#39;shr4.o&#39;</span><span class="p">]:</span></tt>
+            </div>
+            <div id="l169"
+               class="code sev- "><tt><i>169</i>             <span class="n">member</span> <span class="o">=</span> <span class="n">get_one_match</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">members</span><span class="p">)</span></tt>
+            </div>
+            <div id="l170"
+               class="code sev- "><tt><i>170</i>             <span class="k">if</span> <span class="n">member</span><span class="p">:</span></tt>
+            </div>
+            <div id="l171"
+               class="code sev- "><tt><i>171</i>                 <span class="k">return</span> <span class="n">member</span></tt>
+            </div>
+            <div id="l172"
+               class="code sev- "><tt><i>172</i>     <span class="k">return</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l173"
+               class="code sev- "><tt><i>173</i> &nbsp;</tt>
+            </div>
+            <div id="l174"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>174</i> <span class="k">def</span> <span class="nf">get_version</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">members</span><span class="p">):</span></tt>
+            </div>
+            <div id="l175"
+               class="code sev- "><tt><i>175</i>     <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l176"
+               class="code sev- "><tt><i>176</i> <span class="sd">    Sort list of members and return highest numbered version - if it exists.</span></tt>
+            </div>
+            <div id="l177"
+               class="code sev- "><tt><i>177</i> <span class="sd">    This function is called when an unversioned libFOO.a(libFOO.so) has</span></tt>
+            </div>
+            <div id="l178"
+               class="code sev- "><tt><i>178</i> <span class="sd">    not been found.</span></tt>
+            </div>
+            <div id="l179"
+               class="code sev- "><tt><i>179</i> &nbsp;</tt>
+            </div>
+            <div id="l180"
+               class="code sev- "><tt><i>180</i> <span class="sd">    Versioning for the member name is expected to follow</span></tt>
+            </div>
+            <div id="l181"
+               class="code sev- "><tt><i>181</i> <span class="sd">    GNU LIBTOOL conventions: the highest version (x, then X.y, then X.Y.z)</span></tt>
+            </div>
+            <div id="l182"
+               class="code sev- "><tt><i>182</i> <span class="sd">     * find [libFoo.so.X]</span></tt>
+            </div>
+            <div id="l183"
+               class="code sev- "><tt><i>183</i> <span class="sd">     * find [libFoo.so.X.Y]</span></tt>
+            </div>
+            <div id="l184"
+               class="code sev- "><tt><i>184</i> <span class="sd">     * find [libFoo.so.X.Y.Z]</span></tt>
+            </div>
+            <div id="l185"
+               class="code sev- "><tt><i>185</i> &nbsp;</tt>
+            </div>
+            <div id="l186"
+               class="code sev- "><tt><i>186</i> <span class="sd">    Before the GNU convention became the standard scheme regardless of</span></tt>
+            </div>
+            <div id="l187"
+               class="code sev- "><tt><i>187</i> <span class="sd">    binary size AIX packagers used GNU convention &quot;as-is&quot; for 32-bit</span></tt>
+            </div>
+            <div id="l188"
+               class="code sev- "><tt><i>188</i> <span class="sd">    archive members but used an &quot;distinguishing&quot; name for 64-bit members.</span></tt>
+            </div>
+            <div id="l189"
+               class="code sev- "><tt><i>189</i> <span class="sd">    This scheme inserted either 64 or _64 between libFOO and .so</span></tt>
+            </div>
+            <div id="l190"
+               class="code sev- "><tt><i>190</i> <span class="sd">    - generally libFOO_64.so, but occasionally libFOO64.so</span></tt>
+            </div>
+            <div id="l191"
+               class="code sev- "><tt><i>191</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l192"
+               class="code sev- "><tt><i>192</i>     <span class="c1"># the expression ending for versions must start as</span></tt>
+            </div>
+            <div id="l193"
+               class="code sev- "><tt><i>193</i>     <span class="c1"># &#39;.so.[0-9]&#39;, i.e., *.so.[at least one digit]</span></tt>
+            </div>
+            <div id="l194"
+               class="code sev- "><tt><i>194</i>     <span class="c1"># while multiple, more specific expressions could be specified</span></tt>
+            </div>
+            <div id="l195"
+               class="code sev- "><tt><i>195</i>     <span class="c1"># to search for .so.X, .so.X.Y and .so.X.Y.Z</span></tt>
+            </div>
+            <div id="l196"
+               class="code sev- "><tt><i>196</i>     <span class="c1"># after the first required &#39;dot&#39; digit</span></tt>
+            </div>
+            <div id="l197"
+               class="code sev- "><tt><i>197</i>     <span class="c1"># any combination of additional &#39;dot&#39; digits pairs are accepted</span></tt>
+            </div>
+            <div id="l198"
+               class="code sev- "><tt><i>198</i>     <span class="c1"># anything more than libFOO.so.digits.digits.digits</span></tt>
+            </div>
+            <div id="l199"
+               class="code sev- "><tt><i>199</i>     <span class="c1"># should be seen as a member name outside normal expectations</span></tt>
+            </div>
+            <div id="l200"
+               class="code sev- "><tt><i>200</i>     <span class="n">exprs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">rf</span><span class="s1">&#39;lib</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">\.so\.[0-9]+[0-9.]*&#39;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l201"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E128
+                     </span>
+                     Continuation line under-indented for visual indent</li>
+               
+               </ul><tt><i>201</i>         <span class="sa">rf</span><span class="s1">&#39;lib</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">_?64\.so\.[0-9]+[0-9.]*&#39;</span><span class="p">]</span></tt>
+            </div>
+            <div id="l202"
+               class="code sev- "><tt><i>202</i>     <span class="k">for</span> <span class="n">expr</span> <span class="ow">in</span> <span class="n">exprs</span><span class="p">:</span></tt>
+            </div>
+            <div id="l203"
+               class="code sev- "><tt><i>203</i>         <span class="n">versions</span> <span class="o">=</span> <span class="p">[]</span></tt>
+            </div>
+            <div id="l204"
+               class="code sev- "><tt><i>204</i>         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">members</span><span class="p">:</span></tt>
+            </div>
+            <div id="l205"
+               class="code sev- "><tt><i>205</i>             <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+            </div>
+            <div id="l206"
+               class="code sev- "><tt><i>206</i>             <span class="k">if</span> <span class="n">m</span><span class="p">:</span></tt>
+            </div>
+            <div id="l207"
+               class="code sev- "><tt><i>207</i>                 <span class="n">versions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span></tt>
+            </div>
+            <div id="l208"
+               class="code sev- "><tt><i>208</i>         <span class="k">if</span> <span class="n">versions</span><span class="p">:</span></tt>
+            </div>
+            <div id="l209"
+               class="code sev- "><tt><i>209</i>             <span class="k">return</span> <span class="n">_last_version</span><span class="p">(</span><span class="n">versions</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l210"
+               class="code sev- "><tt><i>210</i>     <span class="k">return</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l211"
+               class="code sev- "><tt><i>211</i> &nbsp;</tt>
+            </div>
+            <div id="l212"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>212</i> <span class="k">def</span> <span class="nf">get_member</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">members</span><span class="p">):</span></tt>
+            </div>
+            <div id="l213"
+               class="code sev- "><tt><i>213</i>     <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l214"
+               class="code sev- "><tt><i>214</i> <span class="sd">    Return an archive member matching the request in name.</span></tt>
+            </div>
+            <div id="l215"
+               class="code sev- "><tt><i>215</i> <span class="sd">    Name is the library name without any prefix like lib, suffix like .so,</span></tt>
+            </div>
+            <div id="l216"
+               class="code sev- "><tt><i>216</i> <span class="sd">    or version number.</span></tt>
+            </div>
+            <div id="l217"
+               class="code sev- "><tt><i>217</i> <span class="sd">    Given a list of members find and return the most appropriate result</span></tt>
+            </div>
+            <div id="l218"
+               class="code sev- "><tt><i>218</i> <span class="sd">    Priority is given to generic libXXX.so, then a versioned libXXX.so.a.b.c</span></tt>
+            </div>
+            <div id="l219"
+               class="code sev- "><tt><i>219</i> <span class="sd">    and finally, legacy AIX naming scheme.</span></tt>
+            </div>
+            <div id="l220"
+               class="code sev- "><tt><i>220</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l221"
+               class="code sev- "><tt><i>221</i>     <span class="c1"># look first for a generic match - prepend lib and append .so</span></tt>
+            </div>
+            <div id="l222"
+               class="code sev- "><tt><i>222</i>     <span class="n">expr</span> <span class="o">=</span> <span class="sa">rf</span><span class="s1">&#39;lib</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">\.so&#39;</span></tt>
+            </div>
+            <div id="l223"
+               class="code sev- "><tt><i>223</i>     <span class="n">member</span> <span class="o">=</span> <span class="n">get_one_match</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">members</span><span class="p">)</span></tt>
+            </div>
+            <div id="l224"
+               class="code sev- "><tt><i>224</i>     <span class="k">if</span> <span class="n">member</span><span class="p">:</span></tt>
+            </div>
+            <div id="l225"
+               class="code sev- "><tt><i>225</i>         <span class="k">return</span> <span class="n">member</span></tt>
+            </div>
+            <div id="l226"
+               class="code sev- "><tt><i>226</i>     <span class="k">elif</span> <span class="n">AIX_ABI</span> <span class="o">==</span> <span class="mi">64</span><span class="p">:</span></tt>
+            </div>
+            <div id="l227"
+               class="code sev- "><tt><i>227</i>         <span class="n">expr</span> <span class="o">=</span> <span class="sa">rf</span><span class="s1">&#39;lib</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">64\.so&#39;</span></tt>
+            </div>
+            <div id="l228"
+               class="code sev- "><tt><i>228</i>         <span class="n">member</span> <span class="o">=</span> <span class="n">get_one_match</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">members</span><span class="p">)</span></tt>
+            </div>
+            <div id="l229"
+               class="code sev- "><tt><i>229</i>     <span class="k">if</span> <span class="n">member</span><span class="p">:</span></tt>
+            </div>
+            <div id="l230"
+               class="code sev- "><tt><i>230</i>         <span class="k">return</span> <span class="n">member</span></tt>
+            </div>
+            <div id="l231"
+               class="code sev- "><tt><i>231</i>     <span class="c1"># since an exact match with .so as suffix was not found</span></tt>
+            </div>
+            <div id="l232"
+               class="code sev- "><tt><i>232</i>     <span class="c1"># look for a versioned name</span></tt>
+            </div>
+            <div id="l233"
+               class="code sev- "><tt><i>233</i>     <span class="c1"># If a versioned name is not found, look for AIX legacy member name</span></tt>
+            </div>
+            <div id="l234"
+               class="code sev- "><tt><i>234</i>     <span class="n">member</span> <span class="o">=</span> <span class="n">get_version</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">members</span><span class="p">)</span></tt>
+            </div>
+            <div id="l235"
+               class="code sev- "><tt><i>235</i>     <span class="k">if</span> <span class="n">member</span><span class="p">:</span></tt>
+            </div>
+            <div id="l236"
+               class="code sev- "><tt><i>236</i>         <span class="k">return</span> <span class="n">member</span></tt>
+            </div>
+            <div id="l237"
+               class="code sev- "><tt><i>237</i>     <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l238"
+               class="code sev- "><tt><i>238</i>         <span class="k">return</span> <span class="n">get_legacy</span><span class="p">(</span><span class="n">members</span><span class="p">)</span></tt>
+            </div>
+            <div id="l239"
+               class="code sev- "><tt><i>239</i> &nbsp;</tt>
+            </div>
+            <div id="l240"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>240</i> <span class="k">def</span> <span class="nf">get_libpaths</span><span class="p">():</span></tt>
+            </div>
+            <div id="l241"
+               class="code sev- "><tt><i>241</i>     <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l242"
+               class="code sev- "><tt><i>242</i> <span class="sd">    On AIX, the buildtime searchpath is stored in the executable.</span></tt>
+            </div>
+            <div id="l243"
+               class="code sev- "><tt><i>243</i> <span class="sd">    as &quot;loader header information&quot;.</span></tt>
+            </div>
+            <div id="l244"
+               class="code sev- "><tt><i>244</i> <span class="sd">    The command /usr/bin/dump -H extracts this info.</span></tt>
+            </div>
+            <div id="l245"
+               class="code sev- "><tt><i>245</i> <span class="sd">    Prefix searched libraries with LD_LIBRARY_PATH (preferred),</span></tt>
+            </div>
+            <div id="l246"
+               class="code sev- "><tt><i>246</i> <span class="sd">    or LIBPATH if defined. These paths are appended to the paths</span></tt>
+            </div>
+            <div id="l247"
+               class="code sev- "><tt><i>247</i> <span class="sd">    to libraries the python executable is linked with.</span></tt>
+            </div>
+            <div id="l248"
+               class="code sev- "><tt><i>248</i> <span class="sd">    This mimics AIX dlopen() behavior.</span></tt>
+            </div>
+            <div id="l249"
+               class="code sev- "><tt><i>249</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l250"
+               class="code sev- "><tt><i>250</i>     <span class="n">libpaths</span> <span class="o">=</span> <span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LD_LIBRARY_PATH&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l251"
+               class="code sev- "><tt><i>251</i>     <span class="k">if</span> <span class="n">libpaths</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l252"
+               class="code sev- "><tt><i>252</i>         <span class="n">libpaths</span> <span class="o">=</span> <span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LIBPATH&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l253"
+               class="code sev- "><tt><i>253</i>     <span class="k">if</span> <span class="n">libpaths</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l254"
+               class="code sev- "><tt><i>254</i>         <span class="n">libpaths</span> <span class="o">=</span> <span class="p">[]</span></tt>
+            </div>
+            <div id="l255"
+               class="code sev- "><tt><i>255</i>     <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l256"
+               class="code sev- "><tt><i>256</i>         <span class="n">libpaths</span> <span class="o">=</span> <span class="n">libpaths</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l257"
+               class="code sev- "><tt><i>257</i>     <span class="n">objects</span> <span class="o">=</span> <span class="n">get_ld_headers</span><span class="p">(</span><span class="n">executable</span><span class="p">)</span></tt>
+            </div>
+            <div id="l258"
+               class="code sev- "><tt><i>258</i>     <span class="k">for</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">lines</span><span class="p">)</span> <span class="ow">in</span> <span class="n">objects</span><span class="p">:</span></tt>
+            </div>
+            <div id="l259"
+               class="code sev- "><tt><i>259</i>         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span></tt>
+            </div>
+            <div id="l260"
+               class="code sev- "><tt><i>260</i>             <span class="c1"># the second (optional) argument is PATH if it includes a /</span></tt>
+            </div>
+            <div id="l261"
+               class="code sev- "><tt><i>261</i>             <span class="n">path</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span></tt>
+            </div>
+            <div id="l262"
+               class="code sev- "><tt><i>262</i>             <span class="k">if</span> <span class="s2">&quot;/&quot;</span> <span class="ow">in</span> <span class="n">path</span><span class="p">:</span></tt>
+            </div>
+            <div id="l263"
+               class="code sev- "><tt><i>263</i>                 <span class="n">libpaths</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">))</span></tt>
+            </div>
+            <div id="l264"
+               class="code sev- "><tt><i>264</i>     <span class="k">return</span> <span class="n">libpaths</span></tt>
+            </div>
+            <div id="l265"
+               class="code sev- "><tt><i>265</i> &nbsp;</tt>
+            </div>
+            <div id="l266"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>266</i> <span class="k">def</span> <span class="nf">find_shared</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span></tt>
+            </div>
+            <div id="l267"
+               class="code sev- "><tt><i>267</i>     <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l268"
+               class="code sev- "><tt><i>268</i> <span class="sd">    paths is a list of directories to search for an archive.</span></tt>
+            </div>
+            <div id="l269"
+               class="code sev- "><tt><i>269</i> <span class="sd">    name is the abbreviated name given to find_library().</span></tt>
+            </div>
+            <div id="l270"
+               class="code sev- "><tt><i>270</i> <span class="sd">    Process: search &quot;paths&quot; for archive, and if an archive is found</span></tt>
+            </div>
+            <div id="l271"
+               class="code sev- "><tt><i>271</i> <span class="sd">    return the result of get_member().</span></tt>
+            </div>
+            <div id="l272"
+               class="code sev- "><tt><i>272</i> <span class="sd">    If an archive is not found then return None</span></tt>
+            </div>
+            <div id="l273"
+               class="code sev- "><tt><i>273</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l274"
+               class="code sev- "><tt><i>274</i>     <span class="k">for</span> <span class="nb">dir</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">:</span></tt>
+            </div>
+            <div id="l275"
+               class="code sev- "><tt><i>275</i>         <span class="c1"># /lib is a symbolic link to /usr/lib, skip it</span></tt>
+            </div>
+            <div id="l276"
+               class="code sev- "><tt><i>276</i>         <span class="k">if</span> <span class="nb">dir</span> <span class="o">==</span> <span class="s2">&quot;/lib&quot;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l277"
+               class="code sev- "><tt><i>277</i>             <span class="k">continue</span></tt>
+            </div>
+            <div id="l278"
+               class="code sev- "><tt><i>278</i>         <span class="c1"># &quot;lib&quot; is prefixed to emulate compiler name resolution,</span></tt>
+            </div>
+            <div id="l279"
+               class="code sev- "><tt><i>279</i>         <span class="c1"># e.g., -lc to libc</span></tt>
+            </div>
+            <div id="l280"
+               class="code sev- "><tt><i>280</i>         <span class="n">base</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;lib</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">.a&#39;</span></tt>
+            </div>
+            <div id="l281"
+               class="code sev- "><tt><i>281</i>         <span class="n">archive</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="n">base</span><span class="p">)</span></tt>
+            </div>
+            <div id="l282"
+               class="code sev- "><tt><i>282</i>         <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">archive</span><span class="p">):</span></tt>
+            </div>
+            <div id="l283"
+               class="code sev- "><tt><i>283</i>             <span class="n">members</span> <span class="o">=</span> <span class="n">get_shared</span><span class="p">(</span><span class="n">get_ld_headers</span><span class="p">(</span><span class="n">archive</span><span class="p">))</span></tt>
+            </div>
+            <div id="l284"
+               class="code sev- "><tt><i>284</i>             <span class="n">member</span> <span class="o">=</span> <span class="n">get_member</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">members</span><span class="p">)</span></tt>
+            </div>
+            <div id="l285"
+               class="code sev- "><tt><i>285</i>             <span class="k">if</span> <span class="n">member</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l286"
+               class="code sev- "><tt><i>286</i>                 <span class="k">return</span> <span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">member</span><span class="p">)</span></tt>
+            </div>
+            <div id="l287"
+               class="code sev- "><tt><i>287</i>             <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l288"
+               class="code sev- "><tt><i>288</i>                 <span class="k">return</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></tt>
+            </div>
+            <div id="l289"
+               class="code sev- "><tt><i>289</i>     <span class="k">return</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></tt>
+            </div>
+            <div id="l290"
+               class="code sev- "><tt><i>290</i> &nbsp;</tt>
+            </div>
+            <div id="l291"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>291</i> <span class="k">def</span> <span class="nf">find_library</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></tt>
+            </div>
+            <div id="l292"
+               class="code sev- "><tt><i>292</i>     <span class="sd">&quot;&quot;&quot;AIX implementation of ctypes.util.find_library()</span></tt>
+            </div>
+            <div id="l293"
+               class="code sev- "><tt><i>293</i> <span class="sd">    Find an archive member that will dlopen(). If not available,</span></tt>
+            </div>
+            <div id="l294"
+               class="code sev- "><tt><i>294</i> <span class="sd">    also search for a file (or link) with a .so suffix.</span></tt>
+            </div>
+            <div id="l295"
+               class="code sev- "><tt><i>295</i> &nbsp;</tt>
+            </div>
+            <div id="l296"
+               class="code sev- "><tt><i>296</i> <span class="sd">    AIX supports two types of schemes that can be used with dlopen().</span></tt>
+            </div>
+            <div id="l297"
+               class="code sev- "><tt><i>297</i> <span class="sd">    The so-called SystemV Release4 (svr4) format is commonly suffixed</span></tt>
+            </div>
+            <div id="l298"
+               class="code sev- "><tt><i>298</i> <span class="sd">    with .so while the (default) AIX scheme has the library (archive)</span></tt>
+            </div>
+            <div id="l299"
+               class="code sev- "><tt><i>299</i> <span class="sd">    ending with the suffix .a</span></tt>
+            </div>
+            <div id="l300"
+               class="code sev- "><tt><i>300</i> <span class="sd">    As an archive has multiple members (e.g., 32-bit and 64-bit) in one file</span></tt>
+            </div>
+            <div id="l301"
+               class="code sev- "><tt><i>301</i> <span class="sd">    the argument passed to dlopen must include both the library and</span></tt>
+            </div>
+            <div id="l302"
+               class="code sev- "><tt><i>302</i> <span class="sd">    the member names in a single string.</span></tt>
+            </div>
+            <div id="l303"
+               class="code sev- "><tt><i>303</i> &nbsp;</tt>
+            </div>
+            <div id="l304"
+               class="code sev- "><tt><i>304</i> <span class="sd">    find_library() looks first for an archive (.a) with a suitable member.</span></tt>
+            </div>
+            <div id="l305"
+               class="code sev- "><tt><i>305</i> <span class="sd">    If no archive+member pair is found, look for a .so file.</span></tt>
+            </div>
+            <div id="l306"
+               class="code sev- "><tt><i>306</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l307"
+               class="code sev- "><tt><i>307</i> &nbsp;</tt>
+            </div>
+            <div id="l308"
+               class="code sev- "><tt><i>308</i>     <span class="n">libpaths</span> <span class="o">=</span> <span class="n">get_libpaths</span><span class="p">()</span></tt>
+            </div>
+            <div id="l309"
+               class="code sev- "><tt><i>309</i>     <span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">member</span><span class="p">)</span> <span class="o">=</span> <span class="n">find_shared</span><span class="p">(</span><span class="n">libpaths</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></tt>
+            </div>
+            <div id="l310"
+               class="code sev- "><tt><i>310</i>     <span class="k">if</span> <span class="n">base</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l311"
+               class="code sev- "><tt><i>311</i>         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">member</span><span class="si">}</span><span class="s2">)&quot;</span></tt>
+            </div>
+            <div id="l312"
+               class="code sev- "><tt><i>312</i> &nbsp;</tt>
+            </div>
+            <div id="l313"
+               class="code sev- "><tt><i>313</i>     <span class="c1"># To get here, a member in an archive has not been found</span></tt>
+            </div>
+            <div id="l314"
+               class="code sev- "><tt><i>314</i>     <span class="c1"># In other words, either:</span></tt>
+            </div>
+            <div id="l315"
+               class="code sev- "><tt><i>315</i>     <span class="c1"># a) a .a file was not found</span></tt>
+            </div>
+            <div id="l316"
+               class="code sev- "><tt><i>316</i>     <span class="c1"># b) a .a file did not have a suitable member</span></tt>
+            </div>
+            <div id="l317"
+               class="code sev- "><tt><i>317</i>     <span class="c1"># So, look for a .so file</span></tt>
+            </div>
+            <div id="l318"
+               class="code sev- "><tt><i>318</i>     <span class="c1"># Check libpaths for .so file</span></tt>
+            </div>
+            <div id="l319"
+               class="code sev- "><tt><i>319</i>     <span class="c1"># Note, the installation must prepare a link from a .so</span></tt>
+            </div>
+            <div id="l320"
+               class="code sev- "><tt><i>320</i>     <span class="c1"># to a versioned file</span></tt>
+            </div>
+            <div id="l321"
+               class="code sev- "><tt><i>321</i>     <span class="c1"># This is common practice by GNU libtool on other platforms</span></tt>
+            </div>
+            <div id="l322"
+               class="code sev- "><tt><i>322</i>     <span class="n">soname</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;lib</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.so&quot;</span></tt>
+            </div>
+            <div id="l323"
+               class="code sev- "><tt><i>323</i>     <span class="k">for</span> <span class="nb">dir</span> <span class="ow">in</span> <span class="n">libpaths</span><span class="p">:</span></tt>
+            </div>
+            <div id="l324"
+               class="code sev- "><tt><i>324</i>         <span class="c1"># /lib is a symbolic link to /usr/lib, skip it</span></tt>
+            </div>
+            <div id="l325"
+               class="code sev- "><tt><i>325</i>         <span class="k">if</span> <span class="nb">dir</span> <span class="o">==</span> <span class="s2">&quot;/lib&quot;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l326"
+               class="code sev- "><tt><i>326</i>             <span class="k">continue</span></tt>
+            </div>
+            <div id="l327"
+               class="code sev- "><tt><i>327</i>         <span class="n">shlib</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="n">soname</span><span class="p">)</span></tt>
+            </div>
+            <div id="l328"
+               class="code sev- "><tt><i>328</i>         <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">shlib</span><span class="p">):</span></tt>
+            </div>
+            <div id="l329"
+               class="code sev- "><tt><i>329</i>             <span class="k">return</span> <span class="n">soname</span></tt>
+            </div>
+            <div id="l330"
+               class="code sev- "><tt><i>330</i>     <span class="c1"># if we are here, we have not found anything plausible</span></tt>
+            </div>
+            <div id="l331"
+               class="code sev- "><tt><i>331</i>     <span class="k">return</span> <span class="kc">None</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>

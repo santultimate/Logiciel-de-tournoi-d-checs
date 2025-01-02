@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>.conda/lib/python3.11/turtledemo/planet_and_moon.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <h1>
+            <a href="conda.lib.python3.11.turtledemo.planet_and_moon.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/turtledemo/planet_and_moon.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="ch">#!/usr/bin/env python3</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> <span class="sd">&quot;&quot;&quot;       turtle-example-suite:</span></tt>
+            </div>
+            <div id="l3"
+               class="code sev- "><tt><i>3</i> &nbsp;</tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> <span class="sd">        tdemo_planets_and_moon.py</span></tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> &nbsp;</tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i> <span class="sd">Gravitational system simulation using the</span></tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i> <span class="sd">approximation method from Feynman-lectures,</span></tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i> <span class="sd">p.9-8, using turtlegraphics.</span></tt>
+            </div>
+            <div id="l9"
+               class="code sev- "><tt><i>9</i> &nbsp;</tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i> <span class="sd">Example: heavy central body, light planet,</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i> <span class="sd">very light moon!</span></tt>
+            </div>
+            <div id="l12"
+               class="code sev- "><tt><i>12</i> <span class="sd">Planet has a circular orbit, moon a stable</span></tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i> <span class="sd">orbit around the planet.</span></tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i> &nbsp;</tt>
+            </div>
+            <div id="l15"
+               class="code sev- "><tt><i>15</i> <span class="sd">You can hold the movement temporarily by</span></tt>
+            </div>
+            <div id="l16"
+               class="code sev- "><tt><i>16</i> <span class="sd">pressing the left mouse button with the</span></tt>
+            </div>
+            <div id="l17"
+               class="code sev- "><tt><i>17</i> <span class="sd">mouse over the scrollbar of the canvas.</span></tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i> &nbsp;</tt>
+            </div>
+            <div id="l19"
+               class="code sev- "><tt><i>19</i> <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev- "><tt><i>20</i> <span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">Shape</span><span class="p">,</span> <span class="n">Turtle</span><span class="p">,</span> <span class="n">mainloop</span><span class="p">,</span> <span class="n">Vec2D</span> <span class="k">as</span> <span class="n">Vec</span></tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i> &nbsp;</tt>
+            </div>
+            <div id="l22"
+               class="code sev- "><tt><i>22</i> <span class="n">G</span> <span class="o">=</span> <span class="mi">8</span></tt>
+            </div>
+            <div id="l23"
+               class="code sev- "><tt><i>23</i> &nbsp;</tt>
+            </div>
+            <div id="l24"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>24</i> <span class="k">class</span> <span class="nc">GravSys</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span></tt>
+            </div>
+            <div id="l25"
+               class="code sev- "><tt><i>25</i>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l26"
+               class="code sev- "><tt><i>26</i>         <span class="bp">self</span><span class="o">.</span><span class="n">planets</span> <span class="o">=</span> <span class="p">[]</span></tt>
+            </div>
+            <div id="l27"
+               class="code sev- "><tt><i>27</i>         <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="mi">0</span></tt>
+            </div>
+            <div id="l28"
+               class="code sev- "><tt><i>28</i>         <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span></tt>
+            </div>
+            <div id="l29"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E301
+                     </span>
+                     Expected 1 blank line, found 0</li>
+               
+               </ul><tt><i>29</i>     <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l30"
+               class="code sev- "><tt><i>30</i>         <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">planets</span><span class="p">:</span></tt>
+            </div>
+            <div id="l31"
+               class="code sev- "><tt><i>31</i>             <span class="n">p</span><span class="o">.</span><span class="n">init</span><span class="p">()</span></tt>
+            </div>
+            <div id="l32"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E301
+                     </span>
+                     Expected 1 blank line, found 0</li>
+               
+               </ul><tt><i>32</i>     <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l33"
+               class="code sev- "><tt><i>33</i>         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span></tt>
+            </div>
+            <div id="l34"
+               class="code sev- "><tt><i>34</i>             <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span></tt>
+            </div>
+            <div id="l35"
+               class="code sev- "><tt><i>35</i>             <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">planets</span><span class="p">:</span></tt>
+            </div>
+            <div id="l36"
+               class="code sev- "><tt><i>36</i>                 <span class="n">p</span><span class="o">.</span><span class="n">step</span><span class="p">()</span></tt>
+            </div>
+            <div id="l37"
+               class="code sev- "><tt><i>37</i> &nbsp;</tt>
+            </div>
+            <div id="l38"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>38</i> <span class="k">class</span> <span class="nc">Star</span><span class="p">(</span><span class="n">Turtle</span><span class="p">):</span></tt>
+            </div>
+            <div id="l39"
+               class="code sev- "><tt><i>39</i>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">gravSys</span><span class="p">,</span> <span class="n">shape</span><span class="p">):</span></tt>
+            </div>
+            <div id="l40"
+               class="code sev- "><tt><i>40</i>         <span class="n">Turtle</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">)</span></tt>
+            </div>
+            <div id="l41"
+               class="code sev- "><tt><i>41</i>         <span class="bp">self</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span></tt>
+            </div>
+            <div id="l42"
+               class="code sev- "><tt><i>42</i>         <span class="bp">self</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">m</span></tt>
+            </div>
+            <div id="l43"
+               class="code sev- "><tt><i>43</i>         <span class="bp">self</span><span class="o">.</span><span class="n">setpos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></tt>
+            </div>
+            <div id="l44"
+               class="code sev- "><tt><i>44</i>         <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="n">v</span></tt>
+            </div>
+            <div id="l45"
+               class="code sev- "><tt><i>45</i>         <span class="n">gravSys</span><span class="o">.</span><span class="n">planets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></tt>
+            </div>
+            <div id="l46"
+               class="code sev- "><tt><i>46</i>         <span class="bp">self</span><span class="o">.</span><span class="n">gravSys</span> <span class="o">=</span> <span class="n">gravSys</span></tt>
+            </div>
+            <div id="l47"
+               class="code sev- "><tt><i>47</i>         <span class="bp">self</span><span class="o">.</span><span class="n">resizemode</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l48"
+               class="code sev- "><tt><i>48</i>         <span class="bp">self</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span></tt>
+            </div>
+            <div id="l49"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E301
+                     </span>
+                     Expected 1 blank line, found 0</li>
+               
+               </ul><tt><i>49</i>     <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l50"
+               class="code sev- "><tt><i>50</i>         <span class="n">dt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gravSys</span><span class="o">.</span><span class="n">dt</span></tt>
+            </div>
+            <div id="l51"
+               class="code sev- "><tt><i>51</i>         <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">acc</span><span class="p">()</span></tt>
+            </div>
+            <div id="l52"
+               class="code sev- "><tt><i>52</i>         <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">dt</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span></tt>
+            </div>
+            <div id="l53"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E301
+                     </span>
+                     Expected 1 blank line, found 0</li>
+               
+               </ul><tt><i>53</i>     <span class="k">def</span> <span class="nf">acc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l54"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E231
+                     </span>
+                     Missing whitespace after ','</li>
+               
+               </ul><tt><i>54</i>         <span class="n">a</span> <span class="o">=</span> <span class="n">Vec</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span></tt>
+            </div>
+            <div id="l55"
+               class="code sev- "><tt><i>55</i>         <span class="k">for</span> <span class="n">planet</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gravSys</span><span class="o">.</span><span class="n">planets</span><span class="p">:</span></tt>
+            </div>
+            <div id="l56"
+               class="code sev- "><tt><i>56</i>             <span class="k">if</span> <span class="n">planet</span> <span class="o">!=</span> <span class="bp">self</span><span class="p">:</span></tt>
+            </div>
+            <div id="l57"
+               class="code sev- "><tt><i>57</i>                 <span class="n">v</span> <span class="o">=</span> <span class="n">planet</span><span class="o">.</span><span class="n">pos</span><span class="p">()</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="p">()</span></tt>
+            </div>
+            <div id="l58"
+               class="code sev- "><tt><i>58</i>                 <span class="n">a</span> <span class="o">+=</span> <span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">planet</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">v</span></tt>
+            </div>
+            <div id="l59"
+               class="code sev- "><tt><i>59</i>         <span class="k">return</span> <span class="n">a</span></tt>
+            </div>
+            <div id="l60"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E301
+                     </span>
+                     Expected 1 blank line, found 0</li>
+               
+               </ul><tt><i>60</i>     <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l61"
+               class="code sev- "><tt><i>61</i>         <span class="n">dt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gravSys</span><span class="o">.</span><span class="n">dt</span></tt>
+            </div>
+            <div id="l62"
+               class="code sev- "><tt><i>62</i>         <span class="bp">self</span><span class="o">.</span><span class="n">setpos</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="p">()</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">v</span><span class="p">)</span></tt>
+            </div>
+            <div id="l63"
+               class="code sev- "><tt><i>63</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gravSys</span><span class="o">.</span><span class="n">planets</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span></tt>
+            </div>
+            <div id="l64"
+               class="code sev- "><tt><i>64</i>             <span class="bp">self</span><span class="o">.</span><span class="n">setheading</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">towards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gravSys</span><span class="o">.</span><span class="n">planets</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span></tt>
+            </div>
+            <div id="l65"
+               class="code sev- "><tt><i>65</i>         <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">acc</span><span class="p">()</span></tt>
+            </div>
+            <div id="l66"
+               class="code sev- "><tt><i>66</i>         <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span></tt>
+            </div>
+            <div id="l67"
+               class="code sev- "><tt><i>67</i> &nbsp;</tt>
+            </div>
+            <div id="l68"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E266
+                     </span>
+                     Too many leading '#' for block comment</li>
+               
+               </ul><tt><i>68</i> <span class="c1">## create compound yellow/blue turtleshape for planets</span></tt>
+            </div>
+            <div id="l69"
+               class="code sev- "><tt><i>69</i> &nbsp;</tt>
+            </div>
+            <div id="l70"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>70</i> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span></tt>
+            </div>
+            <div id="l71"
+               class="code sev- "><tt><i>71</i>     <span class="n">s</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span></tt>
+            </div>
+            <div id="l72"
+               class="code sev- "><tt><i>72</i>     <span class="n">s</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span></tt>
+            </div>
+            <div id="l73"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E231
+                     </span>
+                     Missing whitespace after ','</li>
+               
+               </ul><tt><i>73</i>     <span class="n">s</span><span class="o">.</span><span class="n">getscreen</span><span class="p">()</span><span class="o">.</span><span class="n">tracer</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span></tt>
+            </div>
+            <div id="l74"
+               class="code sev- "><tt><i>74</i>     <span class="n">s</span><span class="o">.</span><span class="n">ht</span><span class="p">()</span></tt>
+            </div>
+            <div id="l75"
+               class="code sev- "><tt><i>75</i>     <span class="n">s</span><span class="o">.</span><span class="n">pu</span><span class="p">()</span></tt>
+            </div>
+            <div id="l76"
+               class="code sev- "><tt><i>76</i>     <span class="n">s</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span></tt>
+            </div>
+            <div id="l77"
+               class="code sev- "><tt><i>77</i>     <span class="n">s</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span></tt>
+            </div>
+            <div id="l78"
+               class="code sev- "><tt><i>78</i>     <span class="n">s</span><span class="o">.</span><span class="n">begin_poly</span><span class="p">()</span></tt>
+            </div>
+            <div id="l79"
+               class="code sev- "><tt><i>79</i>     <span class="n">s</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span></tt>
+            </div>
+            <div id="l80"
+               class="code sev- "><tt><i>80</i>     <span class="n">s</span><span class="o">.</span><span class="n">end_poly</span><span class="p">()</span></tt>
+            </div>
+            <div id="l81"
+               class="code sev- "><tt><i>81</i>     <span class="n">m1</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">get_poly</span><span class="p">()</span></tt>
+            </div>
+            <div id="l82"
+               class="code sev- "><tt><i>82</i>     <span class="n">s</span><span class="o">.</span><span class="n">begin_poly</span><span class="p">()</span></tt>
+            </div>
+            <div id="l83"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E231
+                     </span>
+                     Missing whitespace after ','</li>
+               
+               </ul><tt><i>83</i>     <span class="n">s</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">180</span><span class="p">)</span></tt>
+            </div>
+            <div id="l84"
+               class="code sev- "><tt><i>84</i>     <span class="n">s</span><span class="o">.</span><span class="n">end_poly</span><span class="p">()</span></tt>
+            </div>
+            <div id="l85"
+               class="code sev- "><tt><i>85</i>     <span class="n">m2</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">get_poly</span><span class="p">()</span></tt>
+            </div>
+            <div id="l86"
+               class="code sev- "><tt><i>86</i> &nbsp;</tt>
+            </div>
+            <div id="l87"
+               class="code sev- "><tt><i>87</i>     <span class="n">planetshape</span> <span class="o">=</span> <span class="n">Shape</span><span class="p">(</span><span class="s2">&quot;compound&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l88"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E231
+                     </span>
+                     Missing whitespace after ','</li>
+               
+               </ul><tt><i>88</i>     <span class="n">planetshape</span><span class="o">.</span><span class="n">addcomponent</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l89"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E231
+                     </span>
+                     Missing whitespace after ','</li>
+               
+               </ul><tt><i>89</i>     <span class="n">planetshape</span><span class="o">.</span><span class="n">addcomponent</span><span class="p">(</span><span class="n">m2</span><span class="p">,</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l90"
+               class="code sev- "><tt><i>90</i>     <span class="n">s</span><span class="o">.</span><span class="n">getscreen</span><span class="p">()</span><span class="o">.</span><span class="n">register_shape</span><span class="p">(</span><span class="s2">&quot;planet&quot;</span><span class="p">,</span> <span class="n">planetshape</span><span class="p">)</span></tt>
+            </div>
+            <div id="l91"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E231
+                     </span>
+                     Missing whitespace after ','</li>
+               
+               </ul><tt><i>91</i>     <span class="n">s</span><span class="o">.</span><span class="n">getscreen</span><span class="p">()</span><span class="o">.</span><span class="n">tracer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span></tt>
+            </div>
+            <div id="l92"
+               class="code sev- "><tt><i>92</i> &nbsp;</tt>
+            </div>
+            <div id="l93"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E266
+                     </span>
+                     Too many leading '#' for block comment</li>
+               
+               </ul><tt><i>93</i>     <span class="c1">## setup gravitational system</span></tt>
+            </div>
+            <div id="l94"
+               class="code sev- "><tt><i>94</i>     <span class="n">gs</span> <span class="o">=</span> <span class="n">GravSys</span><span class="p">()</span></tt>
+            </div>
+            <div id="l95"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E231
+                     </span>
+                     Missing whitespace after ',' (in 2 places)</li>
+               
+               </ul><tt><i>95</i>     <span class="n">sun</span> <span class="o">=</span> <span class="n">Star</span><span class="p">(</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">Vec</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">Vec</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mf">2.5</span><span class="p">),</span> <span class="n">gs</span><span class="p">,</span> <span class="s2">&quot;circle&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l96"
+               class="code sev- "><tt><i>96</i>     <span class="n">sun</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">&quot;yellow&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l97"
+               class="code sev- "><tt><i>97</i>     <span class="n">sun</span><span class="o">.</span><span class="n">shapesize</span><span class="p">(</span><span class="mf">1.8</span><span class="p">)</span></tt>
+            </div>
+            <div id="l98"
+               class="code sev- "><tt><i>98</i>     <span class="n">sun</span><span class="o">.</span><span class="n">pu</span><span class="p">()</span></tt>
+            </div>
+            <div id="l99"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E231
+                     </span>
+                     Missing whitespace after ',' (in 2 places)</li>
+               
+               </ul><tt><i>99</i>     <span class="n">earth</span> <span class="o">=</span> <span class="n">Star</span><span class="p">(</span><span class="mi">12500</span><span class="p">,</span> <span class="n">Vec</span><span class="p">(</span><span class="mi">210</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">Vec</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">195</span><span class="p">),</span> <span class="n">gs</span><span class="p">,</span> <span class="s2">&quot;planet&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l100"
+               class="code sev- "><tt><i>100</i>     <span class="n">earth</span><span class="o">.</span><span class="n">pencolor</span><span class="p">(</span><span class="s2">&quot;green&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l101"
+               class="code sev- "><tt><i>101</i>     <span class="n">earth</span><span class="o">.</span><span class="n">shapesize</span><span class="p">(</span><span class="mf">0.8</span><span class="p">)</span></tt>
+            </div>
+            <div id="l102"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E231
+                     </span>
+                     Missing whitespace after ',' (in 2 places)</li>
+               
+               </ul><tt><i>102</i>     <span class="n">moon</span> <span class="o">=</span> <span class="n">Star</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Vec</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">Vec</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">295</span><span class="p">),</span> <span class="n">gs</span><span class="p">,</span> <span class="s2">&quot;planet&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l103"
+               class="code sev- "><tt><i>103</i>     <span class="n">moon</span><span class="o">.</span><span class="n">pencolor</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l104"
+               class="code sev- "><tt><i>104</i>     <span class="n">moon</span><span class="o">.</span><span class="n">shapesize</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span></tt>
+            </div>
+            <div id="l105"
+               class="code sev- "><tt><i>105</i>     <span class="n">gs</span><span class="o">.</span><span class="n">init</span><span class="p">()</span></tt>
+            </div>
+            <div id="l106"
+               class="code sev- "><tt><i>106</i>     <span class="n">gs</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></tt>
+            </div>
+            <div id="l107"
+               class="code sev- "><tt><i>107</i>     <span class="k">return</span> <span class="s2">&quot;Done!&quot;</span></tt>
+            </div>
+            <div id="l108"
+               class="code sev- "><tt><i>108</i> &nbsp;</tt>
+            </div>
+            <div id="l109"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E305
+                     </span>
+                     Expected 2 blank lines after class or function definition, found 1</li>
+               
+               </ul><tt><i>109</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l110"
+               class="code sev- "><tt><i>110</i>     <span class="n">main</span><span class="p">()</span></tt>
+            </div>
+            <div id="l111"
+               class="code sev- "><tt><i>111</i>     <span class="n">mainloop</span><span class="p">()</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>

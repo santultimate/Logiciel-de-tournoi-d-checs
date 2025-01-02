@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/http/__init__.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.http.__init__.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/http/__init__.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  47
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l37">
+                  <tt><i>37</i>             <span class="s1">&#39;Switching to new protocol; obey Upgrade header&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l45">
+                  <tt><i>45</i>         <span class="s1">&#39;Request accepted, processing continues off-line&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l47">
+                  <tt><i>47</i>         <span class="s1">&#39;Non-Authoritative Information&#39;</span><span class="p">,</span> <span class="s1">&#39;Request fulfilled from cache&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l57">
+                  <tt><i>57</i>         <span class="s1">&#39;Object has several resources -- see URI list&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l59">
+                  <tt><i>59</i>         <span class="s1">&#39;Object moved permanently -- see URI list&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l63">
+                  <tt><i>63</i>         <span class="s1">&#39;Document has not changed since given time&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l65">
+                  <tt><i>65</i>         <span class="s1">&#39;You must use proxy specified in Location to access this resource&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l67">
+                  <tt><i>67</i>         <span class="s1">&#39;Object moved temporarily -- see URI list&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l69">
+                  <tt><i>69</i>         <span class="s1">&#39;Object moved permanently -- see URI list&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l73">
+                  <tt><i>73</i>         <span class="s1">&#39;Bad request syntax or unsupported method&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l75">
+                  <tt><i>75</i>         <span class="s1">&#39;No permission -- see authorization schemes&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l77">
+                  <tt><i>77</i>         <span class="s1">&#39;No payment -- see charging schemes&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l79">
+                  <tt><i>79</i>         <span class="s1">&#39;Request forbidden -- authorization will not help&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l81">
+                  <tt><i>81</i>         <span class="s1">&#39;Nothing matches the given URI&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l83">
+                  <tt><i>83</i>         <span class="s1">&#39;Specified method is invalid for this resource&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l85">
+                  <tt><i>85</i>         <span class="s1">&#39;URI not available in preferred format&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l87">
+                  <tt><i>87</i>         <span class="s1">&#39;Proxy Authentication Required&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l88">
+                  <tt><i>88</i>         <span class="s1">&#39;You must authenticate with this proxy before proceeding&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l90">
+                  <tt><i>90</i>         <span class="s1">&#39;Request timed out; try again later&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l93">
+                  <tt><i>93</i>         <span class="s1">&#39;URI no longer exists and has been permanently removed&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l95">
+                  <tt><i>95</i>         <span class="s1">&#39;Client must specify Content-Length&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l97">
+                  <tt><i>97</i>         <span class="s1">&#39;Precondition in headers is false&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l99">
+                  <tt><i>99</i>         <span class="s1">&#39;Entity is too large&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l101">
+                  <tt><i>101</i>         <span class="s1">&#39;URI is too long&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l103">
+                  <tt><i>103</i>         <span class="s1">&#39;Entity body in unsupported format&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l105">
+                  <tt><i>105</i>         <span class="s1">&#39;Requested Range Not Satisfiable&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l106">
+                  <tt><i>106</i>         <span class="s1">&#39;Cannot satisfy request range&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l108">
+                  <tt><i>108</i>         <span class="s1">&#39;Expect condition could not be satisfied&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l110">
+                  <tt><i>110</i>         <span class="s1">&#39;Server refuses to brew coffee because it is a teapot.&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l112">
+                  <tt><i>112</i>         <span class="s1">&#39;Server is not able to produce a response&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l119">
+                  <tt><i>119</i>         <span class="s1">&#39;The origin server requires the request to be conditional&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l121">
+                  <tt><i>121</i>         <span class="s1">&#39;The user has sent too many requests in &#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l122">
+                  <tt><i>122</i>         <span class="s1">&#39;a given amount of time (&quot;rate limiting&quot;)&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l124">
+                  <tt><i>124</i>         <span class="s1">&#39;Request Header Fields Too Large&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l125">
+                  <tt><i>125</i>         <span class="s1">&#39;The server is unwilling to process the request because its header &#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l126">
+                  <tt><i>126</i>         <span class="s1">&#39;fields are too large&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l128">
+                  <tt><i>128</i>         <span class="s1">&#39;Unavailable For Legal Reasons&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l129">
+                  <tt><i>129</i>         <span class="s1">&#39;The server is denying access to the &#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l130">
+                  <tt><i>130</i>         <span class="s1">&#39;resource as a consequence of a legal demand&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l134">
+                  <tt><i>134</i>         <span class="s1">&#39;Server got itself in trouble&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l136">
+                  <tt><i>136</i>         <span class="s1">&#39;Server does not support this operation&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l138">
+                  <tt><i>138</i>         <span class="s1">&#39;Invalid responses from another server/proxy&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l140">
+                  <tt><i>140</i>         <span class="s1">&#39;The server cannot process the request due to a high load&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l142">
+                  <tt><i>142</i>         <span class="s1">&#39;The gateway server did not receive a timely response&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l144">
+                  <tt><i>144</i>         <span class="s1">&#39;Cannot fulfill request&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l150">
+                  <tt><i>150</i>         <span class="s1">&#39;Network Authentication Required&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.__init__.source.html#l151">
+                  <tt><i>151</i>         <span class="s1">&#39;The client needs to authenticate to gain network access&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

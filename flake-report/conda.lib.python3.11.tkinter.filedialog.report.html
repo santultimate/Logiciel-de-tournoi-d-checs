@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/tkinter/filedialog.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.tkinter.filedialog.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/tkinter/filedialog.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l399">
+                  <tt><i>399</i>     <span class="n">options</span><span class="p">[</span><span class="s2">&quot;multiple&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l424">
+                  <tt><i>424</i>         <span class="n">ofiles</span><span class="o">=</span><span class="p">[]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l427">
+                  <tt><i>427</i>         <span class="n">files</span><span class="o">=</span><span class="n">ofiles</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l476">
+                  <tt><i>476</i>     <span class="n">openfilename</span><span class="o">=</span><span class="n">askopenfilename</span><span class="p">(</span><span class="n">filetypes</span><span class="o">=</span><span class="p">[(</span><span class="s2">&quot;all files&quot;</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">)])</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l478">
+                  <tt><i>478</i>         <span class="n">fp</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="n">openfilename</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l488">
+                  <tt><i>488</i>     <span class="n">saveasfilename</span><span class="o">=</span><span class="n">asksaveasfilename</span><span class="p">()</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E251">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E251:</strong> unexpected spaces around keyword / parameter equals
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l405">
+                  <tt><i>405</i> <span class="k">def</span> <span class="nf">askopenfile</span><span class="p">(</span><span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l414">
+                  <tt><i>414</i> <span class="k">def</span> <span class="nf">askopenfiles</span><span class="p">(</span><span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l431">
+                  <tt><i>431</i> <span class="k">def</span> <span class="nf">asksaveasfile</span><span class="p">(</span><span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l135">
+                  <tt><i>135</i>         <span class="bp">self</span><span class="o">.</span><span class="n">top</span><span class="o">.</span><span class="n">wait_visibility</span><span class="p">()</span> <span class="c1"># window needs to be visible for the grab</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l325">
+                  <tt><i>325</i>         <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">result</span> <span class="c1"># compatibility</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l374">
+                  <tt><i>374</i>         <span class="bp">self</span><span class="o">.</span><span class="n">directory</span> <span class="o">=</span> <span class="n">result</span> <span class="c1"># compatibility</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l105">
+                  <tt><i>105</i>                                  <span class="n">text</span><span class="o">=</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l106">
+                  <tt><i>106</i>                                  <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ok_command</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l469">
+                  <tt><i>469</i>         <span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l478">
+                  <tt><i>478</i>         <span class="n">fp</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="n">openfilename</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l59">
+                  <tt><i>59</i>         <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">title</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l198">
+                  <tt><i>198</i>         <span class="k">if</span> <span class="n">tail</span> <span class="o">==</span> <span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">:</span> <span class="n">tail</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E211">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E211:</strong> whitespace before '('
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l440">
+                  <tt><i>440</i> <span class="k">def</span> <span class="nf">askdirectory</span> <span class="p">(</span><span class="o">**</span><span class="n">options</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.filedialog.source.html#l480">
+                  <tt><i>480</i>     <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

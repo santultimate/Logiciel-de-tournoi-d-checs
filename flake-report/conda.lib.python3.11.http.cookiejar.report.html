@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/http/cookiejar.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.http.cookiejar.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/http/cookiejar.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  47
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l171">
+                  <tt><i>171</i>     <span class="k">if</span> <span class="n">hr</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">hr</span> <span class="o">=</span> <span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l172">
+                  <tt><i>172</i>     <span class="k">if</span> <span class="nb">min</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="nb">min</span> <span class="o">=</span> <span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l173">
+                  <tt><i>173</i>     <span class="k">if</span> <span class="n">sec</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">sec</span> <span class="o">=</span> <span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l188">
+                  <tt><i>188</i>             <span class="k">if</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="n">yr</span> <span class="o">=</span> <span class="n">yr</span> <span class="o">+</span> <span class="mi">100</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l189">
+                  <tt><i>189</i>             <span class="k">else</span><span class="p">:</span> <span class="n">yr</span> <span class="o">=</span> <span class="n">yr</span> <span class="o">-</span> <span class="mi">100</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l421">
+                  <tt><i>421</i>                 <span class="k">if</span> <span class="n">pairs</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pairs</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l430">
+                  <tt><i>430</i>         <span class="k">if</span> <span class="n">pairs</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pairs</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l456">
+                  <tt><i>456</i>         <span class="k">if</span> <span class="n">attr</span><span class="p">:</span> <span class="n">headers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">attr</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l774">
+                  <tt><i>774</i>         <span class="k">if</span> <span class="n">version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span> <span class="n">version</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">version</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l775">
+                  <tt><i>775</i>         <span class="k">if</span> <span class="n">expires</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span> <span class="n">expires</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">expires</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l811">
+                  <tt><i>811</i>         <span class="k">if</span> <span class="n">now</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l817">
+                  <tt><i>817</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">p</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l818">
+                  <tt><i>818</i>         <span class="k">else</span><span class="p">:</span> <span class="n">p</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1244">
+                  <tt><i>1244</i> <span class="k">class</span> <span class="nc">Absent</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1523">
+                  <tt><i>1523</i>             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1584">
+                  <tt><i>1584</i>             <span class="k">if</span> <span class="n">cookie</span><span class="p">:</span> <span class="n">cookies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cookie</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1672">
+                  <tt><i>1672</i>             <span class="k">if</span> <span class="n">cookie</span><span class="o">.</span><span class="n">domain</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="n">cookie</span><span class="o">.</span><span class="n">domain</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1674">
+                  <tt><i>1674</i>             <span class="k">if</span> <span class="n">cookie</span><span class="o">.</span><span class="n">path</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">c2</span><span class="p">:</span> <span class="n">c2</span><span class="p">[</span><span class="n">cookie</span><span class="o">.</span><span class="n">path</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1759">
+                  <tt><i>1759</i>         <span class="k">for</span> <span class="n">cookie</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1764">
+                  <tt><i>1764</i>         <span class="k">for</span> <span class="n">cookie</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">cookie</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1769">
+                  <tt><i>1769</i>         <span class="k">for</span> <span class="n">cookie</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">cookie</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1774">
+                  <tt><i>1774</i> <span class="k">class</span> <span class="nc">LoadError</span><span class="p">(</span><span class="ne">OSError</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1798">
+                  <tt><i>1798</i>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span> <span class="n">filename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1799">
+                  <tt><i>1799</i>             <span class="k">else</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">MISSING_FILENAME_TEXT</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1813">
+                  <tt><i>1813</i>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span> <span class="n">filename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1814">
+                  <tt><i>1814</i>             <span class="k">else</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">MISSING_FILENAME_TEXT</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1840">
+                  <tt><i>1840</i>     <span class="k">if</span> <span class="n">cookie</span><span class="o">.</span><span class="n">port</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span> <span class="n">h</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;port&quot;</span><span class="p">,</span> <span class="n">cookie</span><span class="o">.</span><span class="n">port</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1841">
+                  <tt><i>1841</i>     <span class="k">if</span> <span class="n">cookie</span><span class="o">.</span><span class="n">path_specified</span><span class="p">:</span> <span class="n">h</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;path_spec&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1842">
+                  <tt><i>1842</i>     <span class="k">if</span> <span class="n">cookie</span><span class="o">.</span><span class="n">port_specified</span><span class="p">:</span> <span class="n">h</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;port_spec&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1843">
+                  <tt><i>1843</i>     <span class="k">if</span> <span class="n">cookie</span><span class="o">.</span><span class="n">domain_initial_dot</span><span class="p">:</span> <span class="n">h</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;domain_dot&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1844">
+                  <tt><i>1844</i>     <span class="k">if</span> <span class="n">cookie</span><span class="o">.</span><span class="n">secure</span><span class="p">:</span> <span class="n">h</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;secure&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1845">
+                  <tt><i>1845</i>     <span class="k">if</span> <span class="n">cookie</span><span class="o">.</span><span class="n">expires</span><span class="p">:</span> <span class="n">h</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;expires&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1847">
+                  <tt><i>1847</i>     <span class="k">if</span> <span class="n">cookie</span><span class="o">.</span><span class="n">discard</span><span class="p">:</span> <span class="n">h</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;discard&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1848">
+                  <tt><i>1848</i>     <span class="k">if</span> <span class="n">cookie</span><span class="o">.</span><span class="n">comment</span><span class="p">:</span> <span class="n">h</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;comment&quot;</span><span class="p">,</span> <span class="n">cookie</span><span class="o">.</span><span class="n">comment</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1849">
+                  <tt><i>1849</i>     <span class="k">if</span> <span class="n">cookie</span><span class="o">.</span><span class="n">comment_url</span><span class="p">:</span> <span class="n">h</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;commenturl&quot;</span><span class="p">,</span> <span class="n">cookie</span><span class="o">.</span><span class="n">comment_url</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1890">
+                  <tt><i>1890</i>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span> <span class="n">filename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1891">
+                  <tt><i>1891</i>             <span class="k">else</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">MISSING_FILENAME_TEXT</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1923">
+                  <tt><i>1923</i>                 <span class="k">if</span> <span class="n">line</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="k">break</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1943">
+                  <tt><i>1943</i>                             <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">v</span> <span class="o">=</span> <span class="kc">True</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l2027">
+                  <tt><i>2027</i>                 <span class="k">if</span> <span class="n">line</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="k">break</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l2037">
+                  <tt><i>2037</i>                 <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">):</span> <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l2089">
+                  <tt><i>2089</i>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span> <span class="n">filename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l2090">
+                  <tt><i>2090</i>             <span class="k">else</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">MISSING_FILENAME_TEXT</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l2104">
+                  <tt><i>2104</i>                 <span class="k">if</span> <span class="n">cookie</span><span class="o">.</span><span class="n">secure</span><span class="p">:</span> <span class="n">secure</span> <span class="o">=</span> <span class="s2">&quot;TRUE&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l2105">
+                  <tt><i>2105</i>                 <span class="k">else</span><span class="p">:</span> <span class="n">secure</span> <span class="o">=</span> <span class="s2">&quot;FALSE&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l2106">
+                  <tt><i>2106</i>                 <span class="k">if</span> <span class="n">domain</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">):</span> <span class="n">initial_dot</span> <span class="o">=</span> <span class="s2">&quot;TRUE&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l2107">
+                  <tt><i>2107</i>                 <span class="k">else</span><span class="p">:</span> <span class="n">initial_dot</span> <span class="o">=</span> <span class="s2">&quot;FALSE&quot;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  29
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l44">
+                  <tt><i>44</i> <span class="k">def</span> <span class="nf">_debug</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l66">
+                  <tt><i>66</i> <span class="k">def</span> <span class="nf">_warn_unhandled_exception</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l81">
+                  <tt><i>81</i> <span class="k">def</span> <span class="nf">_timegm</span><span class="p">(</span><span class="n">tt</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l94">
+                  <tt><i>94</i> <span class="k">def</span> <span class="nf">time2isoz</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l113">
+                  <tt><i>113</i> <span class="k">def</span> <span class="nf">time2netscape</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l136">
+                  <tt><i>136</i> <span class="k">def</span> <span class="nf">offset_from_tz_string</span><span class="p">(</span><span class="n">tz</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l150">
+                  <tt><i>150</i> <span class="k">def</span> <span class="nf">_str2time</span><span class="p">(</span><span class="n">day</span><span class="p">,</span> <span class="n">mon</span><span class="p">,</span> <span class="n">yr</span><span class="p">,</span> <span class="n">hr</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="n">sec</span><span class="p">,</span> <span class="n">tz</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l232">
+                  <tt><i>232</i> <span class="k">def</span> <span class="nf">http2time</span><span class="p">(</span><span class="n">text</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l306">
+                  <tt><i>306</i> <span class="k">def</span> <span class="nf">iso2time</span><span class="p">(</span><span class="n">text</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l348">
+                  <tt><i>348</i> <span class="k">def</span> <span class="nf">split_header_words</span><span class="p">(</span><span class="n">header_values</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l434">
+                  <tt><i>434</i> <span class="k">def</span> <span class="nf">join_header_words</span><span class="p">(</span><span class="n">lists</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l459">
+                  <tt><i>459</i> <span class="k">def</span> <span class="nf">strip_quotes</span><span class="p">(</span><span class="n">text</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l466">
+                  <tt><i>466</i> <span class="k">def</span> <span class="nf">parse_ns_headers</span><span class="p">(</span><span class="n">ns_headers</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l535">
+                  <tt><i>535</i> <span class="k">def</span> <span class="nf">is_HDN</span><span class="p">(</span><span class="n">text</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l550">
+                  <tt><i>550</i> <span class="k">def</span> <span class="nf">domain_match</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l589">
+                  <tt><i>589</i> <span class="k">def</span> <span class="nf">liberal_is_HDN</span><span class="p">(</span><span class="n">text</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l599">
+                  <tt><i>599</i> <span class="k">def</span> <span class="nf">user_domain_match</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l620">
+                  <tt><i>620</i> <span class="k">def</span> <span class="nf">request_host</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l636">
+                  <tt><i>636</i> <span class="k">def</span> <span class="nf">eff_request_host</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l647">
+                  <tt><i>647</i> <span class="k">def</span> <span class="nf">request_path</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l657">
+                  <tt><i>657</i> <span class="k">def</span> <span class="nf">request_port</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l675">
+                  <tt><i>675</i> <span class="k">def</span> <span class="nf">uppercase_escaped_char</span><span class="p">(</span><span class="n">match</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l677">
+                  <tt><i>677</i> <span class="k">def</span> <span class="nf">escape_path</span><span class="p">(</span><span class="n">path</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l691">
+                  <tt><i>691</i> <span class="k">def</span> <span class="nf">reach</span><span class="p">(</span><span class="n">h</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l726">
+                  <tt><i>726</i> <span class="k">def</span> <span class="nf">is_third_party</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1227">
+                  <tt><i>1227</i> <span class="k">def</span> <span class="nf">deepvalues</span><span class="p">(</span><span class="n">mapping</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1246">
+                  <tt><i>1246</i> <span class="k">class</span> <span class="nc">CookieJar</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1776">
+                  <tt><i>1776</i> <span class="k">class</span> <span class="nc">FileCookieJar</span><span class="p">(</span><span class="n">CookieJar</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1859">
+                  <tt><i>1859</i> <span class="k">class</span> <span class="nc">LWPCookieJar</span><span class="p">(</span><span class="n">FileCookieJar</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E129">
+               <span class="count sev-2">
+                  13
+               </span>
+               <strong>E129:</strong> visually indented line with same indent as next logical line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l84">
+                  <tt><i>84</i>         <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">hour</span> <span class="o">&lt;=</span> <span class="mi">24</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="nb">min</span> <span class="o">&lt;=</span> <span class="mi">59</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">sec</span> <span class="o">&lt;=</span> <span class="mi">61</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l999">
+                  <tt><i>999</i>             <span class="n">cookie</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;$&quot;</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1009">
+                  <tt><i>1009</i>                 <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_return_ok</span><span class="p">(</span><span class="n">cookie</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">request</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1060">
+                  <tt><i>1060</i>                 <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">strict_ns_domain</span> <span class="o">&amp;</span> <span class="bp">self</span><span class="o">.</span><span class="n">DomainRFC2965Match</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1066">
+                  <tt><i>1066</i>                 <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">strict_ns_domain</span> <span class="o">&amp;</span> <span class="bp">self</span><span class="o">.</span><span class="n">DomainStrictNoDots</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1069">
+                  <tt><i>1069</i>                     <span class="ow">not</span> <span class="n">IPV4_RE</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">req_host</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1173">
+                  <tt><i>1173</i>             <span class="ow">not</span> <span class="n">cookie</span><span class="o">.</span><span class="n">domain_specified</span> <span class="ow">and</span> <span class="n">domain</span> <span class="o">!=</span> <span class="n">erhn</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1329">
+                  <tt><i>1329</i>                 <span class="bp">self</span><span class="o">.</span><span class="n">non_word_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">cookie</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="ow">and</span> <span class="n">version</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1345">
+                  <tt><i>1345</i>                         <span class="n">domain</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1378">
+                  <tt><i>1378</i>                 <span class="ow">not</span> <span class="n">request</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s2">&quot;Cookie2&quot;</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1471">
+                  <tt><i>1471</i>                         <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;port&quot;</span><span class="p">,</span> <span class="s2">&quot;comment&quot;</span><span class="p">,</span> <span class="s2">&quot;commenturl&quot;</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1613">
+                  <tt><i>1613</i>             <span class="p">(</span><span class="ow">not</span> <span class="n">netscape</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">rfc2965</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l2041">
+                  <tt><i>2041</i>                     <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  8
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l53">
+                  <tt><i>53</i> <span class="n">HTTPONLY_ATTR</span> <span class="o">=</span> <span class="s2">&quot;HTTPOnly&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l89">
+                  <tt><i>89</i> <span class="n">DAYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mon&quot;</span><span class="p">,</span> <span class="s2">&quot;Tue&quot;</span><span class="p">,</span> <span class="s2">&quot;Wed&quot;</span><span class="p">,</span> <span class="s2">&quot;Thu&quot;</span><span class="p">,</span> <span class="s2">&quot;Fri&quot;</span><span class="p">,</span> <span class="s2">&quot;Sat&quot;</span><span class="p">,</span> <span class="s2">&quot;Sun&quot;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l206">
+                  <tt><i>206</i> <span class="n">STRICT_DATE_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l288">
+                  <tt><i>288</i> <span class="n">ISO_DATE_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l344">
+                  <tt><i>344</i> <span class="n">HEADER_TOKEN_RE</span> <span class="o">=</span>        <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^\s*([^=\s;,]+)&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l433">
+                  <tt><i>433</i> <span class="n">HEADER_JOIN_ESCAPE_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;([</span><span class="se">\&quot;\\</span><span class="s2">])&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l619">
+                  <tt><i>619</i> <span class="n">cut_port_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;:\d+$&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">ASCII</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l673">
+                  <tt><i>673</i> <span class="n">HTTP_PATH_SAFE</span> <span class="o">=</span> <span class="s2">&quot;%/;:@&amp;=+$,!~*&#39;()&quot;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1036">
+                  <tt><i>1036</i>                        <span class="s2">&quot;info&quot;</span><span class="p">,</span> <span class="s2">&quot;jobs&quot;</span><span class="p">,</span> <span class="s2">&quot;mobi&quot;</span><span class="p">,</span> <span class="s2">&quot;museum&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;pro&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1037">
+                  <tt><i>1037</i>                        <span class="s2">&quot;travel&quot;</span><span class="p">,</span> <span class="s2">&quot;eu&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">tld</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1452">
+                  <tt><i>1452</i>                               <span class="s2">&quot;attribute: treating as session cookie&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1460">
+                  <tt><i>1460</i>                               <span class="s2">&quot;max-age attribute&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1846">
+                  <tt><i>1846</i>                                <span class="n">time2isoz</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">cookie</span><span class="o">.</span><span class="n">expires</span><span class="p">))))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l805">
+                  <tt><i>805</i>     <span class="k">def</span> <span class="nf">get_nonstandard_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l807">
+                  <tt><i>807</i>     <span class="k">def</span> <span class="nf">set_nonstandard_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l922">
+                  <tt><i>922</i>     <span class="k">def</span> <span class="nf">set_blocked_domains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">blocked_domains</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l935">
+                  <tt><i>935</i>     <span class="k">def</span> <span class="nf">set_allowed_domains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">allowed_domains</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l987">
+                  <tt><i>987</i>                              <span class="s2">&quot;unverifiable transaction&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l991">
+                  <tt><i>991</i>                              <span class="s2">&quot;unverifiable transaction&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l2045">
+                  <tt><i>2045</i>                         <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E222">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E222:</strong> multiple spaces after operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l59">
+                  <tt><i>59</i> <span class="n">NETSCAPE_HEADER_TEXT</span> <span class="o">=</span>  <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l344">
+                  <tt><i>344</i> <span class="n">HEADER_TOKEN_RE</span> <span class="o">=</span>        <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^\s*([^=\s;,]+)&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l346">
+                  <tt><i>346</i> <span class="n">HEADER_VALUE_RE</span> <span class="o">=</span>        <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^\s*=\s*([^\s;,]*)&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l719">
+                  <tt><i>719</i>         <span class="c1">#a = h[:i]  # this line is only here to show what a is</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1201">
+                  <tt><i>1201</i>             <span class="c1">#_debug(&quot;   request domain %s does not match cookie domain %s&quot;,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E401">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E401:</strong> multiple imports on one line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l36">
+                  <tt><i>36</i> <span class="kn">import</span> <span class="nn">urllib.parse</span><span class="o">,</span> <span class="nn">urllib.request</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l70">
+                  <tt><i>70</i>     <span class="kn">import</span> <span class="nn">io</span><span class="o">,</span> <span class="nn">warnings</span><span class="o">,</span> <span class="nn">traceback</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l2125">
+                  <tt><i>2125</i>                                <span class="n">secure</span><span class="p">,</span> <span class="n">expires</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">])</span><span class="o">+</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E227">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E227:</strong> missing whitespace around bitwise or shift operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l882">
+                  <tt><i>882</i>     <span class="n">DomainStrict</span> <span class="o">=</span> <span class="n">DomainStrictNoDots</span><span class="o">|</span><span class="n">DomainStrictNonDomain</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E303:</strong> too many blank lines (2)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.http.cookiejar.source.html#l1664">
+                  <tt><i>1664</i>         <span class="k">finally</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

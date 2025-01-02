@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/imaplib.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.imaplib.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/imaplib.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  3
+               </span>
+               <strong>F841:</strong> local variable 'name' is assigned to but never used
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Local variable 'name' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l708">
+                  <tt><i>708</i>         <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;PROXYAUTH&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'val' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1174">
+                  <tt><i>1174</i>             <span class="k">except</span> <span class="bp">self</span><span class="o">.</span><span class="n">abort</span> <span class="k">as</span> <span class="n">val</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'val' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1555">
+                  <tt><i>1555</i>     <span class="k">except</span> <span class="n">getopt</span><span class="o">.</span><span class="n">error</span> <span class="k">as</span> <span class="n">val</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  78
+               </span>
+               <strong>E303:</strong> too many blank lines (3)
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l135">
+                  <tt><i>135</i> <span class="k">class</span> <span class="nc">IMAP4</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l220">
+                  <tt><i>220</i>     <span class="k">def</span> <span class="nf">_mode_utf8</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l227">
+                  <tt><i>227</i>     <span class="k">def</span> <span class="nf">_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l269">
+                  <tt><i>269</i>     <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l288">
+                  <tt><i>288</i>     <span class="c1">#       Overridable methods</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l291">
+                  <tt><i>291</i>     <span class="k">def</span> <span class="nf">_create_socket</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l316">
+                  <tt><i>316</i>     <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l321">
+                  <tt><i>321</i>     <span class="k">def</span> <span class="nf">readline</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l329">
+                  <tt><i>329</i>     <span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l335">
+                  <tt><i>335</i>     <span class="k">def</span> <span class="nf">shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l351">
+                  <tt><i>351</i>     <span class="k">def</span> <span class="nf">socket</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l360">
+                  <tt><i>360</i>     <span class="c1">#       Utility methods</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l363">
+                  <tt><i>363</i>     <span class="k">def</span> <span class="nf">recent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l380">
+                  <tt><i>380</i>     <span class="k">def</span> <span class="nf">response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l391">
+                  <tt><i>391</i>     <span class="c1">#       IMAP4 commands</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l394">
+                  <tt><i>394</i>     <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mailbox</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="n">date_time</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l420">
+                  <tt><i>420</i>     <span class="k">def</span> <span class="nf">authenticate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mechanism</span><span class="p">,</span> <span class="n">authobject</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l449">
+                  <tt><i>449</i>     <span class="k">def</span> <span class="nf">capability</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l458">
+                  <tt><i>458</i>     <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l466">
+                  <tt><i>466</i>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l481">
+                  <tt><i>481</i>     <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message_set</span><span class="p">,</span> <span class="n">new_mailbox</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l489">
+                  <tt><i>489</i>     <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mailbox</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l497">
+                  <tt><i>497</i>     <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mailbox</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l537">
+                  <tt><i>537</i>     <span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message_set</span><span class="p">,</span> <span class="n">message_parts</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l552">
+                  <tt><i>552</i>     <span class="k">def</span> <span class="nf">getacl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mailbox</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l561">
+                  <tt><i>561</i>     <span class="k">def</span> <span class="nf">getannotation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mailbox</span><span class="p">,</span> <span class="n">entry</span><span class="p">,</span> <span class="n">attribute</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l569">
+                  <tt><i>569</i>     <span class="k">def</span> <span class="nf">getquota</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l580">
+                  <tt><i>580</i>     <span class="k">def</span> <span class="nf">getquotaroot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mailbox</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l591">
+                  <tt><i>591</i>     <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directory</span><span class="o">=</span><span class="s1">&#39;&quot;&quot;&#39;</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l603">
+                  <tt><i>603</i>     <span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l617">
+                  <tt><i>617</i>     <span class="k">def</span> <span class="nf">login_cram_md5</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l626">
+                  <tt><i>626</i>     <span class="k">def</span> <span class="nf">_CRAM_MD5_AUTH</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">challenge</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l634">
+                  <tt><i>634</i>     <span class="k">def</span> <span class="nf">logout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l647">
+                  <tt><i>647</i>     <span class="k">def</span> <span class="nf">lsub</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directory</span><span class="o">=</span><span class="s1">&#39;&quot;&quot;&#39;</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l676">
+                  <tt><i>676</i>     <span class="k">def</span> <span class="nf">noop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l687">
+                  <tt><i>687</i>     <span class="k">def</span> <span class="nf">partial</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message_num</span><span class="p">,</span> <span class="n">message_part</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l699">
+                  <tt><i>699</i>     <span class="k">def</span> <span class="nf">proxyauth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l712">
+                  <tt><i>712</i>     <span class="k">def</span> <span class="nf">rename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">oldmailbox</span><span class="p">,</span> <span class="n">newmailbox</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l720">
+                  <tt><i>720</i>     <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">charset</span><span class="p">,</span> <span class="o">*</span><span class="n">criteria</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l738">
+                  <tt><i>738</i>     <span class="k">def</span> <span class="nf">select</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mailbox</span><span class="o">=</span><span class="s1">&#39;INBOX&#39;</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l770">
+                  <tt><i>770</i>     <span class="k">def</span> <span class="nf">setacl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mailbox</span><span class="p">,</span> <span class="n">who</span><span class="p">,</span> <span class="n">what</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l778">
+                  <tt><i>778</i>     <span class="k">def</span> <span class="nf">setannotation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l786">
+                  <tt><i>786</i>     <span class="k">def</span> <span class="nf">setquota</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">limits</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l795">
+                  <tt><i>795</i>     <span class="k">def</span> <span class="nf">sort</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sort_criteria</span><span class="p">,</span> <span class="n">charset</span><span class="p">,</span> <span class="o">*</span><span class="n">search_criteria</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l809">
+                  <tt><i>809</i>     <span class="k">def</span> <span class="nf">starttls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ssl_context</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l832">
+                  <tt><i>832</i>     <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mailbox</span><span class="p">,</span> <span class="n">names</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l844">
+                  <tt><i>844</i>     <span class="k">def</span> <span class="nf">store</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message_set</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">flags</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l855">
+                  <tt><i>855</i>     <span class="k">def</span> <span class="nf">subscribe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mailbox</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l863">
+                  <tt><i>863</i>     <span class="k">def</span> <span class="nf">thread</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">threading_algorithm</span><span class="p">,</span> <span class="n">charset</span><span class="p">,</span> <span class="o">*</span><span class="n">search_criteria</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l873">
+                  <tt><i>873</i>     <span class="k">def</span> <span class="nf">uid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l898">
+                  <tt><i>898</i>     <span class="k">def</span> <span class="nf">unsubscribe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mailbox</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l906">
+                  <tt><i>906</i>     <span class="k">def</span> <span class="nf">unselect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l922">
+                  <tt><i>922</i>     <span class="k">def</span> <span class="nf">xatom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l941">
+                  <tt><i>941</i>     <span class="c1">#       Private methods</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l944">
+                  <tt><i>944</i>     <span class="k">def</span> <span class="nf">_append_untagged</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">typ</span><span class="p">,</span> <span class="n">dat</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l958">
+                  <tt><i>958</i>     <span class="k">def</span> <span class="nf">_check_bye</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l964">
+                  <tt><i>964</i>     <span class="k">def</span> <span class="nf">_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1041">
+                  <tt><i>1041</i>     <span class="k">def</span> <span class="nf">_command_complete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1059">
+                  <tt><i>1059</i>     <span class="k">def</span> <span class="nf">_get_capabilities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1068">
+                  <tt><i>1068</i>     <span class="k">def</span> <span class="nf">_get_response</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1148">
+                  <tt><i>1148</i>     <span class="k">def</span> <span class="nf">_get_tagged_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="p">,</span> <span class="n">expect_bye</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1181">
+                  <tt><i>1181</i>     <span class="k">def</span> <span class="nf">_get_line</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1200">
+                  <tt><i>1200</i>     <span class="k">def</span> <span class="nf">_match</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cre</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1212">
+                  <tt><i>1212</i>     <span class="k">def</span> <span class="nf">_new_tag</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1220">
+                  <tt><i>1220</i>     <span class="k">def</span> <span class="nf">_quote</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1228">
+                  <tt><i>1228</i>     <span class="k">def</span> <span class="nf">_simple_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1233">
+                  <tt><i>1233</i>     <span class="k">def</span> <span class="nf">_untagged_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">typ</span><span class="p">,</span> <span class="n">dat</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1245">
+                  <tt><i>1245</i>     <span class="k">if</span> <span class="n">__debug__</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1305">
+                  <tt><i>1305</i>         <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">IMAP4_SSL_PORT</span><span class="p">,</span> <span class="n">keyfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1353">
+                  <tt><i>1353</i>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1358">
+                  <tt><i>1358</i>     <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1379">
+                  <tt><i>1379</i>     <span class="k">def</span> <span class="nf">readline</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1384">
+                  <tt><i>1384</i>     <span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1390">
+                  <tt><i>1390</i>     <span class="k">def</span> <span class="nf">shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1398">
+                  <tt><i>1398</i> <span class="k">class</span> <span class="nc">_Authenticator</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1480">
+                  <tt><i>1480</i> <span class="k">def</span> <span class="nf">Int2AP</span><span class="p">(</span><span class="n">num</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1493">
+                  <tt><i>1493</i> <span class="k">def</span> <span class="nf">ParseFlags</span><span class="p">(</span><span class="n">resp</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1545">
+                  <tt><i>1545</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E122">
+               <span class="count sev-2">
+                  22
+               </span>
+               <strong>E122:</strong> continuation line missing indentation or outdented
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l978">
+                  <tt><i>978</i>         <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_readonly</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1575">
+                  <tt><i>1575</i>     <span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">USER</span><span class="p">,</span> <span class="n">PASSWD</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1576">
+                  <tt><i>1576</i>     <span class="p">(</span><span class="s1">&#39;create&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;/tmp/xxx 1&#39;</span><span class="p">,)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1577">
+                  <tt><i>1577</i>     <span class="p">(</span><span class="s1">&#39;rename&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;/tmp/xxx 1&#39;</span><span class="p">,</span> <span class="s1">&#39;/tmp/yyy&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1578">
+                  <tt><i>1578</i>     <span class="p">(</span><span class="s1">&#39;CREATE&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;/tmp/yyz 2&#39;</span><span class="p">,)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1579">
+                  <tt><i>1579</i>     <span class="p">(</span><span class="s1">&#39;append&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;/tmp/yyz 2&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">test_mesg</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1580">
+                  <tt><i>1580</i>     <span class="p">(</span><span class="s1">&#39;list&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;/tmp&#39;</span><span class="p">,</span> <span class="s1">&#39;yy*&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1581">
+                  <tt><i>1581</i>     <span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;/tmp/yyz 2&#39;</span><span class="p">,)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1582">
+                  <tt><i>1582</i>     <span class="p">(</span><span class="s1">&#39;search&#39;</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;SUBJECT&#39;</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1583">
+                  <tt><i>1583</i>     <span class="p">(</span><span class="s1">&#39;fetch&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;(FLAGS INTERNALDATE RFC822)&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1584">
+                  <tt><i>1584</i>     <span class="p">(</span><span class="s1">&#39;store&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;FLAGS&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;(\Deleted)&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1585">
+                  <tt><i>1585</i>     <span class="p">(</span><span class="s1">&#39;namespace&#39;</span><span class="p">,</span> <span class="p">()),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1586">
+                  <tt><i>1586</i>     <span class="p">(</span><span class="s1">&#39;expunge&#39;</span><span class="p">,</span> <span class="p">()),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1587">
+                  <tt><i>1587</i>     <span class="p">(</span><span class="s1">&#39;recent&#39;</span><span class="p">,</span> <span class="p">()),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1588">
+                  <tt><i>1588</i>     <span class="p">(</span><span class="s1">&#39;close&#39;</span><span class="p">,</span> <span class="p">()),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1592">
+                  <tt><i>1592</i>     <span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">,</span> <span class="p">()),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1593">
+                  <tt><i>1593</i>     <span class="p">(</span><span class="s1">&#39;response&#39;</span><span class="p">,(</span><span class="s1">&#39;UIDVALIDITY&#39;</span><span class="p">,)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1594">
+                  <tt><i>1594</i>     <span class="p">(</span><span class="s1">&#39;uid&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;SEARCH&#39;</span><span class="p">,</span> <span class="s1">&#39;ALL&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1595">
+                  <tt><i>1595</i>     <span class="p">(</span><span class="s1">&#39;response&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;EXISTS&#39;</span><span class="p">,)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1596">
+                  <tt><i>1596</i>     <span class="p">(</span><span class="s1">&#39;append&#39;</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">test_mesg</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1597">
+                  <tt><i>1597</i>     <span class="p">(</span><span class="s1">&#39;recent&#39;</span><span class="p">,</span> <span class="p">()),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1598">
+                  <tt><i>1598</i>     <span class="p">(</span><span class="s1">&#39;logout&#39;</span><span class="p">,</span> <span class="p">()),</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  20
+               </span>
+               <strong>E231:</strong> missing whitespace after ':'
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l74">
+                  <tt><i>74</i>         <span class="s1">&#39;GETANNOTATION&#39;</span><span class="p">:(</span><span class="s1">&#39;AUTH&#39;</span><span class="p">,</span> <span class="s1">&#39;SELECTED&#39;</span><span class="p">),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l91">
+                  <tt><i>91</i>         <span class="s1">&#39;SETANNOTATION&#39;</span><span class="p">:(</span><span class="s1">&#39;AUTH&#39;</span><span class="p">,</span> <span class="s1">&#39;SELECTED&#39;</span><span class="p">),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l405">
+                  <tt><i>405</i>             <span class="k">if</span> <span class="p">(</span><span class="n">flags</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">flags</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">!=</span> <span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">,</span><span class="s1">&#39;)&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l663">
+                  <tt><i>663</i>         <span class="n">typ</span><span class="p">,</span><span class="n">dat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_simple_command</span><span class="p">(</span><span class="s1">&#39;MYRIGHTS&#39;</span><span class="p">,</span> <span class="n">mailbox</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l803">
+                  <tt><i>803</i>         <span class="k">if</span> <span class="p">(</span><span class="n">sort_criteria</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">sort_criteria</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">!=</span> <span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">,</span><span class="s1">&#39;)&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l849">
+                  <tt><i>849</i>         <span class="k">if</span> <span class="p">(</span><span class="n">flags</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">flags</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">!=</span> <span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">,</span><span class="s1">&#39;)&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l951">
+                  <tt><i>951</i>                         <span class="p">(</span><span class="n">typ</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ur</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)),</span> <span class="n">dat</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1443">
+                  <tt><i>1443</i> <span class="n">Mon2num</span> <span class="o">=</span> <span class="p">{</span><span class="n">s</span><span class="o">.</span><span class="n">encode</span><span class="p">():</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">Months</span><span class="p">[</span><span class="mi">1</span><span class="p">:])}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1536">
+                  <tt><i>1536</i>     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">date_time</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">date_time</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">date_time</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span><span class="s1">&#39;&quot;&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1559">
+                  <tt><i>1559</i>     <span class="k">for</span> <span class="n">opt</span><span class="p">,</span><span class="n">val</span> <span class="ow">in</span> <span class="n">optlist</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1573">
+                  <tt><i>1573</i>     <span class="n">test_mesg</span> <span class="o">=</span> <span class="s1">&#39;From: </span><span class="si">%(user)s</span><span class="s1">@localhost</span><span class="si">%(lf)s</span><span class="s1">Subject: IMAP4 test</span><span class="si">%(lf)s%(lf)s</span><span class="s1">data...</span><span class="si">%(lf)s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">{</span><span class="s1">&#39;user&#39;</span><span class="p">:</span><span class="n">USER</span><span class="p">,</span> <span class="s1">&#39;lf&#39;</span><span class="p">:</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1593">
+                  <tt><i>1593</i>     <span class="p">(</span><span class="s1">&#39;response&#39;</span><span class="p">,(</span><span class="s1">&#39;UIDVALIDITY&#39;</span><span class="p">,)),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1618">
+                  <tt><i>1618</i>         <span class="k">for</span> <span class="n">cmd</span><span class="p">,</span><span class="n">args</span> <span class="ow">in</span> <span class="n">test_seq1</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1627">
+                  <tt><i>1627</i>         <span class="k">for</span> <span class="n">cmd</span><span class="p">,</span><span class="n">args</span> <span class="ow">in</span> <span class="n">test_seq2</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1630">
+                  <tt><i>1630</i>             <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="n">args</span><span class="p">)</span> <span class="o">!=</span> <span class="p">(</span><span class="s1">&#39;uid&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;SEARCH&#39;</span><span class="p">,</span> <span class="s1">&#39;ALL&#39;</span><span class="p">)):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  12
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l109">
+                  <tt><i>109</i>         <span class="sa">br</span><span class="s1">&#39;(?P&lt;day&gt;[ 0123][0-9])-(?P&lt;mon&gt;[A-Z][a-z][a-z])-(?P&lt;year&gt;[0-9][0-9][0-9][0-9])&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l110">
+                  <tt><i>110</i>         <span class="sa">br</span><span class="s1">&#39; (?P&lt;hour&gt;[0-9][0-9]):(?P&lt;min&gt;[0-9][0-9]):(?P&lt;sec&gt;[0-9][0-9])&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l111">
+                  <tt><i>111</i>         <span class="sa">br</span><span class="s1">&#39; (?P&lt;zonen&gt;[-+])(?P&lt;zoneh&gt;[0-9][0-9])(?P&lt;zonem&gt;[0-9][0-9])&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l112">
+                  <tt><i>112</i>         <span class="sa">br</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l233">
+                  <tt><i>233</i>                         <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">tagpre</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l234">
+                  <tt><i>234</i>                         <span class="o">+</span> <span class="sa">br</span><span class="s1">&#39;\d+) (?P&lt;type&gt;[A-Z]+) (?P&lt;data&gt;.*)&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">ASCII</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l951">
+                  <tt><i>951</i>                         <span class="p">(</span><span class="n">typ</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ur</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)),</span> <span class="n">dat</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1258">
+                  <tt><i>1258</i>                     <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">untagged_resp_dict</span><span class="o">.</span><span class="n">items</span><span class="p">())</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1368">
+                  <tt><i>1368</i>             <span class="n">bufsize</span><span class="o">=</span><span class="n">DEFAULT_BUFFER_SIZE</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1369">
+                  <tt><i>1369</i>             <span class="n">stdin</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1370">
+                  <tt><i>1370</i>             <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">close_fds</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1636">
+                  <tt><i>1636</i>                     <span class="s1">&#39;(FLAGS INTERNALDATE RFC822.SIZE RFC822.HEADER RFC822.TEXT)&#39;</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  12
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l184">
+                  <tt><i>184</i>     <span class="k">class</span> <span class="nc">error</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span> <span class="k">pass</span>    <span class="c1"># Logical errors - debug required</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l185">
+                  <tt><i>185</i>     <span class="k">class</span> <span class="nc">abort</span><span class="p">(</span><span class="n">error</span><span class="p">):</span> <span class="k">pass</span>        <span class="c1"># Service errors - close and retry</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l186">
+                  <tt><i>186</i>     <span class="k">class</span> <span class="nc">readonly</span><span class="p">(</span><span class="n">abort</span><span class="p">):</span> <span class="k">pass</span>     <span class="c1"># Mailbox status changed to READ-ONLY</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l985">
+                  <tt><i>985</i>             <span class="k">if</span> <span class="n">arg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="k">continue</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1109">
+                  <tt><i>1109</i>             <span class="k">if</span> <span class="n">dat</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">dat</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span>        <span class="c1"># Null untagged response</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1110">
+                  <tt><i>1110</i>             <span class="k">if</span> <span class="n">dat2</span><span class="p">:</span> <span class="n">dat</span> <span class="o">=</span> <span class="n">dat</span> <span class="o">+</span> <span class="sa">b</span><span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">dat2</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1564">
+                  <tt><i>1564</i>             <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="p">:</span> <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="n">stream_command</span><span class="p">,)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1566">
+                  <tt><i>1566</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="p">:</span> <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1605">
+                  <tt><i>1605</i>         <span class="k">if</span> <span class="n">typ</span> <span class="o">==</span> <span class="s1">&#39;NO&#39;</span><span class="p">:</span> <span class="k">raise</span> <span class="n">dat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1623">
+                  <tt><i>1623</i>             <span class="k">if</span> <span class="n">mo</span><span class="p">:</span> <span class="n">path</span> <span class="o">=</span> <span class="n">mo</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1624">
+                  <tt><i>1624</i>             <span class="k">else</span><span class="p">:</span> <span class="n">path</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1634">
+                  <tt><i>1634</i>             <span class="k">if</span> <span class="ow">not</span> <span class="n">uid</span><span class="p">:</span> <span class="k">continue</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l438">
+                  <tt><i>438</i>         <span class="c1">#cap = &#39;AUTH=%s&#39; % mech</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l439">
+                  <tt><i>439</i>         <span class="c1">#if not cap in self.capabilities:       # Let the server decide!</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l801">
+                  <tt><i>801</i>         <span class="c1">#if not name in self.capabilities:      # Let the server decide!</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l838">
+                  <tt><i>838</i>         <span class="c1">#if self.PROTOCOL_VERSION == &#39;IMAP4&#39;:   # Let the server decide!</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l933">
+                  <tt><i>933</i>         <span class="c1">#if not name in self.capabilities:      # Let the server decide!</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E713">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E713:</strong> test for membership should be 'not in'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l261">
+                  <tt><i>261</i>             <span class="k">if</span> <span class="ow">not</span> <span class="n">version</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">capabilities</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l882">
+                  <tt><i>882</i>         <span class="k">if</span> <span class="ow">not</span> <span class="n">command</span> <span class="ow">in</span> <span class="n">Commands</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l935">
+                  <tt><i>935</i>         <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">Commands</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1081">
+                  <tt><i>1081</i>             <span class="k">if</span> <span class="ow">not</span> <span class="n">tag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tagged_commands</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1236">
+                  <tt><i>1236</i>         <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">untagged_responses</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E401">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E401:</strong> multiple imports on one line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l25">
+                  <tt><i>25</i> <span class="kn">import</span> <span class="nn">binascii</span><span class="o">,</span> <span class="nn">errno</span><span class="o">,</span> <span class="nn">random</span><span class="o">,</span> <span class="nn">re</span><span class="o">,</span> <span class="nn">socket</span><span class="o">,</span> <span class="nn">subprocess</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">calendar</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1551">
+                  <tt><i>1551</i>     <span class="kn">import</span> <span class="nn">getopt</span><span class="o">,</span> <span class="nn">getpass</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1274">
+                  <tt><i>1274</i>                 <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1640">
+                  <tt><i>1640</i>     <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l630">
+                  <tt><i>630</i>                                              <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E228">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E228:</strong> missing whitespace around modulo operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1251">
+                  <tt><i>1251</i>             <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;  </span><span class="si">%s</span><span class="s1">.</span><span class="si">%02d</span><span class="s1"> </span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">tm</span><span class="p">,</span> <span class="p">(</span><span class="n">secs</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">%</span><span class="mi">100</span><span class="p">,</span> <span class="n">s</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l194">
+                  <tt><i>194</i>         <span class="bp">self</span><span class="o">.</span><span class="n">continuation_response</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c1"># Last continuation response</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1445">
+                  <tt><i>1445</i> <span class="k">def</span> <span class="nf">Internaldate2tuple</span><span class="p">(</span><span class="n">resp</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1442">
+                  <tt><i>1442</i> <span class="n">Months</span> <span class="o">=</span> <span class="s1">&#39; Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E702">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E702:</strong> multiple statements on one line (semicolon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l1484">
+                  <tt><i>1484</i>     <span class="n">val</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span><span class="p">;</span> <span class="n">AP</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;ABCDEFGHIJKLMNOP&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E721">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E721:</strong> do not compare types, use 'isinstance()'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.imaplib.source.html#l993">
+                  <tt><i>993</i>             <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">literal</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

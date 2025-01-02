@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/tabnanny.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.tabnanny.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/tabnanny.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l32">
+                  <tt><i>32</i> <span class="k">def</span> <span class="nf">errprint</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l39">
+                  <tt><i>39</i> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l59">
+                  <tt><i>59</i> <span class="k">class</span> <span class="nc">NannyNag</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l73">
+                  <tt><i>73</i> <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="n">file</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l134">
+                  <tt><i>134</i> <span class="k">class</span> <span class="nc">Whitespace</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l268">
+                  <tt><i>268</i> <span class="k">def</span> <span class="nf">format_witnesses</span><span class="p">(</span><span class="n">w</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l275">
+                  <tt><i>275</i> <span class="k">def</span> <span class="nf">process_tokens</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E221">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E221:</strong> multiple spaces before operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l158">
+                  <tt><i>158</i>         <span class="bp">self</span><span class="o">.</span><span class="n">raw</span>  <span class="o">=</span> <span class="n">ws</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l175">
+                  <tt><i>175</i>         <span class="bp">self</span><span class="o">.</span><span class="n">n</span>    <span class="o">=</span> <span class="n">n</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l176">
+                  <tt><i>176</i>         <span class="bp">self</span><span class="o">.</span><span class="n">nt</span>   <span class="o">=</span> <span class="n">nt</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l66">
+                  <tt><i>66</i>     <span class="k">def</span> <span class="nf">get_lineno</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l68">
+                  <tt><i>68</i>     <span class="k">def</span> <span class="nf">get_msg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l70">
+                  <tt><i>70</i>     <span class="k">def</span> <span class="nf">get_line</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l123">
+                  <tt><i>123</i>             <span class="k">if</span> <span class="s1">&#39; &#39;</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span> <span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">+</span> <span class="n">file</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l124">
+                  <tt><i>124</i>             <span class="k">if</span> <span class="n">filename_only</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l125">
+                  <tt><i>125</i>             <span class="k">else</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">badline</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">line</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E201">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E201:</strong> whitespace after '('
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l222">
+                  <tt><i>222</i>                 <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">ts</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l263">
+                  <tt><i>263</i>                 <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">ts</span><span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E202">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E202:</strong> whitespace before ')'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l224">
+                  <tt><i>224</i>                            <span class="n">other</span><span class="o">.</span><span class="n">indent_level</span><span class="p">(</span><span class="n">ts</span><span class="p">))</span> <span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l265">
+                  <tt><i>265</i>                            <span class="n">other</span><span class="o">.</span><span class="n">indent_level</span><span class="p">(</span><span class="n">ts</span><span class="p">))</span> <span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E129">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E129:</strong> visually indented line with same indent as next logical line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tabnanny.source.html#l91">
+                  <tt><i>91</i>                 <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normcase</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span> <span class="o">==</span> <span class="s2">&quot;.py&quot;</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

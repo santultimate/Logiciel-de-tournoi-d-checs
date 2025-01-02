@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/stat.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.stat.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/stat.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F401:</strong> '_stat.*' imported but unused
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l193">
+                  <tt><i>193</i>     <span class="kn">from</span> <span class="nn">_stat</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from _stat import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l193">
+                  <tt><i>193</i>     <span class="kn">from</span> <span class="nn">_stat</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E221">
+               <span class="count sev-2">
+                  21
+               </span>
+               <strong>E221:</strong> multiple spaces before operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l8">
+                  <tt><i>8</i> <span class="n">ST_MODE</span>  <span class="o">=</span> <span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l9">
+                  <tt><i>9</i> <span class="n">ST_INO</span>   <span class="o">=</span> <span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l10">
+                  <tt><i>10</i> <span class="n">ST_DEV</span>   <span class="o">=</span> <span class="mi">2</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l12">
+                  <tt><i>12</i> <span class="n">ST_UID</span>   <span class="o">=</span> <span class="mi">4</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l13">
+                  <tt><i>13</i> <span class="n">ST_GID</span>   <span class="o">=</span> <span class="mi">5</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l14">
+                  <tt><i>14</i> <span class="n">ST_SIZE</span>  <span class="o">=</span> <span class="mi">6</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l36">
+                  <tt><i>36</i> <span class="n">S_IFDIR</span>  <span class="o">=</span> <span class="mo">0o040000</span>  <span class="c1"># directory</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l37">
+                  <tt><i>37</i> <span class="n">S_IFCHR</span>  <span class="o">=</span> <span class="mo">0o020000</span>  <span class="c1"># character device</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l38">
+                  <tt><i>38</i> <span class="n">S_IFBLK</span>  <span class="o">=</span> <span class="mo">0o060000</span>  <span class="c1"># block device</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l39">
+                  <tt><i>39</i> <span class="n">S_IFREG</span>  <span class="o">=</span> <span class="mo">0o100000</span>  <span class="c1"># regular file</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l40">
+                  <tt><i>40</i> <span class="n">S_IFIFO</span>  <span class="o">=</span> <span class="mo">0o010000</span>  <span class="c1"># fifo (named pipe)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l41">
+                  <tt><i>41</i> <span class="n">S_IFLNK</span>  <span class="o">=</span> <span class="mo">0o120000</span>  <span class="c1"># symbolic link</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l114">
+                  <tt><i>114</i> <span class="n">UF_NODUMP</span>    <span class="o">=</span> <span class="mh">0x00000001</span>  <span class="c1"># do not dump file</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l116">
+                  <tt><i>116</i> <span class="n">UF_APPEND</span>    <span class="o">=</span> <span class="mh">0x00000004</span>  <span class="c1"># file may only be appended to</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l117">
+                  <tt><i>117</i> <span class="n">UF_OPAQUE</span>    <span class="o">=</span> <span class="mh">0x00000008</span>  <span class="c1"># directory is opaque when viewed through a union stack</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l118">
+                  <tt><i>118</i> <span class="n">UF_NOUNLINK</span>  <span class="o">=</span> <span class="mh">0x00000010</span>  <span class="c1"># file may not be renamed or deleted</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l120">
+                  <tt><i>120</i> <span class="n">UF_HIDDEN</span>    <span class="o">=</span> <span class="mh">0x00008000</span>  <span class="c1"># OS X: file should not be displayed</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l121">
+                  <tt><i>121</i> <span class="n">SF_ARCHIVED</span>  <span class="o">=</span> <span class="mh">0x00010000</span>  <span class="c1"># file may be archived</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l123">
+                  <tt><i>123</i> <span class="n">SF_APPEND</span>    <span class="o">=</span> <span class="mh">0x00040000</span>  <span class="c1"># file may only be appended to</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l124">
+                  <tt><i>124</i> <span class="n">SF_NOUNLINK</span>  <span class="o">=</span> <span class="mh">0x00100000</span>  <span class="c1"># file may not be renamed or deleted</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l125">
+                  <tt><i>125</i> <span class="n">SF_SNAPSHOT</span>  <span class="o">=</span> <span class="mh">0x00200000</span>  <span class="c1"># file is a snapshot file</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  13
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l21">
+                  <tt><i>21</i> <span class="k">def</span> <span class="nf">S_IMODE</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l27">
+                  <tt><i>27</i> <span class="k">def</span> <span class="nf">S_IFMT</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l50">
+                  <tt><i>50</i> <span class="k">def</span> <span class="nf">S_ISDIR</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l54">
+                  <tt><i>54</i> <span class="k">def</span> <span class="nf">S_ISCHR</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l58">
+                  <tt><i>58</i> <span class="k">def</span> <span class="nf">S_ISBLK</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l62">
+                  <tt><i>62</i> <span class="k">def</span> <span class="nf">S_ISREG</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l66">
+                  <tt><i>66</i> <span class="k">def</span> <span class="nf">S_ISFIFO</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l70">
+                  <tt><i>70</i> <span class="k">def</span> <span class="nf">S_ISLNK</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l74">
+                  <tt><i>74</i> <span class="k">def</span> <span class="nf">S_ISSOCK</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l78">
+                  <tt><i>78</i> <span class="k">def</span> <span class="nf">S_ISDOOR</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l82">
+                  <tt><i>82</i> <span class="k">def</span> <span class="nf">S_ISPORT</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l86">
+                  <tt><i>86</i> <span class="k">def</span> <span class="nf">S_ISWHT</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l156">
+                  <tt><i>156</i> <span class="k">def</span> <span class="nf">filemode</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E227">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E227:</strong> missing whitespace around bitwise or shift operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l139">
+                  <tt><i>139</i>     <span class="p">((</span><span class="n">S_IXUSR</span><span class="o">|</span><span class="n">S_ISUID</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l145">
+                  <tt><i>145</i>     <span class="p">((</span><span class="n">S_IXGRP</span><span class="o">|</span><span class="n">S_ISGID</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l151">
+                  <tt><i>151</i>     <span class="p">((</span><span class="n">S_IXOTH</span><span class="o">|</span><span class="n">S_ISVTX</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">),</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l94">
+                  <tt><i>94</i> <span class="n">S_ENFMT</span> <span class="o">=</span> <span class="n">S_ISGID</span> <span class="c1"># file locking enforcement</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l97">
+                  <tt><i>97</i> <span class="n">S_IWRITE</span> <span class="o">=</span> <span class="mo">0o0200</span> <span class="c1"># Unix V7 synonym for S_IWUSR</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l119">
+                  <tt><i>119</i> <span class="n">UF_COMPRESSED</span> <span class="o">=</span> <span class="mh">0x00000020</span> <span class="c1"># OS X: file is hfs-compressed</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l36">
+                  <tt><i>36</i> <span class="n">S_IFDIR</span>  <span class="o">=</span> <span class="mo">0o040000</span>  <span class="c1"># directory</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.stat.source.html#l92">
+                  <tt><i>92</i> <span class="n">S_ISUID</span> <span class="o">=</span> <span class="mo">0o4000</span>  <span class="c1"># set UID bit</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

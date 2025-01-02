@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/turtledemo/lindenmayer.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.turtledemo.lindenmayer.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/turtledemo/lindenmayer.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  25
+               </span>
+               <strong>F405:</strong> 'right' may be undefined, or defined from star imports: turtle
+               
+                  (and 12 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'right' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l56">
+                  <tt><i>56</i>         <span class="n">right</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'left' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l59">
+                  <tt><i>59</i>         <span class="n">left</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'forward' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l62">
+                  <tt><i>62</i>         <span class="n">forward</span><span class="p">(</span><span class="mf">7.5</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'reset' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l70">
+                  <tt><i>70</i>     <span class="n">reset</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'speed' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l71">
+                  <tt><i>71</i>     <span class="n">speed</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'tracer' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l72">
+                  <tt><i>72</i>     <span class="n">tracer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ht' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l73">
+                  <tt><i>73</i>     <span class="n">ht</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'up' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l74">
+                  <tt><i>74</i>     <span class="n">up</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'backward' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l75">
+                  <tt><i>75</i>     <span class="n">backward</span><span class="p">(</span><span class="mi">195</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'down' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l76">
+                  <tt><i>76</i>     <span class="n">down</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'color' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l87">
+                  <tt><i>87</i>         <span class="n">color</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'circle' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l88">
+                  <tt><i>88</i>         <span class="n">circle</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">90</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'color' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l92">
+                  <tt><i>92</i>         <span class="n">color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'forward' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l94">
+                  <tt><i>94</i>         <span class="n">forward</span><span class="p">(</span><span class="n">l</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'circle' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l95">
+                  <tt><i>95</i>         <span class="n">circle</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="mi">270</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'forward' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l96">
+                  <tt><i>96</i>         <span class="n">forward</span><span class="p">(</span><span class="n">l</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'color' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l99">
+                  <tt><i>99</i>         <span class="n">color</span><span class="p">(</span><span class="s2">&quot;green&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'forward' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l100">
+                  <tt><i>100</i>         <span class="n">forward</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'reset' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l106">
+                  <tt><i>106</i>     <span class="n">reset</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'speed' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l107">
+                  <tt><i>107</i>     <span class="n">speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'tracer' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l108">
+                  <tt><i>108</i>     <span class="n">tracer</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ht' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l109">
+                  <tt><i>109</i>     <span class="n">ht</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'left' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l110">
+                  <tt><i>110</i>     <span class="n">left</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'tracer' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l113">
+                  <tt><i>113</i>     <span class="n">tracer</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'mainloop' may be undefined, or defined from star imports: turtle:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l119">
+                  <tt><i>119</i>     <span class="n">mainloop</span><span class="p">()</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from turtle import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l28">
+                  <tt><i>28</i> <span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  11
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l34">
+                  <tt><i>34</i>             <span class="n">newseq</span> <span class="o">=</span> <span class="n">newseq</span> <span class="o">+</span> <span class="n">replacementRules</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">element</span><span class="p">,</span><span class="n">element</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l64">
+                  <tt><i>64</i>     <span class="n">snake_rules</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;-&quot;</span><span class="p">:</span><span class="n">r</span><span class="p">,</span> <span class="s2">&quot;+&quot;</span><span class="p">:</span><span class="n">l</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">:</span><span class="n">f</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span><span class="s2">&quot;f+f+f--f--f+f+f&quot;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l72">
+                  <tt><i>72</i>     <span class="n">tracer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l88">
+                  <tt><i>88</i>         <span class="n">circle</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">90</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l102">
+                  <tt><i>102</i>     <span class="n">krishna_rules</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span><span class="n">A</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span><span class="n">B</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">:</span><span class="n">F</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l108">
+                  <tt><i>108</i>     <span class="n">tracer</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E202">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E202:</strong> whitespace before ')'
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Whitespace before ')':</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l30">
+                  <tt><i>30</i> <span class="k">def</span> <span class="nf">replace</span><span class="p">(</span> <span class="n">seq</span><span class="p">,</span> <span class="n">replacementRules</span><span class="p">,</span> <span class="n">n</span> <span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ')':</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l38">
+                  <tt><i>38</i> <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span> <span class="n">commands</span><span class="p">,</span> <span class="n">rules</span> <span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before '}':</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l103">
+                  <tt><i>103</i>     <span class="n">krishna_replacementRules</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span> <span class="p">:</span> <span class="s2">&quot;afbfa&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="p">:</span> <span class="s2">&quot;afbfbfbfa&quot;</span> <span class="p">}</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E201">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E201:</strong> whitespace after '('
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l30">
+                  <tt><i>30</i> <span class="k">def</span> <span class="nf">replace</span><span class="p">(</span> <span class="n">seq</span><span class="p">,</span> <span class="n">replacementRules</span><span class="p">,</span> <span class="n">n</span> <span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l38">
+                  <tt><i>38</i> <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span> <span class="n">commands</span><span class="p">,</span> <span class="n">rules</span> <span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Whitespace before ':' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l103">
+                  <tt><i>103</i>     <span class="n">krishna_replacementRules</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span> <span class="p">:</span> <span class="s2">&quot;afbfa&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="p">:</span> <span class="s2">&quot;afbfbfbfa&quot;</span> <span class="p">}</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l30">
+                  <tt><i>30</i> <span class="k">def</span> <span class="nf">replace</span><span class="p">(</span> <span class="n">seq</span><span class="p">,</span> <span class="n">replacementRules</span><span class="p">,</span> <span class="n">n</span> <span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l38">
+                  <tt><i>38</i> <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span> <span class="n">commands</span><span class="p">,</span> <span class="n">rules</span> <span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E741">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E741:</strong> ambiguous variable name 'l'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l58">
+                  <tt><i>58</i>     <span class="k">def</span> <span class="nf">l</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l93">
+                  <tt><i>93</i>         <span class="n">l</span> <span class="o">=</span> <span class="mi">5</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l116">
+                  <tt><i>116</i> <span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E303:</strong> too many blank lines (2)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l55">
+                  <tt><i>55</i>     <span class="k">def</span> <span class="nf">r</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l116">
+                  <tt><i>116</i> <span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l45">
+                  <tt><i>45</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E743">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E743:</strong> ambiguous function definition 'l'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.lindenmayer.source.html#l58">
+                  <tt><i>58</i>     <span class="k">def</span> <span class="nf">l</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

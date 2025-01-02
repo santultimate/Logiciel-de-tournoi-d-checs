@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/glob.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.glob.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/glob.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  17
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l13">
+                  <tt><i>13</i> <span class="k">def</span> <span class="nf">glob</span><span class="p">(</span><span class="n">pathname</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">root_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dir_fd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l31">
+                  <tt><i>31</i> <span class="k">def</span> <span class="nf">iglob</span><span class="p">(</span><span class="n">pathname</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">root_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dir_fd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l60">
+                  <tt><i>60</i> <span class="k">def</span> <span class="nf">_iglob</span><span class="p">(</span><span class="n">pathname</span><span class="p">,</span> <span class="n">root_dir</span><span class="p">,</span> <span class="n">dir_fd</span><span class="p">,</span> <span class="n">recursive</span><span class="p">,</span> <span class="n">dironly</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l105">
+                  <tt><i>105</i> <span class="k">def</span> <span class="nf">_glob1</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">dir_fd</span><span class="p">,</span> <span class="n">dironly</span><span class="p">,</span> <span class="n">include_hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l111">
+                  <tt><i>111</i> <span class="k">def</span> <span class="nf">_glob0</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">basename</span><span class="p">,</span> <span class="n">dir_fd</span><span class="p">,</span> <span class="n">dironly</span><span class="p">,</span> <span class="n">include_hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l124">
+                  <tt><i>124</i> <span class="k">def</span> <span class="nf">glob0</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">pattern</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l127">
+                  <tt><i>127</i> <span class="k">def</span> <span class="nf">glob1</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">pattern</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l133">
+                  <tt><i>133</i> <span class="k">def</span> <span class="nf">_glob2</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">dir_fd</span><span class="p">,</span> <span class="n">dironly</span><span class="p">,</span> <span class="n">include_hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l142">
+                  <tt><i>142</i> <span class="k">def</span> <span class="nf">_iterdir</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">dir_fd</span><span class="p">,</span> <span class="n">dironly</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l176">
+                  <tt><i>176</i> <span class="k">def</span> <span class="nf">_listdir</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">dir_fd</span><span class="p">,</span> <span class="n">dironly</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l181">
+                  <tt><i>181</i> <span class="k">def</span> <span class="nf">_rlistdir</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">dir_fd</span><span class="p">,</span> <span class="n">dironly</span><span class="p">,</span> <span class="n">include_hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l203">
+                  <tt><i>203</i> <span class="k">def</span> <span class="nf">_isdir</span><span class="p">(</span><span class="n">pathname</span><span class="p">,</span> <span class="n">dir_fd</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l214">
+                  <tt><i>214</i> <span class="k">def</span> <span class="nf">_join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">basename</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l223">
+                  <tt><i>223</i> <span class="k">def</span> <span class="nf">has_magic</span><span class="p">(</span><span class="n">s</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l230">
+                  <tt><i>230</i> <span class="k">def</span> <span class="nf">_ishidden</span><span class="p">(</span><span class="n">path</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l233">
+                  <tt><i>233</i> <span class="k">def</span> <span class="nf">_isrecursive</span><span class="p">(</span><span class="n">pattern</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l239">
+                  <tt><i>239</i> <span class="k">def</span> <span class="nf">escape</span><span class="p">(</span><span class="n">pathname</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l14">
+                  <tt><i>14</i>         <span class="n">include_hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l76">
+                  <tt><i>76</i>                              <span class="n">include_hidden</span><span class="o">=</span><span class="n">include_hidden</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l98">
+                  <tt><i>98</i>                                <span class="n">include_hidden</span><span class="o">=</span><span class="n">include_hidden</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.glob.source.html#l220">
+                  <tt><i>220</i> <span class="n">magic_check</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;([*?[])&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

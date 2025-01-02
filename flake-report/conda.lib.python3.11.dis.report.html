@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/dis.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.dis.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/dis.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  31
+               </span>
+               <strong>F405:</strong> 'opmap' may be undefined, or defined from star imports: opcode
+               
+                  (and 11 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'opmap' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l26">
+                  <tt><i>26</i> <span class="n">FORMAT_VALUE</span> <span class="o">=</span> <span class="n">opmap</span><span class="p">[</span><span class="s1">&#39;FORMAT_VALUE&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opmap' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l33">
+                  <tt><i>33</i> <span class="n">MAKE_FUNCTION</span> <span class="o">=</span> <span class="n">opmap</span><span class="p">[</span><span class="s1">&#39;MAKE_FUNCTION&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opmap' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l36">
+                  <tt><i>36</i> <span class="n">LOAD_CONST</span> <span class="o">=</span> <span class="n">opmap</span><span class="p">[</span><span class="s1">&#39;LOAD_CONST&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opmap' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l37">
+                  <tt><i>37</i> <span class="n">LOAD_GLOBAL</span> <span class="o">=</span> <span class="n">opmap</span><span class="p">[</span><span class="s1">&#39;LOAD_GLOBAL&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opmap' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l38">
+                  <tt><i>38</i> <span class="n">BINARY_OP</span> <span class="o">=</span> <span class="n">opmap</span><span class="p">[</span><span class="s1">&#39;BINARY_OP&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opmap' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l39">
+                  <tt><i>39</i> <span class="n">JUMP_BACKWARD</span> <span class="o">=</span> <span class="n">opmap</span><span class="p">[</span><span class="s1">&#39;JUMP_BACKWARD&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opmap' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l41">
+                  <tt><i>41</i> <span class="n">CACHE</span> <span class="o">=</span> <span class="n">opmap</span><span class="p">[</span><span class="s2">&quot;CACHE&quot;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opname' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l43">
+                  <tt><i>43</i> <span class="n">_all_opname</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">opname</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opmap' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l44">
+                  <tt><i>44</i> <span class="n">_all_opmap</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">opmap</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'hasconst' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l361">
+                  <tt><i>361</i>     <span class="k">assert</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">hasconst</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opname' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l421">
+                  <tt><i>421</i>     <span class="k">return</span> <span class="s1">&#39;JUMP_BACKWARD&#39;</span> <span class="ow">in</span> <span class="n">opname</span><span class="p">[</span><span class="n">op</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'hasconst' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l459">
+                  <tt><i>459</i>             <span class="k">if</span> <span class="n">deop</span> <span class="ow">in</span> <span class="n">hasconst</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'hasname' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l461">
+                  <tt><i>461</i>             <span class="k">elif</span> <span class="n">deop</span> <span class="ow">in</span> <span class="n">hasname</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'hasjabs' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l468">
+                  <tt><i>468</i>             <span class="k">elif</span> <span class="n">deop</span> <span class="ow">in</span> <span class="n">hasjabs</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'hasjrel' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l471">
+                  <tt><i>471</i>             <span class="k">elif</span> <span class="n">deop</span> <span class="ow">in</span> <span class="n">hasjrel</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'hasfree' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l475">
+                  <tt><i>475</i>             <span class="k">elif</span> <span class="n">deop</span> <span class="ow">in</span> <span class="n">haslocal</span> <span class="ow">or</span> <span class="n">deop</span> <span class="ow">in</span> <span class="n">hasfree</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'haslocal' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l475">
+                  <tt><i>475</i>             <span class="k">elif</span> <span class="n">deop</span> <span class="ow">in</span> <span class="n">haslocal</span> <span class="ow">or</span> <span class="n">deop</span> <span class="ow">in</span> <span class="n">hasfree</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'hascompare' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l477">
+                  <tt><i>477</i>             <span class="k">elif</span> <span class="n">deop</span> <span class="ow">in</span> <span class="n">hascompare</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'cmp_op' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l478">
+                  <tt><i>478</i>                 <span class="n">argval</span> <span class="o">=</span> <span class="n">cmp_op</span><span class="p">[</span><span class="n">arg</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opname' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l503">
+                  <tt><i>503</i>         <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">size</span> <span class="ow">in</span> <span class="n">_cache_format</span><span class="p">[</span><span class="n">opname</span><span class="p">[</span><span class="n">deop</span><span class="p">]]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'HAVE_ARGUMENT' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l605">
+                  <tt><i>605</i>         <span class="k">if</span> <span class="n">deop</span> <span class="o">&gt;=</span> <span class="n">HAVE_ARGUMENT</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'EXTENDED_ARG' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l607">
+                  <tt><i>607</i>             <span class="n">extended_arg</span> <span class="o">=</span> <span class="p">(</span><span class="n">arg</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="k">if</span> <span class="n">deop</span> <span class="o">==</span> <span class="n">EXTENDED_ARG</span> <span class="k">else</span> <span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'hasjrel' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l627">
+                  <tt><i>627</i>             <span class="k">if</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">hasjrel</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'hasjabs' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l631">
+                  <tt><i>631</i>             <span class="k">elif</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">hasjabs</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opmap' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l658">
+                  <tt><i>658</i>     <span class="n">IMPORT_NAME</span> <span class="o">=</span> <span class="n">opmap</span><span class="p">[</span><span class="s1">&#39;IMPORT_NAME&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opmap' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l659">
+                  <tt><i>659</i>     <span class="n">LOAD_CONST</span> <span class="o">=</span> <span class="n">opmap</span><span class="p">[</span><span class="s1">&#39;LOAD_CONST&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'EXTENDED_ARG' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l664">
+                  <tt><i>664</i>                   <span class="k">if</span> <span class="n">op</span> <span class="o">!=</span> <span class="n">EXTENDED_ARG</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'hasconst' may be undefined, or defined from star imports: opcode (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l669">
+                  <tt><i>669</i>             <span class="k">if</span> <span class="p">(</span><span class="n">from_op</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="n">hasconst</span> <span class="ow">and</span> <span class="n">level_op</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="n">hasconst</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opmap' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l680">
+                  <tt><i>680</i>         <span class="n">opmap</span><span class="p">[</span><span class="s1">&#39;STORE_NAME&#39;</span><span class="p">],</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'opmap' may be undefined, or defined from star imports: opcode:</p>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l681">
+                  <tt><i>681</i>         <span class="n">opmap</span><span class="p">[</span><span class="s1">&#39;STORE_GLOBAL&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from opcode import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l8">
+                  <tt><i>8</i> <span class="kn">from</span> <span class="nn">opcode</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F841:</strong> local variable 'LOAD_CONST' is assigned to but never used
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l659">
+                  <tt><i>659</i>     <span class="n">LOAD_CONST</span> <span class="o">=</span> <span class="n">opmap</span><span class="p">[</span><span class="s1">&#39;LOAD_CONST&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  28
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l55">
+                  <tt><i>55</i> <span class="k">def</span> <span class="nf">_try_compile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l68">
+                  <tt><i>68</i> <span class="k">def</span> <span class="nf">dis</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">show_caches</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">adaptive</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l113">
+                  <tt><i>113</i> <span class="k">def</span> <span class="nf">distb</span><span class="p">(</span><span class="n">tb</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">show_caches</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">adaptive</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l139">
+                  <tt><i>139</i> <span class="k">def</span> <span class="nf">pretty_flags</span><span class="p">(</span><span class="n">flags</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l153">
+                  <tt><i>153</i> <span class="k">class</span> <span class="nc">_Unknown</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l160">
+                  <tt><i>160</i> <span class="k">def</span> <span class="nf">_get_code_object</span><span class="p">(</span><span class="n">x</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l183">
+                  <tt><i>183</i> <span class="k">def</span> <span class="nf">_deoptop</span><span class="p">(</span><span class="n">op</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l187">
+                  <tt><i>187</i> <span class="k">def</span> <span class="nf">_get_code_array</span><span class="p">(</span><span class="n">co</span><span class="p">,</span> <span class="n">adaptive</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l190">
+                  <tt><i>190</i> <span class="k">def</span> <span class="nf">code_info</span><span class="p">(</span><span class="n">x</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l194">
+                  <tt><i>194</i> <span class="k">def</span> <span class="nf">_format_code_info</span><span class="p">(</span><span class="n">co</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l226">
+                  <tt><i>226</i> <span class="k">def</span> <span class="nf">show_code</span><span class="p">(</span><span class="n">co</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l276">
+                  <tt><i>276</i> <span class="k">class</span> <span class="nc">Instruction</span><span class="p">(</span><span class="n">_Instruction</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l354">
+                  <tt><i>354</i> <span class="k">def</span> <span class="nf">_get_const_value</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">co_consts</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l369">
+                  <tt><i>369</i> <span class="k">def</span> <span class="nf">_get_const_info</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">co_consts</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l381">
+                  <tt><i>381</i> <span class="k">def</span> <span class="nf">_get_name_info</span><span class="p">(</span><span class="n">name_index</span><span class="p">,</span> <span class="n">get_name</span><span class="p">,</span> <span class="o">**</span><span class="n">extrainfo</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l395">
+                  <tt><i>395</i> <span class="k">def</span> <span class="nf">_parse_varint</span><span class="p">(</span><span class="n">iterator</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l404">
+                  <tt><i>404</i> <span class="k">def</span> <span class="nf">_parse_exception_table</span><span class="p">(</span><span class="n">code</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l420">
+                  <tt><i>420</i> <span class="k">def</span> <span class="nf">_is_backward_jump</span><span class="p">(</span><span class="n">op</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l423">
+                  <tt><i>423</i> <span class="k">def</span> <span class="nf">_get_instructions_bytes</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">varname_from_oparg</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l519">
+                  <tt><i>519</i> <span class="k">def</span> <span class="nf">disassemble</span><span class="p">(</span><span class="n">co</span><span class="p">,</span> <span class="n">lasti</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">show_caches</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">adaptive</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l529">
+                  <tt><i>529</i> <span class="k">def</span> <span class="nf">_disassemble_recursive</span><span class="p">(</span><span class="n">co</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">show_caches</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">adaptive</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l542">
+                  <tt><i>542</i> <span class="k">def</span> <span class="nf">_disassemble_bytes</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">lasti</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">varname_from_oparg</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l582">
+                  <tt><i>582</i> <span class="k">def</span> <span class="nf">_disassemble_str</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l594">
+                  <tt><i>594</i> <span class="k">def</span> <span class="nf">_unpack_opargs</span><span class="p">(</span><span class="n">code</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l618">
+                  <tt><i>618</i> <span class="k">def</span> <span class="nf">findlabels</span><span class="p">(</span><span class="n">code</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l639">
+                  <tt><i>639</i> <span class="k">def</span> <span class="nf">findlinestarts</span><span class="p">(</span><span class="n">code</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l651">
+                  <tt><i>651</i> <span class="k">def</span> <span class="nf">_find_imports</span><span class="p">(</span><span class="n">co</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l674">
+                  <tt><i>674</i> <span class="k">def</span> <span class="nf">_find_store_names</span><span class="p">(</span><span class="n">co</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E131">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E131:</strong> continuation line unaligned for hanging indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l131">
+                  <tt><i>131</i>     <span class="mi">16</span><span class="p">:</span> <span class="s2">&quot;NESTED&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l132">
+                  <tt><i>132</i>     <span class="mi">32</span><span class="p">:</span> <span class="s2">&quot;GENERATOR&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l133">
+                  <tt><i>133</i>     <span class="mi">64</span><span class="p">:</span> <span class="s2">&quot;NOFREE&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l134">
+                  <tt><i>134</i>    <span class="mi">128</span><span class="p">:</span> <span class="s2">&quot;COROUTINE&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l135">
+                  <tt><i>135</i>    <span class="mi">256</span><span class="p">:</span> <span class="s2">&quot;ITERABLE_COROUTINE&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l136">
+                  <tt><i>136</i>    <span class="mi">512</span><span class="p">:</span> <span class="s2">&quot;ASYNC_GENERATOR&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E262">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E262:</strong> inline comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l86">
+                  <tt><i>86</i>     <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;gi_code&#39;</span><span class="p">):</span>  <span class="c1">#...a generator object, or</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l88">
+                  <tt><i>88</i>     <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;ag_code&#39;</span><span class="p">):</span>  <span class="c1">#...an asynchronous generator object, or</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l90">
+                  <tt><i>90</i>     <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;cr_code&#39;</span><span class="p">):</span>  <span class="c1">#...a coroutine.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l168">
+                  <tt><i>168</i>     <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;gi_code&#39;</span><span class="p">):</span>  <span class="c1">#...a generator object, or</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l170">
+                  <tt><i>170</i>     <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;ag_code&#39;</span><span class="p">):</span>  <span class="c1">#...an asynchronous generator object, or</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l172">
+                  <tt><i>172</i>     <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;cr_code&#39;</span><span class="p">):</span>  <span class="c1">#...a coroutine.</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E227">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E227:</strong> missing whitespace around bitwise or shift operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l143">
+                  <tt><i>143</i>         <span class="n">flag</span> <span class="o">=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l398">
+                  <tt><i>398</i>     <span class="k">while</span> <span class="n">b</span><span class="o">&amp;</span><span class="mi">64</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l401">
+                  <tt><i>401</i>         <span class="n">val</span> <span class="o">|=</span> <span class="n">b</span><span class="o">&amp;</span><span class="mi">63</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l415">
+                  <tt><i>415</i>             <span class="n">lasti</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">dl</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l489">
+                  <tt><i>489</i>                                     <span class="k">if</span> <span class="n">arg</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l126">
+                  <tt><i>126</i> <span class="n">COMPILER_FLAG_NAMES</span> <span class="o">=</span> <span class="p">{</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l158">
+                  <tt><i>158</i> <span class="n">UNKNOWN</span> <span class="o">=</span> <span class="n">_Unknown</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l233">
+                  <tt><i>233</i> <span class="n">Positions</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l586">
+                  <tt><i>586</i> <span class="n">disco</span> <span class="o">=</span> <span class="n">disassemble</span>                     <span class="c1"># XXX For backwards compatibility</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l773">
+                  <tt><i>773</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l103">
+                  <tt><i>103</i>     <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;co_code&#39;</span><span class="p">):</span> <span class="c1"># Code object</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l105">
+                  <tt><i>105</i>     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">bytearray</span><span class="p">)):</span> <span class="c1"># Raw bytecode</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l664">
+                  <tt><i>664</i>                   <span class="k">if</span> <span class="n">op</span> <span class="o">!=</span> <span class="n">EXTENDED_ARG</span><span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l271">
+                  <tt><i>271</i>     <span class="s2">&quot;start end target depth lasti&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.dis.source.html#l120">
+                  <tt><i>120</i>         <span class="k">while</span> <span class="n">tb</span><span class="o">.</span><span class="n">tb_next</span><span class="p">:</span> <span class="n">tb</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">tb_next</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

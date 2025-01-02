@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/typing.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.typing.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/typing.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  17
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l296">
+                  <tt><i>296</i> <span class="k">def</span> <span class="nf">_unpack_args</span><span class="p">(</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l306">
+                  <tt><i>306</i> <span class="k">def</span> <span class="nf">_deduplicate</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">unhashable_fallback</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l316">
+                  <tt><i>316</i> <span class="k">def</span> <span class="nf">_deduplicate_unhashable</span><span class="p">(</span><span class="n">unhashable_params</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l323">
+                  <tt><i>323</i> <span class="k">def</span> <span class="nf">_compare_args_orderless</span><span class="p">(</span><span class="n">first_args</span><span class="p">,</span> <span class="n">second_args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l334">
+                  <tt><i>334</i> <span class="k">def</span> <span class="nf">_remove_dups_flatten</span><span class="p">(</span><span class="n">parameters</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l387">
+                  <tt><i>387</i> <span class="k">def</span> <span class="nf">_eval_type</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">globalns</span><span class="p">,</span> <span class="n">localns</span><span class="p">,</span> <span class="n">recursive_guard</span><span class="o">=</span><span class="nb">frozenset</span><span class="p">()):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l430">
+                  <tt><i>430</i> <span class="k">class</span> <span class="nc">_Immutable</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l563">
+                  <tt><i>563</i> <span class="nd">@_SpecialForm</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l657">
+                  <tt><i>657</i> <span class="nd">@_SpecialForm</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l679">
+                  <tt><i>679</i> <span class="nd">@_SpecialForm</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l723">
+                  <tt><i>723</i> <span class="nd">@_SpecialForm</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l729">
+                  <tt><i>729</i> <span class="nd">@_LiteralSpecialForm</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l1266">
+                  <tt><i>1266</i> <span class="k">def</span> <span class="nf">_is_dunder</span><span class="p">(</span><span class="n">attr</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l1269">
+                  <tt><i>1269</i> <span class="k">class</span> <span class="nc">_BaseGenericAlias</span><span class="p">(</span><span class="n">_Final</span><span class="p">,</span> <span class="n">_root</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l1618">
+                  <tt><i>1618</i> <span class="k">class</span> <span class="nc">_CallableGenericAlias</span><span class="p">(</span><span class="n">_NotIterable</span><span class="p">,</span> <span class="n">_GenericAlias</span><span class="p">,</span> <span class="n">_root</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l2974">
+                  <tt><i>2974</i> <span class="k">def</span> <span class="nf">_namedtuple_mro_entries</span><span class="p">(</span><span class="n">bases</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l3428">
+                  <tt><i>3428</i> <span class="k">class</span> <span class="nc">re</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">_DeprecatedType</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l2972">
+                  <tt><i>2972</i> <span class="n">_NamedTuple</span> <span class="o">=</span> <span class="nb">type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">NamedTupleMeta</span><span class="p">,</span> <span class="s1">&#39;NamedTuple&#39;</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{})</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l2978">
+                  <tt><i>2978</i> <span class="n">NamedTuple</span><span class="o">.</span><span class="n">__mro_entries__</span> <span class="o">=</span> <span class="n">_namedtuple_mro_entries</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l3135">
+                  <tt><i>3135</i> <span class="n">_TypedDict</span> <span class="o">=</span> <span class="nb">type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">_TypedDictMeta</span><span class="p">,</span> <span class="s1">&#39;TypedDict&#39;</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{})</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l1884">
+                  <tt><i>1884</i>                         <span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">!=</span> <span class="s1">&#39;Protocol&#39;</span> <span class="ow">and</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l1885">
+                  <tt><i>1885</i>                         <span class="nb">type</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">!=</span> <span class="n">_TypedDictMeta</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l203">
+                  <tt><i>203</i>             <span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">ParamSpec</span><span class="p">,</span> <span class="n">_ConcatenateGenericAlias</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l1336">
+                  <tt><i>1336</i>                 <span class="o">+</span> <span class="p">[</span><span class="n">attr</span> <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__origin__</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">_is_dunder</span><span class="p">(</span><span class="n">attr</span><span class="p">)]))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E251">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E251:</strong> unexpected spaces around keyword / parameter equals
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l2891">
+                  <tt><i>2891</i> <span class="k">def</span> <span class="nf">_make_nmtuple</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">types</span><span class="p">,</span> <span class="n">module</span><span class="p">,</span> <span class="n">defaults</span> <span class="o">=</span> <span class="p">()):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E721">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E721:</strong> do not compare types, use 'isinstance()'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l1701">
+                  <tt><i>1701</i>             <span class="k">if</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l1703">
+                  <tt><i>1703</i>             <span class="k">elif</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">is</span> <span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E129">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E129:</strong> visually indented line with same indent as next logical line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.typing.source.html#l1058">
+                  <tt><i>1058</i>             <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">GenericAlias</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="s1">&#39;__unpacked__&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">))):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

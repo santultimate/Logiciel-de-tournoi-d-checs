@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/tokenize.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.tokenize.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/tokenize.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  44
+               </span>
+               <strong>F405:</strong> 'tok_name' may be undefined, or defined from star imports: token
+               
+                  (and 14 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'tok_name' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l48">
+                  <tt><i>48</i>         <span class="n">annotated_type</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> (</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">tok_name</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'OP' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l54">
+                  <tt><i>54</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">OP</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">string</span> <span class="ow">in</span> <span class="n">EXACT_TOKEN_TYPES</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ENCODING' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l196">
+                  <tt><i>196</i>             <span class="k">if</span> <span class="n">tok_type</span> <span class="o">==</span> <span class="n">ENCODING</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ENDMARKER' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l199">
+                  <tt><i>199</i>             <span class="k">if</span> <span class="n">tok_type</span> <span class="o">==</span> <span class="n">ENDMARKER</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'INDENT' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l201">
+                  <tt><i>201</i>             <span class="k">if</span> <span class="n">tok_type</span> <span class="o">==</span> <span class="n">INDENT</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DEDENT' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l204">
+                  <tt><i>204</i>             <span class="k">elif</span> <span class="n">tok_type</span> <span class="o">==</span> <span class="n">DEDENT</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NEWLINE' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l208">
+                  <tt><i>208</i>             <span class="k">elif</span> <span class="n">tok_type</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NL' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l208">
+                  <tt><i>208</i>             <span class="k">elif</span> <span class="n">tok_type</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NEWLINE' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l219">
+                  <tt><i>219</i>             <span class="k">if</span> <span class="n">tok_type</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NL' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l219">
+                  <tt><i>219</i>             <span class="k">if</span> <span class="n">tok_type</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NEWLINE' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l227">
+                  <tt><i>227</i>         <span class="n">startline</span> <span class="o">=</span> <span class="n">token</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NL' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l227">
+                  <tt><i>227</i>         <span class="n">startline</span> <span class="o">=</span> <span class="n">token</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ENCODING' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l232">
+                  <tt><i>232</i>             <span class="k">if</span> <span class="n">toknum</span> <span class="o">==</span> <span class="n">ENCODING</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NAME' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l236">
+                  <tt><i>236</i>             <span class="k">if</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NAME</span><span class="p">,</span> <span class="n">NUMBER</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NUMBER' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l236">
+                  <tt><i>236</i>             <span class="k">if</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NAME</span><span class="p">,</span> <span class="n">NUMBER</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'STRING' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l240">
+                  <tt><i>240</i>             <span class="k">if</span> <span class="n">toknum</span> <span class="o">==</span> <span class="n">STRING</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'INDENT' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l247">
+                  <tt><i>247</i>             <span class="k">if</span> <span class="n">toknum</span> <span class="o">==</span> <span class="n">INDENT</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DEDENT' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l250">
+                  <tt><i>250</i>             <span class="k">elif</span> <span class="n">toknum</span> <span class="o">==</span> <span class="n">DEDENT</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NEWLINE' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l253">
+                  <tt><i>253</i>             <span class="k">elif</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NL' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l253">
+                  <tt><i>253</i>             <span class="k">elif</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ENCODING' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l444">
+                  <tt><i>444</i>         <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">ENCODING</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'strstart' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l465">
+                  <tt><i>465</i>                 <span class="k">raise</span> <span class="n">TokenError</span><span class="p">(</span><span class="s2">&quot;EOF in multi-line string&quot;</span><span class="p">,</span> <span class="n">strstart</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'endprog' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l466">
+                  <tt><i>466</i>             <span class="n">endmatch</span> <span class="o">=</span> <span class="n">endprog</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'STRING' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l469">
+                  <tt><i>469</i>                 <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">STRING</span><span class="p">,</span> <span class="n">contstr</span> <span class="o">+</span> <span class="n">line</span><span class="p">[:</span><span class="n">end</span><span class="p">],</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'strstart' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l470">
+                  <tt><i>470</i>                        <span class="n">strstart</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">end</span><span class="p">),</span> <span class="n">contline</span> <span class="o">+</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ERRORTOKEN' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l474">
+                  <tt><i>474</i>                 <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">ERRORTOKEN</span><span class="p">,</span> <span class="n">contstr</span> <span class="o">+</span> <span class="n">line</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'strstart' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l475">
+                  <tt><i>475</i>                            <span class="n">strstart</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)),</span> <span class="n">contline</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'COMMENT' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l503">
+                  <tt><i>503</i>                     <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">COMMENT</span><span class="p">,</span> <span class="n">comment_token</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NL' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l507">
+                  <tt><i>507</i>                 <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">NL</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="n">pos</span><span class="p">:],</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'INDENT' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l513">
+                  <tt><i>513</i>                 <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">INDENT</span><span class="p">,</span> <span class="n">line</span><span class="p">[:</span><span class="n">pos</span><span class="p">],</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DEDENT' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l521">
+                  <tt><i>521</i>                 <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">DEDENT</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NUMBER' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l539">
+                  <tt><i>539</i>                     <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">NUMBER</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="n">epos</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NL' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l542">
+                  <tt><i>542</i>                         <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">NL</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="n">epos</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NEWLINE' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l544">
+                  <tt><i>544</i>                         <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="n">epos</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'COMMENT' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l548">
+                  <tt><i>548</i>                     <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">COMMENT</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="n">epos</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'STRING' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l556">
+                  <tt><i>556</i>                         <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">STRING</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'STRING' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l591">
+                  <tt><i>591</i>                         <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">STRING</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="n">epos</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NAME' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l594">
+                  <tt><i>594</i>                     <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">NAME</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="n">epos</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'OP' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l602">
+                  <tt><i>602</i>                     <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">OP</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="n">epos</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ERRORTOKEN' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l604">
+                  <tt><i>604</i>                 <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">ERRORTOKEN</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="n">pos</span><span class="p">],</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NEWLINE' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l610">
+                  <tt><i>610</i>         <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">last_line</span><span class="p">)),</span> <span class="p">(</span><span class="n">lnum</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">last_line</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DEDENT' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l612">
+                  <tt><i>612</i>         <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">DEDENT</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ENDMARKER' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l613">
+                  <tt><i>613</i>     <span class="k">yield</span> <span class="n">TokenInfo</span><span class="p">(</span><span class="n">ENDMARKER</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'tok_name' may be undefined, or defined from star imports: token:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l668">
+                  <tt><i>668</i>                   <span class="p">(</span><span class="n">token_range</span><span class="p">,</span> <span class="n">tok_name</span><span class="p">[</span><span class="n">token_type</span><span class="p">],</span> <span class="n">token</span><span class="o">.</span><span class="n">string</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  2
+               </span>
+               <strong>F841:</strong> local variable 'codec' is assigned to but never used
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Local variable 'codec' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l346">
+                  <tt><i>346</i>             <span class="n">codec</span> <span class="o">=</span> <span class="n">lookup</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'strstart' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l577">
+                  <tt><i>577</i>                         <span class="n">strstart</span> <span class="o">=</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">start</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from token import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l35">
+                  <tt><i>35</i> <span class="kn">from</span> <span class="nn">token</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  9
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l46">
+                  <tt><i>46</i> <span class="k">class</span> <span class="nc">TokenInfo</span><span class="p">(</span><span class="n">collections</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;TokenInfo&#39;</span><span class="p">,</span> <span class="s1">&#39;type string start end line&#39;</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l59">
+                  <tt><i>59</i> <span class="k">def</span> <span class="nf">group</span><span class="p">(</span><span class="o">*</span><span class="n">choices</span><span class="p">):</span> <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">choices</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l84">
+                  <tt><i>84</i> <span class="k">def</span> <span class="nf">_all_string_prefixes</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l99">
+                  <tt><i>99</i> <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l161">
+                  <tt><i>161</i> <span class="k">class</span> <span class="nc">TokenError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l163">
+                  <tt><i>163</i> <span class="k">class</span> <span class="nc">StopTokenizing</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l299">
+                  <tt><i>299</i> <span class="k">def</span> <span class="nf">detect_encoding</span><span class="p">(</span><span class="n">readline</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l624">
+                  <tt><i>624</i> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l685">
+                  <tt><i>685</i> <span class="k">def</span> <span class="nf">_generate_tokens_from_c_tokenizer</span><span class="p">(</span><span class="n">source</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l353">
+                  <tt><i>353</i>                         <span class="n">encoding</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l470">
+                  <tt><i>470</i>                        <span class="n">strstart</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">end</span><span class="p">),</span> <span class="n">contline</span> <span class="o">+</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l475">
+                  <tt><i>475</i>                            <span class="n">strstart</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)),</span> <span class="n">contline</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l504">
+                  <tt><i>504</i>                            <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">comment_token</span><span class="p">)),</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l508">
+                  <tt><i>508</i>                            <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)),</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l605">
+                  <tt><i>605</i>                            <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l161">
+                  <tt><i>161</i> <span class="k">class</span> <span class="nc">TokenError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l163">
+                  <tt><i>163</i> <span class="k">class</span> <span class="nc">StopTokenizing</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l485">
+                  <tt><i>485</i>             <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="p">:</span> <span class="k">break</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l65">
+                  <tt><i>65</i> <span class="n">Whitespace</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;[ \f\t]*&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l105">
+                  <tt><i>105</i> <span class="n">StringPrefix</span> <span class="o">=</span> <span class="n">group</span><span class="p">(</span><span class="o">*</span><span class="n">_all_string_prefixes</span><span class="p">())</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E129">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E129:</strong> visually indented line with same indent as next logical line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l538">
+                  <tt><i>538</i>                     <span class="p">(</span><span class="n">initial</span> <span class="o">==</span> <span class="s1">&#39;.&#39;</span> <span class="ow">and</span> <span class="n">token</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span> <span class="ow">and</span> <span class="n">token</span> <span class="o">!=</span> <span class="s1">&#39;...&#39;</span><span class="p">)):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E306">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E306:</strong> expected 1 blank line before a nested definition, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l323">
+                  <tt><i>323</i>     <span class="k">def</span> <span class="nf">read_or_stop</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E402">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E402:</strong> module level import not at top of file
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l41">
+                  <tt><i>41</i> <span class="kn">import</span> <span class="nn">token</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tokenize.source.html#l403">
+                  <tt><i>403</i>     <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

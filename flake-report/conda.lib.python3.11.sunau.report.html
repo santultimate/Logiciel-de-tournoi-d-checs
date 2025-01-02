@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/sunau.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.sunau.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/sunau.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l140">
+                  <tt><i>140</i> <span class="k">class</span> <span class="nc">Error</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l143">
+                  <tt><i>143</i> <span class="k">def</span> <span class="nf">_read_u32</span><span class="p">(</span><span class="n">file</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l152">
+                  <tt><i>152</i> <span class="k">def</span> <span class="nf">_write_u32</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l160">
+                  <tt><i>160</i> <span class="k">class</span> <span class="nc">Au_read</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l312">
+                  <tt><i>312</i> <span class="k">class</span> <span class="nc">Au_write</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l522">
+                  <tt><i>522</i> <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l199">
+                  <tt><i>199</i>                   <span class="n">AUDIO_FILE_ENCODING_ALAW_8</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l264">
+                  <tt><i>264</i>                   <span class="bp">self</span><span class="o">.</span><span class="n">getframerate</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">getnframes</span><span class="p">(),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l265">
+                  <tt><i>265</i>                   <span class="bp">self</span><span class="o">.</span><span class="n">getcomptype</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">getcompname</span><span class="p">())</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l418">
+                  <tt><i>418</i>                   <span class="bp">self</span><span class="o">.</span><span class="n">getframerate</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">getnframes</span><span class="p">(),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l419">
+                  <tt><i>419</i>                   <span class="bp">self</span><span class="o">.</span><span class="n">getcomptype</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">getcompname</span><span class="p">())</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E721">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E721:</strong> do not compare types, use 'isinstance()'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l163">
+                  <tt><i>163</i>         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l315">
+                  <tt><i>315</i>         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l441">
+                  <tt><i>441</i>                   <span class="bp">self</span><span class="o">.</span><span class="n">_datalength</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_datawritten</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.sunau.source.html#l345">
+                  <tt><i>345</i>         <span class="bp">self</span><span class="o">.</span><span class="n">_comptype</span> <span class="o">=</span> <span class="s1">&#39;ULAW&#39;</span> <span class="c1"># default is U-law</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

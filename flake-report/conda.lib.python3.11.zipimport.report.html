@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/zipimport.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.zipimport.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/zipimport.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  10
+               </span>
+               <strong>E303:</strong> too many blank lines (2)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l104">
+                  <tt><i>104</i>     <span class="c1"># Check whether we can satisfy the import of the module named by</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l144">
+                  <tt><i>144</i>     <span class="c1"># Check whether we can satisfy the import of the module named by</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l199">
+                  <tt><i>199</i>     <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pathname</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l219">
+                  <tt><i>219</i>     <span class="c1"># Return a string matching __file__ for the named module</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l232">
+                  <tt><i>232</i>     <span class="k">def</span> <span class="nf">get_source</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l257">
+                  <tt><i>257</i>     <span class="c1"># Return a bool signifying whether the module is a package or not.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l270">
+                  <tt><i>270</i>     <span class="c1"># Load and return the module named by &#39;fullname&#39;.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l314">
+                  <tt><i>314</i>     <span class="k">def</span> <span class="nf">get_resource_reader</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l329">
+                  <tt><i>329</i>     <span class="k">def</span> <span class="nf">invalidate_caches</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l339">
+                  <tt><i>339</i>     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  9
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l46">
+                  <tt><i>46</i> <span class="k">class</span> <span class="nc">zipimporter</span><span class="p">(</span><span class="n">_bootstrap_external</span><span class="o">.</span><span class="n">_LoaderBasics</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l357">
+                  <tt><i>357</i> <span class="k">def</span> <span class="nf">_get_module_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l361">
+                  <tt><i>361</i> <span class="k">def</span> <span class="nf">_is_dir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l370">
+                  <tt><i>370</i> <span class="k">def</span> <span class="nf">_get_module_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l566">
+                  <tt><i>566</i> <span class="k">def</span> <span class="nf">_get_decompress_func</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l587">
+                  <tt><i>587</i> <span class="k">def</span> <span class="nf">_get_data</span><span class="p">(</span><span class="n">archive</span><span class="p">,</span> <span class="n">toc_entry</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l693">
+                  <tt><i>693</i> <span class="k">def</span> <span class="nf">_compile_source</span><span class="p">(</span><span class="n">pathname</span><span class="p">,</span> <span class="n">source</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l699">
+                  <tt><i>699</i> <span class="k">def</span> <span class="nf">_parse_dostime</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l712">
+                  <tt><i>712</i> <span class="k">def</span> <span class="nf">_get_mtime_and_size_of_source</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l109">
+                  <tt><i>109</i>     <span class="k">def</span> <span class="nf">find_loader</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l146">
+                  <tt><i>146</i>     <span class="k">def</span> <span class="nf">find_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l220">
+                  <tt><i>220</i>     <span class="k">def</span> <span class="nf">get_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l258">
+                  <tt><i>258</i>     <span class="k">def</span> <span class="nf">is_package</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l271">
+                  <tt><i>271</i>     <span class="k">def</span> <span class="nf">load_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l38">
+                  <tt><i>38</i> <span class="n">_zip_directory_cache</span> <span class="o">=</span> <span class="p">{}</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l532">
+                  <tt><i>532</i> <span class="n">cp437_table</span> <span class="o">=</span> <span class="p">(</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l681">
+                  <tt><i>681</i> <span class="n">_code_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">_unmarshal_code</span><span class="o">.</span><span class="vm">__code__</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l15">
+                  <tt><i>15</i> <span class="c1">#from importlib import _bootstrap_external</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l16">
+                  <tt><i>16</i> <span class="c1">#from importlib import _bootstrap  # for _verbose_message</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.zipimport.source.html#l302">
+                  <tt><i>302</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

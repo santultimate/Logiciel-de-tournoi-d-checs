@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>.conda/lib/python3.11/_aix_support.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <h1>
+            <a href="conda.lib.python3.11._aix_support.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/_aix_support.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="sd">&quot;&quot;&quot;Shared AIX support functions.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> &nbsp;</tt>
+            </div>
+            <div id="l3"
+               class="code sev- "><tt><i>3</i> <span class="kn">import</span> <span class="nn">sys</span></tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> <span class="kn">import</span> <span class="nn">sysconfig</span></tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> &nbsp;</tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i> <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i>     <span class="kn">import</span> <span class="nn">subprocess</span></tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span></tt>
+            </div>
+            <div id="l9"
+               class="code sev- "><tt><i>9</i>     <span class="c1"># _aix_support is used in distutils by setup.py to build C extensions,</span></tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i>     <span class="c1"># before subprocess dependencies like _posixsubprocess are available.</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i>     <span class="kn">import</span> <span class="nn">_bootsubprocess</span> <span class="k">as</span> <span class="nn">subprocess</span></tt>
+            </div>
+            <div id="l12"
+               class="code sev- "><tt><i>12</i> &nbsp;</tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i> &nbsp;</tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i> <span class="k">def</span> <span class="nf">_aix_tag</span><span class="p">(</span><span class="n">vrtl</span><span class="p">,</span> <span class="n">bd</span><span class="p">):</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev-1  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-1">
+                        F821
+                     </span>
+                     Undefined name 'List'</li>
+               
+               </ul><tt><i>15</i>     <span class="c1"># type: (List[int], int) -&gt; str</span></tt>
+            </div>
+            <div id="l16"
+               class="code sev- "><tt><i>16</i>     <span class="c1"># Infer the ABI bitwidth from maxsize (assuming 64 bit as the default)</span></tt>
+            </div>
+            <div id="l17"
+               class="code sev- "><tt><i>17</i>     <span class="n">_sz</span> <span class="o">=</span> <span class="mi">32</span> <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span> <span class="o">==</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">31</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">else</span> <span class="mi">64</span></tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i>     <span class="n">_bd</span> <span class="o">=</span> <span class="n">bd</span> <span class="k">if</span> <span class="n">bd</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">9988</span></tt>
+            </div>
+            <div id="l19"
+               class="code sev- "><tt><i>19</i>     <span class="c1"># vrtl[version, release, technology_level]</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev- "><tt><i>20</i>     <span class="k">return</span> <span class="s2">&quot;aix-</span><span class="si">{:1x}{:1d}{:02d}</span><span class="s2">-</span><span class="si">{:04d}</span><span class="s2">-</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vrtl</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vrtl</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">vrtl</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">_bd</span><span class="p">,</span> <span class="n">_sz</span><span class="p">)</span></tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i> &nbsp;</tt>
+            </div>
+            <div id="l22"
+               class="code sev- "><tt><i>22</i> &nbsp;</tt>
+            </div>
+            <div id="l23"
+               class="code sev- "><tt><i>23</i> <span class="c1"># extract version, release and technology level from a VRMF string</span></tt>
+            </div>
+            <div id="l24"
+               class="code sev- "><tt><i>24</i> <span class="k">def</span> <span class="nf">_aix_vrtl</span><span class="p">(</span><span class="n">vrmf</span><span class="p">):</span></tt>
+            </div>
+            <div id="l25"
+               class="code sev-1  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-1">
+                        F821
+                     </span>
+                     Undefined name 'List'</li>
+               
+               </ul><tt><i>25</i>     <span class="c1"># type: (str) -&gt; List[int]</span></tt>
+            </div>
+            <div id="l26"
+               class="code sev- "><tt><i>26</i>     <span class="n">v</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">tl</span> <span class="o">=</span> <span class="n">vrmf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[:</span><span class="mi">3</span><span class="p">]</span></tt>
+            </div>
+            <div id="l27"
+               class="code sev- "><tt><i>27</i>     <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">tl</span><span class="p">)]</span></tt>
+            </div>
+            <div id="l28"
+               class="code sev- "><tt><i>28</i> &nbsp;</tt>
+            </div>
+            <div id="l29"
+               class="code sev- "><tt><i>29</i> &nbsp;</tt>
+            </div>
+            <div id="l30"
+               class="code sev- "><tt><i>30</i> <span class="k">def</span> <span class="nf">_aix_bos_rte</span><span class="p">():</span></tt>
+            </div>
+            <div id="l31"
+               class="code sev-1  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-1">
+                        F821
+                     </span>
+                     Undefined name 'Tuple'</li>
+               
+               </ul><tt><i>31</i>     <span class="c1"># type: () -&gt; Tuple[str, int]</span></tt>
+            </div>
+            <div id="l32"
+               class="code sev- "><tt><i>32</i>     <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l33"
+               class="code sev- "><tt><i>33</i> <span class="sd">    Return a Tuple[str, int] e.g., [&#39;7.1.4.34&#39;, 1806]</span></tt>
+            </div>
+            <div id="l34"
+               class="code sev- "><tt><i>34</i> <span class="sd">    The fileset bos.rte represents the current AIX run-time level. It&#39;s VRMF and</span></tt>
+            </div>
+            <div id="l35"
+               class="code sev- "><tt><i>35</i> <span class="sd">    builddate reflect the current ABI levels of the runtime environment.</span></tt>
+            </div>
+            <div id="l36"
+               class="code sev- "><tt><i>36</i> <span class="sd">    If no builddate is found give a value that will satisfy pep425 related queries</span></tt>
+            </div>
+            <div id="l37"
+               class="code sev- "><tt><i>37</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l38"
+               class="code sev- "><tt><i>38</i>     <span class="c1"># All AIX systems to have lslpp installed in this location</span></tt>
+            </div>
+            <div id="l39"
+               class="code sev- "><tt><i>39</i>     <span class="n">out</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">([</span><span class="s2">&quot;/usr/bin/lslpp&quot;</span><span class="p">,</span> <span class="s2">&quot;-Lqc&quot;</span><span class="p">,</span> <span class="s2">&quot;bos.rte&quot;</span><span class="p">])</span></tt>
+            </div>
+            <div id="l40"
+               class="code sev- "><tt><i>40</i>     <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l41"
+               class="code sev- "><tt><i>41</i>     <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>  <span class="c1"># type: ignore</span></tt>
+            </div>
+            <div id="l42"
+               class="code sev- "><tt><i>42</i>     <span class="n">_bd</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="k">if</span> <span class="n">out</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="k">else</span> <span class="mi">9988</span></tt>
+            </div>
+            <div id="l43"
+               class="code sev- "><tt><i>43</i>     <span class="k">return</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="n">_bd</span><span class="p">)</span></tt>
+            </div>
+            <div id="l44"
+               class="code sev- "><tt><i>44</i> &nbsp;</tt>
+            </div>
+            <div id="l45"
+               class="code sev- "><tt><i>45</i> &nbsp;</tt>
+            </div>
+            <div id="l46"
+               class="code sev- "><tt><i>46</i> <span class="k">def</span> <span class="nf">aix_platform</span><span class="p">():</span></tt>
+            </div>
+            <div id="l47"
+               class="code sev- "><tt><i>47</i>     <span class="c1"># type: () -&gt; str</span></tt>
+            </div>
+            <div id="l48"
+               class="code sev- "><tt><i>48</i>     <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l49"
+               class="code sev- "><tt><i>49</i> <span class="sd">    AIX filesets are identified by four decimal values: V.R.M.F.</span></tt>
+            </div>
+            <div id="l50"
+               class="code sev- "><tt><i>50</i> <span class="sd">    V (version) and R (release) can be retrieved using ``uname``</span></tt>
+            </div>
+            <div id="l51"
+               class="code sev- "><tt><i>51</i> <span class="sd">    Since 2007, starting with AIX 5.3 TL7, the M value has been</span></tt>
+            </div>
+            <div id="l52"
+               class="code sev- "><tt><i>52</i> <span class="sd">    included with the fileset bos.rte and represents the Technology</span></tt>
+            </div>
+            <div id="l53"
+               class="code sev- "><tt><i>53</i> <span class="sd">    Level (TL) of AIX. The F (Fix) value also increases, but is not</span></tt>
+            </div>
+            <div id="l54"
+               class="code sev- "><tt><i>54</i> <span class="sd">    relevant for comparing releases and binary compatibility.</span></tt>
+            </div>
+            <div id="l55"
+               class="code sev- "><tt><i>55</i> <span class="sd">    For binary compatibility the so-called builddate is needed.</span></tt>
+            </div>
+            <div id="l56"
+               class="code sev- "><tt><i>56</i> <span class="sd">    Again, the builddate of an AIX release is associated with bos.rte.</span></tt>
+            </div>
+            <div id="l57"
+               class="code sev- "><tt><i>57</i> <span class="sd">    AIX ABI compatibility is described  as guaranteed at: https://www.ibm.com/\</span></tt>
+            </div>
+            <div id="l58"
+               class="code sev- "><tt><i>58</i> <span class="sd">    support/knowledgecenter/en/ssw_aix_72/install/binary_compatability.html</span></tt>
+            </div>
+            <div id="l59"
+               class="code sev- "><tt><i>59</i> &nbsp;</tt>
+            </div>
+            <div id="l60"
+               class="code sev- "><tt><i>60</i> <span class="sd">    For pep425 purposes the AIX platform tag becomes:</span></tt>
+            </div>
+            <div id="l61"
+               class="code sev- "><tt><i>61</i> <span class="sd">    &quot;aix-{:1x}{:1d}{:02d}-{:04d}-{}&quot;.format(v, r, tl, builddate, bitsize)</span></tt>
+            </div>
+            <div id="l62"
+               class="code sev- "><tt><i>62</i> <span class="sd">    e.g., &quot;aix-6107-1415-32&quot; for AIX 6.1 TL7 bd 1415, 32-bit</span></tt>
+            </div>
+            <div id="l63"
+               class="code sev- "><tt><i>63</i> <span class="sd">    and, &quot;aix-6107-1415-64&quot; for AIX 6.1 TL7 bd 1415, 64-bit</span></tt>
+            </div>
+            <div id="l64"
+               class="code sev- "><tt><i>64</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l65"
+               class="code sev- "><tt><i>65</i>     <span class="n">vrmf</span><span class="p">,</span> <span class="n">bd</span> <span class="o">=</span> <span class="n">_aix_bos_rte</span><span class="p">()</span></tt>
+            </div>
+            <div id="l66"
+               class="code sev- "><tt><i>66</i>     <span class="k">return</span> <span class="n">_aix_tag</span><span class="p">(</span><span class="n">_aix_vrtl</span><span class="p">(</span><span class="n">vrmf</span><span class="p">),</span> <span class="n">bd</span><span class="p">)</span></tt>
+            </div>
+            <div id="l67"
+               class="code sev- "><tt><i>67</i> &nbsp;</tt>
+            </div>
+            <div id="l68"
+               class="code sev- "><tt><i>68</i> &nbsp;</tt>
+            </div>
+            <div id="l69"
+               class="code sev- "><tt><i>69</i> <span class="c1"># extract vrtl from the BUILD_GNU_TYPE as an int</span></tt>
+            </div>
+            <div id="l70"
+               class="code sev- "><tt><i>70</i> <span class="k">def</span> <span class="nf">_aix_bgt</span><span class="p">():</span></tt>
+            </div>
+            <div id="l71"
+               class="code sev-1  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-1">
+                        F821
+                     </span>
+                     Undefined name 'List'</li>
+               
+               </ul><tt><i>71</i>     <span class="c1"># type: () -&gt; List[int]</span></tt>
+            </div>
+            <div id="l72"
+               class="code sev- "><tt><i>72</i>     <span class="n">gnu_type</span> <span class="o">=</span> <span class="n">sysconfig</span><span class="o">.</span><span class="n">get_config_var</span><span class="p">(</span><span class="s2">&quot;BUILD_GNU_TYPE&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l73"
+               class="code sev- "><tt><i>73</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">gnu_type</span><span class="p">:</span></tt>
+            </div>
+            <div id="l74"
+               class="code sev- "><tt><i>74</i>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;BUILD_GNU_TYPE is not defined&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l75"
+               class="code sev- "><tt><i>75</i>     <span class="k">return</span> <span class="n">_aix_vrtl</span><span class="p">(</span><span class="n">vrmf</span><span class="o">=</span><span class="n">gnu_type</span><span class="p">)</span></tt>
+            </div>
+            <div id="l76"
+               class="code sev- "><tt><i>76</i> &nbsp;</tt>
+            </div>
+            <div id="l77"
+               class="code sev- "><tt><i>77</i> &nbsp;</tt>
+            </div>
+            <div id="l78"
+               class="code sev- "><tt><i>78</i> <span class="k">def</span> <span class="nf">aix_buildtag</span><span class="p">():</span></tt>
+            </div>
+            <div id="l79"
+               class="code sev- "><tt><i>79</i>     <span class="c1"># type: () -&gt; str</span></tt>
+            </div>
+            <div id="l80"
+               class="code sev- "><tt><i>80</i>     <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l81"
+               class="code sev- "><tt><i>81</i> <span class="sd">    Return the platform_tag of the system Python was built on.</span></tt>
+            </div>
+            <div id="l82"
+               class="code sev- "><tt><i>82</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l83"
+               class="code sev- "><tt><i>83</i>     <span class="c1"># AIX_BUILDDATE is defined by configure with:</span></tt>
+            </div>
+            <div id="l84"
+               class="code sev- "><tt><i>84</i>     <span class="c1"># lslpp -Lcq bos.rte | awk -F:  &#39;{ print $NF }&#39;</span></tt>
+            </div>
+            <div id="l85"
+               class="code sev- "><tt><i>85</i>     <span class="n">build_date</span> <span class="o">=</span> <span class="n">sysconfig</span><span class="o">.</span><span class="n">get_config_var</span><span class="p">(</span><span class="s2">&quot;AIX_BUILDDATE&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l86"
+               class="code sev- "><tt><i>86</i>     <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l87"
+               class="code sev- "><tt><i>87</i>         <span class="n">build_date</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">build_date</span><span class="p">)</span></tt>
+            </div>
+            <div id="l88"
+               class="code sev- "><tt><i>88</i>     <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span></tt>
+            </div>
+            <div id="l89"
+               class="code sev- "><tt><i>89</i>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AIX_BUILDDATE is not defined or invalid: &quot;</span></tt>
+            </div>
+            <div id="l90"
+               class="code sev- "><tt><i>90</i>                          <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">build_date</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l91"
+               class="code sev- "><tt><i>91</i>     <span class="k">return</span> <span class="n">_aix_tag</span><span class="p">(</span><span class="n">_aix_bgt</span><span class="p">(),</span> <span class="n">build_date</span><span class="p">)</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>

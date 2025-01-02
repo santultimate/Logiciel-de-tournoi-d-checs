@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/difflib.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.difflib.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/difflib.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  168
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l30">
+                  <tt><i>30</i>            <span class="s1">&#39;Differ&#39;</span><span class="p">,</span><span class="s1">&#39;IS_CHARACTER_JUNK&#39;</span><span class="p">,</span> <span class="s1">&#39;IS_LINE_JUNK&#39;</span><span class="p">,</span> <span class="s1">&#39;context_diff&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l593">
+                  <tt><i>593</i>             <span class="n">group</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">tag</span><span class="p">,</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">j1</span> <span class="p">,</span><span class="n">j2</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1138">
+                  <tt><i>1138</i>     <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">get_grouped_opcodes</span><span class="p">(</span><span class="n">n</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1227">
+                  <tt><i>1227</i>     <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">get_grouped_opcodes</span><span class="p">(</span><span class="n">n</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1380">
+                  <tt><i>1380</i>     <span class="n">diff_lines_iterator</span> <span class="o">=</span> <span class="n">ndiff</span><span class="p">(</span><span class="n">fromlines</span><span class="p">,</span><span class="n">tolines</span><span class="p">,</span><span class="n">linejunk</span><span class="p">,</span><span class="n">charjunk</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1382">
+                  <tt><i>1382</i>     <span class="k">def</span> <span class="nf">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">format_key</span><span class="p">,</span> <span class="n">side</span><span class="p">,</span> <span class="n">num_lines</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1409">
+                  <tt><i>1409</i>             <span class="k">return</span> <span class="p">(</span><span class="n">num_lines</span><span class="p">[</span><span class="n">side</span><span class="p">],</span><span class="n">lines</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="mi">2</span><span class="p">:])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1415">
+                  <tt><i>1415</i>             <span class="k">def</span> <span class="nf">record_sub_info</span><span class="p">(</span><span class="n">match_object</span><span class="p">,</span><span class="n">sub_info</span><span class="o">=</span><span class="n">sub_info</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1416">
+                  <tt><i>1416</i>                 <span class="n">sub_info</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">match_object</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span><span class="n">match_object</span><span class="o">.</span><span class="n">span</span><span class="p">()])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1418">
+                  <tt><i>1418</i>             <span class="n">change_re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">record_sub_info</span><span class="p">,</span><span class="n">markers</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1421">
+                  <tt><i>1421</i>             <span class="k">for</span> <span class="n">key</span><span class="p">,(</span><span class="n">begin</span><span class="p">,</span><span class="n">end</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">sub_info</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1436">
+                  <tt><i>1436</i>         <span class="k">return</span> <span class="p">(</span><span class="n">num_lines</span><span class="p">[</span><span class="n">side</span><span class="p">],</span><span class="n">text</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1468">
+                  <tt><i>1468</i>                 <span class="k">yield</span> <span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="s1">&#39;?&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="s1">&#39;?&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="kc">True</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1474">
+                  <tt><i>1474</i>                 <span class="k">yield</span> <span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">True</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1479">
+                  <tt><i>1479</i>                 <span class="n">from_line</span><span class="p">,</span><span class="n">to_line</span> <span class="o">=</span> <span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="kc">None</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1480">
+                  <tt><i>1480</i>                 <span class="n">num_blanks_to_yield</span><span class="p">,</span><span class="n">num_blanks_pending</span> <span class="o">=</span> <span class="n">num_blanks_pending</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1483">
+                  <tt><i>1483</i>                 <span class="k">yield</span> <span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="s1">&#39;?&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="kc">True</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1487">
+                  <tt><i>1487</i>                 <span class="k">yield</span> <span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="s1">&#39;?&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="kc">True</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1492">
+                  <tt><i>1492</i>                 <span class="k">yield</span> <span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">True</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1498">
+                  <tt><i>1498</i>                 <span class="k">yield</span> <span class="kc">None</span><span class="p">,</span> <span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="kc">True</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1502">
+                  <tt><i>1502</i>                 <span class="n">from_line</span><span class="p">,</span> <span class="n">to_line</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1503">
+                  <tt><i>1503</i>                 <span class="n">num_blanks_to_yield</span><span class="p">,</span><span class="n">num_blanks_pending</span> <span class="o">=</span> <span class="n">num_blanks_pending</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1507">
+                  <tt><i>1507</i>                 <span class="k">yield</span> <span class="kc">None</span><span class="p">,</span> <span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="kc">True</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 6 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1511">
+                  <tt><i>1511</i>                 <span class="k">yield</span> <span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">[:],</span><span class="kc">None</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">_make_line</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="kc">False</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1517">
+                  <tt><i>1517</i>                 <span class="k">yield</span> <span class="kc">None</span><span class="p">,(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">),</span><span class="kc">True</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1520">
+                  <tt><i>1520</i>                 <span class="k">yield</span> <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">),</span><span class="kc">None</span><span class="p">,</span><span class="kc">True</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1524">
+                  <tt><i>1524</i>                 <span class="k">yield</span> <span class="n">from_line</span><span class="p">,</span><span class="n">to_line</span><span class="p">,</span><span class="kc">True</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1540">
+                  <tt><i>1540</i>         <span class="n">fromlines</span><span class="p">,</span><span class="n">tolines</span><span class="o">=</span><span class="p">[],[]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1549">
+                  <tt><i>1549</i>                     <span class="n">fromlines</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">from_line</span><span class="p">,</span><span class="n">found_diff</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1551">
+                  <tt><i>1551</i>                     <span class="n">tolines</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">to_line</span><span class="p">,</span><span class="n">found_diff</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1555">
+                  <tt><i>1555</i>             <span class="k">yield</span> <span class="p">(</span><span class="n">from_line</span><span class="p">,</span><span class="n">to_line</span><span class="p">,</span><span class="n">fromDiff</span> <span class="ow">or</span> <span class="n">to_diff</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1688">
+                  <tt><i>1688</i>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">tabsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">wrapcolumn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">linejunk</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1732">
+                  <tt><i>1732</i>     <span class="k">def</span> <span class="nf">_tab_newline_replace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">fromlines</span><span class="p">,</span><span class="n">tolines</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1744">
+                  <tt><i>1744</i>             <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1749">
+                  <tt><i>1749</i>             <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1750">
+                  <tt><i>1750</i>             <span class="k">return</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1753">
+                  <tt><i>1753</i>         <span class="k">return</span> <span class="n">fromlines</span><span class="p">,</span><span class="n">tolines</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1755">
+                  <tt><i>1755</i>     <span class="k">def</span> <span class="nf">_split_line</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">data_list</span><span class="p">,</span><span class="n">line_num</span><span class="p">,</span><span class="n">text</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1766">
+                  <tt><i>1766</i>             <span class="n">data_list</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">line_num</span><span class="p">,</span><span class="n">text</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1773">
+                  <tt><i>1773</i>             <span class="n">data_list</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">line_num</span><span class="p">,</span><span class="n">text</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1805">
+                  <tt><i>1805</i>         <span class="n">data_list</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">line_num</span><span class="p">,</span><span class="n">line1</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1808">
+                  <tt><i>1808</i>         <span class="bp">self</span><span class="o">.</span><span class="n">_split_line</span><span class="p">(</span><span class="n">data_list</span><span class="p">,</span><span class="s1">&#39;&gt;&#39;</span><span class="p">,</span><span class="n">line2</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1810">
+                  <tt><i>1810</i>     <span class="k">def</span> <span class="nf">_line_wrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">diffs</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1814">
+                  <tt><i>1814</i>         <span class="k">for</span> <span class="n">fromdata</span><span class="p">,</span><span class="n">todata</span><span class="p">,</span><span class="n">flag</span> <span class="ow">in</span> <span class="n">diffs</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1817">
+                  <tt><i>1817</i>                 <span class="k">yield</span> <span class="n">fromdata</span><span class="p">,</span><span class="n">todata</span><span class="p">,</span><span class="n">flag</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1819">
+                  <tt><i>1819</i>             <span class="p">(</span><span class="n">fromline</span><span class="p">,</span><span class="n">fromtext</span><span class="p">),(</span><span class="n">toline</span><span class="p">,</span><span class="n">totext</span><span class="p">)</span> <span class="o">=</span> <span class="n">fromdata</span><span class="p">,</span><span class="n">todata</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1822">
+                  <tt><i>1822</i>             <span class="n">fromlist</span><span class="p">,</span><span class="n">tolist</span> <span class="o">=</span> <span class="p">[],[]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1823">
+                  <tt><i>1823</i>             <span class="bp">self</span><span class="o">.</span><span class="n">_split_line</span><span class="p">(</span><span class="n">fromlist</span><span class="p">,</span><span class="n">fromline</span><span class="p">,</span><span class="n">fromtext</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1824">
+                  <tt><i>1824</i>             <span class="bp">self</span><span class="o">.</span><span class="n">_split_line</span><span class="p">(</span><span class="n">tolist</span><span class="p">,</span><span class="n">toline</span><span class="p">,</span><span class="n">totext</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1831">
+                  <tt><i>1831</i>                     <span class="n">fromdata</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1835">
+                  <tt><i>1835</i>                     <span class="n">todata</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1836">
+                  <tt><i>1836</i>                 <span class="k">yield</span> <span class="n">fromdata</span><span class="p">,</span><span class="n">todata</span><span class="p">,</span><span class="n">flag</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1838">
+                  <tt><i>1838</i>     <span class="k">def</span> <span class="nf">_collect_lines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">diffs</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1845">
+                  <tt><i>1845</i>         <span class="n">fromlist</span><span class="p">,</span><span class="n">tolist</span><span class="p">,</span><span class="n">flaglist</span> <span class="o">=</span> <span class="p">[],[],[]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1847">
+                  <tt><i>1847</i>         <span class="k">for</span> <span class="n">fromdata</span><span class="p">,</span><span class="n">todata</span><span class="p">,</span><span class="n">flag</span> <span class="ow">in</span> <span class="n">diffs</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1850">
+                  <tt><i>1850</i>                 <span class="n">fromlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_format_line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">flag</span><span class="p">,</span><span class="o">*</span><span class="n">fromdata</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1851">
+                  <tt><i>1851</i>                 <span class="n">tolist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_format_line</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">flag</span><span class="p">,</span><span class="o">*</span><span class="n">todata</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1857">
+                  <tt><i>1857</i>         <span class="k">return</span> <span class="n">fromlist</span><span class="p">,</span><span class="n">tolist</span><span class="p">,</span><span class="n">flaglist</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1859">
+                  <tt><i>1859</i>     <span class="k">def</span> <span class="nf">_format_line</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">side</span><span class="p">,</span><span class="n">flag</span><span class="p">,</span><span class="n">linenum</span><span class="p">,</span><span class="n">text</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1869">
+                  <tt><i>1869</i>             <span class="nb">id</span> <span class="o">=</span> <span class="s1">&#39; id=&quot;</span><span class="si">%s%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_prefix</span><span class="p">[</span><span class="n">side</span><span class="p">],</span><span class="n">linenum</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1874">
+                  <tt><i>1874</i>         <span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&amp;&quot;</span><span class="p">,</span><span class="s2">&quot;&amp;amp;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&gt;&quot;</span><span class="p">,</span><span class="s2">&quot;&amp;gt;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&lt;&quot;</span><span class="p">,</span><span class="s2">&quot;&amp;lt;&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1877">
+                  <tt><i>1877</i>         <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;&amp;nbsp;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1880">
+                  <tt><i>1880</i>                <span class="o">%</span> <span class="p">(</span><span class="nb">id</span><span class="p">,</span><span class="n">linenum</span><span class="p">,</span><span class="n">text</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1891">
+                  <tt><i>1891</i>         <span class="bp">self</span><span class="o">.</span><span class="n">_prefix</span> <span class="o">=</span> <span class="p">[</span><span class="n">fromprefix</span><span class="p">,</span><span class="n">toprefix</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 5 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1893">
+                  <tt><i>1893</i>     <span class="k">def</span> <span class="nf">_convert_flags</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">fromlist</span><span class="p">,</span><span class="n">tolist</span><span class="p">,</span><span class="n">flaglist</span><span class="p">,</span><span class="n">context</span><span class="p">,</span><span class="n">numlines</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1904">
+                  <tt><i>1904</i>         <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">flag</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">flaglist</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1912">
+                  <tt><i>1912</i>                     <span class="n">i</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="n">numlines</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1913">
+                  <tt><i>1913</i>                     <span class="n">next_id</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39; id=&quot;difflib_chg_</span><span class="si">%s</span><span class="s1">_</span><span class="si">%d</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">toprefix</span><span class="p">,</span><span class="n">num_chg</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1918">
+                  <tt><i>1918</i>                          <span class="n">toprefix</span><span class="p">,</span><span class="n">num_chg</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1938">
+                  <tt><i>1938</i>         <span class="k">return</span> <span class="n">fromlist</span><span class="p">,</span><span class="n">tolist</span><span class="p">,</span><span class="n">flaglist</span><span class="p">,</span><span class="n">next_href</span><span class="p">,</span><span class="n">next_id</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 5 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1940">
+                  <tt><i>1940</i>     <span class="k">def</span> <span class="nf">make_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">fromlines</span><span class="p">,</span><span class="n">tolines</span><span class="p">,</span><span class="n">fromdesc</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">todesc</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">context</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1964">
+                  <tt><i>1964</i>         <span class="n">fromlines</span><span class="p">,</span><span class="n">tolines</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tab_newline_replace</span><span class="p">(</span><span class="n">fromlines</span><span class="p">,</span><span class="n">tolines</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1971">
+                  <tt><i>1971</i>         <span class="n">diffs</span> <span class="o">=</span> <span class="n">_mdiff</span><span class="p">(</span><span class="n">fromlines</span><span class="p">,</span><span class="n">tolines</span><span class="p">,</span><span class="n">context_lines</span><span class="p">,</span><span class="n">linejunk</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_linejunk</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1979">
+                  <tt><i>1979</i>         <span class="n">fromlist</span><span class="p">,</span><span class="n">tolist</span><span class="p">,</span><span class="n">flaglist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_collect_lines</span><span class="p">(</span><span class="n">diffs</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1982">
+                  <tt><i>1982</i>         <span class="n">fromlist</span><span class="p">,</span><span class="n">tolist</span><span class="p">,</span><span class="n">flaglist</span><span class="p">,</span><span class="n">next_href</span><span class="p">,</span><span class="n">next_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_flags</span><span class="p">(</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1983">
+                  <tt><i>1983</i>             <span class="n">fromlist</span><span class="p">,</span><span class="n">tolist</span><span class="p">,</span><span class="n">flaglist</span><span class="p">,</span><span class="n">context</span><span class="p">,</span><span class="n">numlines</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1995">
+                  <tt><i>1995</i>                 <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">fmt</span> <span class="o">%</span> <span class="p">(</span><span class="n">next_id</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">next_href</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">fromlist</span><span class="p">[</span><span class="n">i</span><span class="p">],</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1996">
+                  <tt><i>1996</i>                                            <span class="n">next_href</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">tolist</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2011">
+                  <tt><i>2011</i>         <span class="k">return</span> <span class="n">table</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">+&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;span class=&quot;diff_add&quot;&gt;&#39;</span><span class="p">)</span><span class="o">.</span> \</tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2012">
+                  <tt><i>2012</i>                      <span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">-&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;span class=&quot;diff_sub&quot;&gt;&#39;</span><span class="p">)</span><span class="o">.</span> \</tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2013">
+                  <tt><i>2013</i>                      <span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">^&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;span class=&quot;diff_chg&quot;&gt;&#39;</span><span class="p">)</span><span class="o">.</span> \</tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2014">
+                  <tt><i>2014</i>                      <span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\1</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;/span&gt;&#39;</span><span class="p">)</span><span class="o">.</span> \</tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2015">
+                  <tt><i>2015</i>                      <span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&amp;nbsp;&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  16
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l395">
+                  <tt><i>395</i>               <span class="ow">not</span> <span class="n">isbjunk</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">bestj</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l396">
+                  <tt><i>396</i>               <span class="n">a</span><span class="p">[</span><span class="n">besti</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">b</span><span class="p">[</span><span class="n">bestj</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l399">
+                  <tt><i>399</i>               <span class="ow">not</span> <span class="n">isbjunk</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">bestj</span><span class="o">+</span><span class="n">bestsize</span><span class="p">])</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l400">
+                  <tt><i>400</i>               <span class="n">a</span><span class="p">[</span><span class="n">besti</span><span class="o">+</span><span class="n">bestsize</span><span class="p">]</span> <span class="o">==</span> <span class="n">b</span><span class="p">[</span><span class="n">bestj</span><span class="o">+</span><span class="n">bestsize</span><span class="p">]:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l411">
+                  <tt><i>411</i>               <span class="n">isbjunk</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">bestj</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l412">
+                  <tt><i>412</i>               <span class="n">a</span><span class="p">[</span><span class="n">besti</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">b</span><span class="p">[</span><span class="n">bestj</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l415">
+                  <tt><i>415</i>               <span class="n">isbjunk</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">bestj</span><span class="o">+</span><span class="n">bestsize</span><span class="p">])</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l416">
+                  <tt><i>416</i>               <span class="n">a</span><span class="p">[</span><span class="n">besti</span><span class="o">+</span><span class="n">bestsize</span><span class="p">]</span> <span class="o">==</span> <span class="n">b</span><span class="p">[</span><span class="n">bestj</span><span class="o">+</span><span class="n">bestsize</span><span class="p">]:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l938">
+                  <tt><i>938</i>                       <span class="n">cruncher</span><span class="o">.</span><span class="n">quick_ratio</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">best_ratio</span> <span class="ow">and</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l939">
+                  <tt><i>939</i>                       <span class="n">cruncher</span><span class="o">.</span><span class="n">ratio</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">best_ratio</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1996">
+                  <tt><i>1996</i>                                            <span class="n">next_href</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">tolist</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2012">
+                  <tt><i>2012</i>                      <span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">-&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;span class=&quot;diff_sub&quot;&gt;&#39;</span><span class="p">)</span><span class="o">.</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2013">
+                  <tt><i>2013</i>                      <span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">^&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;span class=&quot;diff_chg&quot;&gt;&#39;</span><span class="p">)</span><span class="o">.</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2014">
+                  <tt><i>2014</i>                      <span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\1</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;/span&gt;&#39;</span><span class="p">)</span><span class="o">.</span> \</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2015">
+                  <tt><i>2015</i>                      <span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&amp;nbsp;&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2045">
+                  <tt><i>2045</i>                            <span class="o">%</span> <span class="n">which</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  13
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l39">
+                  <tt><i>39</i> <span class="k">def</span> <span class="nf">_calculate_ratio</span><span class="p">(</span><span class="n">matches</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l44">
+                  <tt><i>44</i> <span class="k">class</span> <span class="nc">SequenceMatcher</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1045">
+                  <tt><i>1045</i> <span class="k">def</span> <span class="nf">IS_LINE_JUNK</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">pat</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\s*(?:#\s*)?$&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">match</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1061">
+                  <tt><i>1061</i> <span class="k">def</span> <span class="nf">IS_CHARACTER_JUNK</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">ws</span><span class="o">=</span><span class="s2">&quot; </span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1095">
+                  <tt><i>1095</i> <span class="k">def</span> <span class="nf">unified_diff</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">fromfile</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tofile</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fromfiledate</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1180">
+                  <tt><i>1180</i> <span class="k">def</span> <span class="nf">context_diff</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">fromfile</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tofile</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1256">
+                  <tt><i>1256</i> <span class="k">def</span> <span class="nf">_check_types</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1273">
+                  <tt><i>1273</i> <span class="k">def</span> <span class="nf">diff_bytes</span><span class="p">(</span><span class="n">dfunc</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">fromfile</span><span class="o">=</span><span class="sa">b</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tofile</span><span class="o">=</span><span class="sa">b</span><span class="s1">&#39;&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1303">
+                  <tt><i>1303</i> <span class="k">def</span> <span class="nf">ndiff</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">linejunk</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">charjunk</span><span class="o">=</span><span class="n">IS_CHARACTER_JUNK</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1340">
+                  <tt><i>1340</i> <span class="k">def</span> <span class="nf">_mdiff</span><span class="p">(</span><span class="n">fromlines</span><span class="p">,</span> <span class="n">tolines</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">linejunk</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1666">
+                  <tt><i>1666</i> <span class="k">class</span> <span class="nc">HtmlDiff</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2019">
+                  <tt><i>2019</i> <span class="k">def</span> <span class="nf">restore</span><span class="p">(</span><span class="n">delta</span><span class="p">,</span> <span class="n">which</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2051">
+                  <tt><i>2051</i> <span class="k">def</span> <span class="nf">_test</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l594">
+                  <tt><i>594</i>         <span class="k">if</span> <span class="n">group</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">group</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">group</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;equal&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1540">
+                  <tt><i>1540</i>         <span class="n">fromlines</span><span class="p">,</span><span class="n">tolines</span><span class="o">=</span><span class="p">[],[]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1543">
+                  <tt><i>1543</i>             <span class="k">while</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fromlines</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">tolines</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1772">
+                  <tt><i>1772</i>         <span class="k">if</span> <span class="p">(</span><span class="n">size</span> <span class="o">&lt;=</span> <span class="nb">max</span><span class="p">)</span> <span class="ow">or</span> <span class="p">((</span><span class="n">size</span> <span class="o">-</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="p">))</span> <span class="o">&lt;=</span> <span class="nb">max</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1874">
+                  <tt><i>1874</i>         <span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&amp;&quot;</span><span class="p">,</span><span class="s2">&quot;&amp;amp;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&gt;&quot;</span><span class="p">,</span><span class="s2">&quot;&amp;gt;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&lt;&quot;</span><span class="p">,</span><span class="s2">&quot;&amp;lt;&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E201">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E201:</strong> whitespace after '('
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l488">
+                  <tt><i>488</i>         <span class="n">non_adjacent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">la</span><span class="p">,</span> <span class="n">lb</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l539">
+                  <tt><i>539</i>                 <span class="n">answer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ai</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">bj</span><span class="p">)</span> <span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l544">
+                  <tt><i>544</i>                 <span class="n">answer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">,</span> <span class="n">ai</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">bj</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1995">
+                  <tt><i>1995</i>                 <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">fmt</span> <span class="o">%</span> <span class="p">(</span><span class="n">next_id</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">next_href</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">fromlist</span><span class="p">[</span><span class="n">i</span><span class="p">],</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E202">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E202:</strong> whitespace before ')'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l488">
+                  <tt><i>488</i>         <span class="n">non_adjacent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">la</span><span class="p">,</span> <span class="n">lb</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l539">
+                  <tt><i>539</i>                 <span class="n">answer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ai</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">bj</span><span class="p">)</span> <span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l544">
+                  <tt><i>544</i>                 <span class="n">answer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">,</span> <span class="n">ai</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">bj</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1043">
+                  <tt><i>1043</i> <span class="kn">import</span> <span class="nn">re</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2017">
+                  <tt><i>2017</i> <span class="k">del</span> <span class="n">re</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2055">
+                  <tt><i>2055</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E221">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E221:</strong> multiple spaces before operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l884">
+                  <tt><i>884</i>             <span class="n">first</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dump</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">blo</span><span class="p">,</span> <span class="n">bhi</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l887">
+                  <tt><i>887</i>             <span class="n">first</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dump</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">alo</span><span class="p">,</span> <span class="n">ahi</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l291">
+                  <tt><i>291</i>             <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">junk</span><span class="p">:</span> <span class="c1"># separate loop avoids separate list of keys</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l302">
+                  <tt><i>302</i>             <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">popular</span><span class="p">:</span> <span class="c1"># ditto; as fast for 1% deletion</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E266">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E266:</strong> too many leading '#' for block comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1081">
+                  <tt><i>1081</i> <span class="c1">###  Unified Diff</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1165">
+                  <tt><i>1165</i> <span class="c1">###  Context Diff</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1972">
+                  <tt><i>1972</i>                       <span class="n">charjunk</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_charjunk</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E203:</strong> whitespace before ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l593">
+                  <tt><i>593</i>             <span class="n">group</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">tag</span><span class="p">,</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">j1</span> <span class="p">,</span><span class="n">j2</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E222">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E222:</strong> multiple spaces after operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l695">
+                  <tt><i>695</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span> <span class="o">&gt;</span>  <span class="mi">0</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E303:</strong> too many blank lines (3)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l724">
+                  <tt><i>724</i> <span class="k">class</span> <span class="nc">Differ</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E306">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E306:</strong> expected 1 blank line before a nested definition, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1415">
+                  <tt><i>1415</i>             <span class="k">def</span> <span class="nf">record_sub_info</span><span class="p">(</span><span class="n">match_object</span><span class="p">,</span><span class="n">sub_info</span><span class="o">=</span><span class="n">sub_info</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E401">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E401:</strong> multiple imports on one line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l2052">
+                  <tt><i>2052</i>     <span class="kn">import</span> <span class="nn">doctest</span><span class="o">,</span> <span class="nn">difflib</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E402">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E402:</strong> module level import not at top of file
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.difflib.source.html#l1043">
+                  <tt><i>1043</i> <span class="kn">import</span> <span class="nn">re</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

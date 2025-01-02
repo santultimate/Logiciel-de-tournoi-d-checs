@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/platform.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.platform.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/platform.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F401:</strong> 'java.lang' imported but unused
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l485">
+                  <tt><i>485</i>         <span class="kn">import</span> <span class="nn">java.lang</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F841:</strong> local variable 'why' is assigned to but never used
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l290">
+                  <tt><i>290</i>         <span class="k">except</span> <span class="p">(</span><span class="ne">OSError</span><span class="p">,</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">CalledProcessError</span><span class="p">)</span> <span class="k">as</span> <span class="n">why</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  29
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l141">
+                  <tt><i>141</i> <span class="k">def</span> <span class="nf">_comparable_version</span><span class="p">(</span><span class="n">version</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l161">
+                  <tt><i>161</i> <span class="k">def</span> <span class="nf">libc_ver</span><span class="p">(</span><span class="n">executable</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lib</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">16384</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l235">
+                  <tt><i>235</i> <span class="k">def</span> <span class="nf">_norm_version</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">build</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l263">
+                  <tt><i>263</i> <span class="k">def</span> <span class="nf">_syscmd_ver</span><span class="p">(</span><span class="n">system</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">release</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l342">
+                  <tt><i>342</i> <span class="k">def</span> <span class="nf">win32_is_iot</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l345">
+                  <tt><i>345</i> <span class="k">def</span> <span class="nf">win32_edition</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l363">
+                  <tt><i>363</i> <span class="k">def</span> <span class="nf">win32_ver</span><span class="p">(</span><span class="n">release</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">csd</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ptype</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l460">
+                  <tt><i>460</i> <span class="k">def</span> <span class="nf">_java_getprop</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">default</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l471">
+                  <tt><i>471</i> <span class="k">def</span> <span class="nf">java_ver</span><span class="p">(</span><span class="n">release</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">vendor</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">vminfo</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span> <span class="n">osinfo</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l506">
+                  <tt><i>506</i> <span class="k">def</span> <span class="nf">system_alias</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">release</span><span class="p">,</span> <span class="n">version</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l548">
+                  <tt><i>548</i> <span class="k">def</span> <span class="nf">_platform</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l580">
+                  <tt><i>580</i> <span class="k">def</span> <span class="nf">_node</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l595">
+                  <tt><i>595</i> <span class="k">def</span> <span class="nf">_follow_symlinks</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l651">
+                  <tt><i>651</i> <span class="k">def</span> <span class="nf">architecture</span><span class="p">(</span><span class="n">executable</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="n">bits</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">linkage</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l919">
+                  <tt><i>919</i> <span class="k">def</span> <span class="nf">system</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l928">
+                  <tt><i>928</i> <span class="k">def</span> <span class="nf">node</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l938">
+                  <tt><i>938</i> <span class="k">def</span> <span class="nf">release</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l947">
+                  <tt><i>947</i> <span class="k">def</span> <span class="nf">version</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l956">
+                  <tt><i>956</i> <span class="k">def</span> <span class="nf">machine</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l965">
+                  <tt><i>965</i> <span class="k">def</span> <span class="nf">processor</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1007">
+                  <tt><i>1007</i> <span class="k">def</span> <span class="nf">_sys_version</span><span class="p">(</span><span class="n">sys_version</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1111">
+                  <tt><i>1111</i> <span class="k">def</span> <span class="nf">python_implementation</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1124">
+                  <tt><i>1124</i> <span class="k">def</span> <span class="nf">python_version</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1134">
+                  <tt><i>1134</i> <span class="k">def</span> <span class="nf">python_version_tuple</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1145">
+                  <tt><i>1145</i> <span class="k">def</span> <span class="nf">python_branch</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1159">
+                  <tt><i>1159</i> <span class="k">def</span> <span class="nf">python_revision</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1172">
+                  <tt><i>1172</i> <span class="k">def</span> <span class="nf">python_build</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1180">
+                  <tt><i>1180</i> <span class="k">def</span> <span class="nf">python_compiler</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1192">
+                  <tt><i>1192</i> <span class="k">def</span> <span class="nf">platform</span><span class="p">(</span><span class="n">aliased</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">terse</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E266">
+               <span class="count sev-2">
+                  11
+               </span>
+               <strong>E266:</strong> too many leading '#' for block comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l122">
+                  <tt><i>122</i> <span class="c1">### Globals &amp; Constants</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l153">
+                  <tt><i>153</i> <span class="c1">### Platform specific APIs</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l504">
+                  <tt><i>504</i> <span class="c1">### System name aliasing</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l546">
+                  <tt><i>546</i> <span class="c1">### Various internal helpers</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l641">
+                  <tt><i>641</i> <span class="c1">### Information about the used architecture</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l781">
+                  <tt><i>781</i> <span class="c1">### Portable uname() interface</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l917">
+                  <tt><i>917</i> <span class="c1">### Direct interfaces to some of the uname() return values</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l977">
+                  <tt><i>977</i> <span class="c1">### Various APIs for extracting information from sys.version</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1188">
+                  <tt><i>1188</i> <span class="c1">### The Opus Magnum of platform strings :-)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1266">
+                  <tt><i>1266</i> <span class="c1">### freedesktop.org os-release standard</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1323">
+                  <tt><i>1323</i> <span class="c1">### Command line interface</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l155">
+                  <tt><i>155</i> <span class="n">_libc_search</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;(__libc_init)&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l250">
+                  <tt><i>250</i> <span class="n">_ver_output</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(?:([\w ]+) ([\w.]+) &#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l313">
+                  <tt><i>313</i> <span class="n">_WIN32_CLIENT_RELEASES</span> <span class="o">=</span> <span class="p">{</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l645">
+                  <tt><i>645</i> <span class="n">_default_architecture</span> <span class="o">=</span> <span class="p">{</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l979">
+                  <tt><i>979</i> <span class="n">_sys_version_parser</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1190">
+                  <tt><i>1190</i> <span class="n">_platform_cache</span> <span class="o">=</span> <span class="p">{}</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1271">
+                  <tt><i>1271</i> <span class="n">_os_release_line</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E741">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E741:</strong> ambiguous variable name 'l'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l240">
+                  <tt><i>240</i>     <span class="n">l</span> <span class="o">=</span> <span class="n">version</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l521">
+                  <tt><i>521</i>         <span class="n">l</span> <span class="o">=</span> <span class="n">release</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l690">
+                  <tt><i>690</i>             <span class="n">b</span><span class="p">,</span> <span class="n">l</span> <span class="o">=</span> <span class="n">_default_architecture</span><span class="p">[</span><span class="n">sys</span><span class="o">.</span><span class="n">platform</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1101">
+                  <tt><i>1101</i>     <span class="n">l</span> <span class="o">=</span> <span class="n">version</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1085">
+                  <tt><i>1085</i>               <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l265">
+                  <tt><i>265</i>                <span class="n">supported_platforms</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;win32&#39;</span><span class="p">,</span> <span class="s1">&#39;win16&#39;</span><span class="p">,</span> <span class="s1">&#39;dos&#39;</span><span class="p">)):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l291">
+                  <tt><i>291</i>             <span class="c1">#print(&#39;Command %s failed: %s&#39; % (cmd, why))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E713">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E713:</strong> test for membership should be 'not in'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.platform.source.html#l1328">
+                  <tt><i>1328</i>     <span class="n">aliased</span> <span class="o">=</span> <span class="p">(</span><span class="ow">not</span> <span class="s1">&#39;nonaliased&#39;</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="ow">and</span> <span class="ow">not</span> <span class="s1">&#39;--nonaliased&#39;</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

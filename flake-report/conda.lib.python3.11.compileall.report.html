@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/compileall.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.compileall.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/compileall.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F841:</strong> local variable 'head' is assigned to but never used
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.compileall.source.html#l219">
+                  <tt><i>219</i>         <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">name</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">],</span> <span class="n">name</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.compileall.source.html#l25">
+                  <tt><i>25</i> <span class="k">def</span> <span class="nf">_walk_dir</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="n">maxlevels</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.compileall.source.html#l48">
+                  <tt><i>48</i> <span class="k">def</span> <span class="nf">compile_dir</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="n">maxlevels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ddir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.compileall.source.html#l125">
+                  <tt><i>125</i> <span class="k">def</span> <span class="nf">compile_file</span><span class="p">(</span><span class="n">fullname</span><span class="p">,</span> <span class="n">ddir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">rx</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.compileall.source.html#l274">
+                  <tt><i>274</i> <span class="k">def</span> <span class="nf">compile_path</span><span class="p">(</span><span class="n">skip_curdir</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">maxlevels</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.compileall.source.html#l23">
+                  <tt><i>23</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;compile_dir&quot;</span><span class="p">,</span><span class="s2">&quot;compile_file&quot;</span><span class="p">,</span><span class="s2">&quot;compile_path&quot;</span><span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.compileall.source.html#l192">
+                  <tt><i>192</i>                           <span class="s2">&quot;only for more than one optimization level&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.compileall.source.html#l409">
+                  <tt><i>409</i>             <span class="k">with</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">flist</span><span class="o">==</span><span class="s1">&#39;-&#39;</span> <span class="k">else</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

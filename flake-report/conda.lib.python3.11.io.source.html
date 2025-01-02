@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>.conda/lib/python3.11/io.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <h1>
+            <a href="conda.lib.python3.11.io.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/io.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="sd">&quot;&quot;&quot;The io module provides the Python interfaces to stream handling. The</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> <span class="sd">builtin open function is defined in this module.</span></tt>
+            </div>
+            <div id="l3"
+               class="code sev- "><tt><i>3</i> &nbsp;</tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> <span class="sd">At the top of the I/O hierarchy is the abstract base class IOBase. It</span></tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> <span class="sd">defines the basic interface to a stream. Note, however, that there is no</span></tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i> <span class="sd">separation between reading and writing to streams; implementations are</span></tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i> <span class="sd">allowed to raise an OSError if they do not support a given operation.</span></tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i> &nbsp;</tt>
+            </div>
+            <div id="l9"
+               class="code sev- "><tt><i>9</i> <span class="sd">Extending IOBase is RawIOBase which deals simply with the reading and</span></tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i> <span class="sd">writing of raw bytes to a stream. FileIO subclasses RawIOBase to provide</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i> <span class="sd">an interface to OS files.</span></tt>
+            </div>
+            <div id="l12"
+               class="code sev- "><tt><i>12</i> &nbsp;</tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i> <span class="sd">BufferedIOBase deals with buffering on a raw byte stream (RawIOBase). Its</span></tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i> <span class="sd">subclasses, BufferedWriter, BufferedReader, and BufferedRWPair buffer</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev- "><tt><i>15</i> <span class="sd">streams that are readable, writable, and both respectively.</span></tt>
+            </div>
+            <div id="l16"
+               class="code sev- "><tt><i>16</i> <span class="sd">BufferedRandom provides a buffered interface to random access</span></tt>
+            </div>
+            <div id="l17"
+               class="code sev- "><tt><i>17</i> <span class="sd">streams. BytesIO is a simple stream of in-memory bytes.</span></tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i> &nbsp;</tt>
+            </div>
+            <div id="l19"
+               class="code sev- "><tt><i>19</i> <span class="sd">Another IOBase subclass, TextIOBase, deals with the encoding and decoding</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev- "><tt><i>20</i> <span class="sd">of streams into text. TextIOWrapper, which extends it, is a buffered text</span></tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i> <span class="sd">interface to a buffered raw stream (`BufferedIOBase`). Finally, StringIO</span></tt>
+            </div>
+            <div id="l22"
+               class="code sev- "><tt><i>22</i> <span class="sd">is an in-memory stream for text.</span></tt>
+            </div>
+            <div id="l23"
+               class="code sev- "><tt><i>23</i> &nbsp;</tt>
+            </div>
+            <div id="l24"
+               class="code sev- "><tt><i>24</i> <span class="sd">Argument names are not part of the specification, and only the arguments</span></tt>
+            </div>
+            <div id="l25"
+               class="code sev- "><tt><i>25</i> <span class="sd">of open() are intended to be used as keyword arguments.</span></tt>
+            </div>
+            <div id="l26"
+               class="code sev- "><tt><i>26</i> &nbsp;</tt>
+            </div>
+            <div id="l27"
+               class="code sev- "><tt><i>27</i> <span class="sd">data:</span></tt>
+            </div>
+            <div id="l28"
+               class="code sev- "><tt><i>28</i> &nbsp;</tt>
+            </div>
+            <div id="l29"
+               class="code sev- "><tt><i>29</i> <span class="sd">DEFAULT_BUFFER_SIZE</span></tt>
+            </div>
+            <div id="l30"
+               class="code sev- "><tt><i>30</i> &nbsp;</tt>
+            </div>
+            <div id="l31"
+               class="code sev- "><tt><i>31</i> <span class="sd">   An int containing the default buffer size used by the module&#39;s buffered</span></tt>
+            </div>
+            <div id="l32"
+               class="code sev- "><tt><i>32</i> <span class="sd">   I/O classes. open() uses the file&#39;s blksize (as obtained by os.stat) if</span></tt>
+            </div>
+            <div id="l33"
+               class="code sev- "><tt><i>33</i> <span class="sd">   possible.</span></tt>
+            </div>
+            <div id="l34"
+               class="code sev- "><tt><i>34</i> <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l35"
+               class="code sev- "><tt><i>35</i> <span class="c1"># New I/O library conforming to PEP 3116.</span></tt>
+            </div>
+            <div id="l36"
+               class="code sev- "><tt><i>36</i> &nbsp;</tt>
+            </div>
+            <div id="l37"
+               class="code sev- "><tt><i>37</i> <span class="n">__author__</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Guido van Rossum &lt;guido@python.org&gt;, &quot;</span></tt>
+            </div>
+            <div id="l38"
+               class="code sev- "><tt><i>38</i>               <span class="s2">&quot;Mike Verdone &lt;mike.verdone@gmail.com&gt;, &quot;</span></tt>
+            </div>
+            <div id="l39"
+               class="code sev- "><tt><i>39</i>               <span class="s2">&quot;Mark Russell &lt;mark.russell@zen.co.uk&gt;, &quot;</span></tt>
+            </div>
+            <div id="l40"
+               class="code sev- "><tt><i>40</i>               <span class="s2">&quot;Antoine Pitrou &lt;solipsis@pitrou.net&gt;, &quot;</span></tt>
+            </div>
+            <div id="l41"
+               class="code sev- "><tt><i>41</i>               <span class="s2">&quot;Amaury Forgeot d&#39;Arc &lt;amauryfa@gmail.com&gt;, &quot;</span></tt>
+            </div>
+            <div id="l42"
+               class="code sev- "><tt><i>42</i>               <span class="s2">&quot;Benjamin Peterson &lt;benjamin@python.org&gt;&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l43"
+               class="code sev- "><tt><i>43</i> &nbsp;</tt>
+            </div>
+            <div id="l44"
+               class="code sev- "><tt><i>44</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;BlockingIOError&quot;</span><span class="p">,</span> <span class="s2">&quot;open&quot;</span><span class="p">,</span> <span class="s2">&quot;open_code&quot;</span><span class="p">,</span> <span class="s2">&quot;IOBase&quot;</span><span class="p">,</span> <span class="s2">&quot;RawIOBase&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l45"
+               class="code sev- "><tt><i>45</i>            <span class="s2">&quot;FileIO&quot;</span><span class="p">,</span> <span class="s2">&quot;BytesIO&quot;</span><span class="p">,</span> <span class="s2">&quot;StringIO&quot;</span><span class="p">,</span> <span class="s2">&quot;BufferedIOBase&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l46"
+               class="code sev- "><tt><i>46</i>            <span class="s2">&quot;BufferedReader&quot;</span><span class="p">,</span> <span class="s2">&quot;BufferedWriter&quot;</span><span class="p">,</span> <span class="s2">&quot;BufferedRWPair&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l47"
+               class="code sev- "><tt><i>47</i>            <span class="s2">&quot;BufferedRandom&quot;</span><span class="p">,</span> <span class="s2">&quot;TextIOBase&quot;</span><span class="p">,</span> <span class="s2">&quot;TextIOWrapper&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l48"
+               class="code sev- "><tt><i>48</i>            <span class="s2">&quot;UnsupportedOperation&quot;</span><span class="p">,</span> <span class="s2">&quot;SEEK_SET&quot;</span><span class="p">,</span> <span class="s2">&quot;SEEK_CUR&quot;</span><span class="p">,</span> <span class="s2">&quot;SEEK_END&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l49"
+               class="code sev- "><tt><i>49</i>            <span class="s2">&quot;DEFAULT_BUFFER_SIZE&quot;</span><span class="p">,</span> <span class="s2">&quot;text_encoding&quot;</span><span class="p">,</span> <span class="s2">&quot;IncrementalNewlineDecoder&quot;</span><span class="p">]</span></tt>
+            </div>
+            <div id="l50"
+               class="code sev- "><tt><i>50</i> &nbsp;</tt>
+            </div>
+            <div id="l51"
+               class="code sev- "><tt><i>51</i> &nbsp;</tt>
+            </div>
+            <div id="l52"
+               class="code sev- "><tt><i>52</i> <span class="kn">import</span> <span class="nn">_io</span></tt>
+            </div>
+            <div id="l53"
+               class="code sev- "><tt><i>53</i> <span class="kn">import</span> <span class="nn">abc</span></tt>
+            </div>
+            <div id="l54"
+               class="code sev- "><tt><i>54</i> &nbsp;</tt>
+            </div>
+            <div id="l55"
+               class="code sev- "><tt><i>55</i> <span class="kn">from</span> <span class="nn">_io</span> <span class="kn">import</span> <span class="p">(</span><span class="n">DEFAULT_BUFFER_SIZE</span><span class="p">,</span> <span class="ne">BlockingIOError</span><span class="p">,</span> <span class="n">UnsupportedOperation</span><span class="p">,</span></tt>
+            </div>
+            <div id="l56"
+               class="code sev- "><tt><i>56</i>                  <span class="nb">open</span><span class="p">,</span> <span class="n">open_code</span><span class="p">,</span> <span class="n">FileIO</span><span class="p">,</span> <span class="n">BytesIO</span><span class="p">,</span> <span class="n">StringIO</span><span class="p">,</span> <span class="n">BufferedReader</span><span class="p">,</span></tt>
+            </div>
+            <div id="l57"
+               class="code sev- "><tt><i>57</i>                  <span class="n">BufferedWriter</span><span class="p">,</span> <span class="n">BufferedRWPair</span><span class="p">,</span> <span class="n">BufferedRandom</span><span class="p">,</span></tt>
+            </div>
+            <div id="l58"
+               class="code sev- "><tt><i>58</i>                  <span class="n">IncrementalNewlineDecoder</span><span class="p">,</span> <span class="n">text_encoding</span><span class="p">,</span> <span class="n">TextIOWrapper</span><span class="p">)</span></tt>
+            </div>
+            <div id="l59"
+               class="code sev- "><tt><i>59</i> &nbsp;</tt>
+            </div>
+            <div id="l60"
+               class="code sev- "><tt><i>60</i> &nbsp;</tt>
+            </div>
+            <div id="l61"
+               class="code sev- "><tt><i>61</i> <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></tt>
+            </div>
+            <div id="l62"
+               class="code sev- "><tt><i>62</i>     <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;OpenWrapper&quot;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l63"
+               class="code sev- "><tt><i>63</i>         <span class="c1"># bpo-43680: Until Python 3.9, _pyio.open was not a static method and</span></tt>
+            </div>
+            <div id="l64"
+               class="code sev- "><tt><i>64</i>         <span class="c1"># builtins.open was set to OpenWrapper to not become a bound method</span></tt>
+            </div>
+            <div id="l65"
+               class="code sev- "><tt><i>65</i>         <span class="c1"># when set to a class variable. _io.open is a built-in function whereas</span></tt>
+            </div>
+            <div id="l66"
+               class="code sev- "><tt><i>66</i>         <span class="c1"># _pyio.open is a Python function. In Python 3.10, _pyio.open() is now</span></tt>
+            </div>
+            <div id="l67"
+               class="code sev- "><tt><i>67</i>         <span class="c1"># a static method, and builtins.open() is now io.open().</span></tt>
+            </div>
+            <div id="l68"
+               class="code sev- "><tt><i>68</i>         <span class="kn">import</span> <span class="nn">warnings</span></tt>
+            </div>
+            <div id="l69"
+               class="code sev- "><tt><i>69</i>         <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;OpenWrapper is deprecated, use open instead&#39;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l70"
+               class="code sev- "><tt><i>70</i>                       <span class="ne">DeprecationWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span></tt>
+            </div>
+            <div id="l71"
+               class="code sev- "><tt><i>71</i>         <span class="k">global</span> <span class="n">OpenWrapper</span></tt>
+            </div>
+            <div id="l72"
+               class="code sev- "><tt><i>72</i>         <span class="n">OpenWrapper</span> <span class="o">=</span> <span class="nb">open</span></tt>
+            </div>
+            <div id="l73"
+               class="code sev- "><tt><i>73</i>         <span class="k">return</span> <span class="n">OpenWrapper</span></tt>
+            </div>
+            <div id="l74"
+               class="code sev- "><tt><i>74</i>     <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;module </span><span class="si">{</span><span class="vm">__name__</span><span class="si">!r}</span><span class="s2"> has no attribute </span><span class="si">{</span><span class="n">name</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l75"
+               class="code sev- "><tt><i>75</i> &nbsp;</tt>
+            </div>
+            <div id="l76"
+               class="code sev- "><tt><i>76</i> &nbsp;</tt>
+            </div>
+            <div id="l77"
+               class="code sev- "><tt><i>77</i> <span class="c1"># Pretend this exception was created here.</span></tt>
+            </div>
+            <div id="l78"
+               class="code sev- "><tt><i>78</i> <span class="n">UnsupportedOperation</span><span class="o">.</span><span class="vm">__module__</span> <span class="o">=</span> <span class="s2">&quot;io&quot;</span></tt>
+            </div>
+            <div id="l79"
+               class="code sev- "><tt><i>79</i> &nbsp;</tt>
+            </div>
+            <div id="l80"
+               class="code sev- "><tt><i>80</i> <span class="c1"># for seek()</span></tt>
+            </div>
+            <div id="l81"
+               class="code sev- "><tt><i>81</i> <span class="n">SEEK_SET</span> <span class="o">=</span> <span class="mi">0</span></tt>
+            </div>
+            <div id="l82"
+               class="code sev- "><tt><i>82</i> <span class="n">SEEK_CUR</span> <span class="o">=</span> <span class="mi">1</span></tt>
+            </div>
+            <div id="l83"
+               class="code sev- "><tt><i>83</i> <span class="n">SEEK_END</span> <span class="o">=</span> <span class="mi">2</span></tt>
+            </div>
+            <div id="l84"
+               class="code sev- "><tt><i>84</i> &nbsp;</tt>
+            </div>
+            <div id="l85"
+               class="code sev- "><tt><i>85</i> <span class="c1"># Declaring ABCs in C is tricky so we do it here.</span></tt>
+            </div>
+            <div id="l86"
+               class="code sev- "><tt><i>86</i> <span class="c1"># Method descriptions and default implementations are inherited from the C</span></tt>
+            </div>
+            <div id="l87"
+               class="code sev- "><tt><i>87</i> <span class="c1"># version however.</span></tt>
+            </div>
+            <div id="l88"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>88</i> <span class="k">class</span> <span class="nc">IOBase</span><span class="p">(</span><span class="n">_io</span><span class="o">.</span><span class="n">_IOBase</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span><span class="p">):</span></tt>
+            </div>
+            <div id="l89"
+               class="code sev- "><tt><i>89</i>     <span class="vm">__doc__</span> <span class="o">=</span> <span class="n">_io</span><span class="o">.</span><span class="n">_IOBase</span><span class="o">.</span><span class="vm">__doc__</span></tt>
+            </div>
+            <div id="l90"
+               class="code sev- "><tt><i>90</i> &nbsp;</tt>
+            </div>
+            <div id="l91"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>91</i> <span class="k">class</span> <span class="nc">RawIOBase</span><span class="p">(</span><span class="n">_io</span><span class="o">.</span><span class="n">_RawIOBase</span><span class="p">,</span> <span class="n">IOBase</span><span class="p">):</span></tt>
+            </div>
+            <div id="l92"
+               class="code sev- "><tt><i>92</i>     <span class="vm">__doc__</span> <span class="o">=</span> <span class="n">_io</span><span class="o">.</span><span class="n">_RawIOBase</span><span class="o">.</span><span class="vm">__doc__</span></tt>
+            </div>
+            <div id="l93"
+               class="code sev- "><tt><i>93</i> &nbsp;</tt>
+            </div>
+            <div id="l94"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>94</i> <span class="k">class</span> <span class="nc">BufferedIOBase</span><span class="p">(</span><span class="n">_io</span><span class="o">.</span><span class="n">_BufferedIOBase</span><span class="p">,</span> <span class="n">IOBase</span><span class="p">):</span></tt>
+            </div>
+            <div id="l95"
+               class="code sev- "><tt><i>95</i>     <span class="vm">__doc__</span> <span class="o">=</span> <span class="n">_io</span><span class="o">.</span><span class="n">_BufferedIOBase</span><span class="o">.</span><span class="vm">__doc__</span></tt>
+            </div>
+            <div id="l96"
+               class="code sev- "><tt><i>96</i> &nbsp;</tt>
+            </div>
+            <div id="l97"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>97</i> <span class="k">class</span> <span class="nc">TextIOBase</span><span class="p">(</span><span class="n">_io</span><span class="o">.</span><span class="n">_TextIOBase</span><span class="p">,</span> <span class="n">IOBase</span><span class="p">):</span></tt>
+            </div>
+            <div id="l98"
+               class="code sev- "><tt><i>98</i>     <span class="vm">__doc__</span> <span class="o">=</span> <span class="n">_io</span><span class="o">.</span><span class="n">_TextIOBase</span><span class="o">.</span><span class="vm">__doc__</span></tt>
+            </div>
+            <div id="l99"
+               class="code sev- "><tt><i>99</i> &nbsp;</tt>
+            </div>
+            <div id="l100"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E305
+                     </span>
+                     Expected 2 blank lines after class or function definition, found 1</li>
+               
+               </ul><tt><i>100</i> <span class="n">RawIOBase</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">FileIO</span><span class="p">)</span></tt>
+            </div>
+            <div id="l101"
+               class="code sev- "><tt><i>101</i> &nbsp;</tt>
+            </div>
+            <div id="l102"
+               class="code sev- "><tt><i>102</i> <span class="k">for</span> <span class="n">klass</span> <span class="ow">in</span> <span class="p">(</span><span class="n">BytesIO</span><span class="p">,</span> <span class="n">BufferedReader</span><span class="p">,</span> <span class="n">BufferedWriter</span><span class="p">,</span> <span class="n">BufferedRandom</span><span class="p">,</span></tt>
+            </div>
+            <div id="l103"
+               class="code sev- "><tt><i>103</i>               <span class="n">BufferedRWPair</span><span class="p">):</span></tt>
+            </div>
+            <div id="l104"
+               class="code sev- "><tt><i>104</i>     <span class="n">BufferedIOBase</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span></tt>
+            </div>
+            <div id="l105"
+               class="code sev- "><tt><i>105</i> &nbsp;</tt>
+            </div>
+            <div id="l106"
+               class="code sev- "><tt><i>106</i> <span class="k">for</span> <span class="n">klass</span> <span class="ow">in</span> <span class="p">(</span><span class="n">StringIO</span><span class="p">,</span> <span class="n">TextIOWrapper</span><span class="p">):</span></tt>
+            </div>
+            <div id="l107"
+               class="code sev- "><tt><i>107</i>     <span class="n">TextIOBase</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span></tt>
+            </div>
+            <div id="l108"
+               class="code sev- "><tt><i>108</i> <span class="k">del</span> <span class="n">klass</span></tt>
+            </div>
+            <div id="l109"
+               class="code sev- "><tt><i>109</i> &nbsp;</tt>
+            </div>
+            <div id="l110"
+               class="code sev- "><tt><i>110</i> <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l111"
+               class="code sev- "><tt><i>111</i>     <span class="kn">from</span> <span class="nn">_io</span> <span class="kn">import</span> <span class="n">_WindowsConsoleIO</span></tt>
+            </div>
+            <div id="l112"
+               class="code sev- "><tt><i>112</i> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l113"
+               class="code sev- "><tt><i>113</i>     <span class="k">pass</span></tt>
+            </div>
+            <div id="l114"
+               class="code sev- "><tt><i>114</i> <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l115"
+               class="code sev- "><tt><i>115</i>     <span class="n">RawIOBase</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">_WindowsConsoleIO</span><span class="p">)</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>

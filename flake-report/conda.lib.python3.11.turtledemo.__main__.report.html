@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/turtledemo/__main__.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.turtledemo.__main__.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/turtledemo/__main__.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  53
+               </span>
+               <strong>F405:</strong> 'NORMAL' may be undefined, or defined from star imports: tkinter
+               
+                  (and 18 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'NORMAL' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l108">
+                  <tt><i>108</i> <span class="n">menufont</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">NORMAL</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Tk' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l130">
+                  <tt><i>130</i>         <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">root</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">_root</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Menu' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l155">
+                  <tt><i>155</i>         <span class="bp">self</span><span class="o">.</span><span class="n">mBar</span> <span class="o">=</span> <span class="n">Menu</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">RAISED</span><span class="p">,</span> <span class="n">borderwidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'RAISED' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l155">
+                  <tt><i>155</i>         <span class="bp">self</span><span class="o">.</span><span class="n">mBar</span> <span class="o">=</span> <span class="n">Menu</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">RAISED</span><span class="p">,</span> <span class="n">borderwidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'HORIZONTAL' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l164">
+                  <tt><i>164</i>         <span class="n">pane</span> <span class="o">=</span> <span class="n">PanedWindow</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="n">HORIZONTAL</span><span class="p">,</span> <span class="n">sashwidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'PanedWindow' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l164">
+                  <tt><i>164</i>         <span class="n">pane</span> <span class="o">=</span> <span class="n">PanedWindow</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="n">HORIZONTAL</span><span class="p">,</span> <span class="n">sashwidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SOLID' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l165">
+                  <tt><i>165</i>                            <span class="n">sashrelief</span><span class="o">=</span><span class="n">SOLID</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;#ddd&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l170">
+                  <tt><i>170</i>         <span class="bp">self</span><span class="o">.</span><span class="n">output_lbl</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot; --- &quot;</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s2">&quot;#ddf&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'RIDGE' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l172">
+                  <tt><i>172</i>                                 <span class="n">relief</span><span class="o">=</span><span class="n">RIDGE</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l174">
+                  <tt><i>174</i>             <span class="bp">self</span><span class="o">.</span><span class="n">start_btn</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot; START &quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">btnfont</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l176">
+                  <tt><i>176</i>             <span class="bp">self</span><span class="o">.</span><span class="n">stop_btn</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot; STOP &quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">btnfont</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l178">
+                  <tt><i>178</i>             <span class="bp">self</span><span class="o">.</span><span class="n">clear_btn</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot; CLEAR &quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">btnfont</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l181">
+                  <tt><i>181</i>             <span class="bp">self</span><span class="o">.</span><span class="n">start_btn</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot; START &quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">btnfont</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l184">
+                  <tt><i>184</i>             <span class="bp">self</span><span class="o">.</span><span class="n">stop_btn</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot; STOP &quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">btnfont</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l187">
+                  <tt><i>187</i>             <span class="bp">self</span><span class="o">.</span><span class="n">clear_btn</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot; CLEAR &quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">btnfont</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DISABLED' may be undefined, or defined from star imports: tkinter (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l200">
+                  <tt><i>200</i>         <span class="bp">self</span><span class="o">.</span><span class="n">configGUI</span><span class="p">(</span><span class="n">DISABLED</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Frame' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l212">
+                  <tt><i>212</i>         <span class="bp">self</span><span class="o">.</span><span class="n">text_frame</span> <span class="o">=</span> <span class="n">text_frame</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">root</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Text' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l213">
+                  <tt><i>213</i>         <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="n">text_frame</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Scrollbar' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l217">
+                  <tt><i>217</i>         <span class="bp">self</span><span class="o">.</span><span class="n">vbar</span> <span class="o">=</span> <span class="n">vbar</span> <span class="o">=</span> <span class="n">Scrollbar</span><span class="p">(</span><span class="n">text_frame</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;vbar&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'LEFT' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l219">
+                  <tt><i>219</i>         <span class="n">vbar</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">Y</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Y' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l219">
+                  <tt><i>219</i>         <span class="n">vbar</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">Y</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'HORIZONTAL' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l220">
+                  <tt><i>220</i>         <span class="bp">self</span><span class="o">.</span><span class="n">hbar</span> <span class="o">=</span> <span class="n">hbar</span> <span class="o">=</span> <span class="n">Scrollbar</span><span class="p">(</span><span class="n">text_frame</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;hbar&#39;</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="n">HORIZONTAL</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Scrollbar' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l220">
+                  <tt><i>220</i>         <span class="bp">self</span><span class="o">.</span><span class="n">hbar</span> <span class="o">=</span> <span class="n">hbar</span> <span class="o">=</span> <span class="n">Scrollbar</span><span class="p">(</span><span class="n">text_frame</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;hbar&#39;</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="n">HORIZONTAL</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'BOTTOM' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l222">
+                  <tt><i>222</i>         <span class="n">hbar</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">BOTTOM</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">X</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'X' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l222">
+                  <tt><i>222</i>         <span class="n">hbar</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">BOTTOM</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">X</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'BOTH' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l236">
+                  <tt><i>236</i>         <span class="n">text</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">BOTH</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'LEFT' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l236">
+                  <tt><i>236</i>         <span class="n">text</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">BOTH</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NORMAL' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l287">
+                  <tt><i>287</i>                                   <span class="n">bg</span><span class="o">=</span><span class="s2">&quot;#d00&quot;</span> <span class="k">if</span> <span class="n">start</span> <span class="o">==</span> <span class="n">NORMAL</span> <span class="k">else</span> <span class="s2">&quot;#fca&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NORMAL' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l289">
+                  <tt><i>289</i>                                  <span class="n">bg</span><span class="o">=</span><span class="s2">&quot;#d00&quot;</span> <span class="k">if</span> <span class="n">stop</span> <span class="o">==</span> <span class="n">NORMAL</span> <span class="k">else</span> <span class="s2">&quot;#fca&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NORMAL' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l291">
+                  <tt><i>291</i>                                   <span class="n">bg</span><span class="o">=</span><span class="s2">&quot;#d00&quot;</span> <span class="k">if</span> <span class="n">clear</span> <span class="o">==</span> <span class="n">NORMAL</span> <span class="k">else</span> <span class="s2">&quot;#fca&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Menu' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l295">
+                  <tt><i>295</i>         <span class="n">menu</span> <span class="o">=</span> <span class="n">Menu</span><span class="p">(</span><span class="n">master</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Menu' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l305">
+                  <tt><i>305</i>         <span class="n">menu</span> <span class="o">=</span> <span class="n">Menu</span><span class="p">(</span><span class="n">master</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Menu' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l320">
+                  <tt><i>320</i>         <span class="n">menu</span> <span class="o">=</span> <span class="n">Menu</span><span class="p">(</span><span class="n">master</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DISABLED' may be undefined, or defined from star imports: tkinter (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l344">
+                  <tt><i>344</i>         <span class="bp">self</span><span class="o">.</span><span class="n">configGUI</span><span class="p">(</span><span class="n">NORMAL</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NORMAL' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l344">
+                  <tt><i>344</i>         <span class="bp">self</span><span class="o">.</span><span class="n">configGUI</span><span class="p">(</span><span class="n">NORMAL</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DISABLED' may be undefined, or defined from star imports: tkinter (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l352">
+                  <tt><i>352</i>         <span class="bp">self</span><span class="o">.</span><span class="n">configGUI</span><span class="p">(</span><span class="n">DISABLED</span><span class="p">,</span> <span class="n">NORMAL</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NORMAL' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l352">
+                  <tt><i>352</i>         <span class="bp">self</span><span class="o">.</span><span class="n">configGUI</span><span class="p">(</span><span class="n">DISABLED</span><span class="p">,</span> <span class="n">NORMAL</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DISABLED' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l370">
+                  <tt><i>370</i>             <span class="bp">self</span><span class="o">.</span><span class="n">configGUI</span><span class="p">(</span><span class="n">NORMAL</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span> <span class="n">NORMAL</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NORMAL' may be undefined, or defined from star imports: tkinter (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l370">
+                  <tt><i>370</i>             <span class="bp">self</span><span class="o">.</span><span class="n">configGUI</span><span class="p">(</span><span class="n">NORMAL</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span> <span class="n">NORMAL</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DISABLED' may be undefined, or defined from star imports: tkinter (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l374">
+                  <tt><i>374</i>             <span class="bp">self</span><span class="o">.</span><span class="n">configGUI</span><span class="p">(</span><span class="n">DISABLED</span><span class="p">,</span> <span class="n">NORMAL</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NORMAL' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l374">
+                  <tt><i>374</i>             <span class="bp">self</span><span class="o">.</span><span class="n">configGUI</span><span class="p">(</span><span class="n">DISABLED</span><span class="p">,</span> <span class="n">NORMAL</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DISABLED' may be undefined, or defined from star imports: tkinter (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l381">
+                  <tt><i>381</i>         <span class="bp">self</span><span class="o">.</span><span class="n">configGUI</span><span class="p">(</span><span class="n">NORMAL</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NORMAL' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l381">
+                  <tt><i>381</i>         <span class="bp">self</span><span class="o">.</span><span class="n">configGUI</span><span class="p">(</span><span class="n">NORMAL</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DISABLED' may be undefined, or defined from star imports: tkinter (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l387">
+                  <tt><i>387</i>             <span class="bp">self</span><span class="o">.</span><span class="n">configGUI</span><span class="p">(</span><span class="n">NORMAL</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NORMAL' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l387">
+                  <tt><i>387</i>             <span class="bp">self</span><span class="o">.</span><span class="n">configGUI</span><span class="p">(</span><span class="n">NORMAL</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span> <span class="n">DISABLED</span><span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from tkinter import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l91">
+                  <tt><i>91</i> <span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E251">
+               <span class="count sev-2">
+                  9
+               </span>
+               <strong>E251:</strong> unexpected spaces around keyword / parameter equals
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Unexpected spaces around keyword / parameter equals:</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l170">
+                  <tt><i>170</i>         <span class="bp">self</span><span class="o">.</span><span class="n">output_lbl</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot; --- &quot;</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s2">&quot;#ddf&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l179">
+                  <tt><i>179</i>                                     <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;#00cc22&#39;</span><span class="p">,</span> <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">clearCanvas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l182">
+                  <tt><i>182</i>                                     <span class="n">fg</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">disabledforeground</span> <span class="o">=</span> <span class="s2">&quot;#fed&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l185">
+                  <tt><i>185</i>                                    <span class="n">fg</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">disabledforeground</span> <span class="o">=</span> <span class="s2">&quot;#fed&quot;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l189">
+                  <tt><i>189</i>                                     <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">clearCanvas</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l120">
+                  <tt><i>120</i> <span class="n">help_entries</span> <span class="o">=</span> <span class="p">(</span>  <span class="c1"># (help_label,  help_doc)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l401">
+                  <tt><i>401</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l331">
+                  <tt><i>331</i>             <span class="bp">self</span><span class="o">.</span><span class="n">dirty</span><span class="o">=</span><span class="kc">False</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l190">
+                  <tt><i>190</i>         <span class="bp">self</span><span class="o">.</span><span class="n">output_lbl</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="s1">&#39;news&#39;</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l116">
+                  <tt><i>116</i> <span class="k">def</span> <span class="nf">getExampleEntries</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E303:</strong> too many blank lines (2)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.turtledemo.__main__.source.html#l205">
+                  <tt><i>205</i>     <span class="k">def</span> <span class="nf">onResize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

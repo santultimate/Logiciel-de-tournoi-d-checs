@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>.conda/lib/python3.11/multiprocessing/popen_spawn_win32.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <h1>
+            <a href="conda.lib.python3.11.multiprocessing.popen_spawn_win32.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/multiprocessing/popen_spawn_win32.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="kn">import</span> <span class="nn">os</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> <span class="kn">import</span> <span class="nn">msvcrt</span></tt>
+            </div>
+            <div id="l3"
+               class="code sev- "><tt><i>3</i> <span class="kn">import</span> <span class="nn">signal</span></tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> <span class="kn">import</span> <span class="nn">sys</span></tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> <span class="kn">import</span> <span class="nn">_winapi</span></tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i> &nbsp;</tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i> <span class="kn">from</span> <span class="nn">.context</span> <span class="kn">import</span> <span class="n">reduction</span><span class="p">,</span> <span class="n">get_spawning_popen</span><span class="p">,</span> <span class="n">set_spawning_popen</span></tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">spawn</span></tt>
+            </div>
+            <div id="l9"
+               class="code sev- "><tt><i>9</i> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">util</span></tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i> &nbsp;</tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Popen&#39;</span><span class="p">]</span></tt>
+            </div>
+            <div id="l12"
+               class="code sev- "><tt><i>12</i> &nbsp;</tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i> <span class="c1">#</span></tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i> <span class="c1">#</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev- "><tt><i>15</i> <span class="c1">#</span></tt>
+            </div>
+            <div id="l16"
+               class="code sev- "><tt><i>16</i> &nbsp;</tt>
+            </div>
+            <div id="l17"
+               class="code sev- "><tt><i>17</i> <span class="c1"># Exit code used by Popen.terminate()</span></tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i> <span class="n">TERMINATE</span> <span class="o">=</span> <span class="mh">0x10000</span></tt>
+            </div>
+            <div id="l19"
+               class="code sev- "><tt><i>19</i> <span class="n">WINEXE</span> <span class="o">=</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;win32&#39;</span> <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span> <span class="s1">&#39;frozen&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev- "><tt><i>20</i> <span class="n">WINSERVICE</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;pythonservice.exe&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i> &nbsp;</tt>
+            </div>
+            <div id="l22"
+               class="code sev- "><tt><i>22</i> &nbsp;</tt>
+            </div>
+            <div id="l23"
+               class="code sev- "><tt><i>23</i> <span class="k">def</span> <span class="nf">_path_eq</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span></tt>
+            </div>
+            <div id="l24"
+               class="code sev- "><tt><i>24</i>     <span class="k">return</span> <span class="n">p1</span> <span class="o">==</span> <span class="n">p2</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normcase</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span> <span class="o">==</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normcase</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span></tt>
+            </div>
+            <div id="l25"
+               class="code sev- "><tt><i>25</i> &nbsp;</tt>
+            </div>
+            <div id="l26"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E305
+                     </span>
+                     Expected 2 blank lines after class or function definition, found 1</li>
+               
+               </ul><tt><i>26</i> <span class="n">WINENV</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">_path_eq</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">_base_executable</span><span class="p">)</span></tt>
+            </div>
+            <div id="l27"
+               class="code sev- "><tt><i>27</i> &nbsp;</tt>
+            </div>
+            <div id="l28"
+               class="code sev- "><tt><i>28</i> &nbsp;</tt>
+            </div>
+            <div id="l29"
+               class="code sev- "><tt><i>29</i> <span class="k">def</span> <span class="nf">_close_handles</span><span class="p">(</span><span class="o">*</span><span class="n">handles</span><span class="p">):</span></tt>
+            </div>
+            <div id="l30"
+               class="code sev- "><tt><i>30</i>     <span class="k">for</span> <span class="n">handle</span> <span class="ow">in</span> <span class="n">handles</span><span class="p">:</span></tt>
+            </div>
+            <div id="l31"
+               class="code sev- "><tt><i>31</i>         <span class="n">_winapi</span><span class="o">.</span><span class="n">CloseHandle</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span></tt>
+            </div>
+            <div id="l32"
+               class="code sev- "><tt><i>32</i> &nbsp;</tt>
+            </div>
+            <div id="l33"
+               class="code sev- "><tt><i>33</i> &nbsp;</tt>
+            </div>
+            <div id="l34"
+               class="code sev- "><tt><i>34</i> <span class="c1">#</span></tt>
+            </div>
+            <div id="l35"
+               class="code sev- "><tt><i>35</i> <span class="c1"># We define a Popen class similar to the one from subprocess, but</span></tt>
+            </div>
+            <div id="l36"
+               class="code sev- "><tt><i>36</i> <span class="c1"># whose constructor takes a process object as its argument.</span></tt>
+            </div>
+            <div id="l37"
+               class="code sev- "><tt><i>37</i> <span class="c1">#</span></tt>
+            </div>
+            <div id="l38"
+               class="code sev- "><tt><i>38</i> &nbsp;</tt>
+            </div>
+            <div id="l39"
+               class="code sev- "><tt><i>39</i> <span class="k">class</span> <span class="nc">Popen</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span></tt>
+            </div>
+            <div id="l40"
+               class="code sev- "><tt><i>40</i>     <span class="sd">&#39;&#39;&#39;</span></tt>
+            </div>
+            <div id="l41"
+               class="code sev- "><tt><i>41</i> <span class="sd">    Start a subprocess to run the code of a process object</span></tt>
+            </div>
+            <div id="l42"
+               class="code sev- "><tt><i>42</i> <span class="sd">    &#39;&#39;&#39;</span></tt>
+            </div>
+            <div id="l43"
+               class="code sev- "><tt><i>43</i>     <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;spawn&#39;</span></tt>
+            </div>
+            <div id="l44"
+               class="code sev- "><tt><i>44</i> &nbsp;</tt>
+            </div>
+            <div id="l45"
+               class="code sev- "><tt><i>45</i>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">process_obj</span><span class="p">):</span></tt>
+            </div>
+            <div id="l46"
+               class="code sev- "><tt><i>46</i>         <span class="n">prep_data</span> <span class="o">=</span> <span class="n">spawn</span><span class="o">.</span><span class="n">get_preparation_data</span><span class="p">(</span><span class="n">process_obj</span><span class="o">.</span><span class="n">_name</span><span class="p">)</span></tt>
+            </div>
+            <div id="l47"
+               class="code sev- "><tt><i>47</i> &nbsp;</tt>
+            </div>
+            <div id="l48"
+               class="code sev- "><tt><i>48</i>         <span class="c1"># read end of pipe will be duplicated by the child process</span></tt>
+            </div>
+            <div id="l49"
+               class="code sev- "><tt><i>49</i>         <span class="c1"># -- see spawn_main() in spawn.py.</span></tt>
+            </div>
+            <div id="l50"
+               class="code sev- "><tt><i>50</i>         <span class="c1">#</span></tt>
+            </div>
+            <div id="l51"
+               class="code sev- "><tt><i>51</i>         <span class="c1"># bpo-33929: Previously, the read end of pipe was &quot;stolen&quot; by the child</span></tt>
+            </div>
+            <div id="l52"
+               class="code sev- "><tt><i>52</i>         <span class="c1"># process, but it leaked a handle if the child process had been</span></tt>
+            </div>
+            <div id="l53"
+               class="code sev- "><tt><i>53</i>         <span class="c1"># terminated before it could steal the handle from the parent process.</span></tt>
+            </div>
+            <div id="l54"
+               class="code sev- "><tt><i>54</i>         <span class="n">rhandle</span><span class="p">,</span> <span class="n">whandle</span> <span class="o">=</span> <span class="n">_winapi</span><span class="o">.</span><span class="n">CreatePipe</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></tt>
+            </div>
+            <div id="l55"
+               class="code sev- "><tt><i>55</i>         <span class="n">wfd</span> <span class="o">=</span> <span class="n">msvcrt</span><span class="o">.</span><span class="n">open_osfhandle</span><span class="p">(</span><span class="n">whandle</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></tt>
+            </div>
+            <div id="l56"
+               class="code sev- "><tt><i>56</i>         <span class="n">cmd</span> <span class="o">=</span> <span class="n">spawn</span><span class="o">.</span><span class="n">get_command_line</span><span class="p">(</span><span class="n">parent_pid</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">(),</span></tt>
+            </div>
+            <div id="l57"
+               class="code sev- "><tt><i>57</i>                                      <span class="n">pipe_handle</span><span class="o">=</span><span class="n">rhandle</span><span class="p">)</span></tt>
+            </div>
+            <div id="l58"
+               class="code sev- "><tt><i>58</i> &nbsp;</tt>
+            </div>
+            <div id="l59"
+               class="code sev- "><tt><i>59</i>         <span class="n">python_exe</span> <span class="o">=</span> <span class="n">spawn</span><span class="o">.</span><span class="n">get_executable</span><span class="p">()</span></tt>
+            </div>
+            <div id="l60"
+               class="code sev- "><tt><i>60</i> &nbsp;</tt>
+            </div>
+            <div id="l61"
+               class="code sev- "><tt><i>61</i>         <span class="c1"># bpo-35797: When running in a venv, we bypass the redirect</span></tt>
+            </div>
+            <div id="l62"
+               class="code sev- "><tt><i>62</i>         <span class="c1"># executor and launch our base Python.</span></tt>
+            </div>
+            <div id="l63"
+               class="code sev- "><tt><i>63</i>         <span class="k">if</span> <span class="n">WINENV</span> <span class="ow">and</span> <span class="n">_path_eq</span><span class="p">(</span><span class="n">python_exe</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">):</span></tt>
+            </div>
+            <div id="l64"
+               class="code sev- "><tt><i>64</i>             <span class="n">cmd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">python_exe</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">_base_executable</span></tt>
+            </div>
+            <div id="l65"
+               class="code sev- "><tt><i>65</i>             <span class="n">env</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span></tt>
+            </div>
+            <div id="l66"
+               class="code sev- "><tt><i>66</i>             <span class="n">env</span><span class="p">[</span><span class="s2">&quot;__PYVENV_LAUNCHER__&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span></tt>
+            </div>
+            <div id="l67"
+               class="code sev- "><tt><i>67</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l68"
+               class="code sev- "><tt><i>68</i>             <span class="n">env</span> <span class="o">=</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l69"
+               class="code sev- "><tt><i>69</i> &nbsp;</tt>
+            </div>
+            <div id="l70"
+               class="code sev- "><tt><i>70</i>         <span class="n">cmd</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">cmd</span><span class="p">)</span></tt>
+            </div>
+            <div id="l71"
+               class="code sev- "><tt><i>71</i> &nbsp;</tt>
+            </div>
+            <div id="l72"
+               class="code sev- "><tt><i>72</i>         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">wfd</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">,</span> <span class="n">closefd</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">to_child</span><span class="p">:</span></tt>
+            </div>
+            <div id="l73"
+               class="code sev- "><tt><i>73</i>             <span class="c1"># start process</span></tt>
+            </div>
+            <div id="l74"
+               class="code sev- "><tt><i>74</i>             <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l75"
+               class="code sev- "><tt><i>75</i>                 <span class="n">hp</span><span class="p">,</span> <span class="n">ht</span><span class="p">,</span> <span class="n">pid</span><span class="p">,</span> <span class="n">tid</span> <span class="o">=</span> <span class="n">_winapi</span><span class="o">.</span><span class="n">CreateProcess</span><span class="p">(</span></tt>
+            </div>
+            <div id="l76"
+               class="code sev- "><tt><i>76</i>                     <span class="n">python_exe</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span></tt>
+            </div>
+            <div id="l77"
+               class="code sev- "><tt><i>77</i>                     <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></tt>
+            </div>
+            <div id="l78"
+               class="code sev- "><tt><i>78</i>                 <span class="n">_winapi</span><span class="o">.</span><span class="n">CloseHandle</span><span class="p">(</span><span class="n">ht</span><span class="p">)</span></tt>
+            </div>
+            <div id="l79"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E722
+                     </span>
+                     Do not use bare 'except'</li>
+               
+               </ul><tt><i>79</i>             <span class="k">except</span><span class="p">:</span></tt>
+            </div>
+            <div id="l80"
+               class="code sev- "><tt><i>80</i>                 <span class="n">_winapi</span><span class="o">.</span><span class="n">CloseHandle</span><span class="p">(</span><span class="n">rhandle</span><span class="p">)</span></tt>
+            </div>
+            <div id="l81"
+               class="code sev- "><tt><i>81</i>                 <span class="k">raise</span></tt>
+            </div>
+            <div id="l82"
+               class="code sev- "><tt><i>82</i> &nbsp;</tt>
+            </div>
+            <div id="l83"
+               class="code sev- "><tt><i>83</i>             <span class="c1"># set attributes of self</span></tt>
+            </div>
+            <div id="l84"
+               class="code sev- "><tt><i>84</i>             <span class="bp">self</span><span class="o">.</span><span class="n">pid</span> <span class="o">=</span> <span class="n">pid</span></tt>
+            </div>
+            <div id="l85"
+               class="code sev- "><tt><i>85</i>             <span class="bp">self</span><span class="o">.</span><span class="n">returncode</span> <span class="o">=</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l86"
+               class="code sev- "><tt><i>86</i>             <span class="bp">self</span><span class="o">.</span><span class="n">_handle</span> <span class="o">=</span> <span class="n">hp</span></tt>
+            </div>
+            <div id="l87"
+               class="code sev- "><tt><i>87</i>             <span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">hp</span><span class="p">)</span></tt>
+            </div>
+            <div id="l88"
+               class="code sev- "><tt><i>88</i>             <span class="bp">self</span><span class="o">.</span><span class="n">finalizer</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">Finalize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_close_handles</span><span class="p">,</span></tt>
+            </div>
+            <div id="l89"
+               class="code sev- "><tt><i>89</i>                                            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">rhandle</span><span class="p">)))</span></tt>
+            </div>
+            <div id="l90"
+               class="code sev- "><tt><i>90</i> &nbsp;</tt>
+            </div>
+            <div id="l91"
+               class="code sev- "><tt><i>91</i>             <span class="c1"># send information to child</span></tt>
+            </div>
+            <div id="l92"
+               class="code sev- "><tt><i>92</i>             <span class="n">set_spawning_popen</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></tt>
+            </div>
+            <div id="l93"
+               class="code sev- "><tt><i>93</i>             <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l94"
+               class="code sev- "><tt><i>94</i>                 <span class="n">reduction</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">prep_data</span><span class="p">,</span> <span class="n">to_child</span><span class="p">)</span></tt>
+            </div>
+            <div id="l95"
+               class="code sev- "><tt><i>95</i>                 <span class="n">reduction</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">process_obj</span><span class="p">,</span> <span class="n">to_child</span><span class="p">)</span></tt>
+            </div>
+            <div id="l96"
+               class="code sev- "><tt><i>96</i>             <span class="k">finally</span><span class="p">:</span></tt>
+            </div>
+            <div id="l97"
+               class="code sev- "><tt><i>97</i>                 <span class="n">set_spawning_popen</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span></tt>
+            </div>
+            <div id="l98"
+               class="code sev- "><tt><i>98</i> &nbsp;</tt>
+            </div>
+            <div id="l99"
+               class="code sev- "><tt><i>99</i>     <span class="k">def</span> <span class="nf">duplicate_for_child</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">handle</span><span class="p">):</span></tt>
+            </div>
+            <div id="l100"
+               class="code sev- "><tt><i>100</i>         <span class="k">assert</span> <span class="bp">self</span> <span class="ow">is</span> <span class="n">get_spawning_popen</span><span class="p">()</span></tt>
+            </div>
+            <div id="l101"
+               class="code sev- "><tt><i>101</i>         <span class="k">return</span> <span class="n">reduction</span><span class="o">.</span><span class="n">duplicate</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sentinel</span><span class="p">)</span></tt>
+            </div>
+            <div id="l102"
+               class="code sev- "><tt><i>102</i> &nbsp;</tt>
+            </div>
+            <div id="l103"
+               class="code sev- "><tt><i>103</i>     <span class="k">def</span> <span class="nf">wait</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+            </div>
+            <div id="l104"
+               class="code sev- "><tt><i>104</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">returncode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l105"
+               class="code sev- "><tt><i>105</i>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">returncode</span></tt>
+            </div>
+            <div id="l106"
+               class="code sev- "><tt><i>106</i> &nbsp;</tt>
+            </div>
+            <div id="l107"
+               class="code sev- "><tt><i>107</i>         <span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l108"
+               class="code sev- "><tt><i>108</i>             <span class="n">msecs</span> <span class="o">=</span> <span class="n">_winapi</span><span class="o">.</span><span class="n">INFINITE</span></tt>
+            </div>
+            <div id="l109"
+               class="code sev- "><tt><i>109</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l110"
+               class="code sev- "><tt><i>110</i>             <span class="n">msecs</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">timeout</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">))</span></tt>
+            </div>
+            <div id="l111"
+               class="code sev- "><tt><i>111</i> &nbsp;</tt>
+            </div>
+            <div id="l112"
+               class="code sev- "><tt><i>112</i>         <span class="n">res</span> <span class="o">=</span> <span class="n">_winapi</span><span class="o">.</span><span class="n">WaitForSingleObject</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_handle</span><span class="p">),</span> <span class="n">msecs</span><span class="p">)</span></tt>
+            </div>
+            <div id="l113"
+               class="code sev- "><tt><i>113</i>         <span class="k">if</span> <span class="n">res</span> <span class="o">==</span> <span class="n">_winapi</span><span class="o">.</span><span class="n">WAIT_OBJECT_0</span><span class="p">:</span></tt>
+            </div>
+            <div id="l114"
+               class="code sev- "><tt><i>114</i>             <span class="n">code</span> <span class="o">=</span> <span class="n">_winapi</span><span class="o">.</span><span class="n">GetExitCodeProcess</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_handle</span><span class="p">)</span></tt>
+            </div>
+            <div id="l115"
+               class="code sev- "><tt><i>115</i>             <span class="k">if</span> <span class="n">code</span> <span class="o">==</span> <span class="n">TERMINATE</span><span class="p">:</span></tt>
+            </div>
+            <div id="l116"
+               class="code sev- "><tt><i>116</i>                 <span class="n">code</span> <span class="o">=</span> <span class="o">-</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGTERM</span></tt>
+            </div>
+            <div id="l117"
+               class="code sev- "><tt><i>117</i>             <span class="bp">self</span><span class="o">.</span><span class="n">returncode</span> <span class="o">=</span> <span class="n">code</span></tt>
+            </div>
+            <div id="l118"
+               class="code sev- "><tt><i>118</i> &nbsp;</tt>
+            </div>
+            <div id="l119"
+               class="code sev- "><tt><i>119</i>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">returncode</span></tt>
+            </div>
+            <div id="l120"
+               class="code sev- "><tt><i>120</i> &nbsp;</tt>
+            </div>
+            <div id="l121"
+               class="code sev- "><tt><i>121</i>     <span class="k">def</span> <span class="nf">poll</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l122"
+               class="code sev- "><tt><i>122</i>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></tt>
+            </div>
+            <div id="l123"
+               class="code sev- "><tt><i>123</i> &nbsp;</tt>
+            </div>
+            <div id="l124"
+               class="code sev- "><tt><i>124</i>     <span class="k">def</span> <span class="nf">terminate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l125"
+               class="code sev- "><tt><i>125</i>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">returncode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span></tt>
+            </div>
+            <div id="l126"
+               class="code sev- "><tt><i>126</i>             <span class="k">return</span></tt>
+            </div>
+            <div id="l127"
+               class="code sev- "><tt><i>127</i> &nbsp;</tt>
+            </div>
+            <div id="l128"
+               class="code sev- "><tt><i>128</i>         <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l129"
+               class="code sev- "><tt><i>129</i>             <span class="n">_winapi</span><span class="o">.</span><span class="n">TerminateProcess</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_handle</span><span class="p">),</span> <span class="n">TERMINATE</span><span class="p">)</span></tt>
+            </div>
+            <div id="l130"
+               class="code sev- "><tt><i>130</i>         <span class="k">except</span> <span class="ne">PermissionError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l131"
+               class="code sev- "><tt><i>131</i>             <span class="c1"># ERROR_ACCESS_DENIED (winerror 5) is received when the</span></tt>
+            </div>
+            <div id="l132"
+               class="code sev- "><tt><i>132</i>             <span class="c1"># process already died.</span></tt>
+            </div>
+            <div id="l133"
+               class="code sev- "><tt><i>133</i>             <span class="n">code</span> <span class="o">=</span> <span class="n">_winapi</span><span class="o">.</span><span class="n">GetExitCodeProcess</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_handle</span><span class="p">))</span></tt>
+            </div>
+            <div id="l134"
+               class="code sev- "><tt><i>134</i>             <span class="k">if</span> <span class="n">code</span> <span class="o">==</span> <span class="n">_winapi</span><span class="o">.</span><span class="n">STILL_ACTIVE</span><span class="p">:</span></tt>
+            </div>
+            <div id="l135"
+               class="code sev- "><tt><i>135</i>                 <span class="k">raise</span></tt>
+            </div>
+            <div id="l136"
+               class="code sev- "><tt><i>136</i> &nbsp;</tt>
+            </div>
+            <div id="l137"
+               class="code sev- "><tt><i>137</i>         <span class="c1"># gh-113009: Don&#39;t set self.returncode. Even if GetExitCodeProcess()</span></tt>
+            </div>
+            <div id="l138"
+               class="code sev- "><tt><i>138</i>         <span class="c1"># returns an exit code different than STILL_ACTIVE, the process can</span></tt>
+            </div>
+            <div id="l139"
+               class="code sev- "><tt><i>139</i>         <span class="c1"># still be running. Only set self.returncode once WaitForSingleObject()</span></tt>
+            </div>
+            <div id="l140"
+               class="code sev- "><tt><i>140</i>         <span class="c1"># returns WAIT_OBJECT_0 in wait().</span></tt>
+            </div>
+            <div id="l141"
+               class="code sev- "><tt><i>141</i> &nbsp;</tt>
+            </div>
+            <div id="l142"
+               class="code sev- "><tt><i>142</i>     <span class="n">kill</span> <span class="o">=</span> <span class="n">terminate</span></tt>
+            </div>
+            <div id="l143"
+               class="code sev- "><tt><i>143</i> &nbsp;</tt>
+            </div>
+            <div id="l144"
+               class="code sev- "><tt><i>144</i>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l145"
+               class="code sev- "><tt><i>145</i>         <span class="bp">self</span><span class="o">.</span><span class="n">finalizer</span><span class="p">()</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>

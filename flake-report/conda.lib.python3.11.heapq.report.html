@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/heapq.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.heapq.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/heapq.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F811">
+               <span class="count sev-1">
+                  3
+               </span>
+               <strong>F811:</strong> redefinition of unused '_heapreplace_max' from line 191
+               
+                  (and 2 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Redefinition of unused '_heapreplace_max' from line 191:</p>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l587">
+                  <tt><i>587</i>     <span class="kn">from</span> <span class="nn">_heapq</span> <span class="kn">import</span> <span class="n">_heapreplace_max</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Redefinition of unused '_heapify_max' from line 198:</p>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l591">
+                  <tt><i>591</i>     <span class="kn">from</span> <span class="nn">_heapq</span> <span class="kn">import</span> <span class="n">_heapify_max</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Redefinition of unused '_heappop_max' from line 181:</p>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l595">
+                  <tt><i>595</i>     <span class="kn">from</span> <span class="nn">_heapq</span> <span class="kn">import</span> <span class="n">_heappop_max</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F401:</strong> '_heapq.*' imported but unused
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l583">
+                  <tt><i>583</i>     <span class="kn">from</span> <span class="nn">_heapq</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from _heapq import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l583">
+                  <tt><i>583</i>     <span class="kn">from</span> <span class="nn">_heapq</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  14
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l132">
+                  <tt><i>132</i> <span class="k">def</span> <span class="nf">heappush</span><span class="p">(</span><span class="n">heap</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l137">
+                  <tt><i>137</i> <span class="k">def</span> <span class="nf">heappop</span><span class="p">(</span><span class="n">heap</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l147">
+                  <tt><i>147</i> <span class="k">def</span> <span class="nf">heapreplace</span><span class="p">(</span><span class="n">heap</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l163">
+                  <tt><i>163</i> <span class="k">def</span> <span class="nf">heappushpop</span><span class="p">(</span><span class="n">heap</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l170">
+                  <tt><i>170</i> <span class="k">def</span> <span class="nf">heapify</span><span class="p">(</span><span class="n">x</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l181">
+                  <tt><i>181</i> <span class="k">def</span> <span class="nf">_heappop_max</span><span class="p">(</span><span class="n">heap</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l191">
+                  <tt><i>191</i> <span class="k">def</span> <span class="nf">_heapreplace_max</span><span class="p">(</span><span class="n">heap</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l198">
+                  <tt><i>198</i> <span class="k">def</span> <span class="nf">_heapify_max</span><span class="p">(</span><span class="n">x</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l207">
+                  <tt><i>207</i> <span class="k">def</span> <span class="nf">_siftdown</span><span class="p">(</span><span class="n">heap</span><span class="p">,</span> <span class="n">startpos</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l260">
+                  <tt><i>260</i> <span class="k">def</span> <span class="nf">_siftup</span><span class="p">(</span><span class="n">heap</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l280">
+                  <tt><i>280</i> <span class="k">def</span> <span class="nf">_siftdown_max</span><span class="p">(</span><span class="n">heap</span><span class="p">,</span> <span class="n">startpos</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l295">
+                  <tt><i>295</i> <span class="k">def</span> <span class="nf">_siftup_max</span><span class="p">(</span><span class="n">heap</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l316">
+                  <tt><i>316</i> <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="o">*</span><span class="n">iterables</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l523">
+                  <tt><i>523</i> <span class="k">def</span> <span class="nf">nlargest</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">iterable</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l602">
+                  <tt><i>602</i>     <span class="kn">import</span> <span class="nn">doctest</span> <span class="c1"># pragma: no cover</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l603">
+                  <tt><i>603</i>     <span class="nb">print</span><span class="p">(</span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">())</span> <span class="c1"># pragma: no cover</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.heapq.source.html#l582">
+                  <tt><i>582</i> <span class="k">try</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

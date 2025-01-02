@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/idlelib/debugger_r.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.idlelib.debugger_r.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/idlelib/debugger_r.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  11
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l31">
+                  <tt><i>31</i> <span class="c1">#=======================================</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l75">
+                  <tt><i>75</i>     <span class="c1">#----------called by an IdbProxy----------</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l120">
+                  <tt><i>120</i>     <span class="c1">#----------called by a FrameProxy----------</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l147">
+                  <tt><i>147</i>     <span class="c1">#----------called by a CodeProxy----------</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l157">
+                  <tt><i>157</i>     <span class="c1">#----------called by a DictProxy----------</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l173">
+                  <tt><i>173</i> <span class="c1">#----------end class IdbAdapter----------</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l193">
+                  <tt><i>193</i> <span class="c1">#=======================================</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l276">
+                  <tt><i>276</i>         <span class="c1">##print(&quot;*** Failed DictProxy.__getattr__:&quot;, name)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l287">
+                  <tt><i>287</i>         <span class="c1">##print(&quot;*** Interaction: (%s, %s, %s)&quot; % (message, fid, modified_info))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l300">
+                  <tt><i>300</i>         <span class="c1">##print(&quot;*** IdbProxy.call %s %s %s&quot; % (methodname, args, kwargs))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l302">
+                  <tt><i>302</i>         <span class="c1">##print(&quot;*** IdbProxy.call %s returns %r&quot; % (methodname, value))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  8
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l40">
+                  <tt><i>40</i> <span class="k">def</span> <span class="nf">wrap_frame</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l45">
+                  <tt><i>45</i> <span class="k">def</span> <span class="nf">wrap_info</span><span class="p">(</span><span class="n">info</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l57">
+                  <tt><i>57</i> <span class="k">class</span> <span class="nc">GUIProxy</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l70">
+                  <tt><i>70</i> <span class="k">class</span> <span class="nc">IdbAdapter</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l343">
+                  <tt><i>343</i> <span class="k">def</span> <span class="nf">start_remote_debugger</span><span class="p">(</span><span class="n">rpcclt</span><span class="p">,</span> <span class="n">pyshell</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l367">
+                  <tt><i>367</i> <span class="k">def</span> <span class="nf">close_remote_debugger</span><span class="p">(</span><span class="n">rpcclt</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l379">
+                  <tt><i>379</i> <span class="k">def</span> <span class="nf">close_subprocess_debugger</span><span class="p">(</span><span class="n">rpcclt</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l382">
+                  <tt><i>382</i> <span class="k">def</span> <span class="nf">restart_subprocess_debugger</span><span class="p">(</span><span class="n">rpcclt</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E266">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E266:</strong> too many leading '#' for block comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l161">
+                  <tt><i>161</i> <span class="c1">##         return dicttable[did].keys()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l163">
+                  <tt><i>163</i>     <span class="c1">### Needed until dict_keys type is finished and pickleable.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l165">
+                  <tt><i>165</i>     <span class="c1">### Will probably need to extend rpc.py:SocketIO._proxify at that time.</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l263">
+                  <tt><i>263</i> <span class="c1">##    def keys(self):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l264">
+                  <tt><i>264</i> <span class="c1">##        return self._conn.remotecall(self._oid, &quot;dict_keys&quot;, (self._did,), {})</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E502">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E502:</strong> the backslash is redundant between brackets
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l359">
+                  <tt><i>359</i>     <span class="n">idb_adap_oid</span> <span class="o">=</span> <span class="n">rpcclt</span><span class="o">.</span><span class="n">remotecall</span><span class="p">(</span><span class="s2">&quot;exec&quot;</span><span class="p">,</span> <span class="s2">&quot;start_the_debugger&quot;</span><span class="p">,</span>\</tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l383">
+                  <tt><i>383</i>     <span class="n">idb_adap_oid_ret</span> <span class="o">=</span> <span class="n">rpcclt</span><span class="o">.</span><span class="n">remotecall</span><span class="p">(</span><span class="s2">&quot;exec&quot;</span><span class="p">,</span> <span class="s2">&quot;start_the_debugger&quot;</span><span class="p">,</span>\</tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l360">
+                  <tt><i>360</i>                                    <span class="p">(</span><span class="n">gui_adap_oid</span><span class="p">,),</span> <span class="p">{})</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.debugger_r.source.html#l171">
+                  <tt><i>171</i>         <span class="k">return</span> <span class="n">reprlib</span><span class="o">.</span><span class="n">repr</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1"># Can&#39;t pickle module &#39;builtins&#39;.</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

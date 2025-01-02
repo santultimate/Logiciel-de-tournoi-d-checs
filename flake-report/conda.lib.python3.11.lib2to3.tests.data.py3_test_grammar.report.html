@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/lib2to3/tests/data/py3_test_grammar.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/lib2to3/tests/data/py3_test_grammar.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  27
+               </span>
+               <strong>F841:</strong> local variable 'x' is assigned to but never used
+               
+                  (and 10 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l59">
+                  <tt><i>59</i>                     <span class="n">x</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">s</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l73">
+                  <tt><i>73</i>         <span class="n">x</span> <span class="o">=</span> <span class="mb">0B111111111111111111111111111111111111111111111111111111111111111111111</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l95">
+                  <tt><i>95</i>         <span class="n">x</span> <span class="o">=</span> <span class="mf">3_1E-4_1</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l109">
+                  <tt><i>109</i>         <span class="n">x</span> <span class="o">=</span> <span class="mf">3.1e4</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l171">
+                  <tt><i>171</i>         <span class="n">x</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;1, 0 or 1&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'l2' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l361">
+                  <tt><i>361</i>         <span class="n">l2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="n">a</span><span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="c1"># XXX just testing the expression</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'abc' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l398">
+                  <tt><i>398</i>         <span class="n">abc</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">xyz</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'xyz' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l398">
+                  <tt><i>398</i>         <span class="n">abc</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">xyz</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l482">
+                  <tt><i>482</i>         <span class="n">x</span> <span class="o">=</span> <span class="n">g2</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x3' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l483">
+                  <tt><i>483</i>         <span class="n">x3</span> <span class="o">=</span> <span class="n">g3</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x1' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l492">
+                  <tt><i>492</i>         <span class="n">x1</span> <span class="o">=</span> <span class="n">g1</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x2' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l493">
+                  <tt><i>493</i>         <span class="n">x2</span> <span class="o">=</span> <span class="n">g2</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x3' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l494">
+                  <tt><i>494</i>         <span class="n">x3</span> <span class="o">=</span> <span class="n">g3</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'msg' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l616">
+                  <tt><i>616</i>         <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'msg' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l617">
+                  <tt><i>617</i>         <span class="k">except</span> <span class="ne">RuntimeError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'msg' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l623">
+                  <tt><i>623</i>         <span class="k">except</span> <span class="p">(</span><span class="ne">EOFError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">,</span> <span class="ne">ZeroDivisionError</span><span class="p">)</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l657">
+                  <tt><i>657</i>         <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l673">
+                  <tt><i>673</i>         <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l678">
+                  <tt><i>678</i>         <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l684">
+                  <tt><i>684</i>         <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l690">
+                  <tt><i>690</i>         <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">%</span> <span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l697">
+                  <tt><i>697</i>         <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="o">*</span><span class="mi">1</span> <span class="o">-</span> <span class="o">---</span><span class="mi">1</span><span class="o">*</span><span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l706">
+                  <tt><i>706</i>         <span class="n">x</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">time</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'c' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l709">
+                  <tt><i>709</i>         <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 's' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l716">
+                  <tt><i>716</i>         <span class="n">s</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'y' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l922">
+                  <tt><i>922</i>         <span class="k">with</span> <span class="n">manager</span><span class="p">()</span> <span class="k">as</span> <span class="n">x</span><span class="p">,</span> <span class="n">manager</span><span class="p">()</span> <span class="k">as</span> <span class="n">y</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'x' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l924">
+                  <tt><i>924</i>         <span class="k">with</span> <span class="n">manager</span><span class="p">()</span> <span class="k">as</span> <span class="n">x</span><span class="p">,</span> <span class="n">manager</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F811">
+               <span class="count sev-1">
+                  9
+               </span>
+               <strong>F811:</strong> redefinition of unused 'sys' from line 13
+               
+                  (and 7 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Redefinition of unused 'sys' from line 13:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l507">
+                  <tt><i>507</i>         <span class="kn">import</span> <span class="nn">sys</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Redefinition of unused 'sys' from line 507:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l508">
+                  <tt><i>508</i>         <span class="kn">import</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">sys</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Redefinition of unused 'time' from line 508:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l510">
+                  <tt><i>510</i>         <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Redefinition of unused 'time' from line 510:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l511">
+                  <tt><i>511</i>         <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="p">(</span><span class="n">time</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Redefinition of unused 'argv' from line 514:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l515">
+                  <tt><i>515</i>         <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">argv</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Redefinition of unused 'path' from line 514:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l515">
+                  <tt><i>515</i>         <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">argv</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Redefinition of unused 'argv' from line 515:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l516">
+                  <tt><i>516</i>         <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">argv</span><span class="p">,)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Redefinition of unused 'path' from line 515:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l516">
+                  <tt><i>516</i>         <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">argv</span><span class="p">,)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Redefinition of unused 'sys' from line 13:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l703">
+                  <tt><i>703</i>         <span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">time</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  5
+               </span>
+               <strong>F401:</strong> 'sys' imported but unused
+               
+                  (and 3 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'sys' imported but unused:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l13">
+                  <tt><i>13</i> <span class="kn">import</span> <span class="nn">sys</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'sys' imported but unused:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l508">
+                  <tt><i>508</i>         <span class="kn">import</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">sys</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'time.time' imported but unused:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l511">
+                  <tt><i>511</i>         <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="p">(</span><span class="n">time</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'sys.argv' imported but unused:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l516">
+                  <tt><i>516</i>         <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">argv</span><span class="p">,)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'sys.path' imported but unused:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l516">
+                  <tt><i>516</i>         <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">argv</span><span class="p">,)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F632">
+               <span class="count sev-1">
+                  4
+               </span>
+               <strong>F632:</strong> use ==/!= to compare constant literals (str, bytes, int, float, tuple)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Use ==/!= to compare constant literals (str, bytes, int, float, tuple):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l664">
+                  <tt><i>664</i>         <span class="k">if</span> <span class="mi">1</span> <span class="ow">is</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Use ==/!= to compare constant literals (str, bytes, int, float, tuple):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l665">
+                  <tt><i>665</i>         <span class="k">if</span> <span class="mi">1</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Use ==/!= to compare constant literals (str, bytes, int, float, tuple) (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l668">
+                  <tt><i>668</i>         <span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="mi">1</span> <span class="o">!=</span> <span class="mi">1</span> <span class="ow">in</span> <span class="mi">1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="mi">1</span> <span class="ow">is</span> <span class="mi">1</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from sys import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l15">
+                  <tt><i>15</i> <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F405:</strong> 'd' may be undefined, or defined from star imports: sys
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l361">
+                  <tt><i>361</i>         <span class="n">l2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="n">a</span><span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="c1"># XXX just testing the expression</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  96
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l208">
+                  <tt><i>208</i>         <span class="n">v0</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 9 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l209">
+                  <tt><i>209</i>         <span class="n">v0</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l212">
+                  <tt><i>212</i>         <span class="n">v1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l213">
+                  <tt><i>213</i>         <span class="n">v1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 9 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l214">
+                  <tt><i>214</i>         <span class="n">v1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l215">
+                  <tt><i>215</i>         <span class="n">v2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l216">
+                  <tt><i>216</i>         <span class="n">v2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l217">
+                  <tt><i>217</i>         <span class="n">v2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 9 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l218">
+                  <tt><i>218</i>         <span class="n">v2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l224">
+                  <tt><i>224</i>         <span class="n">d01</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l228">
+                  <tt><i>228</i>         <span class="n">d11</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l235">
+                  <tt><i>235</i>         <span class="n">d21</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l242">
+                  <tt><i>242</i>         <span class="n">d02</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l258">
+                  <tt><i>258</i>         <span class="n">d01v</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l295">
+                  <tt><i>295</i>             <span class="nb">str</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="sa">b</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span><span class="mi">1</span> <span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l303">
+                  <tt><i>303</i>         <span class="k">def</span> <span class="nf">pos2key2</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">k1</span><span class="p">,</span> <span class="n">k2</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span> <span class="k">return</span> <span class="n">p1</span><span class="p">,</span><span class="n">p2</span><span class="p">,</span><span class="n">k1</span><span class="p">,</span><span class="n">k2</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l307">
+                  <tt><i>307</i>         <span class="k">def</span> <span class="nf">pos2key2dict</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">k1</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">k2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwarg</span><span class="p">):</span> <span class="k">return</span> <span class="n">p1</span><span class="p">,</span><span class="n">p2</span><span class="p">,</span><span class="n">k1</span><span class="p">,</span><span class="n">k2</span><span class="p">,</span><span class="n">kwarg</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l308">
+                  <tt><i>308</i>         <span class="n">pos2key2dict</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">k2</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">tokwarg1</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">tokwarg2</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l309">
+                  <tt><i>309</i>         <span class="n">pos2key2dict</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">tokwarg1</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">tokwarg2</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">k2</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l315">
+                  <tt><i>315</i>                                                     <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">}))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l322">
+                  <tt><i>322</i>         <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="nb">int</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l324">
+                  <tt><i>324</i>         <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">*</span><span class="n">x</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l326">
+                  <tt><i>326</i>         <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">**</span><span class="n">x</span><span class="p">:</span><span class="nb">float</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l328">
+                  <tt><i>328</i>         <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l330">
+                  <tt><i>330</i>         <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l332">
+                  <tt><i>332</i>         <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span><span class="mi">3</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="o">*</span><span class="n">g</span><span class="p">:</span><span class="mi">6</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 6 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l335">
+                  <tt><i>335</i>         <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span><span class="mi">3</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="o">*</span><span class="n">g</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="n">h</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span><span class="mi">9</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l336">
+                  <tt><i>336</i>               <span class="o">**</span><span class="n">k</span><span class="p">:</span><span class="mi">11</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">12</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l372">
+                  <tt><i>372</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">l6</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="mi">20</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l373">
+                  <tt><i>373</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">l6</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="mi">10</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l405">
+                  <tt><i>405</i>         <span class="n">abc</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l536">
+                  <tt><i>536</i>         <span class="k">assert</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l537">
+                  <tt><i>537</i>         <span class="k">assert</span> <span class="mi">1</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l722">
+                  <tt><i>722</i>         <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">,]</span> <span class="o">=</span> <span class="mi">2</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l723">
+                  <tt><i>723</i>         <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l724">
+                  <tt><i>724</i>         <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l745">
+                  <tt><i>745</i>         <span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l748">
+                  <tt><i>748</i>         <span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l752">
+                  <tt><i>752</i>         <span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l754">
+                  <tt><i>754</i>         <span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l788">
+                  <tt><i>788</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">({</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">},</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l818">
+                  <tt><i>818</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">([[</span><span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]],</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l894">
+                  <tt><i>894</i>         <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="kc">False</span><span class="p">;</span> <span class="n">g</span> <span class="o">=</span> <span class="p">((</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="n">t</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l896">
+                  <tt><i>896</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">([(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)],</span> <span class="nb">list</span><span class="p">(</span><span class="n">g</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  61
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l421">
+                  <tt><i>421</i>         <span class="k">while</span> <span class="mi">1</span><span class="p">:</span> <span class="k">break</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l426">
+                  <tt><i>426</i>         <span class="k">while</span> <span class="n">i</span><span class="p">:</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="k">continue</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l500">
+                  <tt><i>500</i>         <span class="k">try</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;just testing&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l501">
+                  <tt><i>501</i>         <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l502">
+                  <tt><i>502</i>         <span class="k">try</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">KeyboardInterrupt</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l503">
+                  <tt><i>503</i>         <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l551">
+                  <tt><i>551</i>         <span class="k">if</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l552">
+                  <tt><i>552</i>         <span class="k">if</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l553">
+                  <tt><i>553</i>         <span class="k">else</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l554">
+                  <tt><i>554</i>         <span class="k">if</span> <span class="mi">0</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l555">
+                  <tt><i>555</i>         <span class="k">elif</span> <span class="mi">0</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l556">
+                  <tt><i>556</i>         <span class="k">if</span> <span class="mi">0</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l557">
+                  <tt><i>557</i>         <span class="k">elif</span> <span class="mi">0</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l558">
+                  <tt><i>558</i>         <span class="k">elif</span> <span class="mi">0</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l559">
+                  <tt><i>559</i>         <span class="k">elif</span> <span class="mi">0</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l560">
+                  <tt><i>560</i>         <span class="k">else</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l564">
+                  <tt><i>564</i>         <span class="k">while</span> <span class="mi">0</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l565">
+                  <tt><i>565</i>         <span class="k">while</span> <span class="mi">0</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l566">
+                  <tt><i>566</i>         <span class="k">else</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l579">
+                  <tt><i>579</i>         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l580">
+                  <tt><i>580</i>         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">():</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l581">
+                  <tt><i>581</i>         <span class="k">else</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l588">
+                  <tt><i>588</i>                 <span class="k">if</span> <span class="ow">not</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">IndexError</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l595">
+                  <tt><i>595</i>         <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">Squares</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span> <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">+</span><span class="n">x</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l614">
+                  <tt><i>614</i>         <span class="k">try</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l615">
+                  <tt><i>615</i>         <span class="k">except</span> <span class="ne">EOFError</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l616">
+                  <tt><i>616</i>         <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l617">
+                  <tt><i>617</i>         <span class="k">except</span> <span class="ne">RuntimeError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l618">
+                  <tt><i>618</i>         <span class="k">except</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l619">
+                  <tt><i>619</i>         <span class="k">else</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l620">
+                  <tt><i>620</i>         <span class="k">try</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l621">
+                  <tt><i>621</i>         <span class="k">except</span> <span class="p">(</span><span class="ne">EOFError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">,</span> <span class="ne">ZeroDivisionError</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l622">
+                  <tt><i>622</i>         <span class="k">try</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l623">
+                  <tt><i>623</i>         <span class="k">except</span> <span class="p">(</span><span class="ne">EOFError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">,</span> <span class="ne">ZeroDivisionError</span><span class="p">)</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l624">
+                  <tt><i>624</i>         <span class="k">try</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l625">
+                  <tt><i>625</i>         <span class="k">finally</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l629">
+                  <tt><i>629</i>         <span class="k">if</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l646">
+                  <tt><i>646</i>         <span class="k">if</span> <span class="ow">not</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l647">
+                  <tt><i>647</i>         <span class="k">if</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l648">
+                  <tt><i>648</i>         <span class="k">if</span> <span class="mi">1</span> <span class="ow">or</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l649">
+                  <tt><i>649</i>         <span class="k">if</span> <span class="ow">not</span> <span class="ow">not</span> <span class="ow">not</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l650">
+                  <tt><i>650</i>         <span class="k">if</span> <span class="ow">not</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l651">
+                  <tt><i>651</i>         <span class="k">if</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">1</span> <span class="ow">or</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">1</span> <span class="ow">or</span> <span class="ow">not</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l656">
+                  <tt><i>656</i>         <span class="k">if</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l658">
+                  <tt><i>658</i>         <span class="k">if</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l659">
+                  <tt><i>659</i>         <span class="k">if</span> <span class="mi">1</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l660">
+                  <tt><i>660</i>         <span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l661">
+                  <tt><i>661</i>         <span class="k">if</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l662">
+                  <tt><i>662</i>         <span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l663">
+                  <tt><i>663</i>         <span class="k">if</span> <span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l664">
+                  <tt><i>664</i>         <span class="k">if</span> <span class="mi">1</span> <span class="ow">is</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l665">
+                  <tt><i>665</i>         <span class="k">if</span> <span class="mi">1</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l666">
+                  <tt><i>666</i>         <span class="k">if</span> <span class="mi">1</span> <span class="ow">in</span> <span class="p">():</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l667">
+                  <tt><i>667</i>         <span class="k">if</span> <span class="mi">1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">():</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l668">
+                  <tt><i>668</i>         <span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="mi">1</span> <span class="o">!=</span> <span class="mi">1</span> <span class="ow">in</span> <span class="mi">1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="mi">1</span> <span class="ow">is</span> <span class="mi">1</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">1</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l766">
+                  <tt><i>766</i>         <span class="k">class</span> <span class="nc">B</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l767">
+                  <tt><i>767</i>         <span class="k">class</span> <span class="nc">B2</span><span class="p">():</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l768">
+                  <tt><i>768</i>         <span class="k">class</span> <span class="nc">C1</span><span class="p">(</span><span class="n">B</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l769">
+                  <tt><i>769</i>         <span class="k">class</span> <span class="nc">C2</span><span class="p">(</span><span class="n">B</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l770">
+                  <tt><i>770</i>         <span class="k">class</span> <span class="nc">D</span><span class="p">(</span><span class="n">C1</span><span class="p">,</span> <span class="n">C2</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l781">
+                  <tt><i>781</i>         <span class="k">class</span> <span class="nc">G</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E266">
+               <span class="count sev-2">
+                  31
+               </span>
+               <strong>E266:</strong> too many leading '#' for block comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l174">
+                  <tt><i>174</i>         <span class="c1">### [decorators] &#39;def&#39; NAME parameters [&#39;-&gt;&#39; test] &#39;:&#39; suite</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l175">
+                  <tt><i>175</i>         <span class="c1">### decorator: &#39;@&#39; dotted_name [ &#39;(&#39; [arglist] &#39;)&#39; ] NEWLINE</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l176">
+                  <tt><i>176</i>         <span class="c1">### decorators: decorator+</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l177">
+                  <tt><i>177</i>         <span class="c1">### parameters: &#39;(&#39; [typedargslist] &#39;)&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l178">
+                  <tt><i>178</i>         <span class="c1">### typedargslist: ((tfpdef [&#39;=&#39; test] &#39;,&#39;)*</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l179">
+                  <tt><i>179</i>         <span class="c1">###                (&#39;*&#39; [tfpdef] (&#39;,&#39; tfpdef [&#39;=&#39; test])* [&#39;,&#39; &#39;**&#39; tfpdef] | &#39;**&#39; tfpdef)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l180">
+                  <tt><i>180</i>         <span class="c1">###                | tfpdef [&#39;=&#39; test] (&#39;,&#39; tfpdef [&#39;=&#39; test])* [&#39;,&#39;])</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l181">
+                  <tt><i>181</i>         <span class="c1">### tfpdef: NAME [&#39;:&#39; test]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l182">
+                  <tt><i>182</i>         <span class="c1">### varargslist: ((vfpdef [&#39;=&#39; test] &#39;,&#39;)*</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l183">
+                  <tt><i>183</i>         <span class="c1">###              (&#39;*&#39; [vfpdef] (&#39;,&#39; vfpdef [&#39;=&#39; test])*  [&#39;,&#39; &#39;**&#39; vfpdef] | &#39;**&#39; vfpdef)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l184">
+                  <tt><i>184</i>         <span class="c1">###              | vfpdef [&#39;=&#39; test] (&#39;,&#39; vfpdef [&#39;=&#39; test])* [&#39;,&#39;])</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l185">
+                  <tt><i>185</i>         <span class="c1">### vfpdef: NAME</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l358">
+                  <tt><i>358</i>         <span class="c1">### lambdef: &#39;lambda&#39; [varargslist] &#39;:&#39; test</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l376">
+                  <tt><i>376</i>     <span class="c1">### stmt: simple_stmt | compound_stmt</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l380">
+                  <tt><i>380</i>         <span class="c1">### simple_stmt: small_stmt (&#39;;&#39; small_stmt)* [&#39;;&#39;]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l387">
+                  <tt><i>387</i>     <span class="c1">### small_stmt: expr_stmt | pass_stmt | del_stmt | flow_stmt | import_stmt | global_stmt | access_stmt</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l546">
+                  <tt><i>546</i>     <span class="c1">### compound_stmt: if_stmt | while_stmt | for_stmt | try_stmt | funcdef | classdef</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l605">
+                  <tt><i>605</i>         <span class="c1">### try_stmt: &#39;try&#39; &#39;:&#39; suite (except_clause &#39;:&#39; suite)+ [&#39;else&#39; &#39;:&#39; suite]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l606">
+                  <tt><i>606</i>         <span class="c1">###         | &#39;try&#39; &#39;:&#39; suite &#39;finally&#39; &#39;:&#39; suite</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l607">
+                  <tt><i>607</i>         <span class="c1">### except_clause: &#39;except&#39; [expr [&#39;as&#39; expr]]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l643">
+                  <tt><i>643</i>         <span class="c1">### and_test (&#39;or&#39; and_test)*</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l644">
+                  <tt><i>644</i>         <span class="c1">### and_test: not_test (&#39;and&#39; not_test)*</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l645">
+                  <tt><i>645</i>         <span class="c1">### not_test: &#39;not&#39; not_test | comparison</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l654">
+                  <tt><i>654</i>         <span class="c1">### comparison: expr (comp_op expr)*</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l655">
+                  <tt><i>655</i>         <span class="c1">### comp_op: &#39;&lt;&#39;|&#39;&gt;&#39;|&#39;==&#39;|&#39;&gt;=&#39;|&#39;&lt;=&#39;|&#39;!=&#39;|&#39;in&#39;|&#39;not&#39; &#39;in&#39;|&#39;is&#39;|&#39;is&#39; &#39;not&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l700">
+                  <tt><i>700</i>         <span class="c1">### trailer: &#39;(&#39; [testlist] &#39;)&#39; | &#39;[&#39; subscript &#39;]&#39; | &#39;.&#39; NAME</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l701">
+                  <tt><i>701</i>         <span class="c1">### subscript: expr | [expr] &#39;:&#39; [expr]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l730">
+                  <tt><i>730</i>         <span class="c1">### atom: &#39;(&#39; [testlist] &#39;)&#39; | &#39;[&#39; [testlist] &#39;]&#39; | &#39;{&#39; [dictsetmaker] &#39;}&#39; | NAME | NUMBER | STRING</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l731">
+                  <tt><i>731</i>         <span class="c1">### dictsetmaker: (test &#39;:&#39; test (&#39;,&#39; test &#39;:&#39; test)* [&#39;,&#39;]) | (test (&#39;,&#39; test)* [&#39;,&#39;])</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l760">
+                  <tt><i>760</i>     <span class="c1">### exprlist: expr (&#39;,&#39; expr)* [&#39;,&#39;]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l761">
+                  <tt><i>761</i>     <span class="c1">### testlist: test (&#39;,&#39; test)* [&#39;,&#39;]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E702">
+               <span class="count sev-2">
+                  17
+               </span>
+               <strong>E702:</strong> multiple statements on one line (semicolon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Multiple statements on one line (semicolon) (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l112">
+                  <tt><i>112</i>         <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span> <span class="bp">self</span><span class="o">.</span><span class="n">assert_</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Multiple statements on one line (semicolon) (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l113">
+                  <tt><i>113</i>         <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">;</span> <span class="bp">self</span><span class="o">.</span><span class="n">assert_</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span> <span class="ow">and</span> <span class="nb">ord</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">39</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Multiple statements on one line (semicolon) (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l114">
+                  <tt><i>114</i>         <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">;</span> <span class="bp">self</span><span class="o">.</span><span class="n">assert_</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span> <span class="ow">and</span> <span class="nb">ord</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">34</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Multiple statements on one line (semicolon):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l150">
+                  <tt><i>150</i>         <span class="n">x</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;hello \</span><span class="si">{</span><span class="kc">True</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;hello </span><span class="se">\\</span><span class="si">{</span><span class="kc">True</span><span class="si">}</span><span class="s2">&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Multiple statements on one line (semicolon) (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l381">
+                  <tt><i>381</i>         <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="k">pass</span><span class="p">;</span> <span class="k">del</span> <span class="n">x</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Multiple statements on one line (semicolon) (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l384">
+                  <tt><i>384</i>             <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="k">pass</span><span class="p">;</span> <span class="k">del</span> <span class="n">x</span><span class="p">;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Multiple statements on one line (semicolon):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l426">
+                  <tt><i>426</i>         <span class="k">while</span> <span class="n">i</span><span class="p">:</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="k">continue</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Multiple statements on one line (semicolon) (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l890">
+                  <tt><i>890</i>         <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">));</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Multiple statements on one line (semicolon) (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l894">
+                  <tt><i>894</i>         <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="kc">False</span><span class="p">;</span> <span class="n">g</span> <span class="o">=</span> <span class="p">((</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="n">t</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Multiple statements on one line (semicolon):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l895">
+                  <tt><i>895</i>         <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="kc">True</span><span class="p">;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E306">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E306:</strong> expected 1 blank line before a nested definition, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l382">
+                  <tt><i>382</i>         <span class="k">def</span> <span class="nf">foo</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l528">
+                  <tt><i>528</i>         <span class="k">def</span> <span class="nf">f</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l582">
+                  <tt><i>582</i>         <span class="k">class</span> <span class="nc">Squares</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l586">
+                  <tt><i>586</i>             <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sofar</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l587">
+                  <tt><i>587</i>             <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l771">
+                  <tt><i>771</i>         <span class="k">class</span> <span class="nc">C</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l911">
+                  <tt><i>911</i>             <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l359">
+                  <tt><i>359</i>         <span class="n">l1</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l361">
+                  <tt><i>361</i>         <span class="n">l2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="n">a</span><span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="c1"># XXX just testing the expression</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l362">
+                  <tt><i>362</i>         <span class="n">l3</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="p">[</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':' (in 3 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l364">
+                  <tt><i>364</i>         <span class="n">l4</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">y</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">z</span><span class="o">=</span><span class="mi">1</span> <span class="p">:</span> <span class="n">z</span> <span class="p">:</span> <span class="n">y</span><span class="p">()</span> <span class="p">:</span> <span class="n">x</span><span class="p">()</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E252">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E252:</strong> missing whitespace around parameter equals
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace around parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l332">
+                  <tt><i>332</i>         <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span><span class="mi">3</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="o">*</span><span class="n">g</span><span class="p">:</span><span class="mi">6</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around parameter equals (in 4 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l335">
+                  <tt><i>335</i>         <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span><span class="mi">3</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="o">*</span><span class="n">g</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="n">h</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span><span class="mi">9</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E731">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E731:</strong> do not assign a lambda expression, use a def
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l359">
+                  <tt><i>359</i>         <span class="n">l1</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l361">
+                  <tt><i>361</i>         <span class="n">l2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="n">a</span><span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="c1"># XXX just testing the expression</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l362">
+                  <tt><i>362</i>         <span class="n">l3</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="p">[</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l364">
+                  <tt><i>364</i>         <span class="n">l4</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">y</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">z</span><span class="o">=</span><span class="mi">1</span> <span class="p">:</span> <span class="n">z</span> <span class="p">:</span> <span class="n">y</span><span class="p">()</span> <span class="p">:</span> <span class="n">x</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l366">
+                  <tt><i>366</i>         <span class="n">l5</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l371">
+                  <tt><i>371</i>         <span class="n">l6</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">20</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">k</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E131">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E131:</strong> continuation line unaligned for hanging indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l844">
+                  <tt><i>844</i>             <span class="k">for</span> <span class="p">(</span><span class="n">sno</span><span class="p">,</span> <span class="n">sname</span><span class="p">)</span> <span class="ow">in</span> <span class="n">suppliers</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l845">
+                  <tt><i>845</i>               <span class="k">for</span> <span class="p">(</span><span class="n">pno</span><span class="p">,</span> <span class="n">pname</span><span class="p">)</span> <span class="ow">in</span> <span class="n">parts</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l846">
+                  <tt><i>846</i>                 <span class="k">for</span> <span class="p">(</span><span class="n">sp_sno</span><span class="p">,</span> <span class="n">sp_pno</span><span class="p">)</span> <span class="ow">in</span> <span class="n">suppart</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l847">
+                  <tt><i>847</i>                   <span class="k">if</span> <span class="n">sno</span> <span class="o">==</span> <span class="n">sp_sno</span> <span class="ow">and</span> <span class="n">pno</span> <span class="o">==</span> <span class="n">sp_pno</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E202">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E202:</strong> whitespace before '}'
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Whitespace before '}':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l295">
+                  <tt><i>295</i>             <span class="nb">str</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="sa">b</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span><span class="mi">1</span> <span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ']':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l900">
+                  <tt><i>900</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">([</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">3</span> <span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ']':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l936">
+                  <tt><i>936</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">([</span> <span class="n">x</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="kc">False</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="p">()</span> <span class="p">],</span> <span class="p">[</span><span class="kc">True</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ']':</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l937">
+                  <tt><i>937</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">([</span> <span class="n">x</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="kc">False</span> <span class="k">if</span> <span class="n">x</span> <span class="k">else</span> <span class="kc">True</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">x</span> <span class="k">else</span> <span class="kc">False</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span> <span class="p">],</span> <span class="p">[</span><span class="kc">True</span><span class="p">])</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E201">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E201:</strong> whitespace after '['
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l900">
+                  <tt><i>900</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">([</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">3</span> <span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l936">
+                  <tt><i>936</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">([</span> <span class="n">x</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="kc">False</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="p">()</span> <span class="p">],</span> <span class="p">[</span><span class="kc">True</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l937">
+                  <tt><i>937</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">([</span> <span class="n">x</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="kc">False</span> <span class="k">if</span> <span class="n">x</span> <span class="k">else</span> <span class="kc">True</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">x</span> <span class="k">else</span> <span class="kc">False</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span> <span class="p">],</span> <span class="p">[</span><span class="kc">True</span><span class="p">])</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l434">
+                  <tt><i>434</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l469">
+                  <tt><i>469</i>                 <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l618">
+                  <tt><i>618</i>         <span class="k">except</span><span class="p">:</span> <span class="k">pass</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E228">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E228:</strong> missing whitespace around modulo operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace around modulo operator (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l879">
+                  <tt><i>879</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="p">),</span> <span class="nb">sum</span><span class="p">([</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="p">]))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E251">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E251:</strong> unexpected spaces around keyword / parameter equals
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l459">
+                  <tt><i>459</i>         <span class="k">def</span> <span class="nf">test_inner</span><span class="p">(</span><span class="n">extra_burning_oil</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l17">
+                  <tt><i>17</i> <span class="k">class</span> <span class="nc">TokenTests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l158">
+                  <tt><i>158</i> <span class="k">class</span> <span class="nc">GrammarTests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E401">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E401:</strong> multiple imports on one line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l508">
+                  <tt><i>508</i>         <span class="kn">import</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">sys</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l703">
+                  <tt><i>703</i>         <span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">time</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E501:</strong> line too long (122 > 119 characters)
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (122 > 119 characters):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l883">
+                  <tt><i>883</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">(</span><span class="n">z</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="kc">True</span><span class="p">))</span> <span class="k">if</span> <span class="kc">True</span><span class="p">),</span> <span class="nb">sum</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (132 > 119 characters):</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l937">
+                  <tt><i>937</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">([</span> <span class="n">x</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="kc">False</span> <span class="k">if</span> <span class="n">x</span> <span class="k">else</span> <span class="kc">True</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">x</span> <span class="k">else</span> <span class="kc">False</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span> <span class="p">],</span> <span class="p">[</span><span class="kc">True</span><span class="p">])</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E703">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E703:</strong> statement ends with a semicolon
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l384">
+                  <tt><i>384</i>             <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="k">pass</span><span class="p">;</span> <span class="k">del</span> <span class="n">x</span><span class="p">;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l895">
+                  <tt><i>895</i>         <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="kc">True</span><span class="p">;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E122">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E122:</strong> continuation line missing indentation or outdented
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l22">
+                  <tt><i>22</i>         <span class="o">+</span> <span class="mi">1</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l361">
+                  <tt><i>361</i>         <span class="n">l2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="n">a</span><span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="c1"># XXX just testing the expression</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l935">
+                  <tt><i>935</i>         <span class="c1">#self.assertEqual([ x() for x in lambda: True, lambda: False if x() ], [True])</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l379">
+                  <tt><i>379</i>     <span class="k">def</span> <span class="nf">testSimpleStmt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E303:</strong> too many blank lines (2)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l376">
+                  <tt><i>376</i>     <span class="c1">### stmt: simple_stmt | compound_stmt</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E741">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E741:</strong> ambiguous variable name 'l'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.data.py3_test_grammar.source.html#l812">
+                  <tt><i>812</i>         <span class="k">def</span> <span class="nf">test_in_func</span><span class="p">(</span><span class="n">l</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/tkinter/tix.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.tkinter.tix.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/tkinter/tix.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  21
+               </span>
+               <strong>F405:</strong> 'Widget' may be undefined, or defined from star imports: tkinter
+               
+                  (and 13 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'Widget' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l322">
+                  <tt><i>322</i>             <span class="n">Widget</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cnf</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'TclError' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l348">
+                  <tt><i>348</i>             <span class="k">raise</span> <span class="n">TclError</span><span class="p">(</span><span class="s2">&quot;Subwidget &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; not child of &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'TclError' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l372">
+                  <tt><i>372</i>         <span class="k">except</span> <span class="n">TclError</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'TclError' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l380">
+                  <tt><i>380</i>         <span class="k">except</span> <span class="n">TclError</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'TclError' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l409">
+                  <tt><i>409</i>         <span class="k">except</span> <span class="n">TclError</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'XView' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l856">
+                  <tt><i>856</i> <span class="k">class</span> <span class="nc">HList</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">,</span> <span class="n">XView</span><span class="p">,</span> <span class="n">YView</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'YView' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l856">
+                  <tt><i>856</i> <span class="k">class</span> <span class="nc">HList</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">,</span> <span class="n">XView</span><span class="p">,</span> <span class="n">YView</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'XView' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1421">
+                  <tt><i>1421</i> <span class="k">class</span> <span class="nc">TList</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">,</span> <span class="n">XView</span><span class="p">,</span> <span class="n">YView</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'YView' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1421">
+                  <tt><i>1421</i> <span class="k">class</span> <span class="nc">TList</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">,</span> <span class="n">XView</span><span class="p">,</span> <span class="n">YView</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1604">
+                  <tt><i>1604</i> <span class="k">class</span> <span class="nc">_dummyButton</span><span class="p">(</span><span class="n">Button</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Checkbutton' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1608">
+                  <tt><i>1608</i> <span class="k">class</span> <span class="nc">_dummyCheckbutton</span><span class="p">(</span><span class="n">Checkbutton</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Entry' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1612">
+                  <tt><i>1612</i> <span class="k">class</span> <span class="nc">_dummyEntry</span><span class="p">(</span><span class="n">Entry</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Frame' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1616">
+                  <tt><i>1616</i> <span class="k">class</span> <span class="nc">_dummyFrame</span><span class="p">(</span><span class="n">Frame</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1620">
+                  <tt><i>1620</i> <span class="k">class</span> <span class="nc">_dummyLabel</span><span class="p">(</span><span class="n">Label</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Listbox' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1624">
+                  <tt><i>1624</i> <span class="k">class</span> <span class="nc">_dummyListbox</span><span class="p">(</span><span class="n">Listbox</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Menu' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1628">
+                  <tt><i>1628</i> <span class="k">class</span> <span class="nc">_dummyMenu</span><span class="p">(</span><span class="n">Menu</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Menubutton' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1632">
+                  <tt><i>1632</i> <span class="k">class</span> <span class="nc">_dummyMenubutton</span><span class="p">(</span><span class="n">Menubutton</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Scrollbar' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1636">
+                  <tt><i>1636</i> <span class="k">class</span> <span class="nc">_dummyScrollbar</span><span class="p">(</span><span class="n">Scrollbar</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Text' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1640">
+                  <tt><i>1640</i> <span class="k">class</span> <span class="nc">_dummyText</span><span class="p">(</span><span class="n">Text</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'XView' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1772">
+                  <tt><i>1772</i> <span class="k">class</span> <span class="nc">Grid</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">,</span> <span class="n">XView</span><span class="p">,</span> <span class="n">YView</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'YView' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1772">
+                  <tt><i>1772</i> <span class="k">class</span> <span class="nc">Grid</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">,</span> <span class="n">XView</span><span class="p">,</span> <span class="n">YView</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from tkinter import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l29">
+                  <tt><i>29</i> <span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  62
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l78">
+                  <tt><i>78</i> <span class="k">class</span> <span class="nc">tixCommand</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l206">
+                  <tt><i>206</i> <span class="k">class</span> <span class="nc">Tk</span><span class="p">(</span><span class="n">tkinter</span><span class="o">.</span><span class="n">Tk</span><span class="p">,</span> <span class="n">tixCommand</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l229">
+                  <tt><i>229</i> <span class="k">class</span> <span class="nc">Form</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l276">
+                  <tt><i>276</i> <span class="k">class</span> <span class="nc">TixWidget</span><span class="p">(</span><span class="n">tkinter</span><span class="o">.</span><span class="n">Widget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l416">
+                  <tt><i>416</i> <span class="k">class</span> <span class="nc">TixSubWidget</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l546">
+                  <tt><i>546</i> <span class="k">class</span> <span class="nc">ButtonBox</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l565">
+                  <tt><i>565</i> <span class="k">class</span> <span class="nc">ComboBox</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l609">
+                  <tt><i>609</i> <span class="k">class</span> <span class="nc">Control</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l642">
+                  <tt><i>642</i> <span class="k">class</span> <span class="nc">DirList</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l663">
+                  <tt><i>663</i> <span class="k">class</span> <span class="nc">DirTree</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l685">
+                  <tt><i>685</i> <span class="k">class</span> <span class="nc">DirSelectBox</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l704">
+                  <tt><i>704</i> <span class="k">class</span> <span class="nc">ExFileSelectBox</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l782">
+                  <tt><i>782</i> <span class="k">class</span> <span class="nc">FileSelectBox</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l810">
+                  <tt><i>810</i> <span class="k">class</span> <span class="nc">FileSelectDialog</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l831">
+                  <tt><i>831</i> <span class="k">class</span> <span class="nc">FileEntry</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l856">
+                  <tt><i>856</i> <span class="k">class</span> <span class="nc">HList</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">,</span> <span class="n">XView</span><span class="p">,</span> <span class="n">YView</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1050">
+                  <tt><i>1050</i> <span class="k">class</span> <span class="nc">InputOnly</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1058">
+                  <tt><i>1058</i> <span class="k">class</span> <span class="nc">LabelEntry</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1074">
+                  <tt><i>1074</i> <span class="k">class</span> <span class="nc">LabelFrame</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1127">
+                  <tt><i>1127</i> <span class="k">class</span> <span class="nc">Meter</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1136">
+                  <tt><i>1136</i> <span class="k">class</span> <span class="nc">NoteBook</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1176">
+                  <tt><i>1176</i> <span class="k">class</span> <span class="nc">NoteBookFrame</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1180">
+                  <tt><i>1180</i> <span class="k">class</span> <span class="nc">OptionMenu</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1208">
+                  <tt><i>1208</i> <span class="k">class</span> <span class="nc">PanedWindow</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1249">
+                  <tt><i>1249</i> <span class="k">class</span> <span class="nc">PopupMenu</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1275">
+                  <tt><i>1275</i> <span class="k">class</span> <span class="nc">ResizeHandle</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1299">
+                  <tt><i>1299</i> <span class="k">class</span> <span class="nc">ScrolledHList</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1310">
+                  <tt><i>1310</i> <span class="k">class</span> <span class="nc">ScrolledListBox</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1320">
+                  <tt><i>1320</i> <span class="k">class</span> <span class="nc">ScrolledText</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1330">
+                  <tt><i>1330</i> <span class="k">class</span> <span class="nc">ScrolledTList</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1341">
+                  <tt><i>1341</i> <span class="k">class</span> <span class="nc">ScrolledWindow</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1351">
+                  <tt><i>1351</i> <span class="k">class</span> <span class="nc">Select</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1373">
+                  <tt><i>1373</i> <span class="k">class</span> <span class="nc">Shell</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1381">
+                  <tt><i>1381</i> <span class="k">class</span> <span class="nc">DialogShell</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1406">
+                  <tt><i>1406</i> <span class="k">class</span> <span class="nc">StdButtonBox</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1421">
+                  <tt><i>1421</i> <span class="k">class</span> <span class="nc">TList</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">,</span> <span class="n">XView</span><span class="p">,</span> <span class="n">YView</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1504">
+                  <tt><i>1504</i> <span class="k">class</span> <span class="nc">Tree</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1608">
+                  <tt><i>1608</i> <span class="k">class</span> <span class="nc">_dummyCheckbutton</span><span class="p">(</span><span class="n">Checkbutton</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1612">
+                  <tt><i>1612</i> <span class="k">class</span> <span class="nc">_dummyEntry</span><span class="p">(</span><span class="n">Entry</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1616">
+                  <tt><i>1616</i> <span class="k">class</span> <span class="nc">_dummyFrame</span><span class="p">(</span><span class="n">Frame</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1620">
+                  <tt><i>1620</i> <span class="k">class</span> <span class="nc">_dummyLabel</span><span class="p">(</span><span class="n">Label</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1624">
+                  <tt><i>1624</i> <span class="k">class</span> <span class="nc">_dummyListbox</span><span class="p">(</span><span class="n">Listbox</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1628">
+                  <tt><i>1628</i> <span class="k">class</span> <span class="nc">_dummyMenu</span><span class="p">(</span><span class="n">Menu</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1632">
+                  <tt><i>1632</i> <span class="k">class</span> <span class="nc">_dummyMenubutton</span><span class="p">(</span><span class="n">Menubutton</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1636">
+                  <tt><i>1636</i> <span class="k">class</span> <span class="nc">_dummyScrollbar</span><span class="p">(</span><span class="n">Scrollbar</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1640">
+                  <tt><i>1640</i> <span class="k">class</span> <span class="nc">_dummyText</span><span class="p">(</span><span class="n">Text</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1644">
+                  <tt><i>1644</i> <span class="k">class</span> <span class="nc">_dummyScrolledListBox</span><span class="p">(</span><span class="n">ScrolledListBox</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1651">
+                  <tt><i>1651</i> <span class="k">class</span> <span class="nc">_dummyHList</span><span class="p">(</span><span class="n">HList</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1655">
+                  <tt><i>1655</i> <span class="k">class</span> <span class="nc">_dummyScrolledHList</span><span class="p">(</span><span class="n">ScrolledHList</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1662">
+                  <tt><i>1662</i> <span class="k">class</span> <span class="nc">_dummyTList</span><span class="p">(</span><span class="n">TList</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1666">
+                  <tt><i>1666</i> <span class="k">class</span> <span class="nc">_dummyComboBox</span><span class="p">(</span><span class="n">ComboBox</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1683">
+                  <tt><i>1683</i> <span class="k">class</span> <span class="nc">_dummyDirList</span><span class="p">(</span><span class="n">DirList</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1690">
+                  <tt><i>1690</i> <span class="k">class</span> <span class="nc">_dummyDirSelectBox</span><span class="p">(</span><span class="n">DirSelectBox</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1696">
+                  <tt><i>1696</i> <span class="k">class</span> <span class="nc">_dummyExFileSelectBox</span><span class="p">(</span><span class="n">ExFileSelectBox</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1708">
+                  <tt><i>1708</i> <span class="k">class</span> <span class="nc">_dummyFileSelectBox</span><span class="p">(</span><span class="n">FileSelectBox</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1716">
+                  <tt><i>1716</i> <span class="k">class</span> <span class="nc">_dummyFileComboBox</span><span class="p">(</span><span class="n">ComboBox</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1721">
+                  <tt><i>1721</i> <span class="k">class</span> <span class="nc">_dummyStdButtonBox</span><span class="p">(</span><span class="n">StdButtonBox</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1729">
+                  <tt><i>1729</i> <span class="k">class</span> <span class="nc">_dummyNoteBookFrame</span><span class="p">(</span><span class="n">NoteBookFrame</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1733">
+                  <tt><i>1733</i> <span class="k">class</span> <span class="nc">_dummyPanedWindow</span><span class="p">(</span><span class="n">PanedWindow</span><span class="p">,</span> <span class="n">TixSubWidget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1743">
+                  <tt><i>1743</i> <span class="k">def</span> <span class="nf">OptionName</span><span class="p">(</span><span class="n">widget</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1753">
+                  <tt><i>1753</i> <span class="k">def</span> <span class="nf">FileTypeList</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1761">
+                  <tt><i>1761</i> <span class="k">class</span> <span class="nc">CObjView</span><span class="p">(</span><span class="n">TixWidget</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  28
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l307">
+                  <tt><i>307</i>         <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">cnf</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l368">
+                  <tt><i>368</i>     <span class="k">def</span> <span class="nf">_subwidget_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">name</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l486">
+                  <tt><i>486</i>                             <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_options</span><span class="p">(</span><span class="n">cnf</span><span class="p">,</span><span class="n">kw</span><span class="p">)</span> <span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l504">
+                  <tt><i>504</i>     <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">key</span><span class="p">,</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l509">
+                  <tt><i>509</i>             <span class="bp">self</span><span class="o">.</span><span class="n">stylename</span><span class="p">,</span> <span class="s1">&#39;configure&#39;</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_options</span><span class="p">(</span><span class="n">cnf</span><span class="p">,</span><span class="n">kw</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l511">
+                  <tt><i>511</i>     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">key</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l864">
+                  <tt><i>864</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1055">
+                  <tt><i>1055</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1068">
+                  <tt><i>1068</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1070">
+                  <tt><i>1070</i>                            <span class="p">[</span><span class="s1">&#39;labelside&#39;</span><span class="p">,</span><span class="s1">&#39;options&#39;</span><span class="p">],</span> <span class="n">cnf</span><span class="p">,</span> <span class="n">kw</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1085">
+                  <tt><i>1085</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1087">
+                  <tt><i>1087</i>                            <span class="p">[</span><span class="s1">&#39;labelside&#39;</span><span class="p">,</span><span class="s1">&#39;options&#39;</span><span class="p">],</span> <span class="n">cnf</span><span class="p">,</span> <span class="n">kw</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1144">
+                  <tt><i>1144</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1145">
+                  <tt><i>1145</i>         <span class="n">TixWidget</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="p">,</span><span class="s1">&#39;tixNoteBook&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;options&#39;</span><span class="p">],</span> <span class="n">cnf</span><span class="p">,</span> <span class="n">kw</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1378">
+                  <tt><i>1378</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1390">
+                  <tt><i>1390</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1431">
+                  <tt><i>1431</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1668">
+                  <tt><i>1668</i>         <span class="n">TixSubWidget</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">master</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;fancy&#39;</span><span class="p">,</span><span class="n">destroy_physically</span><span class="p">])</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E211">
+               <span class="count sev-2">
+                  12
+               </span>
+               <strong>E211:</strong> whitespace before '('
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l289">
+                  <tt><i>289</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">widgetName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l579">
+                  <tt><i>579</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l623">
+                  <tt><i>623</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l864">
+                  <tt><i>864</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l957">
+                  <tt><i>957</i>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tk</span><span class="o">.</span><span class="n">call</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_w</span><span class="p">,</span> <span class="s1">&#39;indicator&#39;</span><span class="p">,</span> <span class="s1">&#39;exists&#39;</span><span class="p">,</span> <span class="n">entry</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1055">
+                  <tt><i>1055</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1068">
+                  <tt><i>1068</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1085">
+                  <tt><i>1085</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1144">
+                  <tt><i>1144</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1378">
+                  <tt><i>1378</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1390">
+                  <tt><i>1390</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1431">
+                  <tt><i>1431</i>     <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l299">
+                  <tt><i>299</i>         <span class="n">extra</span><span class="o">=</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1791">
+                  <tt><i>1791</i>         <span class="n">static</span><span class="o">=</span> <span class="p">[]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1792">
+                  <tt><i>1792</i>         <span class="bp">self</span><span class="o">.</span><span class="n">cnf</span><span class="o">=</span> <span class="n">cnf</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1880">
+                  <tt><i>1880</i>         <span class="n">args</span><span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_options</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cnf</span><span class="p">,</span> <span class="n">kw</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1882">
+                  <tt><i>1882</i>             <span class="n">args</span><span class="o">=</span> <span class="p">(</span><span class="s1">&#39;-itemtype&#39;</span><span class="p">,</span> <span class="n">itemtype</span><span class="p">)</span> <span class="o">+</span> <span class="n">args</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1946">
+                  <tt><i>1946</i>         <span class="n">static</span><span class="o">=</span> <span class="p">[]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1947">
+                  <tt><i>1947</i>         <span class="bp">self</span><span class="o">.</span><span class="n">cnf</span><span class="o">=</span> <span class="n">cnf</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l290">
+                  <tt><i>290</i>                 <span class="n">static_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="n">kw</span><span class="o">=</span><span class="p">{}):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l424">
+                  <tt><i>424</i>                <span class="n">destroy_physically</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">check_intermediate</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l486">
+                  <tt><i>486</i>                             <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_options</span><span class="p">(</span><span class="n">cnf</span><span class="p">,</span><span class="n">kw</span><span class="p">)</span> <span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1011">
+                  <tt><i>1011</i>               <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_options</span><span class="p">(</span><span class="n">cnf</span><span class="p">,</span> <span class="n">kw</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1030">
+                  <tt><i>1030</i>               <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_options</span><span class="p">(</span><span class="n">cnf</span><span class="p">,</span> <span class="n">kw</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1909">
+                  <tt><i>1909</i>                              <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_options</span><span class="p">({},</span> <span class="n">kw</span><span class="p">)))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E221">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E221:</strong> multiple spaces before operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l66">
+                  <tt><i>66</i> <span class="n">TCL_DONT_WAIT</span>     <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l68">
+                  <tt><i>68</i> <span class="n">TCL_FILE_EVENTS</span>   <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l69">
+                  <tt><i>69</i> <span class="n">TCL_TIMER_EVENTS</span>  <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l70">
+                  <tt><i>70</i> <span class="n">TCL_IDLE_EVENTS</span>   <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l71">
+                  <tt><i>71</i> <span class="n">TCL_ALL_EVENTS</span>    <span class="o">=</span> <span class="mi">0</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E266">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E266:</strong> too many leading '#' for block comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l516">
+                  <tt><i>516</i> <span class="c1">### The Tix Widget classes - in alphabetical order ###</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1600">
+                  <tt><i>1600</i> <span class="c1">### The subclassing below is used to instantiate the subwidgets in each ###</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1601">
+                  <tt><i>1601</i> <span class="c1">### mega widget. This allows us to access their methods directly.       ###</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1738">
+                  <tt><i>1738</i> <span class="c1">### Utility Routines ###</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l398">
+                  <tt><i>398</i>         <span class="k">if</span> <span class="n">kw</span> <span class="ow">and</span> <span class="n">cnf</span><span class="p">:</span> <span class="n">cnf</span> <span class="o">=</span> <span class="n">_cnfmerge</span><span class="p">((</span><span class="n">cnf</span><span class="p">,</span> <span class="n">kw</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l399">
+                  <tt><i>399</i>         <span class="k">elif</span> <span class="n">kw</span><span class="p">:</span> <span class="n">cnf</span> <span class="o">=</span> <span class="n">kw</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l460">
+                  <tt><i>460</i>         <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span> <span class="n">c</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l435">
+                  <tt><i>435</i>             <span class="n">TixWidget</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">master</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span> <span class="p">:</span> <span class="n">name</span><span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l452">
+                  <tt><i>452</i>             <span class="n">TixWidget</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span> <span class="p">:</span> <span class="n">name</span><span class="p">})</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E228">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E228:</strong> missing whitespace around modulo operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l505">
+                  <tt><i>505</i>         <span class="bp">self</span><span class="o">.</span><span class="n">tk</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stylename</span><span class="p">,</span> <span class="s1">&#39;configure&#39;</span><span class="p">,</span> <span class="s1">&#39;-</span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l512">
+                  <tt><i>512</i>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tk</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stylename</span><span class="p">,</span> <span class="s1">&#39;cget&#39;</span><span class="p">,</span> <span class="s1">&#39;-</span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">key</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1677">
+                  <tt><i>1677</i>             <span class="c1">#cross Button : present if created with the fancy option</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l1741">
+                  <tt><i>1741</i> <span class="c1">#mike Should tixDestroy be exposed as a wrapper? - but not for widgets.</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l395">
+                  <tt><i>395</i>     <span class="k">def</span> <span class="nf">image_create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">imgtype</span><span class="p">,</span> <span class="n">cnf</span><span class="o">=</span><span class="p">{},</span> <span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l406">
+                  <tt><i>406</i>     <span class="k">def</span> <span class="nf">image_delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">imgname</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l363">
+                  <tt><i>363</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l430">
+                  <tt><i>430</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E122">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E122:</strong> continuation line missing indentation or outdented
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l270">
+                  <tt><i>270</i>                        <span class="s1">&#39;tixForm&#39;</span><span class="p">,</span> <span class="s1">&#39;slaves&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_w</span><span class="p">))]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E202">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E202:</strong> whitespace before ')'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l486">
+                  <tt><i>486</i>                             <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_options</span><span class="p">(</span><span class="n">cnf</span><span class="p">,</span><span class="n">kw</span><span class="p">)</span> <span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E303:</strong> too many blank lines (3)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.tkinter.tix.source.html#l274">
+                  <tt><i>274</i> <span class="n">tkinter</span><span class="o">.</span><span class="n">Widget</span><span class="o">.</span><span class="vm">__bases__</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Widget</span><span class="o">.</span><span class="vm">__bases__</span> <span class="o">+</span> <span class="p">(</span><span class="n">Form</span><span class="p">,)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

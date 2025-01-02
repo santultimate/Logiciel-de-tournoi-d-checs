@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/mailcap.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.mailcap.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/mailcap.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  8
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l25">
+                  <tt><i>25</i> <span class="k">class</span> <span class="nc">UnsafeMailcapInput</span><span class="p">(</span><span class="ne">Warning</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l57">
+                  <tt><i>57</i> <span class="k">def</span> <span class="nf">listmailcapfiles</span><span class="p">():</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l124">
+                  <tt><i>124</i> <span class="k">def</span> <span class="nf">parseline</span><span class="p">(</span><span class="n">line</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l155">
+                  <tt><i>155</i> <span class="k">def</span> <span class="nf">parsefield</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l198">
+                  <tt><i>198</i> <span class="k">def</span> <span class="nf">lookup</span><span class="p">(</span><span class="n">caps</span><span class="p">,</span> <span class="n">MIMEtype</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l211">
+                  <tt><i>211</i> <span class="k">def</span> <span class="nf">subst</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">MIMEtype</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">plist</span><span class="o">=</span><span class="p">[]):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l252">
+                  <tt><i>252</i> <span class="k">def</span> <span class="nf">findparam</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">plist</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l286">
+                  <tt><i>286</i> <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="n">caps</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l95">
+                  <tt><i>95</i>         <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="p">:</span> <span class="k">break</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l103">
+                  <tt><i>103</i>             <span class="k">if</span> <span class="ow">not</span> <span class="n">nextline</span><span class="p">:</span> <span class="n">nextline</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l288">
+                  <tt><i>288</i>     <span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="n">listmailcapfiles</span><span class="p">():</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">fn</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l290">
+                  <tt><i>290</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">caps</span><span class="p">:</span> <span class="n">caps</span> <span class="o">=</span> <span class="n">getcaps</span><span class="p">()</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E702">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E702:</strong> multiple statements on one line (semicolon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l216">
+                  <tt><i>216</i>         <span class="n">c</span> <span class="o">=</span> <span class="n">field</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l219">
+                  <tt><i>219</i>                 <span class="n">c</span> <span class="o">=</span> <span class="n">field</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l222">
+                  <tt><i>222</i>             <span class="n">c</span> <span class="o">=</span> <span class="n">field</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l68">
+                  <tt><i>68</i>             <span class="n">home</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span> <span class="c1"># Last resort</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l135">
+                  <tt><i>135</i>         <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="c1"># Skip semicolon</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l23">
+                  <tt><i>23</i> <span class="n">_find_unsafe</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^\xa1-\U0010FFFF\w@+=:,./-]&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">search</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l303">
+                  <tt><i>303</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l70">
+                  <tt><i>70</i>                 <span class="s1">&#39;/usr/etc/mailcap&#39;</span><span class="p">,</span> <span class="s1">&#39;/usr/local/etc/mailcap&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l7">
+                  <tt><i>7</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;getcaps&quot;</span><span class="p">,</span><span class="s2">&quot;findmatch&quot;</span><span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E713">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E713:</strong> test for membership should be 'not in'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.mailcap.source.html#l51">
+                  <tt><i>51</i>             <span class="k">if</span> <span class="ow">not</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">caps</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

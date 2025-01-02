@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>.conda/lib/python3.11/idlelib/idle_test/tkinter_testing_utils.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <h1>
+            <a href="conda.lib.python3.11.idlelib.idle_test.tkinter_testing_utils.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/idlelib/idle_test/tkinter_testing_utils.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="sd">&quot;&quot;&quot;Utilities for testing with Tkinter&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> <span class="kn">import</span> <span class="nn">functools</span></tt>
+            </div>
+            <div id="l3"
+               class="code sev- "><tt><i>3</i> &nbsp;</tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> &nbsp;</tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> <span class="k">def</span> <span class="nf">run_in_tk_mainloop</span><span class="p">(</span><span class="n">delay</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span></tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i>     <span class="sd">&quot;&quot;&quot;Decorator for running a test method with a real Tk mainloop.</span></tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i> &nbsp;</tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i> <span class="sd">    This starts a Tk mainloop before running the test, and stops it</span></tt>
+            </div>
+            <div id="l9"
+               class="code sev- "><tt><i>9</i> <span class="sd">    at the end. This is faster and more robust than the common</span></tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i> <span class="sd">    alternative method of calling .update() and/or .update_idletasks().</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i> &nbsp;</tt>
+            </div>
+            <div id="l12"
+               class="code sev- "><tt><i>12</i> <span class="sd">    Test methods using this must be written as generator functions,</span></tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i> <span class="sd">    using &quot;yield&quot; to allow the mainloop to process events and &quot;after&quot;</span></tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i> <span class="sd">    callbacks, and then continue the test from that point.</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev- "><tt><i>15</i> &nbsp;</tt>
+            </div>
+            <div id="l16"
+               class="code sev- "><tt><i>16</i> <span class="sd">    The delay argument is passed into root.after(...) calls as the number</span></tt>
+            </div>
+            <div id="l17"
+               class="code sev- "><tt><i>17</i> <span class="sd">    of ms to wait before passing execution back to the generator function.</span></tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i> &nbsp;</tt>
+            </div>
+            <div id="l19"
+               class="code sev- "><tt><i>19</i> <span class="sd">    This also assumes that the test class has a .root attribute,</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev- "><tt><i>20</i> <span class="sd">    which is a tkinter.Tk object.</span></tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i> &nbsp;</tt>
+            </div>
+            <div id="l22"
+               class="code sev- "><tt><i>22</i> <span class="sd">    For example (from test_sidebar.py):</span></tt>
+            </div>
+            <div id="l23"
+               class="code sev- "><tt><i>23</i> &nbsp;</tt>
+            </div>
+            <div id="l24"
+               class="code sev- "><tt><i>24</i> <span class="sd">    @run_test_with_tk_mainloop()</span></tt>
+            </div>
+            <div id="l25"
+               class="code sev- "><tt><i>25</i> <span class="sd">    def test_single_empty_input(self):</span></tt>
+            </div>
+            <div id="l26"
+               class="code sev- "><tt><i>26</i> <span class="sd">        self.do_input(&#39;\n&#39;)</span></tt>
+            </div>
+            <div id="l27"
+               class="code sev- "><tt><i>27</i> <span class="sd">        yield</span></tt>
+            </div>
+            <div id="l28"
+               class="code sev- "><tt><i>28</i> <span class="sd">        self.assert_sidebar_lines_end_with([&#39;&gt;&gt;&gt;&#39;, &#39;&gt;&gt;&gt;&#39;])</span></tt>
+            </div>
+            <div id="l29"
+               class="code sev- "><tt><i>29</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l30"
+               class="code sev- "><tt><i>30</i>     <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">test_method</span><span class="p">):</span></tt>
+            </div>
+            <div id="l31"
+               class="code sev- "><tt><i>31</i>         <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">test_method</span><span class="p">)</span></tt>
+            </div>
+            <div id="l32"
+               class="code sev- "><tt><i>32</i>         <span class="k">def</span> <span class="nf">new_test_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l33"
+               class="code sev- "><tt><i>33</i>             <span class="n">test_generator</span> <span class="o">=</span> <span class="n">test_method</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></tt>
+            </div>
+            <div id="l34"
+               class="code sev- "><tt><i>34</i>             <span class="n">root</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span></tt>
+            </div>
+            <div id="l35"
+               class="code sev- "><tt><i>35</i>             <span class="c1"># Exceptions raised by self.assert...() need to be raised</span></tt>
+            </div>
+            <div id="l36"
+               class="code sev- "><tt><i>36</i>             <span class="c1"># outside of the after() callback in order for the test</span></tt>
+            </div>
+            <div id="l37"
+               class="code sev- "><tt><i>37</i>             <span class="c1"># harness to capture them.</span></tt>
+            </div>
+            <div id="l38"
+               class="code sev- "><tt><i>38</i>             <span class="n">exception</span> <span class="o">=</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l39"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E306
+                     </span>
+                     Expected 1 blank line before a nested definition, found 0</li>
+               
+               </ul><tt><i>39</i>             <span class="k">def</span> <span class="nf">after_callback</span><span class="p">():</span></tt>
+            </div>
+            <div id="l40"
+               class="code sev- "><tt><i>40</i>                 <span class="k">nonlocal</span> <span class="n">exception</span></tt>
+            </div>
+            <div id="l41"
+               class="code sev- "><tt><i>41</i>                 <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l42"
+               class="code sev- "><tt><i>42</i>                     <span class="nb">next</span><span class="p">(</span><span class="n">test_generator</span><span class="p">)</span></tt>
+            </div>
+            <div id="l43"
+               class="code sev- "><tt><i>43</i>                 <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span></tt>
+            </div>
+            <div id="l44"
+               class="code sev- "><tt><i>44</i>                     <span class="n">root</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span></tt>
+            </div>
+            <div id="l45"
+               class="code sev- "><tt><i>45</i>                 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span></tt>
+            </div>
+            <div id="l46"
+               class="code sev- "><tt><i>46</i>                     <span class="n">exception</span> <span class="o">=</span> <span class="n">exc</span></tt>
+            </div>
+            <div id="l47"
+               class="code sev- "><tt><i>47</i>                     <span class="n">root</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span></tt>
+            </div>
+            <div id="l48"
+               class="code sev- "><tt><i>48</i>                 <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l49"
+               class="code sev- "><tt><i>49</i>                     <span class="c1"># Schedule the Tk mainloop to call this function again,</span></tt>
+            </div>
+            <div id="l50"
+               class="code sev- "><tt><i>50</i>                     <span class="c1"># using a robust method of ensuring that it gets a</span></tt>
+            </div>
+            <div id="l51"
+               class="code sev- "><tt><i>51</i>                     <span class="c1"># chance to process queued events before doing so.</span></tt>
+            </div>
+            <div id="l52"
+               class="code sev- "><tt><i>52</i>                     <span class="c1"># See: https://stackoverflow.com/q/18499082#comment65004099_38817470</span></tt>
+            </div>
+            <div id="l53"
+               class="code sev- "><tt><i>53</i>                     <span class="n">root</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="n">delay</span><span class="p">,</span> <span class="n">root</span><span class="o">.</span><span class="n">after_idle</span><span class="p">,</span> <span class="n">after_callback</span><span class="p">)</span></tt>
+            </div>
+            <div id="l54"
+               class="code sev- "><tt><i>54</i>             <span class="n">root</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">root</span><span class="o">.</span><span class="n">after_idle</span><span class="p">,</span> <span class="n">after_callback</span><span class="p">)</span></tt>
+            </div>
+            <div id="l55"
+               class="code sev- "><tt><i>55</i>             <span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span></tt>
+            </div>
+            <div id="l56"
+               class="code sev- "><tt><i>56</i> &nbsp;</tt>
+            </div>
+            <div id="l57"
+               class="code sev- "><tt><i>57</i>             <span class="k">if</span> <span class="n">exception</span><span class="p">:</span></tt>
+            </div>
+            <div id="l58"
+               class="code sev- "><tt><i>58</i>                 <span class="k">raise</span> <span class="n">exception</span></tt>
+            </div>
+            <div id="l59"
+               class="code sev- "><tt><i>59</i> &nbsp;</tt>
+            </div>
+            <div id="l60"
+               class="code sev- "><tt><i>60</i>         <span class="k">return</span> <span class="n">new_test_method</span></tt>
+            </div>
+            <div id="l61"
+               class="code sev- "><tt><i>61</i> &nbsp;</tt>
+            </div>
+            <div id="l62"
+               class="code sev- "><tt><i>62</i>     <span class="k">return</span> <span class="n">decorator</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>

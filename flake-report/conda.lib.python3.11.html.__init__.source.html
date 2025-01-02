@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>.conda/lib/python3.11/html/__init__.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <h1>
+            <a href="conda.lib.python3.11.html.__init__.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/html/__init__.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> <span class="sd">General functions for HTML manipulation.</span></tt>
+            </div>
+            <div id="l3"
+               class="code sev- "><tt><i>3</i> <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> &nbsp;</tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> <span class="kn">import</span> <span class="nn">re</span> <span class="k">as</span> <span class="nn">_re</span></tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i> <span class="kn">from</span> <span class="nn">html.entities</span> <span class="kn">import</span> <span class="n">html5</span> <span class="k">as</span> <span class="n">_html5</span></tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i> &nbsp;</tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i> &nbsp;</tt>
+            </div>
+            <div id="l9"
+               class="code sev- "><tt><i>9</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;escape&#39;</span><span class="p">,</span> <span class="s1">&#39;unescape&#39;</span><span class="p">]</span></tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i> &nbsp;</tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i> &nbsp;</tt>
+            </div>
+            <div id="l12"
+               class="code sev- "><tt><i>12</i> <span class="k">def</span> <span class="nf">escape</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">quote</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span></tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i>     <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i> <span class="sd">    Replace special characters &quot;&amp;&quot;, &quot;&lt;&quot; and &quot;&gt;&quot; to HTML-safe sequences.</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev- "><tt><i>15</i> <span class="sd">    If the optional flag quote is true (the default), the quotation mark</span></tt>
+            </div>
+            <div id="l16"
+               class="code sev- "><tt><i>16</i> <span class="sd">    characters, both double quote (&quot;) and single quote (&#39;) characters are also</span></tt>
+            </div>
+            <div id="l17"
+               class="code sev- "><tt><i>17</i> <span class="sd">    translated.</span></tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l19"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E261
+                     </span>
+                     At least two spaces before inline comment</li>
+               
+               </ul><tt><i>19</i>     <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&amp;&quot;</span><span class="p">,</span> <span class="s2">&quot;&amp;amp;&quot;</span><span class="p">)</span> <span class="c1"># Must be done first!</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev- "><tt><i>20</i>     <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&lt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&amp;lt;&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i>     <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&amp;gt;&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l22"
+               class="code sev- "><tt><i>22</i>     <span class="k">if</span> <span class="n">quote</span><span class="p">:</span></tt>
+            </div>
+            <div id="l23"
+               class="code sev- "><tt><i>23</i>         <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;&amp;quot;&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l24"
+               class="code sev- "><tt><i>24</i>         <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s2">&quot;&amp;#x27;&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l25"
+               class="code sev- "><tt><i>25</i>     <span class="k">return</span> <span class="n">s</span></tt>
+            </div>
+            <div id="l26"
+               class="code sev- "><tt><i>26</i> &nbsp;</tt>
+            </div>
+            <div id="l27"
+               class="code sev- "><tt><i>27</i> &nbsp;</tt>
+            </div>
+            <div id="l28"
+               class="code sev- "><tt><i>28</i> <span class="c1"># see https://html.spec.whatwg.org/multipage/parsing.html#numeric-character-reference-end-state</span></tt>
+            </div>
+            <div id="l29"
+               class="code sev- "><tt><i>29</i> &nbsp;</tt>
+            </div>
+            <div id="l30"
+               class="code sev- "><tt><i>30</i> <span class="n">_invalid_charrefs</span> <span class="o">=</span> <span class="p">{</span></tt>
+            </div>
+            <div id="l31"
+               class="code sev- "><tt><i>31</i>     <span class="mh">0x00</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\ufffd</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># REPLACEMENT CHARACTER</span></tt>
+            </div>
+            <div id="l32"
+               class="code sev- "><tt><i>32</i>     <span class="mh">0x0d</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span>      <span class="c1"># CARRIAGE RETURN</span></tt>
+            </div>
+            <div id="l33"
+               class="code sev- "><tt><i>33</i>     <span class="mh">0x80</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u20ac</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># EURO SIGN</span></tt>
+            </div>
+            <div id="l34"
+               class="code sev- "><tt><i>34</i>     <span class="mh">0x81</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\x81</span><span class="s1">&#39;</span><span class="p">,</span>    <span class="c1"># &lt;control&gt;</span></tt>
+            </div>
+            <div id="l35"
+               class="code sev- "><tt><i>35</i>     <span class="mh">0x82</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u201a</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># SINGLE LOW-9 QUOTATION MARK</span></tt>
+            </div>
+            <div id="l36"
+               class="code sev- "><tt><i>36</i>     <span class="mh">0x83</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u0192</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># LATIN SMALL LETTER F WITH HOOK</span></tt>
+            </div>
+            <div id="l37"
+               class="code sev- "><tt><i>37</i>     <span class="mh">0x84</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u201e</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># DOUBLE LOW-9 QUOTATION MARK</span></tt>
+            </div>
+            <div id="l38"
+               class="code sev- "><tt><i>38</i>     <span class="mh">0x85</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u2026</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># HORIZONTAL ELLIPSIS</span></tt>
+            </div>
+            <div id="l39"
+               class="code sev- "><tt><i>39</i>     <span class="mh">0x86</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u2020</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># DAGGER</span></tt>
+            </div>
+            <div id="l40"
+               class="code sev- "><tt><i>40</i>     <span class="mh">0x87</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u2021</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># DOUBLE DAGGER</span></tt>
+            </div>
+            <div id="l41"
+               class="code sev- "><tt><i>41</i>     <span class="mh">0x88</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u02c6</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># MODIFIER LETTER CIRCUMFLEX ACCENT</span></tt>
+            </div>
+            <div id="l42"
+               class="code sev- "><tt><i>42</i>     <span class="mh">0x89</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u2030</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># PER MILLE SIGN</span></tt>
+            </div>
+            <div id="l43"
+               class="code sev- "><tt><i>43</i>     <span class="mh">0x8a</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u0160</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># LATIN CAPITAL LETTER S WITH CARON</span></tt>
+            </div>
+            <div id="l44"
+               class="code sev- "><tt><i>44</i>     <span class="mh">0x8b</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u2039</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># SINGLE LEFT-POINTING ANGLE QUOTATION MARK</span></tt>
+            </div>
+            <div id="l45"
+               class="code sev- "><tt><i>45</i>     <span class="mh">0x8c</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u0152</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># LATIN CAPITAL LIGATURE OE</span></tt>
+            </div>
+            <div id="l46"
+               class="code sev- "><tt><i>46</i>     <span class="mh">0x8d</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\x8d</span><span class="s1">&#39;</span><span class="p">,</span>    <span class="c1"># &lt;control&gt;</span></tt>
+            </div>
+            <div id="l47"
+               class="code sev- "><tt><i>47</i>     <span class="mh">0x8e</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u017d</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># LATIN CAPITAL LETTER Z WITH CARON</span></tt>
+            </div>
+            <div id="l48"
+               class="code sev- "><tt><i>48</i>     <span class="mh">0x8f</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\x8f</span><span class="s1">&#39;</span><span class="p">,</span>    <span class="c1"># &lt;control&gt;</span></tt>
+            </div>
+            <div id="l49"
+               class="code sev- "><tt><i>49</i>     <span class="mh">0x90</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\x90</span><span class="s1">&#39;</span><span class="p">,</span>    <span class="c1"># &lt;control&gt;</span></tt>
+            </div>
+            <div id="l50"
+               class="code sev- "><tt><i>50</i>     <span class="mh">0x91</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u2018</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># LEFT SINGLE QUOTATION MARK</span></tt>
+            </div>
+            <div id="l51"
+               class="code sev- "><tt><i>51</i>     <span class="mh">0x92</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u2019</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># RIGHT SINGLE QUOTATION MARK</span></tt>
+            </div>
+            <div id="l52"
+               class="code sev- "><tt><i>52</i>     <span class="mh">0x93</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u201c</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># LEFT DOUBLE QUOTATION MARK</span></tt>
+            </div>
+            <div id="l53"
+               class="code sev- "><tt><i>53</i>     <span class="mh">0x94</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u201d</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># RIGHT DOUBLE QUOTATION MARK</span></tt>
+            </div>
+            <div id="l54"
+               class="code sev- "><tt><i>54</i>     <span class="mh">0x95</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u2022</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># BULLET</span></tt>
+            </div>
+            <div id="l55"
+               class="code sev- "><tt><i>55</i>     <span class="mh">0x96</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u2013</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># EN DASH</span></tt>
+            </div>
+            <div id="l56"
+               class="code sev- "><tt><i>56</i>     <span class="mh">0x97</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u2014</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># EM DASH</span></tt>
+            </div>
+            <div id="l57"
+               class="code sev- "><tt><i>57</i>     <span class="mh">0x98</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u02dc</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># SMALL TILDE</span></tt>
+            </div>
+            <div id="l58"
+               class="code sev- "><tt><i>58</i>     <span class="mh">0x99</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u2122</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># TRADE MARK SIGN</span></tt>
+            </div>
+            <div id="l59"
+               class="code sev- "><tt><i>59</i>     <span class="mh">0x9a</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u0161</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># LATIN SMALL LETTER S WITH CARON</span></tt>
+            </div>
+            <div id="l60"
+               class="code sev- "><tt><i>60</i>     <span class="mh">0x9b</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u203a</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># SINGLE RIGHT-POINTING ANGLE QUOTATION MARK</span></tt>
+            </div>
+            <div id="l61"
+               class="code sev- "><tt><i>61</i>     <span class="mh">0x9c</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u0153</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># LATIN SMALL LIGATURE OE</span></tt>
+            </div>
+            <div id="l62"
+               class="code sev- "><tt><i>62</i>     <span class="mh">0x9d</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\x9d</span><span class="s1">&#39;</span><span class="p">,</span>    <span class="c1"># &lt;control&gt;</span></tt>
+            </div>
+            <div id="l63"
+               class="code sev- "><tt><i>63</i>     <span class="mh">0x9e</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u017e</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># LATIN SMALL LETTER Z WITH CARON</span></tt>
+            </div>
+            <div id="l64"
+               class="code sev- "><tt><i>64</i>     <span class="mh">0x9f</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\u0178</span><span class="s1">&#39;</span><span class="p">,</span>  <span class="c1"># LATIN CAPITAL LETTER Y WITH DIAERESIS</span></tt>
+            </div>
+            <div id="l65"
+               class="code sev- "><tt><i>65</i> <span class="p">}</span></tt>
+            </div>
+            <div id="l66"
+               class="code sev- "><tt><i>66</i> &nbsp;</tt>
+            </div>
+            <div id="l67"
+               class="code sev- "><tt><i>67</i> <span class="n">_invalid_codepoints</span> <span class="o">=</span> <span class="p">{</span></tt>
+            </div>
+            <div id="l68"
+               class="code sev- "><tt><i>68</i>     <span class="c1"># 0x0001 to 0x0008</span></tt>
+            </div>
+            <div id="l69"
+               class="code sev- "><tt><i>69</i>     <span class="mh">0x1</span><span class="p">,</span> <span class="mh">0x2</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x4</span><span class="p">,</span> <span class="mh">0x5</span><span class="p">,</span> <span class="mh">0x6</span><span class="p">,</span> <span class="mh">0x7</span><span class="p">,</span> <span class="mh">0x8</span><span class="p">,</span></tt>
+            </div>
+            <div id="l70"
+               class="code sev- "><tt><i>70</i>     <span class="c1"># 0x000E to 0x001F</span></tt>
+            </div>
+            <div id="l71"
+               class="code sev- "><tt><i>71</i>     <span class="mh">0xe</span><span class="p">,</span> <span class="mh">0xf</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x11</span><span class="p">,</span> <span class="mh">0x12</span><span class="p">,</span> <span class="mh">0x13</span><span class="p">,</span> <span class="mh">0x14</span><span class="p">,</span> <span class="mh">0x15</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">,</span> <span class="mh">0x17</span><span class="p">,</span> <span class="mh">0x18</span><span class="p">,</span> <span class="mh">0x19</span><span class="p">,</span></tt>
+            </div>
+            <div id="l72"
+               class="code sev- "><tt><i>72</i>     <span class="mh">0x1a</span><span class="p">,</span> <span class="mh">0x1b</span><span class="p">,</span> <span class="mh">0x1c</span><span class="p">,</span> <span class="mh">0x1d</span><span class="p">,</span> <span class="mh">0x1e</span><span class="p">,</span> <span class="mh">0x1f</span><span class="p">,</span></tt>
+            </div>
+            <div id="l73"
+               class="code sev- "><tt><i>73</i>     <span class="c1"># 0x007F to 0x009F</span></tt>
+            </div>
+            <div id="l74"
+               class="code sev- "><tt><i>74</i>     <span class="mh">0x7f</span><span class="p">,</span> <span class="mh">0x80</span><span class="p">,</span> <span class="mh">0x81</span><span class="p">,</span> <span class="mh">0x82</span><span class="p">,</span> <span class="mh">0x83</span><span class="p">,</span> <span class="mh">0x84</span><span class="p">,</span> <span class="mh">0x85</span><span class="p">,</span> <span class="mh">0x86</span><span class="p">,</span> <span class="mh">0x87</span><span class="p">,</span> <span class="mh">0x88</span><span class="p">,</span> <span class="mh">0x89</span><span class="p">,</span> <span class="mh">0x8a</span><span class="p">,</span></tt>
+            </div>
+            <div id="l75"
+               class="code sev- "><tt><i>75</i>     <span class="mh">0x8b</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="mh">0x8d</span><span class="p">,</span> <span class="mh">0x8e</span><span class="p">,</span> <span class="mh">0x8f</span><span class="p">,</span> <span class="mh">0x90</span><span class="p">,</span> <span class="mh">0x91</span><span class="p">,</span> <span class="mh">0x92</span><span class="p">,</span> <span class="mh">0x93</span><span class="p">,</span> <span class="mh">0x94</span><span class="p">,</span> <span class="mh">0x95</span><span class="p">,</span> <span class="mh">0x96</span><span class="p">,</span></tt>
+            </div>
+            <div id="l76"
+               class="code sev- "><tt><i>76</i>     <span class="mh">0x97</span><span class="p">,</span> <span class="mh">0x98</span><span class="p">,</span> <span class="mh">0x99</span><span class="p">,</span> <span class="mh">0x9a</span><span class="p">,</span> <span class="mh">0x9b</span><span class="p">,</span> <span class="mh">0x9c</span><span class="p">,</span> <span class="mh">0x9d</span><span class="p">,</span> <span class="mh">0x9e</span><span class="p">,</span> <span class="mh">0x9f</span><span class="p">,</span></tt>
+            </div>
+            <div id="l77"
+               class="code sev- "><tt><i>77</i>     <span class="c1"># 0xFDD0 to 0xFDEF</span></tt>
+            </div>
+            <div id="l78"
+               class="code sev- "><tt><i>78</i>     <span class="mh">0xfdd0</span><span class="p">,</span> <span class="mh">0xfdd1</span><span class="p">,</span> <span class="mh">0xfdd2</span><span class="p">,</span> <span class="mh">0xfdd3</span><span class="p">,</span> <span class="mh">0xfdd4</span><span class="p">,</span> <span class="mh">0xfdd5</span><span class="p">,</span> <span class="mh">0xfdd6</span><span class="p">,</span> <span class="mh">0xfdd7</span><span class="p">,</span> <span class="mh">0xfdd8</span><span class="p">,</span></tt>
+            </div>
+            <div id="l79"
+               class="code sev- "><tt><i>79</i>     <span class="mh">0xfdd9</span><span class="p">,</span> <span class="mh">0xfdda</span><span class="p">,</span> <span class="mh">0xfddb</span><span class="p">,</span> <span class="mh">0xfddc</span><span class="p">,</span> <span class="mh">0xfddd</span><span class="p">,</span> <span class="mh">0xfdde</span><span class="p">,</span> <span class="mh">0xfddf</span><span class="p">,</span> <span class="mh">0xfde0</span><span class="p">,</span> <span class="mh">0xfde1</span><span class="p">,</span></tt>
+            </div>
+            <div id="l80"
+               class="code sev- "><tt><i>80</i>     <span class="mh">0xfde2</span><span class="p">,</span> <span class="mh">0xfde3</span><span class="p">,</span> <span class="mh">0xfde4</span><span class="p">,</span> <span class="mh">0xfde5</span><span class="p">,</span> <span class="mh">0xfde6</span><span class="p">,</span> <span class="mh">0xfde7</span><span class="p">,</span> <span class="mh">0xfde8</span><span class="p">,</span> <span class="mh">0xfde9</span><span class="p">,</span> <span class="mh">0xfdea</span><span class="p">,</span></tt>
+            </div>
+            <div id="l81"
+               class="code sev- "><tt><i>81</i>     <span class="mh">0xfdeb</span><span class="p">,</span> <span class="mh">0xfdec</span><span class="p">,</span> <span class="mh">0xfded</span><span class="p">,</span> <span class="mh">0xfdee</span><span class="p">,</span> <span class="mh">0xfdef</span><span class="p">,</span></tt>
+            </div>
+            <div id="l82"
+               class="code sev- "><tt><i>82</i>     <span class="c1"># others</span></tt>
+            </div>
+            <div id="l83"
+               class="code sev- "><tt><i>83</i>     <span class="mh">0xb</span><span class="p">,</span> <span class="mh">0xfffe</span><span class="p">,</span> <span class="mh">0xffff</span><span class="p">,</span> <span class="mh">0x1fffe</span><span class="p">,</span> <span class="mh">0x1ffff</span><span class="p">,</span> <span class="mh">0x2fffe</span><span class="p">,</span> <span class="mh">0x2ffff</span><span class="p">,</span> <span class="mh">0x3fffe</span><span class="p">,</span> <span class="mh">0x3ffff</span><span class="p">,</span></tt>
+            </div>
+            <div id="l84"
+               class="code sev- "><tt><i>84</i>     <span class="mh">0x4fffe</span><span class="p">,</span> <span class="mh">0x4ffff</span><span class="p">,</span> <span class="mh">0x5fffe</span><span class="p">,</span> <span class="mh">0x5ffff</span><span class="p">,</span> <span class="mh">0x6fffe</span><span class="p">,</span> <span class="mh">0x6ffff</span><span class="p">,</span> <span class="mh">0x7fffe</span><span class="p">,</span> <span class="mh">0x7ffff</span><span class="p">,</span></tt>
+            </div>
+            <div id="l85"
+               class="code sev- "><tt><i>85</i>     <span class="mh">0x8fffe</span><span class="p">,</span> <span class="mh">0x8ffff</span><span class="p">,</span> <span class="mh">0x9fffe</span><span class="p">,</span> <span class="mh">0x9ffff</span><span class="p">,</span> <span class="mh">0xafffe</span><span class="p">,</span> <span class="mh">0xaffff</span><span class="p">,</span> <span class="mh">0xbfffe</span><span class="p">,</span> <span class="mh">0xbffff</span><span class="p">,</span></tt>
+            </div>
+            <div id="l86"
+               class="code sev- "><tt><i>86</i>     <span class="mh">0xcfffe</span><span class="p">,</span> <span class="mh">0xcffff</span><span class="p">,</span> <span class="mh">0xdfffe</span><span class="p">,</span> <span class="mh">0xdffff</span><span class="p">,</span> <span class="mh">0xefffe</span><span class="p">,</span> <span class="mh">0xeffff</span><span class="p">,</span> <span class="mh">0xffffe</span><span class="p">,</span> <span class="mh">0xfffff</span><span class="p">,</span></tt>
+            </div>
+            <div id="l87"
+               class="code sev- "><tt><i>87</i>     <span class="mh">0x10fffe</span><span class="p">,</span> <span class="mh">0x10ffff</span></tt>
+            </div>
+            <div id="l88"
+               class="code sev- "><tt><i>88</i> <span class="p">}</span></tt>
+            </div>
+            <div id="l89"
+               class="code sev- "><tt><i>89</i> &nbsp;</tt>
+            </div>
+            <div id="l90"
+               class="code sev- "><tt><i>90</i> &nbsp;</tt>
+            </div>
+            <div id="l91"
+               class="code sev- "><tt><i>91</i> <span class="k">def</span> <span class="nf">_replace_charref</span><span class="p">(</span><span class="n">s</span><span class="p">):</span></tt>
+            </div>
+            <div id="l92"
+               class="code sev- "><tt><i>92</i>     <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></tt>
+            </div>
+            <div id="l93"
+               class="code sev- "><tt><i>93</i>     <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;#&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l94"
+               class="code sev- "><tt><i>94</i>         <span class="c1"># numeric charref</span></tt>
+            </div>
+            <div id="l95"
+               class="code sev- "><tt><i>95</i>         <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="s1">&#39;xX&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l96"
+               class="code sev- "><tt><i>96</i>             <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">),</span> <span class="mi">16</span><span class="p">)</span></tt>
+            </div>
+            <div id="l97"
+               class="code sev- "><tt><i>97</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l98"
+               class="code sev- "><tt><i>98</i>             <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">))</span></tt>
+            </div>
+            <div id="l99"
+               class="code sev- "><tt><i>99</i>         <span class="k">if</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">_invalid_charrefs</span><span class="p">:</span></tt>
+            </div>
+            <div id="l100"
+               class="code sev- "><tt><i>100</i>             <span class="k">return</span> <span class="n">_invalid_charrefs</span><span class="p">[</span><span class="n">num</span><span class="p">]</span></tt>
+            </div>
+            <div id="l101"
+               class="code sev- "><tt><i>101</i>         <span class="k">if</span> <span class="mh">0xD800</span> <span class="o">&lt;=</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="mh">0xDFFF</span> <span class="ow">or</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mh">0x10FFFF</span><span class="p">:</span></tt>
+            </div>
+            <div id="l102"
+               class="code sev- "><tt><i>102</i>             <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\uFFFD</span><span class="s1">&#39;</span></tt>
+            </div>
+            <div id="l103"
+               class="code sev- "><tt><i>103</i>         <span class="k">if</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">_invalid_codepoints</span><span class="p">:</span></tt>
+            </div>
+            <div id="l104"
+               class="code sev- "><tt><i>104</i>             <span class="k">return</span> <span class="s1">&#39;&#39;</span></tt>
+            </div>
+            <div id="l105"
+               class="code sev- "><tt><i>105</i>         <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="n">num</span><span class="p">)</span></tt>
+            </div>
+            <div id="l106"
+               class="code sev- "><tt><i>106</i>     <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l107"
+               class="code sev- "><tt><i>107</i>         <span class="c1"># named charref</span></tt>
+            </div>
+            <div id="l108"
+               class="code sev- "><tt><i>108</i>         <span class="k">if</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">_html5</span><span class="p">:</span></tt>
+            </div>
+            <div id="l109"
+               class="code sev- "><tt><i>109</i>             <span class="k">return</span> <span class="n">_html5</span><span class="p">[</span><span class="n">s</span><span class="p">]</span></tt>
+            </div>
+            <div id="l110"
+               class="code sev- "><tt><i>110</i>         <span class="c1"># find the longest matching name (as defined by the standard)</span></tt>
+            </div>
+            <div id="l111"
+               class="code sev- "><tt><i>111</i>         <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span></tt>
+            </div>
+            <div id="l112"
+               class="code sev- "><tt><i>112</i>             <span class="k">if</span> <span class="n">s</span><span class="p">[:</span><span class="n">x</span><span class="p">]</span> <span class="ow">in</span> <span class="n">_html5</span><span class="p">:</span></tt>
+            </div>
+            <div id="l113"
+               class="code sev- "><tt><i>113</i>                 <span class="k">return</span> <span class="n">_html5</span><span class="p">[</span><span class="n">s</span><span class="p">[:</span><span class="n">x</span><span class="p">]]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="n">x</span><span class="p">:]</span></tt>
+            </div>
+            <div id="l114"
+               class="code sev- "><tt><i>114</i>         <span class="k">else</span><span class="p">:</span></tt>
+            </div>
+            <div id="l115"
+               class="code sev- "><tt><i>115</i>             <span class="k">return</span> <span class="s1">&#39;&amp;&#39;</span> <span class="o">+</span> <span class="n">s</span></tt>
+            </div>
+            <div id="l116"
+               class="code sev- "><tt><i>116</i> &nbsp;</tt>
+            </div>
+            <div id="l117"
+               class="code sev- "><tt><i>117</i> &nbsp;</tt>
+            </div>
+            <div id="l118"
+               class="code sev- "><tt><i>118</i> <span class="n">_charref</span> <span class="o">=</span> <span class="n">_re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;&amp;(#[0-9]+;?&#39;</span></tt>
+            </div>
+            <div id="l119"
+               class="code sev- "><tt><i>119</i>                        <span class="sa">r</span><span class="s1">&#39;|#[xX][0-9a-fA-F]+;?&#39;</span></tt>
+            </div>
+            <div id="l120"
+               class="code sev- "><tt><i>120</i>                        <span class="sa">r</span><span class="s1">&#39;|[^\t\n\f &lt;&amp;#;]{1,32};?)&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l121"
+               class="code sev- "><tt><i>121</i> &nbsp;</tt>
+            </div>
+            <div id="l122"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>122</i> <span class="k">def</span> <span class="nf">unescape</span><span class="p">(</span><span class="n">s</span><span class="p">):</span></tt>
+            </div>
+            <div id="l123"
+               class="code sev- "><tt><i>123</i>     <span class="sd">&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l124"
+               class="code sev- "><tt><i>124</i> <span class="sd">    Convert all named and numeric character references (e.g. &amp;gt;, &amp;#62;,</span></tt>
+            </div>
+            <div id="l125"
+               class="code sev- "><tt><i>125</i> <span class="sd">    &amp;x3e;) in the string s to the corresponding unicode characters.</span></tt>
+            </div>
+            <div id="l126"
+               class="code sev- "><tt><i>126</i> <span class="sd">    This function uses the rules defined by the HTML 5 standard</span></tt>
+            </div>
+            <div id="l127"
+               class="code sev- "><tt><i>127</i> <span class="sd">    for both valid and invalid character references, and the list of</span></tt>
+            </div>
+            <div id="l128"
+               class="code sev- "><tt><i>128</i> <span class="sd">    HTML 5 named character references defined in html.entities.html5.</span></tt>
+            </div>
+            <div id="l129"
+               class="code sev- "><tt><i>129</i> <span class="sd">    &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l130"
+               class="code sev- "><tt><i>130</i>     <span class="k">if</span> <span class="s1">&#39;&amp;&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span></tt>
+            </div>
+            <div id="l131"
+               class="code sev- "><tt><i>131</i>         <span class="k">return</span> <span class="n">s</span></tt>
+            </div>
+            <div id="l132"
+               class="code sev- "><tt><i>132</i>     <span class="k">return</span> <span class="n">_charref</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">_replace_charref</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>

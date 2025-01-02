@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/email/_header_value_parser.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.email._header_value_parser.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/email/_header_value_parser.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  5
+               </span>
+               <strong>F841:</strong> local variable 'err' is assigned to but never used
+               
+                  (and 3 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Local variable 'err' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1994">
+                  <tt><i>1994</i>         <span class="k">except</span> <span class="n">errors</span><span class="o">.</span><span class="n">HeaderParseError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'e' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2103">
+                  <tt><i>2103</i>         <span class="k">except</span> <span class="n">errors</span><span class="o">.</span><span class="n">HeaderParseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'leader' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2450">
+                  <tt><i>2450</i>     <span class="n">leader</span> <span class="o">=</span> <span class="kc">None</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'err' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2575">
+                  <tt><i>2575</i>         <span class="k">except</span> <span class="n">errors</span><span class="o">.</span><span class="n">HeaderParseError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Local variable 'recover' is assigned to but never used:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2633">
+                  <tt><i>2633</i>     <span class="n">recover</span> <span class="o">=</span> <span class="kc">False</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  57
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l98">
+                  <tt><i>98</i> <span class="k">def</span> <span class="nf">quote_string</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l202">
+                  <tt><i>202</i> <span class="k">class</span> <span class="nc">Word</span><span class="p">(</span><span class="n">TokenList</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l291">
+                  <tt><i>291</i> <span class="k">class</span> <span class="nc">AddressList</span><span class="p">(</span><span class="n">TokenList</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l335">
+                  <tt><i>335</i> <span class="k">class</span> <span class="nc">MailboxList</span><span class="p">(</span><span class="n">TokenList</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l702">
+                  <tt><i>702</i> <span class="k">class</span> <span class="nc">Section</span><span class="p">(</span><span class="n">TokenList</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l990">
+                  <tt><i>990</i> <span class="k">def</span> <span class="nf">_validate_xtext</span><span class="p">(</span><span class="n">xtext</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1000">
+                  <tt><i>1000</i> <span class="k">def</span> <span class="nf">_get_ptext_to_endchars</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">endchars</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1030">
+                  <tt><i>1030</i> <span class="k">def</span> <span class="nf">get_fws</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1042">
+                  <tt><i>1042</i> <span class="k">def</span> <span class="nf">get_encoded_word</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1091">
+                  <tt><i>1091</i> <span class="k">def</span> <span class="nf">get_unstructured</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1158">
+                  <tt><i>1158</i> <span class="k">def</span> <span class="nf">get_qp_ctext</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1175">
+                  <tt><i>1175</i> <span class="k">def</span> <span class="nf">get_qcontent</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1190">
+                  <tt><i>1190</i> <span class="k">def</span> <span class="nf">get_atext</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1206">
+                  <tt><i>1206</i> <span class="k">def</span> <span class="nf">get_bare_quoted_string</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1249">
+                  <tt><i>1249</i> <span class="k">def</span> <span class="nf">get_comment</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1274">
+                  <tt><i>1274</i> <span class="k">def</span> <span class="nf">get_cfws</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1287">
+                  <tt><i>1287</i> <span class="k">def</span> <span class="nf">get_quoted_string</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1305">
+                  <tt><i>1305</i> <span class="k">def</span> <span class="nf">get_atom</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1332">
+                  <tt><i>1332</i> <span class="k">def</span> <span class="nf">get_dot_atom_text</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1351">
+                  <tt><i>1351</i> <span class="k">def</span> <span class="nf">get_dot_atom</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1376">
+                  <tt><i>1376</i> <span class="k">def</span> <span class="nf">get_word</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1410">
+                  <tt><i>1410</i> <span class="k">def</span> <span class="nf">get_phrase</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1448">
+                  <tt><i>1448</i> <span class="k">def</span> <span class="nf">get_local_part</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1487">
+                  <tt><i>1487</i> <span class="k">def</span> <span class="nf">get_obs_local_part</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1534">
+                  <tt><i>1534</i> <span class="k">def</span> <span class="nf">get_dtext</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1554">
+                  <tt><i>1554</i> <span class="k">def</span> <span class="nf">_check_for_early_dl_end</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">domain_literal</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1562">
+                  <tt><i>1562</i> <span class="k">def</span> <span class="nf">get_domain_literal</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1601">
+                  <tt><i>1601</i> <span class="k">def</span> <span class="nf">get_domain</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1639">
+                  <tt><i>1639</i> <span class="k">def</span> <span class="nf">get_addr_spec</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1655">
+                  <tt><i>1655</i> <span class="k">def</span> <span class="nf">get_obs_route</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1696">
+                  <tt><i>1696</i> <span class="k">def</span> <span class="nf">get_angle_addr</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1742">
+                  <tt><i>1742</i> <span class="k">def</span> <span class="nf">get_display_name</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1787">
+                  <tt><i>1787</i> <span class="k">def</span> <span class="nf">get_mailbox</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1808">
+                  <tt><i>1808</i> <span class="k">def</span> <span class="nf">get_invalid_mailbox</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">endchars</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1826">
+                  <tt><i>1826</i> <span class="k">def</span> <span class="nf">get_mailbox_list</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1920">
+                  <tt><i>1920</i> <span class="k">def</span> <span class="nf">get_group</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1950">
+                  <tt><i>1950</i> <span class="k">def</span> <span class="nf">get_address</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1979">
+                  <tt><i>1979</i> <span class="k">def</span> <span class="nf">get_address_list</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2056">
+                  <tt><i>2056</i> <span class="k">def</span> <span class="nf">get_msg_id</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2153">
+                  <tt><i>2153</i> <span class="k">def</span> <span class="nf">parse_mime_version</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2221">
+                  <tt><i>2221</i> <span class="k">def</span> <span class="nf">get_invalid_parameter</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2239">
+                  <tt><i>2239</i> <span class="k">def</span> <span class="nf">get_ttext</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2258">
+                  <tt><i>2258</i> <span class="k">def</span> <span class="nf">get_token</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2281">
+                  <tt><i>2281</i> <span class="k">def</span> <span class="nf">get_attrtext</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2300">
+                  <tt><i>2300</i> <span class="k">def</span> <span class="nf">get_attribute</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2323">
+                  <tt><i>2323</i> <span class="k">def</span> <span class="nf">get_extended_attrtext</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2341">
+                  <tt><i>2341</i> <span class="k">def</span> <span class="nf">get_extended_attribute</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2363">
+                  <tt><i>2363</i> <span class="k">def</span> <span class="nf">get_section</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2415">
+                  <tt><i>2415</i> <span class="k">def</span> <span class="nf">get_parameter</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2557">
+                  <tt><i>2557</i> <span class="k">def</span> <span class="nf">parse_mime_parameters</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2609">
+                  <tt><i>2609</i> <span class="k">def</span> <span class="nf">_find_mime_parameters</span><span class="p">(</span><span class="n">tokenlist</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2625">
+                  <tt><i>2625</i> <span class="k">def</span> <span class="nf">parse_content_type_header</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2682">
+                  <tt><i>2682</i> <span class="k">def</span> <span class="nf">parse_content_disposition_header</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2712">
+                  <tt><i>2712</i> <span class="k">def</span> <span class="nf">parse_content_transfer_encoding_header</span><span class="p">(</span><span class="n">value</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2766">
+                  <tt><i>2766</i> <span class="k">def</span> <span class="nf">_refold_parse_tree</span><span class="p">(</span><span class="n">parse_tree</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">policy</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2889">
+                  <tt><i>2889</i> <span class="k">def</span> <span class="nf">_fold_as_ew</span><span class="p">(</span><span class="n">to_encode</span><span class="p">,</span> <span class="n">lines</span><span class="p">,</span> <span class="n">maxlen</span><span class="p">,</span> <span class="n">last_ew</span><span class="p">,</span> <span class="n">ew_combine_allowed</span><span class="p">,</span> <span class="n">charset</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2954">
+                  <tt><i>2954</i> <span class="k">def</span> <span class="nf">_fold_mime_parameters</span><span class="p">(</span><span class="n">part</span><span class="p">,</span> <span class="n">lines</span><span class="p">,</span> <span class="n">maxlen</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  21
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l192">
+                  <tt><i>192</i>         <span class="k">return</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">content</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">token_type</span><span class="o">==</span><span class="s1">&#39;comment&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l297">
+                  <tt><i>297</i>         <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">token_type</span><span class="o">==</span><span class="s1">&#39;address&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l302">
+                  <tt><i>302</i>                     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">token_type</span><span class="o">==</span><span class="s1">&#39;address&#39;</span><span class="p">),</span> <span class="p">[])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l307">
+                  <tt><i>307</i>                     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">token_type</span><span class="o">==</span><span class="s1">&#39;address&#39;</span><span class="p">),</span> <span class="p">[])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l341">
+                  <tt><i>341</i>         <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">token_type</span><span class="o">==</span><span class="s1">&#39;mailbox&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l591">
+                  <tt><i>591</i>             <span class="k">if</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">token_type</span><span class="o">==</span><span class="s1">&#39;cfws&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">token_type</span><span class="o">==</span><span class="s1">&#39;cfws&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l593">
+                  <tt><i>593</i>             <span class="k">if</span> <span class="bp">self</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">token_type</span><span class="o">==</span><span class="s1">&#39;cfws&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">token_type</span><span class="o">==</span><span class="s1">&#39;cfws&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1399">
+                  <tt><i>1399</i>     <span class="k">if</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;&quot;&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1430">
+                  <tt><i>1430</i>         <span class="k">if</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;.&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1471">
+                  <tt><i>1471</i>     <span class="k">if</span> <span class="n">value</span> <span class="ow">and</span> <span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span> <span class="ow">or</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">PHRASE_ENDS</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1492">
+                  <tt><i>1492</i>     <span class="k">while</span> <span class="n">value</span> <span class="ow">and</span> <span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span> <span class="ow">or</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">PHRASE_ENDS</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1501">
+                  <tt><i>1501</i>         <span class="k">elif</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1521">
+                  <tt><i>1521</i>             <span class="n">obs_local_part</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">token_type</span><span class="o">==</span><span class="s1">&#39;cfws&#39;</span> <span class="ow">and</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1522">
+                  <tt><i>1522</i>             <span class="n">obs_local_part</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">token_type</span><span class="o">==</span><span class="s1">&#39;dot&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1526">
+                  <tt><i>1526</i>             <span class="n">obs_local_part</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">token_type</span><span class="o">==</span><span class="s1">&#39;cfws&#39;</span> <span class="ow">and</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1527">
+                  <tt><i>1527</i>             <span class="n">obs_local_part</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">token_type</span><span class="o">==</span><span class="s1">&#39;dot&#39;</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1663">
+                  <tt><i>1663</i>     <span class="k">while</span> <span class="n">value</span> <span class="ow">and</span> <span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;,&#39;</span> <span class="ow">or</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="n">CFWS_LEADER</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1676">
+                  <tt><i>1676</i>     <span class="k">while</span> <span class="n">value</span> <span class="ow">and</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;,&#39;</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around operator:</p>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1908">
+                  <tt><i>1908</i>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">all_mailboxes</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  10
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l132">
+                  <tt><i>132</i>                              <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">())</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l346">
+                  <tt><i>346</i>             <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">token_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;mailbox&#39;</span><span class="p">,</span> <span class="s1">&#39;invalid-mailbox&#39;</span><span class="p">)]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1339">
+                  <tt><i>1339</i>             <span class="s2">&quot;dot-atom-text but found &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1348">
+                  <tt><i>1348</i>             <span class="s2">&quot;but found &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="o">+</span><span class="n">value</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1574">
+                  <tt><i>1574</i>                 <span class="s2">&quot;but found &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1593">
+                  <tt><i>1593</i>                 <span class="s2">&quot;but found &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1692">
+                  <tt><i>1692</i>             <span class="s2">&quot;obs-route but found &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1928">
+                  <tt><i>1928</i>             <span class="s2">&quot;display name but found &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2431">
+                  <tt><i>2431</i>             <span class="s2">&quot;name (</span><span class="si">{}</span><span class="s2">) but no value&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">token</span><span class="p">)))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2533">
+                  <tt><i>2533</i>                                   <span class="s2">&quot;delimiter, but found </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l174">
+                  <tt><i>174</i>                                         <span class="s1">&#39;list: </span><span class="si">{!r}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">token</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1803">
+                  <tt><i>1803</i>                        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">token</span><span class="o">.</span><span class="n">all_defects</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E129">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E129:</strong> visually indented line with same indent as next logical line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1058">
+                  <tt><i>1058</i>         <span class="n">tok</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;?&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E201">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E201:</strong> whitespace after '('
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l1691">
+                  <tt><i>1691</i>         <span class="k">raise</span> <span class="n">errors</span><span class="o">.</span><span class="n">HeaderParseError</span><span class="p">(</span> <span class="s2">&quot;expected &#39;:&#39; marking end of &quot;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l102">
+                  <tt><i>102</i> <span class="n">rfc2047_matcher</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;&#39;&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.email._header_value_parser.source.html#l2473">
+                  <tt><i>2473</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/lib2to3/tests/test_parser.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/lib2to3/tests/test_parser.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  10
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html#l524">
+                  <tt><i>524</i>         <span class="s2">&quot;r&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;r&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;R&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;R&quot;&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html#l525">
+                  <tt><i>525</i>         <span class="s2">&quot;u&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;u&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;U&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;U&quot;&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html#l526">
+                  <tt><i>526</i>         <span class="s2">&quot;b&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;b&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;B&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;B&quot;&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html#l527">
+                  <tt><i>527</i>         <span class="s2">&quot;f&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;f&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;F&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;F&quot;&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html#l528">
+                  <tt><i>528</i>         <span class="s2">&quot;ur&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;ur&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;Ur&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;Ur&quot;&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html#l529">
+                  <tt><i>529</i>         <span class="s2">&quot;uR&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;uR&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;UR&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;UR&quot;&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html#l530">
+                  <tt><i>530</i>         <span class="s2">&quot;br&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;br&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;Br&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;Br&quot;&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html#l531">
+                  <tt><i>531</i>         <span class="s2">&quot;bR&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;bR&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;BR&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;BR&quot;&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html#l532">
+                  <tt><i>532</i>         <span class="s2">&quot;rb&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;rb&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;Rb&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;Rb&quot;&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html#l533">
+                  <tt><i>533</i>         <span class="s2">&quot;rB&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;rB&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;RB&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;RB&quot;&#39;</span><span class="p">,)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E306">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E306:</strong> expected 1 blank line before a nested definition, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html#l112">
+                  <tt><i>112</i>         <span class="k">class</span> <span class="nc">MyLoader</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html#l115">
+                  <tt><i>115</i>         <span class="k">class</span> <span class="nc">MyModule</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E201">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E201:</strong> whitespace after '('
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.tests.test_parser.source.html#l98">
+                  <tt><i>98</i>             <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">(</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">sub_env</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

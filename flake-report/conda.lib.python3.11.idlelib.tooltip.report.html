@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/idlelib/tooltip.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.idlelib.tooltip.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/idlelib/tooltip.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  12
+               </span>
+               <strong>F405:</strong> 'Toplevel' may be undefined, or defined from star imports: tkinter
+               
+                  (and 5 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'Toplevel' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l30">
+                  <tt><i>30</i>         <span class="bp">self</span><span class="o">.</span><span class="n">tipwindow</span> <span class="o">=</span> <span class="n">tw</span> <span class="o">=</span> <span class="n">Toplevel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">anchor_widget</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'TclError' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l39">
+                  <tt><i>39</i>         <span class="k">except</span> <span class="n">TclError</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'TclError' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l78">
+                  <tt><i>78</i>             <span class="k">except</span> <span class="n">TclError</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'TclError' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l108">
+                  <tt><i>108</i>         <span class="k">except</span> <span class="n">TclError</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'TclError' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l140">
+                  <tt><i>140</i>         <span class="k">except</span> <span class="n">TclError</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'LEFT' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l161">
+                  <tt><i>161</i>         <span class="n">label</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tipwindow</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l161">
+                  <tt><i>161</i>         <span class="n">label</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tipwindow</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'SOLID' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l162">
+                  <tt><i>162</i>                       <span class="n">background</span><span class="o">=</span><span class="s2">&quot;#ffffe0&quot;</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">SOLID</span><span class="p">,</span> <span class="n">borderwidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Toplevel' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l167">
+                  <tt><i>167</i>     <span class="n">top</span> <span class="o">=</span> <span class="n">Toplevel</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Label' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l171">
+                  <tt><i>171</i>     <span class="n">label</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Place your mouse over buttons&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l173">
+                  <tt><i>173</i>     <span class="n">button1</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Button 1 -- 1/2 second hover delay&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'Button' may be undefined, or defined from star imports: tkinter:</p>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l176">
+                  <tt><i>176</i>     <span class="n">button2</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Button 2 -- no hover delay&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from tkinter import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l7">
+                  <tt><i>7</i> <span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.idlelib.tooltip.source.html#l107">
+                  <tt><i>107</i>             <span class="bp">self</span><span class="o">.</span><span class="n">anchor_widget</span><span class="o">.</span><span class="n">unbind</span><span class="p">(</span><span class="s2">&quot;&lt;Button&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_id3</span><span class="p">)</span> <span class="c1"># pragma: no cover</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

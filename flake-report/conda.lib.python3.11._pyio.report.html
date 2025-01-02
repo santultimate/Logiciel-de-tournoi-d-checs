@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/_pyio.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11._pyio.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/_pyio.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F401:</strong> 'io.__all__' imported but unused
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l19">
+                  <tt><i>19</i> <span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="p">(</span><span class="n">__all__</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">,</span> <span class="n">SEEK_CUR</span><span class="p">,</span> <span class="n">SEEK_END</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F821">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F821:</strong> undefined name 'EncodingWarning'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l66">
+                  <tt><i>66</i>                           <span class="n">EncodingWarning</span><span class="p">,</span> <span class="n">stacklevel</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E266">
+               <span class="count sev-2">
+                  11
+               </span>
+               <strong>E266:</strong> too many leading '#' for block comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l363">
+                  <tt><i>363</i>     <span class="c1">### Internal ###</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l370">
+                  <tt><i>370</i>     <span class="c1">### Positioning ###</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l400">
+                  <tt><i>400</i>     <span class="c1">### Flush and close ###</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l448">
+                  <tt><i>448</i>     <span class="c1">### Inquiries ###</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l508">
+                  <tt><i>508</i>     <span class="c1">### Context manager ###</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l519">
+                  <tt><i>519</i>     <span class="c1">### Lower-level APIs ###</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l538">
+                  <tt><i>538</i>     <span class="c1">### Readline[s] and writelines ###</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l807">
+                  <tt><i>807</i>     <span class="c1">### Positioning ###</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l836">
+                  <tt><i>836</i>     <span class="c1">### Flush and close ###</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l859">
+                  <tt><i>859</i>     <span class="c1">### Inquiries ###</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l893">
+                  <tt><i>893</i>     <span class="c1">### Lower-level APIs ###</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E227">
+               <span class="count sev-2">
+                  8
+               </span>
+               <strong>E227:</strong> missing whitespace around bitwise or shift operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace around bitwise or shift operator (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l2330">
+                  <tt><i>2330</i>         <span class="k">return</span> <span class="p">(</span><span class="n">position</span> <span class="o">|</span> <span class="p">(</span><span class="n">dec_flags</span><span class="o">&lt;&lt;</span><span class="mi">64</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">bytes_to_feed</span><span class="o">&lt;&lt;</span><span class="mi">128</span><span class="p">)</span> <span class="o">|</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around bitwise or shift operator (in 2 places):</p>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l2331">
+                  <tt><i>2331</i>                <span class="p">(</span><span class="n">chars_to_skip</span><span class="o">&lt;&lt;</span><span class="mi">192</span><span class="p">)</span> <span class="o">|</span> <span class="nb">bool</span><span class="p">(</span><span class="n">need_eof</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="mi">256</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around bitwise or shift operator:</p>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l2334">
+                  <tt><i>2334</i>         <span class="n">rest</span><span class="p">,</span> <span class="n">position</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">bigint</span><span class="p">,</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">64</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around bitwise or shift operator:</p>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l2335">
+                  <tt><i>2335</i>         <span class="n">rest</span><span class="p">,</span> <span class="n">dec_flags</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">rest</span><span class="p">,</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">64</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around bitwise or shift operator:</p>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l2336">
+                  <tt><i>2336</i>         <span class="n">rest</span><span class="p">,</span> <span class="n">bytes_to_feed</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">rest</span><span class="p">,</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">64</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace around bitwise or shift operator:</p>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l2337">
+                  <tt><i>2337</i>         <span class="n">need_eof</span><span class="p">,</span> <span class="n">chars_to_skip</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">rest</span><span class="p">,</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">64</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l300">
+                  <tt><i>300</i> <span class="k">try</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l620">
+                  <tt><i>620</i> <span class="n">io</span><span class="o">.</span><span class="n">IOBase</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">IOBase</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l684">
+                  <tt><i>684</i> <span class="n">io</span><span class="o">.</span><span class="n">RawIOBase</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">RawIOBase</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l792">
+                  <tt><i>792</i> <span class="n">io</span><span class="o">.</span><span class="n">BufferedIOBase</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">BufferedIOBase</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l1899">
+                  <tt><i>1899</i> <span class="n">io</span><span class="o">.</span><span class="n">TextIOBase</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">TextIOBase</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l1211">
+                  <tt><i>1211</i>                         <span class="k">break</span> <span class="c1"># eof</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l1218">
+                  <tt><i>1218</i>                         <span class="k">break</span> <span class="c1"># eof</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l1699">
+                  <tt><i>1699</i>             <span class="k">if</span> <span class="ow">not</span> <span class="n">chunk</span><span class="p">:</span> <span class="c1"># reached the end of the file</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l278">
+                  <tt><i>278</i>     <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l445">
+                  <tt><i>445</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l1616">
+                  <tt><i>1616</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l1937">
+                  <tt><i>1937</i>                     <span class="o">|</span> <span class="p">(</span><span class="n">crlf</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_CRLF</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l2324">
+                  <tt><i>2324</i>                            <span class="n">bytes_to_feed</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">need_eof</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">chars_to_skip</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l22">
+                  <tt><i>22</i> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">os</span><span class="p">,</span> <span class="s1">&#39;SEEK_HOLE&#39;</span><span class="p">)</span> <span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l958">
+                  <tt><i>958</i>         <span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_pos</span> <span class="p">:</span> <span class="n">newpos</span><span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l284">
+                  <tt><i>284</i> <span class="k">def</span> <span class="nf">_open_code_with_warning</span><span class="p">(</span><span class="n">path</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l1240">
+                  <tt><i>1240</i> <span class="k">class</span> <span class="nc">BufferedWriter</span><span class="p">(</span><span class="n">_BufferedIOMixin</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E124">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E124:</strong> closing bracket does not match visual indentation
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l1984">
+                  <tt><i>1984</i>                <span class="p">)[</span><span class="bp">self</span><span class="o">.</span><span class="n">seennl</span><span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l2331">
+                  <tt><i>2331</i>                <span class="p">(</span><span class="n">chars_to_skip</span><span class="o">&lt;&lt;</span><span class="mi">192</span><span class="p">)</span> <span class="o">|</span> <span class="nb">bool</span><span class="p">(</span><span class="n">need_eof</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="mi">256</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E402">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E402:</strong> module level import not at top of file
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11._pyio.source.html#l685">
+                  <tt><i>685</i> <span class="kn">from</span> <span class="nn">_io</span> <span class="kn">import</span> <span class="n">FileIO</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

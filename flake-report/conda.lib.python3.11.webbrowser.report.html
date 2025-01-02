@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/webbrowser.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.webbrowser.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/webbrowser.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F541">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F541:</strong> f-string is missing placeholders
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l695">
+                  <tt><i>695</i>                 <span class="n">script</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;&#39;&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l15">
+                  <tt><i>15</i> <span class="k">class</span> <span class="nc">Error</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l23">
+                  <tt><i>23</i> <span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">klass</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">preferred</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l38">
+                  <tt><i>38</i> <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="n">using</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l72">
+                  <tt><i>72</i> <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">autoraise</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l91">
+                  <tt><i>91</i> <span class="k">def</span> <span class="nf">open_new</span><span class="p">(</span><span class="n">url</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l98">
+                  <tt><i>98</i> <span class="k">def</span> <span class="nf">open_new_tab</span><span class="p">(</span><span class="n">url</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l525">
+                  <tt><i>525</i> <span class="k">def</span> <span class="nf">register_standard_browsers</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l18">
+                  <tt><i>18</i> <span class="n">_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">RLock</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l325">
+                  <tt><i>325</i> <span class="n">Chromium</span> <span class="o">=</span> <span class="n">Chrome</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l735">
+                  <tt><i>735</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l229">
+                  <tt><i>229</i>             <span class="k">if</span> <span class="n">opt</span><span class="p">:</span> <span class="n">raise_opt</span> <span class="o">=</span> <span class="p">[</span><span class="n">opt</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l724">
+                  <tt><i>724</i>         <span class="k">if</span> <span class="n">o</span> <span class="o">==</span> <span class="s1">&#39;-n&#39;</span><span class="p">:</span> <span class="n">new_win</span> <span class="o">=</span> <span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l725">
+                  <tt><i>725</i>         <span class="k">elif</span> <span class="n">o</span> <span class="o">==</span> <span class="s1">&#39;-t&#39;</span><span class="p">:</span> <span class="n">new_win</span> <span class="o">=</span> <span class="mi">2</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l649">
+                  <tt><i>649</i>                 <span class="n">script</span> <span class="o">=</span> <span class="s1">&#39;open location &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">url</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;%22&#39;</span><span class="p">)</span> <span class="c1"># opens in default browser</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l693">
+                  <tt><i>693</i>                 <span class="n">script</span> <span class="o">=</span> <span class="s1">&#39;open location &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">url</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;%22&#39;</span><span class="p">)</span> <span class="c1"># opens in default browser</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l559">
+                  <tt><i>559</i>             <span class="k">except</span> <span class="p">(</span><span class="ne">FileNotFoundError</span><span class="p">,</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">CalledProcessError</span><span class="p">,</span> <span class="ne">PermissionError</span><span class="p">,</span> <span class="ne">NotADirectoryError</span><span class="p">)</span> <span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E228">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E228:</strong> missing whitespace around modulo operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l700">
+                  <tt><i>700</i> <span class="s1">                   &#39;&#39;&#39;</span><span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">url</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;%22&#39;</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E713">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E713:</strong> test for membership should be 'not in'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.webbrowser.source.html#l642">
+                  <tt><i>642</i>             <span class="k">if</span> <span class="ow">not</span> <span class="s1">&#39;:&#39;</span> <span class="ow">in</span> <span class="n">url</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

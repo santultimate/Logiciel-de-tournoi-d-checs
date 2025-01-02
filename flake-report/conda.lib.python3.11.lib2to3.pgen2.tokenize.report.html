@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/lib2to3/pgen2/tokenize.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/lib2to3/pgen2/tokenize.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F405">
+               <span class="count sev-1">
+                  43
+               </span>
+               <strong>F405:</strong> 'tok_name' may be undefined, or defined from star imports: lib2to3.pgen2.token
+               
+                  (and 15 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'tok_name' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l146">
+                  <tt><i>146</i>         <span class="p">(</span><span class="n">srow</span><span class="p">,</span> <span class="n">scol</span><span class="p">,</span> <span class="n">erow</span><span class="p">,</span> <span class="n">ecol</span><span class="p">,</span> <span class="n">tok_name</span><span class="p">[</span><span class="nb">type</span><span class="p">],</span> <span class="nb">repr</span><span class="p">(</span><span class="n">token</span><span class="p">)))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NEWLINE' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l194">
+                  <tt><i>194</i>             <span class="k">if</span> <span class="n">tok_type</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NL' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l194">
+                  <tt><i>194</i>             <span class="k">if</span> <span class="n">tok_type</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NAME' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l204">
+                  <tt><i>204</i>         <span class="k">if</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NAME</span><span class="p">,</span> <span class="n">NUMBER</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NUMBER' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l204">
+                  <tt><i>204</i>         <span class="k">if</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NAME</span><span class="p">,</span> <span class="n">NUMBER</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NEWLINE' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l206">
+                  <tt><i>206</i>         <span class="k">if</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NL' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l206">
+                  <tt><i>206</i>         <span class="k">if</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ASYNC' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l211">
+                  <tt><i>211</i>             <span class="k">if</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NAME</span><span class="p">,</span> <span class="n">NUMBER</span><span class="p">,</span> <span class="n">ASYNC</span><span class="p">,</span> <span class="n">AWAIT</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AWAIT' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l211">
+                  <tt><i>211</i>             <span class="k">if</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NAME</span><span class="p">,</span> <span class="n">NUMBER</span><span class="p">,</span> <span class="n">ASYNC</span><span class="p">,</span> <span class="n">AWAIT</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NAME' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l211">
+                  <tt><i>211</i>             <span class="k">if</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NAME</span><span class="p">,</span> <span class="n">NUMBER</span><span class="p">,</span> <span class="n">ASYNC</span><span class="p">,</span> <span class="n">AWAIT</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NUMBER' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l211">
+                  <tt><i>211</i>             <span class="k">if</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NAME</span><span class="p">,</span> <span class="n">NUMBER</span><span class="p">,</span> <span class="n">ASYNC</span><span class="p">,</span> <span class="n">AWAIT</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'INDENT' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l214">
+                  <tt><i>214</i>             <span class="k">if</span> <span class="n">toknum</span> <span class="o">==</span> <span class="n">INDENT</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DEDENT' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l217">
+                  <tt><i>217</i>             <span class="k">elif</span> <span class="n">toknum</span> <span class="o">==</span> <span class="n">DEDENT</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NEWLINE' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l220">
+                  <tt><i>220</i>             <span class="k">elif</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NL' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l220">
+                  <tt><i>220</i>             <span class="k">elif</span> <span class="n">toknum</span> <span class="ow">in</span> <span class="p">(</span><span class="n">NEWLINE</span><span class="p">,</span> <span class="n">NL</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'strstart' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l372">
+                  <tt><i>372</i>                 <span class="k">raise</span> <span class="n">TokenError</span><span class="p">(</span><span class="s2">&quot;EOF in multi-line string&quot;</span><span class="p">,</span> <span class="n">strstart</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'endprog' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l373">
+                  <tt><i>373</i>             <span class="n">endmatch</span> <span class="o">=</span> <span class="n">endprog</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'STRING' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l376">
+                  <tt><i>376</i>                 <span class="k">yield</span> <span class="p">(</span><span class="n">STRING</span><span class="p">,</span> <span class="n">contstr</span> <span class="o">+</span> <span class="n">line</span><span class="p">[:</span><span class="n">end</span><span class="p">],</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'strstart' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l377">
+                  <tt><i>377</i>                        <span class="n">strstart</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">end</span><span class="p">),</span> <span class="n">contline</span> <span class="o">+</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ERRORTOKEN' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l381">
+                  <tt><i>381</i>                 <span class="k">yield</span> <span class="p">(</span><span class="n">ERRORTOKEN</span><span class="p">,</span> <span class="n">contstr</span> <span class="o">+</span> <span class="n">line</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'strstart' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l382">
+                  <tt><i>382</i>                            <span class="n">strstart</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)),</span> <span class="n">contline</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'COMMENT' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l410">
+                  <tt><i>410</i>                     <span class="k">yield</span> <span class="p">(</span><span class="n">COMMENT</span><span class="p">,</span> <span class="n">comment_token</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NL' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l412">
+                  <tt><i>412</i>                     <span class="k">yield</span> <span class="p">(</span><span class="n">NL</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="n">nl_pos</span><span class="p">:],</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'COMMENT' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l415">
+                  <tt><i>415</i>                     <span class="k">yield</span> <span class="p">((</span><span class="n">NL</span><span class="p">,</span> <span class="n">COMMENT</span><span class="p">)[</span><span class="n">line</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;#&#39;</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="n">pos</span><span class="p">:],</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NL' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l415">
+                  <tt><i>415</i>                     <span class="k">yield</span> <span class="p">((</span><span class="n">NL</span><span class="p">,</span> <span class="n">COMMENT</span><span class="p">)[</span><span class="n">line</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;#&#39;</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="n">pos</span><span class="p">:],</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'INDENT' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l421">
+                  <tt><i>421</i>                 <span class="k">yield</span> <span class="p">(</span><span class="n">INDENT</span><span class="p">,</span> <span class="n">line</span><span class="p">[:</span><span class="n">pos</span><span class="p">],</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DEDENT' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l434">
+                  <tt><i>434</i>                 <span class="k">yield</span> <span class="p">(</span><span class="n">DEDENT</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NUMBER' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l455">
+                  <tt><i>455</i>                     <span class="k">yield</span> <span class="p">(</span><span class="n">NUMBER</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="n">epos</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NEWLINE' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l457">
+                  <tt><i>457</i>                     <span class="n">newline</span> <span class="o">=</span> <span class="n">NEWLINE</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NL' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l459">
+                  <tt><i>459</i>                         <span class="n">newline</span> <span class="o">=</span> <span class="n">NL</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'COMMENT' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l472">
+                  <tt><i>472</i>                     <span class="k">yield</span> <span class="p">(</span><span class="n">COMMENT</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="n">epos</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'STRING' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l482">
+                  <tt><i>482</i>                         <span class="k">yield</span> <span class="p">(</span><span class="n">STRING</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'STRING' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l502">
+                  <tt><i>502</i>                         <span class="k">yield</span> <span class="p">(</span><span class="n">STRING</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="n">epos</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ASYNC' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l506">
+                  <tt><i>506</i>                             <span class="k">yield</span> <span class="p">(</span><span class="n">ASYNC</span> <span class="k">if</span> <span class="n">token</span> <span class="o">==</span> <span class="s1">&#39;async&#39;</span> <span class="k">else</span> <span class="n">AWAIT</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'AWAIT' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l506">
+                  <tt><i>506</i>                             <span class="k">yield</span> <span class="p">(</span><span class="n">ASYNC</span> <span class="k">if</span> <span class="n">token</span> <span class="o">==</span> <span class="s1">&#39;async&#39;</span> <span class="k">else</span> <span class="n">AWAIT</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NAME' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l510">
+                  <tt><i>510</i>                     <span class="n">tok</span> <span class="o">=</span> <span class="p">(</span><span class="n">NAME</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="n">epos</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NAME' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l517">
+                  <tt><i>517</i>                                 <span class="ow">and</span> <span class="n">stashed</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">NAME</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ASYNC' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l524">
+                  <tt><i>524</i>                             <span class="k">yield</span> <span class="p">(</span><span class="n">ASYNC</span><span class="p">,</span> <span class="n">stashed</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'NL' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l539">
+                  <tt><i>539</i>                     <span class="k">yield</span> <span class="p">(</span><span class="n">NL</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'OP' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l547">
+                  <tt><i>547</i>                     <span class="k">yield</span> <span class="p">(</span><span class="n">OP</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">spos</span><span class="p">,</span> <span class="n">epos</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ERRORTOKEN' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l549">
+                  <tt><i>549</i>                 <span class="k">yield</span> <span class="p">(</span><span class="n">ERRORTOKEN</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="n">pos</span><span class="p">],</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'DEDENT' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l558">
+                  <tt><i>558</i>         <span class="k">yield</span> <span class="p">(</span><span class="n">DEDENT</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'ENDMARKER' may be undefined, or defined from star imports: lib2to3.pgen2.token:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l559">
+                  <tt><i>559</i>     <span class="k">yield</span> <span class="p">(</span><span class="n">ENDMARKER</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F403">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F403:</strong> 'from lib2to3.pgen2.token import *' used; unable to detect undefined names
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l34">
+                  <tt><i>34</i> <span class="kn">from</span> <span class="nn">lib2to3.pgen2.token</span> <span class="kn">import</span> <span class="o">*</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F841:</strong> local variable 'strstart' is assigned to but never used
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l492">
+                  <tt><i>492</i>                         <span class="n">strstart</span> <span class="o">=</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">start</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  12
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l48">
+                  <tt><i>48</i> <span class="k">def</span> <span class="nf">group</span><span class="p">(</span><span class="o">*</span><span class="n">choices</span><span class="p">):</span> <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">choices</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l51">
+                  <tt><i>51</i> <span class="k">def</span> <span class="nf">_combinations</span><span class="p">(</span><span class="o">*</span><span class="n">l</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l138">
+                  <tt><i>138</i> <span class="k">class</span> <span class="nc">TokenError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l140">
+                  <tt><i>140</i> <span class="k">class</span> <span class="nc">StopTokenizing</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l142">
+                  <tt><i>142</i> <span class="k">def</span> <span class="nf">printtoken</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">xxx_todo_changeme</span><span class="p">,</span> <span class="n">xxx_todo_changeme1</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span> <span class="c1"># for testing</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l148">
+                  <tt><i>148</i> <span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">readline</span><span class="p">,</span> <span class="n">tokeneater</span><span class="o">=</span><span class="n">printtoken</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l167">
+                  <tt><i>167</i> <span class="k">def</span> <span class="nf">tokenize_loop</span><span class="p">(</span><span class="n">readline</span><span class="p">,</span> <span class="n">tokeneater</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l171">
+                  <tt><i>171</i> <span class="k">class</span> <span class="nc">Untokenizer</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l230">
+                  <tt><i>230</i> <span class="k">def</span> <span class="nf">_get_normal_name</span><span class="p">(</span><span class="n">orig_enc</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l241">
+                  <tt><i>241</i> <span class="k">def</span> <span class="nf">detect_encoding</span><span class="p">(</span><span class="n">readline</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l314">
+                  <tt><i>314</i> <span class="k">def</span> <span class="nf">untokenize</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l335">
+                  <tt><i>335</i> <span class="k">def</span> <span class="nf">generate_tokens</span><span class="p">(</span><span class="n">readline</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E701">
+               <span class="count sev-2">
+                  12
+               </span>
+               <strong>E701:</strong> multiple statements on one line (colon)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l138">
+                  <tt><i>138</i> <span class="k">class</span> <span class="nc">TokenError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l140">
+                  <tt><i>140</i> <span class="k">class</span> <span class="nc">StopTokenizing</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span> <span class="k">pass</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l392">
+                  <tt><i>392</i>             <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="p">:</span> <span class="k">break</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l395">
+                  <tt><i>395</i>                 <span class="k">if</span> <span class="n">line</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span> <span class="n">column</span> <span class="o">=</span> <span class="n">column</span> <span class="o">+</span> <span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l396">
+                  <tt><i>396</i>                 <span class="k">elif</span> <span class="n">line</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">:</span> <span class="n">column</span> <span class="o">=</span> <span class="p">(</span><span class="n">column</span><span class="o">//</span><span class="n">tabsize</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">tabsize</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l397">
+                  <tt><i>397</i>                 <span class="k">elif</span> <span class="n">line</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\f</span><span class="s1">&#39;</span><span class="p">:</span> <span class="n">column</span> <span class="o">=</span> <span class="mi">0</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l398">
+                  <tt><i>398</i>                 <span class="k">else</span><span class="p">:</span> <span class="k">break</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l400">
+                  <tt><i>400</i>             <span class="k">if</span> <span class="n">pos</span> <span class="o">==</span> <span class="nb">max</span><span class="p">:</span> <span class="k">break</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l542">
+                  <tt><i>542</i>                     <span class="k">if</span> <span class="n">initial</span> <span class="ow">in</span> <span class="s1">&#39;([{&#39;</span><span class="p">:</span> <span class="n">parenlev</span> <span class="o">=</span> <span class="n">parenlev</span> <span class="o">+</span> <span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l543">
+                  <tt><i>543</i>                     <span class="k">elif</span> <span class="n">initial</span> <span class="ow">in</span> <span class="s1">&#39;)]}&#39;</span><span class="p">:</span> <span class="n">parenlev</span> <span class="o">=</span> <span class="n">parenlev</span> <span class="o">-</span> <span class="mi">1</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l563">
+                  <tt><i>563</i>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span> <span class="n">tokenize</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">readline</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l564">
+                  <tt><i>564</i>     <span class="k">else</span><span class="p">:</span> <span class="n">tokenize</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l56">
+                  <tt><i>56</i> <span class="n">Whitespace</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;[ \f\t]*&#39;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l227">
+                  <tt><i>227</i> <span class="n">cookie_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^[ \t\f]*#.*?coding[:=][ \t]*([-\w.]+)&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">ASCII</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l561">
+                  <tt><i>561</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>                     <span class="c1"># testing</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E127">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E127:</strong> continuation line over-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l382">
+                  <tt><i>382</i>                            <span class="n">strstart</span><span class="p">,</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)),</span> <span class="n">contline</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l550">
+                  <tt><i>550</i>                            <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="p">(</span><span class="n">lnum</span><span class="p">,</span> <span class="n">pos</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">line</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E128">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E128:</strong> continuation line under-indented for visual indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l38">
+                  <tt><i>38</i>            <span class="s2">&quot;generate_tokens&quot;</span><span class="p">,</span> <span class="s2">&quot;untokenize&quot;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l146">
+                  <tt><i>146</i>         <span class="p">(</span><span class="n">srow</span><span class="p">,</span> <span class="n">scol</span><span class="p">,</span> <span class="n">erow</span><span class="p">,</span> <span class="n">ecol</span><span class="p">,</span> <span class="n">tok_name</span><span class="p">[</span><span class="nb">type</span><span class="p">],</span> <span class="nb">repr</span><span class="p">(</span><span class="n">token</span><span class="p">)))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E125">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E125:</strong> continuation line with same indent as next logical line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l490">
+                  <tt><i>490</i>                     <span class="n">token</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="ow">in</span> <span class="n">single_quoted</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l142">
+                  <tt><i>142</i> <span class="k">def</span> <span class="nf">printtoken</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">xxx_todo_changeme</span><span class="p">,</span> <span class="n">xxx_todo_changeme1</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span> <span class="c1"># for testing</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E306">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E306:</strong> expected 1 blank line before a nested definition, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l262">
+                  <tt><i>262</i>     <span class="k">def</span> <span class="nf">read_or_stop</span><span class="p">():</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E401">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E401:</strong> multiple imports on one line
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l32">
+                  <tt><i>32</i> <span class="kn">import</span> <span class="nn">string</span><span class="o">,</span> <span class="nn">re</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E502">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E502:</strong> the backslash is redundant between brackets
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l145">
+                  <tt><i>145</i>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">,</span><span class="si">%d</span><span class="s2">-</span><span class="si">%d</span><span class="s2">,</span><span class="si">%d</span><span class="s2">:</span><span class="se">\t</span><span class="si">%s</span><span class="se">\t</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> \</tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E741">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E741:</strong> ambiguous variable name 'l'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.lib2to3.pgen2.tokenize.source.html#l51">
+                  <tt><i>51</i> <span class="k">def</span> <span class="nf">_combinations</span><span class="p">(</span><span class="o">*</span><span class="n">l</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

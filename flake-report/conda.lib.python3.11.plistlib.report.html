@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: .conda/lib/python3.11/plistlib.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="conda.lib.python3.11.plistlib.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               .conda/lib/python3.11/plistlib.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F821">
+               <span class="count sev-1">
+                  4
+               </span>
+               <strong>F821:</strong> undefined name 'FMT_XML'
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Undefined name 'FMT_XML':</p>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l852">
+                  <tt><i>852</i>     <span class="n">FMT_XML</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Undefined name 'FMT_BINARY':</p>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l857">
+                  <tt><i>857</i>     <span class="n">FMT_BINARY</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Undefined name 'FMT_XML':</p>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l895">
+                  <tt><i>895</i> <span class="k">def</span> <span class="nf">dump</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="n">FMT_XML</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skipkeys</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Undefined name 'FMT_XML':</p>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l906">
+                  <tt><i>906</i> <span class="k">def</span> <span class="nf">dumps</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="n">FMT_XML</span><span class="p">,</span> <span class="n">skipkeys</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F822">
+               <span class="count sev-1">
+                  2
+               </span>
+               <strong>F822:</strong> undefined name 'FMT_XML' in __all__
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Undefined name 'FMT_BINARY' in __all__:</p>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l57">
+                  <tt><i>57</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Undefined name 'FMT_XML' in __all__:</p>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l57">
+                  <tt><i>57</i> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l121">
+                  <tt><i>121</i> <span class="k">def</span> <span class="nf">_encode_base64</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">maxlinelength</span><span class="o">=</span><span class="mi">76</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l130">
+                  <tt><i>130</i> <span class="k">def</span> <span class="nf">_decode_base64</span><span class="p">(</span><span class="n">s</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l161">
+                  <tt><i>161</i> <span class="k">def</span> <span class="nf">_escape</span><span class="p">(</span><span class="n">text</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l173">
+                  <tt><i>173</i> <span class="k">class</span> <span class="nc">_PlistParser</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l456">
+                  <tt><i>456</i> <span class="k">class</span> <span class="nc">_BinaryPlistParser</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l616">
+                  <tt><i>616</i> <span class="k">def</span> <span class="nf">_count_to_size</span><span class="p">(</span><span class="n">count</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l631">
+                  <tt><i>631</i> <span class="k">class</span> <span class="nc">_BinaryPlistWriter</span> <span class="p">(</span><span class="nb">object</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l140">
+                  <tt><i>140</i> <span class="n">_dateParser</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?P&lt;year&gt;\d\d\d\d)(?:-(?P&lt;month&gt;\d\d)(?:-(?P&lt;day&gt;\d\d)(?:T(?P&lt;hour&gt;\d\d)(?::(?P&lt;minute&gt;\d\d)(?::(?P&lt;second&gt;\d\d))?)?)?)?)?Z&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">ASCII</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l452">
+                  <tt><i>452</i> <span class="n">_BINARY_FORMAT</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">:</span> <span class="s1">&#39;Q&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l629">
+                  <tt><i>629</i> <span class="n">_scalars</span> <span class="o">=</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E261">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E261:</strong> at least two spaces before inline comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l549">
+                  <tt><i>549</i>         <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span> <span class="mh">0x22</span><span class="p">:</span> <span class="c1"># real</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l552">
+                  <tt><i>552</i>         <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span> <span class="mh">0x23</span><span class="p">:</span> <span class="c1"># real</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l430">
+                  <tt><i>430</i>                 <span class="c1">#(codecs.BOM_UTF32_BE, &quot;utf-32-be&quot;),</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l431">
+                  <tt><i>431</i>                 <span class="c1">#(codecs.BOM_UTF32_LE, &quot;utf-32-le&quot;),</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l126">
+                  <tt><i>126</i>         <span class="n">chunk</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">maxbinsize</span><span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l851">
+                  <tt><i>851</i> <span class="n">_FORMATS</span><span class="o">=</span><span class="p">{</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E228">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E228:</strong> missing whitespace around modulo operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l900">
+                  <tt><i>900</i>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unsupported format: </span><span class="si">%r</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">fmt</span><span class="p">,))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l240">
+                  <tt><i>240</i>                              <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_key</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">CurrentLineNumber</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E501:</strong> line too long (162 > 119 characters)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="conda.lib.python3.11.plistlib.source.html#l140">
+                  <tt><i>140</i> <span class="n">_dateParser</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?P&lt;year&gt;\d\d\d\d)(?:-(?P&lt;month&gt;\d\d)(?:-(?P&lt;day&gt;\d\d)(?:T(?P&lt;hour&gt;\d\d)(?::(?P&lt;minute&gt;\d\d)(?::(?P&lt;second&gt;\d\d))?)?)?)?)?Z&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">ASCII</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>
