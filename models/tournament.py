@@ -1,6 +1,5 @@
 from models.round import Round
 from models.player import Player
-from datetime import datetime
 
 
 class Tournament:
@@ -11,7 +10,7 @@ class Tournament:
         self.end_date = end_date
         self.description = description
         self.num_rounds = num_rounds
-        self.current_round = 0  # Commence à 0 car le premier round sera Round 1
+        self.current_round = 0
         self.players = []
         self.rounds = []
 
@@ -23,25 +22,20 @@ class Tournament:
         self.players.append(player)
 
     def generate_pairs(self, players):
-        """Génère dynamiquement les paires pour un tour."""
-        # Trier les joueurs par score décroissant, puis par ordre alphabétique pour briser les égalités
+        # Génère dynamiquement les paires pour un tour.
         players.sort(key=lambda p: (-p.score, p.last_name, p.first_name))
-        
         pairs = []
         unmatched_player = None
-
         # Gestion des joueurs impairs
         if len(players) % 2 != 0:
-            unmatched_player = players.pop()  # Exclut le dernier joueur pour ce tour
-
+            unmatched_player = players.pop()  # Exclut le dernier joueur
         # Créer les paires
         for i in range(0, len(players), 2):
             pairs.append((players[i], players[i + 1]))
-
         return pairs, unmatched_player
 
     def to_dict(self):
-        """Convertit le tournoi en dictionnaire pour JSON."""
+        # Convertit le tournoi en dictionnaire pour JSON
         return {
             "name": self.name,
             "location": self.location,

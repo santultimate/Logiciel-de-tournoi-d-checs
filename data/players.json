@@ -133,5 +133,23 @@
         "score": 0,
         "matches_played": [],
         "rank": null
+    },
+    {
+        "last_name": "diallo",
+        "first_name": "Ami",
+        "birth_date": "2000-10-10",
+        "national_id": "DF12345",
+        "score": 0,
+        "matches_played": [],
+        "rank": null
+    },
+    {
+        "last_name": "Bah",
+        "first_name": "Oumou",
+        "birth_date": "1987-02-14",
+        "national_id": "KL23456",
+        "score": 0,
+        "matches_played": [],
+        "rank": null
     }
 ]

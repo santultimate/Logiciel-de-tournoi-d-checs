@@ -1,5 +1,6 @@
 from models.player import Player  # Ajout de l'import de Player
 
+
 class Match:
     def __init__(self, player1, player2):
         """
@@ -7,25 +8,24 @@ class Match:
         :param player1: Premier joueur
         :param player2: Deuxième joueur
         """
-        self.players = {player1: 0, player2: 0}  # Dictionnaire {Joueur: Score}
+        self.players = {player1: 0, player2: 0}
         self.winner = None
-        self.is_finished = player2 is None  # Si player2 est None, le match est marqué terminé
+        self.is_finished = player2 is None
 
         if player2 is None:  # Gestion des joueurs exemptés
             self.winner = player1
-            player1.add_points(2)  # Victoire automatique pour le joueur exempté
+            player1.add_points(2)  # Victoire  joueur exempté
 
     def set_result(self, score1, score2):
         if score1 < 0 or score2 < 0:
             raise ValueError("La valeur de score doit être positive")
-        
         player1, player2 = list(self.players.keys())
 
         if player2 is None:  # Joueur exempté
             self.winner = player1
             player1.add_points(2)  # Victoire automatique
             return
-        
+
         self.players[player1] = score1
         self.players[player2] = score2
 
@@ -71,7 +71,7 @@ class Match:
         # Créer une instance de Match
         match = cls(player1, player2)
         if player2 is None:
-            match.is_finished = True  # Marquer automatiquement le match exempté comme terminé
+            match.is_finished = True
         else:
             match.set_result(score1, score2)
 

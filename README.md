@@ -59,6 +59,10 @@ Pour exécuter le logiciel :
 ```bash
 python main.py
 ```
+Pour exécuter le rapport flake8:
+```bash
+./generate_fake8_report.py
+```
 
 ### Navigation dans le menu principal :
 1. Créer un nouveau tournoi.
@@ -84,13 +88,13 @@ Pour générer un rapport de conformité au style PEP 8, utilisez l'outil `flake
 
 2. **Exécuter l'analyse :**
    ```bash
-   flake8 --max-line-length=119 --format=html --htmldir=flake8-report
+   ./generate_fake8_report.py
    ```
 
-   - Cette commande générera un rapport HTML dans le répertoire `flake8-report`.
+   - Cette commande générera un rapport HTML dans le répertoire `flake8_report`.
 
 3. **Consulter le rapport :**
-   - Ouvrez le fichier `flake8-report/index.html` dans un navigateur pour visualiser les résultats.
+   - Ouvrez le fichier `flake8_report/index.html` dans un navigateur pour visualiser les résultats.
 
 ---
 

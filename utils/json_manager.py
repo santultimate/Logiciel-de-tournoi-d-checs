@@ -1,6 +1,7 @@
 import json
 import os
 
+
 class JSONManager:
     @staticmethod
     def save_to_file(data, file_path):
@@ -20,5 +21,5 @@ class JSONManager:
             print(f"Erreur : Le fichier {file_path} est introuvable.")
             return None
         except json.JSONDecodeError:
-            print(f"Erreur : Le fichier {file_path} contient des données invalides.")
+            print(f"Erreur : Le fichier {file_path} data not valid.")
             return None

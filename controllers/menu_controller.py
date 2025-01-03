@@ -1,9 +1,8 @@
-import os
 from datetime import datetime
 from controllers.tournament_controller import TournamentController
 from controllers.player_controller import PlayerController
 from views.tournament_view import TournamentView
-from views.report_view import ReportView
+
 
 class MenuController:
     def __init__(self):
@@ -33,12 +32,12 @@ class MenuController:
                 elif choice == "8":
                     self.end_tournament()
                 elif choice == "9":
-                    print("Merci d'avoir utilisé le gestionnaire de tournois d'échecs. À bientôt !")
+                    print("thx for using this app. Bye ")
                     break
                 else:
-                    print("Choix invalide. Veuillez entrer un nombre entre 1 et 9.")
+                    print("Error.Veuillez entrer un nombre entre 1 et 9.")
             except KeyboardInterrupt:
-                print("\nProgramme interrompu par l'utilisateur. À bientôt !")
+                print("\nProgram interrrp by user. bye!")
                 break
             except Exception as e:
                 print(f"Erreur inattendue : {e}")
@@ -69,44 +68,40 @@ class MenuController:
     def add_player(self):
         """Ajout d'un joueur."""
         if not self.current_tournament:
-            print("Aucun tournoi chargé. Veuillez en charger ou en créer un.")
+            print("no tournament. Charger ou en créer un.")
             return
-
         player_data = TournamentView.get_player_data()
         if player_data:
             player = self.player_controller.add_player(player_data)
             if player:
                 self.current_tournament.add_player(player)
                 self.tournament_controller.save_all_tournaments()
-                print(f"Joueur '{player.first_name} {player.last_name}' ajouté au tournoi.")
+                print(f"Joueur '{player.first_name}' ajouté au tournoi.")
 
     def start_new_round(self):
         """Commence un nouveau tour pour le tournoi actuel."""
         if not self.current_tournament:
             print("Aucun tournoi chargé. Veuillez en charger ou en créer un.")
             return
-
         try:
             # Appel pour créer le prochain tour
             new_round = self.current_tournament.create_next_round()
             if new_round:
                 TournamentView.display_round(new_round)
-                self.tournament_controller.save_all_tournaments()  # Sauvegarde les changements
+                self.tournament_controller.save_all_tournaments()
                 print("Les tournois ont été sauvegardés.")
             else:
-                print("Impossible de démarrer un nouveau tour : tous les tours ont déjà été joués.")
+                print("Dsl,tous les tours ont déjà été joués.")
         except Exception as e:
-            print(f"Erreur lors de la création d'un nouveau tour : {e}")
+            print(f"Erreur lors de la création: {e}")
 
     def record_match_results(self):
         """Enregistre les résultats d'un match pour le tour actuel."""
         if not self.current_tournament or not self.current_tournament.rounds:
             print("Aucun tournoi ou aucun tour actif.")
             return
-
         # Obtenir le dernier tour
         current_round = self.current_tournament.rounds[-1]
-
         # Vérifier si des matchs sont disponibles
         if not current_round.matches:
             print("Aucun match disponible pour ce tour.")
@@ -123,26 +118,22 @@ class MenuController:
             if match_index < 0 or match_index >= len(current_round.matches):
                 print("Numéro de match invalide.")
                 return
-
             # Vérifier si un joueur est exempté
             match = current_round.matches[match_index]
             if None in match.players:  # Si un joueur est exempté
-                print("Ce joueur est exempté. Aucun résultat n'est requis.")
+                print("Ce joueur est exempté. Pas de resultat.")
                 return
-
             # Enregistrer les scores
             match.set_result(score1, score2)
-
             # Sauvegarder les changements
             self.tournament_controller.save_all_tournaments()
             print(f"Scores enregistrés pour le match {match_index + 1}.")
-
         except ValueError as ve:
             print(f"Erreur de validation des scores : {ve}")
         except IndexError as ie:
             print(f"Erreur : Index du match invalide. {ie}")
         except Exception as e:
-            print(f"Erreur inattendue lors de l'enregistrement des scores : {e}")
+            print(f"soucis enregistrement des scores : {e}")
 
     def display_reports(self):
         """Affiche les rapports disponibles."""
@@ -161,32 +152,27 @@ class MenuController:
             elif choice == "6":
                 break  # Retour au menu principal
             else:
-                print("Choix invalide. Veuillez entrer un nombre entre 1 et 6.")
+                print("Error. Entrer un nombre entre 1 et 6.")
 
     def end_current_round(self):
-        """Termine le tour actuel si tous les matchs sont terminés ou si c'est le dernier tour."""
         if not self.current_tournament or not self.current_tournament.rounds:
-            print("Aucun tournoi ou aucun tour actif.")
+            print("Aucun tournoi ou tour actif.")
             return
-
         current_round = self.current_tournament.rounds[-1]  # Dernier tour
-
         # Vérifie si c'est le dernier tour du tournoi
         if self.current_tournament.current_round > self.current_tournament.num_rounds:
             current_round.end_time = datetime.now().isoformat()
             print(f"{current_round.name} (dernier tour) terminé avec succès.")
             self.tournament_controller.save_all_tournaments()
             return
-
         # Vérifie si tous les matchs sont terminés pour les autres tours
         if all(match.winner is not None for match in current_round.matches):
             current_round.end_time = datetime.now().isoformat()
             print(f"{current_round.name} terminé avec succès.")
             self.tournament_controller.save_all_tournaments()
         else:
-            print(f"Impossible de terminer {current_round.name} : certains matchs ne sont pas terminés.")
+            print(f"ERROR {current_round.name} : matchs encours.")
 
-   
     def display_all_tournaments(self):
         """Affiche tous les tournois enregistrés."""
         tournaments = self.tournament_controller.tournaments
@@ -194,7 +180,7 @@ class MenuController:
             print("Aucun tournoi enregistré.")
             return
         for i, tournament in enumerate(tournaments, start=1):
-            print(f"{i}. {tournament.name} ({tournament.start_date} - {tournament.end_date})")
+            print(f"{i}. {tournament.name} ")
 
     def display_tournament_details(self):
         """Affiche les détails d'un tournoi spécifique."""
@@ -214,15 +200,13 @@ class MenuController:
         if not self.current_tournament:
             print("Aucun tournoi chargé.")
             return
-
-        sorted_players = sorted(self.current_tournament.players, key=lambda p: (p.last_name, p.first_name))
+        sorted_players = sorted(self.current_tournament.players, key=lambda p: (p.last_name))
         if not sorted_players:
-            print(f"Le tournoi '{self.current_tournament.name}' n'a aucun joueur inscrit.")
+            print(f"Le tournoi '{self.current_tournament.name}' no players.")
             return
-
         print(f"\n=== Joueurs du tournoi : {self.current_tournament.name} ===")
         for player in sorted_players:
-            print(f"{player.first_name} {player.last_name} (ID: {player.national_id}, Score: {player.score})")
+            print(f"{player.first_name}(ID: {player.national_id})")
         print("=============================================")
 
     def display_rounds_and_matches(self):
@@ -230,12 +214,10 @@ class MenuController:
         if not self.current_tournament:
             print("Aucun tournoi chargé.")
             return
-
         if not self.current_tournament.rounds:
-            print(f"Le tournoi '{self.current_tournament.name}' n'a pas encore de tours enregistrés.")
+            print(f"Tournoi '{self.current_tournament.name}' not saved.")
             return
-
-        print(f"\n=== Récapitulatif des tours : {self.current_tournament.name} ===")
+        print(f"\n== Récap. tours : {self.current_tournament.name} ==")
         for round_obj in self.current_tournament.rounds:
             print(f"{round_obj.name} - Début : {round_obj.start_time} | Fin : {round_obj.end_time or 'En cours'}")
             if not round_obj.matches:
@@ -245,9 +227,9 @@ class MenuController:
                 player1, score1 = list(match.players.items())[0]
                 if len(match.players) > 1:
                     player2, score2 = list(match.players.items())[1]
-                    print(f"  Match {i}: {player1.first_name} {player1.last_name} ({score1} pts) vs {player2.first_name} {player2.last_name} ({score2} pts)")
+                    print(f"Match {i}: {player1.first_name}  vs {player2.first_name} ")
                 else:
-                    print(f"  Match {i}: {player1.first_name} {player1.last_name} est exempté.")
+                    print(f" Match {i}: {player1.first_name} est exempté.")
         print("=============================================")
 
     def display_all_players(self):
@@ -257,35 +239,31 @@ class MenuController:
             print("Aucun joueur enregistré.")
             return
         # Trier les joueurs par ordre alphabétique (nom, puis prénom)
-        sorted_players = sorted(players, key=lambda p: (p.last_name, p.first_name))
+        sorted_players = sorted(players, key=lambda p: (p.first_name))
         print("\n=== Liste de tous les joueurs ===")
         for player in sorted_players:
-            print(f"{player.last_name} {player.first_name} - ID: {player.national_id}, Score: {player.score}")
+            print(f"{player.last_name}, Score: {player.score}")
         print("=================================")
-        
+
     def end_tournament(self):
         """Termine le tournoi et affiche les classements finaux."""
         if not self.current_tournament:
             print("Aucun tournoi actif.")
             return
-
         # Calculer les classements
         self.current_tournament.calculate_rankings()
-
         # Afficher les classements
         TournamentView.display_rankings(self.current_tournament.players)
-
         # Marquer le tournoi comme terminé
         print(f"Le tournoi '{self.current_tournament.name}' est terminé.")
-        
         # Sauvegarder le tournoi
         self.tournament_controller.save_all_tournaments()
         print("Le tournoi est terminé et les résultats ont été sauvegardés.")
         print("=================================")
-    
+
     def validate_choice(choice, valid_choices):
         """Valide un choix utilisateur parmi une liste de choix valides."""
         if choice not in valid_choices:
-            print(f"Choix invalide. Veuillez entrer un nombre parmi {', '.join(valid_choices)}.")
+            print(f"Entrer un nombre parmi {', '.join(valid_choices)}.")
             return False
         return True

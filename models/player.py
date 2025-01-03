@@ -1,7 +1,6 @@
-import json
-import os
 from datetime import datetime
 import re
+
 
 class Player:
     def __init__(self, last_name, first_name, birth_date, national_id):
@@ -18,15 +17,15 @@ class Player:
         try:
             date_obj = datetime.strptime(birth_date, "%Y-%m-%d")
             if date_obj > datetime.now():
-                raise ValueError("La date de naissance ne peut pas être dans le futur.")
+                raise ValueError("Error: Date future")
             return birth_date
         except ValueError as e:
-            raise ValueError(f"Date invalide : {birth_date}. Format attendu : AAAA-MM-JJ. {e}")
+            raise ValueError(f"Error : {birth_date}. Format:AAAA-MM-JJ.{e}")
 
     @staticmethod
     def validate_national_id(national_id):
         if not re.match(r"^[A-Z]{2}\d{5}$", national_id):
-            raise ValueError(f"Identifiant national invalide : {national_id}. Format attendu : AB12345.")
+            raise ValueError(f"Error ID : {national_id}. Format: AB12345.")
         return national_id
 
     def add_match(self, opponent_id):
@@ -37,7 +36,7 @@ class Player:
     def add_points(self, points):
         """Ajoute des points au score du joueur."""
         if points < 0:
-            raise ValueError("Les points ne peuvent pas être négatifs.")
+            raise ValueError("Points negatifs.")
         self.score += points
 
     def reset_stats(self):
@@ -73,5 +72,5 @@ class Player:
         return player
 
     def __str__(self):
-        return (f"{self.first_name} {self.last_name} (ID: {self.national_id}) - "
+        return (f"{self.first_name} (ID: {self.national_id}) - "
                 f"Score: {self.score}, Rank: {self.rank}")

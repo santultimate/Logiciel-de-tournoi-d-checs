@@ -1,6 +1,6 @@
 from datetime import datetime
-from models.player import Player
 from models.match import Match
+
 
 class Round:
     def __init__(self, name, matches=None):
@@ -10,7 +10,7 @@ class Round:
         :param matches: Liste des objets Match (par défaut, vide)
         """
         self.name = name
-        self.matches = matches if matches is not None else []  # Liste des matchs
+        self.matches = matches if matches is not None else []
         self.start_time = datetime.now().isoformat()  # Date et heure de début
         self.end_time = None  # Date et heure de fin (par défaut à None)
 
@@ -51,7 +51,7 @@ class Round:
 
         if num_players % 2 != 0:
             last_player = players[-1]
-            print(f"{last_player.first_name} {last_player.last_name} est exempté ce tour.")
+            print(f"{last_player.first_name} exempté.")
             exempt_match = Match(last_player, None)
             exempt_match.set_result(1, 0)  # Victoire automatique
             self.matches.append(exempt_match)
@@ -64,16 +64,7 @@ class Round:
             print("Erreur : L'objet fourni n'est pas un match valide.")
 
     def check_and_finish_round(self):
-        """Vérifie si tous les matchs sont terminés et marque la fin du tour."""
-        if all(match.winner is not None for match in self.matches):
-            self.end_time = datetime.now().isoformat()
-            print(f"{self.name} terminé à {self.end_time}.")
-            return True
-        print(f"Certains matchs de {self.name} ne sont pas encore terminés.")
-        return False
-    
-    def check_and_finish_round(self):
-        """Vérifie si tous les matchs sont terminés et marque la fin du tour."""
+        # Vérifie si tous les matchs sont terminés et marque la fin du tour.
         if all(match.is_finished for match in self.matches):
             self.end_round()  # Marquer la fin du round
             print(f"{self.name} terminé à {self.end_time}.")

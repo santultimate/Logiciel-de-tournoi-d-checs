@@ -1,21 +1,20 @@
 from datetime import datetime
 
+
 class TournamentView:
     @staticmethod
     def display_round(round_obj):
-        """Affiche les informations d'un tour."""
+        # Affiche les informations d'un tour
         print(f"\n=== {round_obj.name} ===")
         print(f"Début : {round_obj.start_time}")
         print("Matchs :")
         for i, match in enumerate(round_obj.matches, 1):
             player1, player2 = list(match.players.keys())
             score1, score2 = list(match.players.values())
-            
             if player2:  # Vérifier si player2 n'est pas None
-                print(f"  Match {i}: {player1.first_name} {player1.last_name} ({score1} pts) vs "
-                    f"{player2.first_name} {player2.last_name} ({score2} pts)")
+                print(f"Mat.{i}:{player1.first_name}vs"f"{player2.first_name}")
             else:
-                print(f"  Match {i}: {player1.first_name} {player1.last_name} est exempté.")
+                print(f"Mat.{i}:{player1.first_name} est exempté.")
         print("=========================\n")
 
     @staticmethod
@@ -63,7 +62,7 @@ class TournamentView:
         print("8. Terminer le tournoi et afficher le classement")
         print("9. Quitter")
         return input("Votre choix : ")
-                
+
     @staticmethod
     def get_player_data():
         """Collecte les données nécessaires à l'ajout d'un joueur."""
@@ -71,9 +70,9 @@ class TournamentView:
         last_name = input("Nom de famille : ").strip()
         first_name = input("Prénom : ").strip()
         birth_date = input("Date de naissance (YYYY-MM-DD) : ").strip()
-        national_id = input("Identifiant national d'échecs (ex : AB12345) : ").strip()
+        national_id = input("ERROR ID (ex : AB12345) : ").strip()
 
-        if not last_name or not first_name or not birth_date or not national_id:
+        if not first_name or not birth_date or not national_id:
             print("Erreur : Toutes les informations sont obligatoires.")
             return None
 
@@ -91,7 +90,7 @@ class TournamentView:
         try:
             match_index = int(input("Entrez le numéro du match : ")) - 1
             if match_index < 0:
-                raise ValueError("L'indice du match doit être un entier positif.")
+                raise ValueError("Error indice match.")
             score1 = float(input("Entrez le score du joueur 1 : "))
             score2 = float(input("Entrez le score du joueur 2 : "))
             return match_index, score1, score2
@@ -104,15 +103,15 @@ class TournamentView:
         """Affiche les scores de tous les joueurs."""
         print("\n=== Scores des Joueurs ===")
         for player in players:
-            print(f"{player.first_name} {player.last_name} - Score : {player.score}")
+            print(f"{player.first_name} -Score:{player.score}")
         print("==========================\n")
-    
+
     @staticmethod
     def display_rankings(players):
         """Affiche le classement des joueurs."""
         print("\n=== Classement Final ===")
         for player in players:
-            print(f"{player.rank}. {player.first_name} {player.last_name} - Score : {player.score}")
+            print(f"{player.rank}. {player.first_name} - pt: {player.score}")
         print("=========================\n")
 
     @staticmethod
@@ -126,7 +125,7 @@ class TournamentView:
         print("5. Liste de tous les rounds et matchs d’un tournoi")
         print("6. Retour au menu principal")
         return input("Votre choix : ")
-    
+
     @staticmethod
     def display_player_list(players):
         if not players:
@@ -134,7 +133,7 @@ class TournamentView:
             return
         print("\n=== Liste des Joueurs ===")
         for player in players:
-            print(f"{player.first_name} {player.last_name} - ID : {player.national_id}")
+            print(f"{player.first_name} - ID : {player.national_id}")
         print("=========================\n")
 
     @staticmethod
@@ -151,7 +150,7 @@ class TournamentView:
                 player1, score1 = players[0]
                 if len(players) > 1:
                     player2, score2 = players[1]
-                    print(f"  Match {i}: {player1.first_name} {player1.last_name} ({score1} pts) vs {player2.first_name} {player2.last_name} ({score2} pts)")
+                    print(f"Ma.{i}:{player1.first_name}vs{player2.first_name}")
                 else:
-                    print(f"  Match {i}: {player1.first_name} {player1.last_name} est exempté.")
+                    print(f"Match {i}: {player1.first_name} exempté")
             print("=========================\n")
