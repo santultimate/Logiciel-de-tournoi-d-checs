@@ -6,3 +6,4 @@ PyQt5==5.12.3
 PyQtWebEngine==5.12.1
 pyodbc==5.2.0
 pyzmq==26.2.0
+colorama>=0.4.6
