@@ -160,7 +160,10 @@ class MenuController:
             return
         current_round = self.current_tournament.rounds[-1]  # Dernier tour
         # Vérifie si c'est le dernier tour du tournoi
-        if self.current_tournament.current_round > self.current_tournament.num_rounds:
+        if (
+            self.current_tournament.current_round
+            > self.current_tournament.num_rounds
+        ):
             current_round.end_time = datetime.now().isoformat()
             print(f"{current_round.name} (dernier tour) terminé avec succès.")
             self.tournament_controller.save_all_tournaments()
@@ -200,7 +203,10 @@ class MenuController:
         if not self.current_tournament:
             print("Aucun tournoi chargé.")
             return
-        sorted_players = sorted(self.current_tournament.players, key=lambda p: (p.last_name))
+            sorted_players = sorted(
+                self.current_tournament.players,
+                key=lambda p: p.last_name
+            )
         if not sorted_players:
             print(f"Le tournoi '{self.current_tournament.name}' no players.")
             return
@@ -219,7 +225,10 @@ class MenuController:
             return
         print(f"\n== Récap. tours : {self.current_tournament.name} ==")
         for round_obj in self.current_tournament.rounds:
-            print(f"{round_obj.name} - Début : {round_obj.start_time} | Fin : {round_obj.end_time or 'En cours'}")
+            print(
+                f"{round_obj.name} - Début : {round_obj.start_time} | "
+                f"Fin : {round_obj.end_time or 'En cours'}"
+            )
             if not round_obj.matches:
                 print("  Aucun match enregistré pour ce tour.")
                 continue
@@ -227,7 +236,11 @@ class MenuController:
                 player1, score1 = list(match.players.items())[0]
                 if len(match.players) > 1:
                     player2, score2 = list(match.players.items())[1]
-                    print(f"Match {i}: {player1.first_name}  vs {player2.first_name} ")
+                    print(
+                        f"Match {i}: {player1.first_name} "
+                        f"vs {player2.first_name}"
+                    )
+
                 else:
                     print(f" Match {i}: {player1.first_name} est exempté.")
         print("=============================================")

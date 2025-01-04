@@ -3,7 +3,16 @@ from models.player import Player
 
 
 class Tournament:
-    def __init__(self, name, location, start_date, end_date, description="", num_rounds=4):
+    def __init__(
+            self,
+            name,
+            location,
+            start_date,
+            end_date,
+            description="",
+            num_rounds=4,
+            ):
+
         self.name = name
         self.location = location
         self.start_date = start_date
@@ -44,7 +53,10 @@ class Tournament:
             "description": self.description,
             "num_rounds": self.num_rounds,
             "current_round": self.current_round,
-            "players": [player.to_dict() for player in self.players if player is not None],
+            "players": [
+                player.to_dict()
+                for player in self.players
+                if player is not None],
             "rounds": [round.to_dict() for round in self.rounds],
         }
 

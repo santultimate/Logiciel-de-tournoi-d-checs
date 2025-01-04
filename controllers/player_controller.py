@@ -45,9 +45,16 @@ class PlayerController:
     def save_all_players(self):
         # Sauvegarde tous les joueurs dans le fichier JSON."""
         try:
-            os.makedirs(os.path.dirname(self.file_path), exist_ok=True)  # Assure que le dossier existe
+            os.makedirs(
+                os.path.dirname(self.file_path),
+                exist_ok=True
+            )  # Assure que le dossier existe
             with open(self.file_path, "w") as file:
-                json.dump([player.to_dict() for player in self.players], file, indent=4)
+                json.dump(
+                    [player.to_dict() for player in self.players],
+                    file,
+                    indent=4,
+                )
             print(f"players saved {self.file_path}.")
         except Exception as e:
             print(f"Erreur players not saved : {e}")

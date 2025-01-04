@@ -37,30 +37,53 @@ class ReportView:
     def display_tournament_players(tournament):
         """Affiche les joueurs d'un tournoi par ordre alphabétique."""
         print(f"\n=== Joueurs du tournoi : {tournament.name} ===")
-        for player in sorted(tournament.players, key=lambda p: (p.last_name, p.first_name)):
-            print(f"{player.first_name} {player.last_name} (ID: {player.national_id}, Score: {player.score})")
+        for player in sorted(
+            tournament.players,
+            key=lambda p: (p.last_name, p.first_name)
+        ):
+
+            print(
+                f"{player.first_name} {player.last_name} "
+                f"(ID: {player.national_id}, Score: {player.score})"
+            )
+
         print("=============================================\n")
 
     @staticmethod
     def display_tournament_rounds(tournament):
         """Affiche tous les tours et les matchs d'un tournoi."""
         if not tournament.rounds:
-            print(f"\n'{tournament.name}' n'a pas de tours.")
+            print("Aucun tour enregistré pour ce tournoi.")
             return
 
         print(f"\n=== Récapitulatif des tours : {tournament.name} ===")
         for round_obj in tournament.rounds:
-            print(f"{round_obj.name} - Début:{round_obj.start_time}|Fin: {round_obj.end_time or'En cours'}")
+            print(
+                f"{round_obj.name} - Début: {round_obj.start_time} | "
+                f"Fin: {round_obj.end_time or 'En cours'}"
+            )
+
             if not round_obj.matches:
                 print("  Aucun match enregistré pour ce tour.")
                 continue
+
             for i, match in enumerate(round_obj.matches, start=1):
                 # Extraction des joueurs et des scores depuis l'objet Match
-                player1, score1 = list(match.players.items())[0]
-                player2, score2 = list(match.players.items())[1] if len(match.players) > 1 else (None, None)
+                players = list(match.players.items())
+                player1, score1 = players[0]
+                player2, score2 = (
+                    list(match.players.items())[1]
+                    if len(match.players) > 1
+                    else (None, None)
+                )
 
                 if player2:  # Si le match a deux joueurs
-                    print(f"Ma.{i}:{player1.first_name}vs{player2.first_name}")
+                    print(
+                        f"Match {i}:{player1.first_name} vs "
+                        f"{player2.first_name}"
+                        f"({score1} - {score2})"
+                    )
                 else:  # Si un joueur est exempté
-                    print(f"Ma.{i}:{player1.first_name} exempté.")
+                    print(f"  Match {i}: {player1.first_name} est exempté.")
+
         print("=============================================\n")

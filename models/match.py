@@ -48,8 +48,12 @@ class Match:
         :return: Tuple avec les joueurs et leurs scores
         """
         return [
-            [list(self.players.keys())[0].to_dict(), list(self.players.values())[0]],
-            [list(self.players.keys())[1].to_dict() if list(self.players.keys())[1] else None,
+            [list(self.players.keys())[0].to_dict(),
+             list(self.players.values())[0],
+             ],
+            [list(self.players.keys())[1].to_dict()
+             if list(self.players.keys())[1]
+             else None,
              list(self.players.values())[1]],
         ]
 

@@ -44,7 +44,10 @@ class TournamentController:
                     print("Le fichier JSON est vide. Aucun tournoi chargé.")
                     return
                 tournaments_data = json.loads(content)
-                self.tournaments = [Tournament.from_dict(data) for data in tournaments_data]
+                self.tournaments = [
+                    Tournament.from_dict(data)
+                    for data in tournaments_data
+                ]
         except json.JSONDecodeError as e:
             print(f"Error JSON : {e}. check: {self.file_path}.")
         except Exception as e:
@@ -55,7 +58,11 @@ class TournamentController:
         os.makedirs(os.path.dirname(self.file_path), exist_ok=True)
         try:
             with open(self.file_path, "w") as file:
-                json.dump([tournament.to_dict() for tournament in self.tournaments], file, indent=4)
+                json.dump(
+                    [tournament.to_dict() for tournament in self.tournaments],
+                    file,
+                    indent=4
+                )
             print(f"Les tournois ont été sauvegardés dans {self.file_path}.")
         except Exception as e:
             print(f"Erreur lors de la sauvegarde des tournois : {e}")
